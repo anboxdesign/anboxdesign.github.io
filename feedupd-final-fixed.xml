@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<yml_catalog date="2025-03-31 12:00">
+  <shop>
+    <name>Anbox.Design</name>
+    <company>Anbox.Design</company>
+    <url>https://anboxdesign.ru</url>
+    <email>info@anboxdesign.ru</email>
+    
+    <description>Онлайн-курс по дизайну упаковки от брендинговой студии Anbox.Design</description>
+
+    <currencies>
+      <currency id="RUB" rate="1" />
+    </currencies>
+
+    <categories>
+      <category id="400">Онлайн-обучение</category>
+      <category id="401" parentId="400">Графический дизайн</category>
+    </categories>
+
+    <sets>
+      <set id="packaging">
+        <name>Курсы по упаковке</name>
+        <url>https://anboxdesign.ru/study</url>
+      </set>
+    </sets>
+
+    <offers>
+      <offer id="upm2" available="false">
+        <name>Упаковка на Миллион 2.0</name>
+        <url>https://anboxdesign.ru/study</url>
+        <categoryId>401</categoryId>
+        <set-ids>packaging</set-ids>
+        <price>54900</price>
+        <currencyId>RUB</currencyId>
+
+        <param name="Ближайшая дата">2025-05-13</param>
+        <param name="Продолжительность" unit="месяц">3</param>
+
+        <param name="План" order="1" unit="Введение в теорию дизайна упаковки" hours="3"> Основные принципы, функции упаковки, визуальные коды и композиция. </param>
+        <param name="План" order="2" unit="Маркетинг и аналитика" hours="4"> Анализ продукта, целевой аудитории, конкурентов и трендов. </param>
+        <param name="План" order="3" unit="Практика создания упаковки" hours="8"> Разработка концепции, дизайн-макет, визуализация, экспорт под печать. </param>
+
+        <param name="Формат обучения">Самостоятельно с наставником</param>
+        <param name="Есть вебинары">true</param>
+        <param name="Есть домашние работы">true</param>
+        <param name="Есть видеоуроки">true</param>
+        <param name="Есть текстовые уроки">true</param>
+        <param name="Есть сообщество">true</param>
+
+        <param name="Сложность">Для опытных</param>
+        <param name="Тип обучения">Курс</param>
+        <param name="Есть бесплатная часть">false</param>
+        <param name="Результат обучения">Сертификат</param>
+
+        <picture>https://raw.githubusercontent.com/anboxdesign/anbox-yml-feed/main/fav.png</picture>
+        <description> Пройдите все этапы создания упаковки — от аналитики до готового проекта в портфолио. Курс подходит для дизайнеров с опытом от 1 года, которые хотят выйти на новый уровень и научиться брать проекты по дизайну упаковки. </description>
+      </offer>
+    </offers>
+  </shop>
+</yml_catalog>
