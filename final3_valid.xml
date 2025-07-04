@@ -34,7 +34,7 @@
         <price>54900</price>
         <currencyId>RUR</currencyId>
 
-        <param name="Ближайшая дата">2025-05-13</param>
+        <param name="Ближайшая дата">2025-09-01</param>
         <param name="Продолжительность" unit="месяц">3</param>
 
         <param name="План" order="1" unit="Введение в теорию дизайна упаковки" hours="8"> Стартовый блок: цели курса, роль упаковки, структура </param>
