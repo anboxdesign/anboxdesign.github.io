@@ -31,10 +31,10 @@
         <url>https://anboxdesign.ru/study</url>
         <categoryId>401</categoryId>
         <set-ids>packaging</set-ids>
-        <price>54900</price>
+        <price>64900</price>
         <currencyId>RUR</currencyId>
 
-        <param name="Ближайшая дата">2025-12-01</param>
+        <param name="Ближайшая дата">2026-02-01</param>
         <param name="Продолжительность" unit="месяц">3</param>
 
         <param name="План" order="1" unit="Введение в теорию дизайна упаковки" hours="8"> Стартовый блок: цели курса, роль упаковки, структура </param>
