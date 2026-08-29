@@ -1,0 +1,5 @@
+node_modules/
+*.log
+Thumbs.db
+.DS_Store
+ANBOX-Studio-responsive-clean-20260826/QA/*.png

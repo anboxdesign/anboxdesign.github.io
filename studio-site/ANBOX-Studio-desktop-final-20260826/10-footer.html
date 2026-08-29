@@ -1,0 +1,188 @@
+<!--
+ANBOX STUDIO · 10 · Подвал
+Статус: branch/current
+Назначение: один VibeBlock, desktop + mobile
+Версия: light-v2 · светлый фон
+Вставляйте этот файл целиком.
+-->
+<style data-anbox-footer="light-v2">
+.anbox-part-10{
+  --anbox-footer-ink:#151716;
+  --anbox-footer-muted:rgba(21,23,22,.62);
+  --anbox-footer-bg:#f3f4f0;
+  --anbox-footer-purple:#ad95ee;
+  --anbox-content-inset:6.6667vw;
+  box-sizing:border-box;
+  width:100%;
+  margin:0;
+  overflow:hidden;
+  background:var(--anbox-footer-bg);
+  color:var(--anbox-footer-ink);
+  font-family:var(--anbox-font-text,"Onest",Arial,sans-serif);
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.anbox-part-10,.anbox-part-10 *{box-sizing:border-box}
+.anbox-part-10 a{color:inherit;text-decoration:none}
+.anbox-part-10 a:focus-visible{outline:2px solid var(--anbox-footer-purple);outline-offset:4px}
+.anbox-part-10 .abct__site-footer{
+  width:100%;
+  margin:0 auto;
+  padding:40px var(--anbox-content-inset);
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  grid-template-rows:auto auto;
+  column-gap:20px;
+  row-gap:12px;
+  align-items:center;
+}
+.anbox-part-10 .abct__footer-logo{grid-column:1 / 4;grid-row:1;width:150px;line-height:0}
+.anbox-part-10 .abct__footer-logo svg{display:block;width:100%;height:auto}
+.anbox-part-10 .abct__footer-line{
+  grid-column:1 / 5;
+  grid-row:2;
+  margin:0;
+  color:var(--anbox-footer-muted);
+  font-size:12px;
+  line-height:1.4;
+}
+.anbox-part-10 .abct__footer-legal{
+  grid-column:5 / 13;
+  grid-row:2;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:24px;
+  color:var(--anbox-footer-muted);
+  font-size:10px;
+  font-weight:500;
+  line-height:1.35;
+  text-align:right;
+}
+.anbox-part-10 .abct__footer-legal>*{white-space:nowrap}
+.anbox-part-10 .abct__footer-legal a{transition:color .22s ease}
+.anbox-part-10 .abct__footer-end{grid-column:9 / 13;grid-row:1;display:flex;justify-content:flex-end;align-items:center}
+.anbox-part-10 .abct__footer-socials{display:flex;align-items:center;gap:18px}
+.anbox-part-10 .abct__footer-socials a{
+  width:24px;
+  height:24px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--anbox-footer-ink);
+  transition:color .22s ease,transform .22s cubic-bezier(.22,1,.36,1);
+}
+.anbox-part-10 .abct__footer-socials svg{
+  width:18px;
+  height:18px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.6;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.anbox-part-10 .abct__social-behance span{font-size:16px;font-weight:600;line-height:1}
+@media (hover:hover) and (pointer:fine){
+  .anbox-part-10 .abct__footer-legal a:hover{color:var(--anbox-footer-ink)}
+  .anbox-part-10 .abct__footer-socials a:hover{color:var(--anbox-footer-purple);transform:translateY(-2px)}
+}
+@media (max-width:960px){
+  .anbox-part-10 .abct__site-footer{
+    width:100%;
+    padding:32px clamp(16px,4.6vw,24px);
+    grid-template-columns:repeat(8,minmax(0,1fr));
+    row-gap:18px;
+  }
+  .anbox-part-10 .abct__footer-logo{grid-column:1 / 4}
+  .anbox-part-10 .abct__footer-end{grid-column:6 / 9}
+  .anbox-part-10 .abct__footer-line{grid-column:1 / 5}
+  .anbox-part-10 .abct__footer-legal{grid-column:5 / 9;gap:14px;flex-wrap:wrap}
+}
+@media (max-width:640px){
+  .anbox-part-10 .abct__site-footer{
+    padding:28px 16px 24px;
+    grid-template-columns:minmax(0,1fr) auto;
+    row-gap:22px;
+  }
+  .anbox-part-10 .abct__footer-logo{grid-column:1;grid-row:1;width:148px}
+  .anbox-part-10 .abct__footer-end{grid-column:2;grid-row:1}
+  .anbox-part-10 .abct__footer-line{grid-column:1 / 3;grid-row:2;max-width:260px}
+  .anbox-part-10 .abct__footer-legal{
+    grid-column:1 / 3;
+    grid-row:3;
+    padding-top:18px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:flex-start;
+    gap:10px;
+    border-top:1px solid rgba(21,23,22,.14);
+    font-size:11px;
+    text-align:left;
+  }
+  .anbox-part-10 .abct__footer-legal>*{white-space:normal}
+}
+@media (min-width:1921px){
+  .anbox-part-10 .abct__site-footer{
+    width:calc(100vw - clamp(24px,6.667vw,256px) * 2);
+    max-width:none;
+    padding:clamp(40px,2.083vw,80px) 0;
+    column-gap:clamp(20px,1.042vw,40px);
+    row-gap:clamp(12px,.625vw,24px);
+  }
+  .anbox-part-10 .abct__footer-logo{width:clamp(150px,7.813vw,300px)}
+  .anbox-part-10 .abct__footer-line{font-size:clamp(12px,.625vw,24px)}
+  .anbox-part-10 .abct__footer-legal{gap:clamp(24px,1.25vw,48px);font-size:clamp(10px,.521vw,20px)}
+  .anbox-part-10 .abct__footer-socials{gap:clamp(18px,.938vw,36px)}
+  .anbox-part-10 .abct__footer-socials a{width:clamp(24px,1.25vw,48px);height:clamp(24px,1.25vw,48px)}
+  .anbox-part-10 .abct__footer-socials svg{width:clamp(18px,.938vw,36px);height:clamp(18px,.938vw,36px)}
+  .anbox-part-10 .abct__social-behance span{font-size:clamp(16px,.833vw,32px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .anbox-part-10 .abct__footer-legal a,.anbox-part-10 .abct__footer-socials a{transition:none}
+}
+</style>
+
+<div class="anbox-part-10">
+  <footer id="anbox-footer" class="abct__site-footer" aria-label="Подвал сайта">
+    <a class="abct__footer-logo" href="#top" aria-label="ANBOX studio — наверх">
+      <svg viewBox="158 278 307 39" aria-hidden="true" focusable="false">
+        <g fill="#ad95ee">
+          <path d="M366.1,307.9h2.9c.5,1.8,2,2.6,4.3,2.6s3.7-.8,3.7-1.9-.6-1.7-3.2-2.2l-1.7-.3c-3.8-.7-5.5-2.2-5.5-4.4s2.6-4.5,6.4-4.5,6.1,1.6,6.7,4.5h-3.1c-.5-1.3-2.1-1.9-3.7-1.9s-3.4.7-3.4,1.8.9,1.6,3,1.9l1.8.3c4.3.7,5.7,2.3,5.7,4.8s-2.5,4.5-6.6,4.5-6.7-1.9-7.1-5.1Z"/>
+          <path d="M388.7,300.2v8.1c0,1.2.5,2,2.1,2s1.2,0,1.9-.2v2.7c-.4.1-1.2.3-2,.3-3.3,0-4.8-1.6-4.8-4.8v-8.1h-3.1v-2.7h3.1v-4h2.9v4h4.3v2.7h-4.3Z"/>
+          <path d="M411.3,297.4v15.2h-2.7v-2.4c-1.1,1.6-3,2.7-5,2.7-3.6,0-6.6-2.3-6.6-7.1v-8.4h2.9v8.4c0,2.8,1.9,4.4,4.2,4.4s4.4-2.1,4.4-4.6v-8.1h2.9Z"/>
+          <path d="M431.4,291.2v21.5h-2.9v-2.3c-1.3,1.6-3.1,2.6-5.2,2.6-4.1,0-7.2-3.3-7.2-7.9s3.1-7.9,7.2-7.9,4,1.1,5.3,2.8v-8.7h2.7ZM428.6,305c0-3-2-5.2-4.8-5.2s-4.7,2.2-4.7,5.2,2,5.2,4.7,5.2,4.8-2.2,4.8-5.2Z"/>
+          <path d="M440.4,291.3v3.4h-3.2v-3.4h3.2ZM440.3,297.4v15.2h-2.9v-15.2h2.9Z"/>
+          <path d="M444.9,305c0-4.5,3.5-7.9,8.1-7.9s8.1,3.4,8.1,7.9-3.5,7.9-8.1,7.9-8.1-3.4-8.1-7.9ZM458.1,305c0-3-2.2-5.2-5.1-5.2s-5.1,2.3-5.1,5.2,2,5.2,5.1,5.2,5.1-2.3,5.1-5.2Z"/>
+        </g>
+        <g fill="#151716">
+          <path d="M277.4,294.2c.4-.4.8-.8.8-2.7v-3.9c0-3-2.5-5.5-5.5-5.5h-24.7v30.6h29.4c3.1,0,5.6-2.5,5.6-5.6v-7.2c0-3.1-2.5-5.6-5.6-5.6ZM255,287.5h14.4c.9,0,1.7.8,1.7,1.7v3.4c0,.9-.8,1.7-1.7,1.7h-14.4v-6.7ZM276.1,305.5c0,1-.8,1.7-1.7,1.7h-19.3v-7.6h19.3c1,0,1.7.8,1.7,1.7v4.1Z"/>
+          <path d="M319.3,282.1h-24c-3,0-5.4,2.4-5.4,5.5v19.6c0,3,2.4,5.5,5.4,5.5h24c3,0,5.4-2.4,5.4-5.5v-19.6c0-3-2.4-5.5-5.4-5.5ZM317.7,305.5c0,1-.8,1.7-1.7,1.7h-17.4c-1,0-1.7-.8-1.7-1.7v-16.3c0-1,.8-1.7,1.7-1.7h17.4c1,0,1.7.8,1.7,1.7v16.3Z"/>
+          <path d="M190,282.1h-15.8l-11.7,30.6h6.9l1.7-4.5h22.2l1.7,4.5h6.9l-11.7-30.6ZM173.1,302.8l5.9-15.3h6.2l5.8,15.3h-18Z"/>
+          <path d="M232.8,282.1v23l-17.2-23h-9.2v30.6h7v-23l17.2,23h9.1v-30.6h-7Z"/>
+          <path d="M359.5,282.1h-8.7l-7.5,9.7-7.5-9.7h-8.7l11.9,15.3-11.9,15.3h8.7l7.5-9.7,7.5,9.7h8.7l-11.9-15.3,11.9-15.3Z"/>
+        </g>
+      </svg>
+    </a>
+
+    <p class="abct__footer-line">Дизайн, стратегия и запуск брендов.</p>
+
+    <nav class="abct__footer-legal" aria-label="Юридическая информация">
+      <span>© 2026 ANBOX studio</span>
+      <a href="#">ИП Плавская Анна Владиславовна</a>
+      <a href="#">Политика конфиденциальности</a>
+    </nav>
+
+    <div class="abct__footer-end">
+      <div class="abct__footer-socials" aria-label="Социальные сети">
+        <a href="https://t.me/anbox_design" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 17-7-4 16-5-5-3 3 .5-4.5zM8.5 13.5 17 7"/></svg>
+        </a>
+        <a href="https://www.instagram.com/anbox.design" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><circle cx="17.5" cy="6.7" r=".8"/></svg>
+        </a>
+        <a class="abct__social-behance" href="https://www.behance.net/anbox_design" target="_blank" rel="noopener noreferrer" aria-label="Behance"><span aria-hidden="true">Bē</span></a>
+      </div>
+    </div>
+  </footer>
+</div>

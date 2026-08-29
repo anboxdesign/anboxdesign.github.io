@@ -1,0 +1,1155 @@
+<!--
+ANBOX STUDIO · 08 · Блог
+Статус: branch/current
+Назначение: один VibeBlock, desktop + mobile
+Вставляйте целиком в порядке файлов из README.md.
+-->
+<style data-anbox-full-page>
+  .anbox-part-08{ scroll-behavior: smooth; background: #f5f3ef; }
+  .anbox-part-08{ margin: 0; overflow-x: hidden; background: #f5f3ef; color: #171717; }
+  .anbox-part-08 .anbox-full-page{ width: 100%; overflow: clip; }
+  .anbox-part-08 .anbox-full-page > section{ display: block; position: relative; }
+  .anbox-part-08 :focus-visible{ outline: 2px solid #8f71e6; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce){ .anbox-part-08{ scroll-behavior: auto; } }
+
+.anbox-part-08{
+  --anbox-shell:1200px;
+  --anbox-page-gutter:20px;
+  --anbox-content-inset:6.6667vw;
+  --anbox-mobile-section-space:clamp(56px,16vw,72px);
+}
+@media(max-width:640px){
+  .anbox-part-08{--anbox-content-inset:clamp(16px,4.6vw,24px)}
+}
+</style>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap");
+
+#ablog {
+  --ab-paper: var(--anbox-paper, #f5f3ef);
+  --ab-surface: var(--anbox-surface, #faf9f6);
+  --ab-ink: var(--anbox-ink, #171717);
+  --ab-graphite: var(--anbox-graphite, #202123);
+  --ab-muted: var(--anbox-muted, #6a6863);
+  --ab-line: var(--anbox-line-light, rgba(23, 23, 23, .14));
+  --ab-purple: var(--anbox-purple, #ad95ee);
+  --ab-purple-soft: var(--anbox-purple-soft, #ded4f7);
+  --ab-lime: var(--anbox-lime, #dde63f);
+  color: var(--ab-ink);
+  background: var(--ab-paper);
+  font-family: "Onest", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.anbox-part-08 #ablog,.anbox-part-08 #ablog *{ box-sizing: border-box; }
+.anbox-part-08 #ablog a{ color: inherit; text-decoration: none; }
+
+.anbox-part-08 .ablog__shell{
+  width: min(1200px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: clamp(76px, 6.7vw, 108px) 0 clamp(88px, 7.6vw, 124px);
+}
+
+.anbox-part-08 .ablog__head{ margin-bottom: 40px; }
+
+.anbox-part-08 .ablog__kicker{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 24px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.anbox-part-08 .ablog__kicker span:first-child{ color: var(--ab-purple); }
+
+.anbox-part-08 .ablog__intro{
+  display: grid;
+  grid-template-columns: 2px minmax(0, 408px);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.anbox-part-08 .ablog__intro > i{ width: 2px; background: var(--ab-purple); }
+
+.anbox-part-08 .ablog__intro h2{
+  margin: 0;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -.025em;
+  font-weight: 500;
+}
+
+.anbox-part-08 .ablog__intro h2 span{
+  background: linear-gradient(90deg, var(--ab-purple-soft), var(--ab-purple-soft));
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  background-size: 0 100%;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition: background-size .75s cubic-bezier(.22, 1, .36, 1);
+}
+
+.anbox-part-08 .ablog__head.is-visible .ablog__intro h2 span{ background-size: 100% 100%; }
+
+.anbox-part-08 .ablog__desktop{
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(360px, 5fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.anbox-part-08 .ablog__feature,.anbox-part-08 .ablog__feed{
+  min-height: 548px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.anbox-part-08 .ablog__feature{ background: var(--ab-graphite); color: #fff; }
+.anbox-part-08 .ablog__feature-link{ display: grid; grid-template-rows: 304px 1fr; height: 100%; }
+
+.anbox-part-08 .ablog__cover{
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 72% 24%, rgba(221,230,63,.96) 0 7%, transparent 7.2%),
+    linear-gradient(128deg, #b29af3 0 46%, #8d74d2 46% 100%);
+  isolation: isolate;
+}
+
+.anbox-part-08 .ablog__cover::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(105deg, rgba(255,255,255,.12), transparent 44%, rgba(23,23,23,.12));
+}
+
+.anbox-part-08 .ablog__cover-grid{
+  position: absolute;
+  inset: 0;
+  opacity: .36;
+  background-image:
+    linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+  background-size: 76px 76px;
+}
+
+.anbox-part-08 .ablog__cover-label{
+  position: absolute;
+  left: 26px;
+  top: 24px;
+  z-index: 2;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .07em;
+}
+
+.anbox-part-08 .ablog__cover-year{
+  position: absolute;
+  left: 25px;
+  bottom: 16px;
+  z-index: 2;
+  font-size: 88px;
+  line-height: .73;
+  font-weight: 600;
+  letter-spacing: -.08em;
+}
+
+.anbox-part-08 .ablog__cover-object{
+  position: absolute;
+  right: 8%;
+  bottom: -13%;
+  width: 42%;
+  height: 116%;
+  transform: rotate(11deg);
+  transition: transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.anbox-part-08 .ablog__cover-object span{
+  position: absolute;
+  inset-inline: 0;
+  height: 31%;
+  border: 1px solid rgba(255,255,255,.6);
+  border-radius: 8px;
+  box-shadow: 0 24px 50px rgba(23,23,23,.18);
+}
+
+.anbox-part-08 .ablog__cover-object span:nth-child(1){ top: 0; background: #f7f6f2; }
+.anbox-part-08 .ablog__cover-object span:nth-child(2){ top: 29%; background: #202123; }
+.anbox-part-08 .ablog__cover-object span:nth-child(3){ top: 58%; background: var(--ab-lime); }
+.anbox-part-08 .ablog__feature-link:hover .ablog__cover-object{ transform: rotate(7deg) translateY(-10px); }
+
+.anbox-part-08 .ablog__feature-body{
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr auto;
+  column-gap: 32px;
+  padding: 24px 26px 26px;
+}
+
+.anbox-part-08 .ablog__meta{
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 18px;
+  margin-bottom: 19px;
+  color: rgba(255,255,255,.58);
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.anbox-part-08 .ablog__feature-copy h3{
+  max-width: 570px;
+  margin: 0 0 12px;
+  font-size: clamp(24px, 2vw, 32px);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+  font-weight: 500;
+}
+
+.anbox-part-08 .ablog__feature-copy p{
+  max-width: 590px;
+  margin: 0;
+  color: rgba(255,255,255,.64);
+  font-size: 14px;
+  line-height: 1.42;
+}
+
+.anbox-part-08 .ablog__read{
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,.18);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.anbox-part-08 .ablog__read i{ font-size: 18px; font-style: normal; transition: transform .35s ease; }
+.anbox-part-08 .ablog__feature-link:hover .ablog__read i{ transform: translate(3px,-3px); }
+
+.anbox-part-08 .ablog__feed{
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  background: var(--ab-surface);
+  border: 1px solid var(--ab-line);
+}
+
+.anbox-part-08 .ablog__feed-top{ display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.anbox-part-08 .ablog__eyebrow{ font-size: 11px; font-weight: 600; text-transform: uppercase; }
+.anbox-part-08 .ablog__live{ display: flex; align-items: center; gap: 7px; color: var(--ab-muted); font-size: 11px; }
+.anbox-part-08 .ablog__live i{ width: 7px; height: 7px; border-radius: 50%; background: var(--ab-lime); box-shadow: 0 0 0 4px rgba(221,230,63,.2); }
+
+.anbox-part-08 .ablog__feed h3{
+  margin: 64px 0 18px;
+  font-size: clamp(31px, 2.8vw, 45px);
+  line-height: .98;
+  letter-spacing: -.055em;
+  font-weight: 500;
+}
+
+.anbox-part-08 .ablog__feed-lead{
+  max-width: 390px;
+  margin: 0 0 32px;
+  color: var(--ab-muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.anbox-part-08 .ablog__topics{ list-style: none; margin: auto 0 26px; padding: 0; border-top: 1px solid var(--ab-line); }
+.anbox-part-08 .ablog__topics li{
+  display: grid;
+  grid-template-columns: 34px 1fr auto;
+  align-items: center;
+  gap: 12px;
+  min-height: 51px;
+  border-bottom: 1px solid var(--ab-line);
+}
+.anbox-part-08 .ablog__topics span{ color: var(--ab-purple); font-size: 11px; }
+.anbox-part-08 .ablog__topics strong{ font-size: 13px; font-weight: 500; }
+.anbox-part-08 .ablog__topics i{ width: 18px; height: 2px; background: var(--ab-purple); transition: width .45s cubic-bezier(.22, 1, .36, 1); }
+.anbox-part-08 .ablog__topics li:hover i{ width: 36px; }
+
+.anbox-part-08 .ablog__feed-cta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70px;
+  padding: 12px 12px 12px 18px;
+  border-radius: 8px;
+  background: var(--ab-lime);
+}
+.anbox-part-08 .ablog__feed-cta span{ display: flex; flex-direction: column; gap: 4px; }
+.anbox-part-08 .ablog__feed-cta small{ font-size: 10px; color: rgba(23,23,23,.6); }
+.anbox-part-08 .ablog__feed-cta strong{ font-size: 13px; text-transform: uppercase; }
+.anbox-part-08 .ablog__feed-cta > i{
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--ab-ink);
+  font-style: normal;
+  transition: transform .35s ease;
+}
+.anbox-part-08 .ablog__feed-cta:hover > i{ transform: rotate(8deg) scale(1.05); }
+
+.anbox-part-08 .ablog__mobile{ display: none; }
+
+.anbox-part-08 [data-ablog-reveal]{
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s ease-in-out, transform .7s ease-in-out;
+}
+.anbox-part-08 [data-ablog-reveal].is-visible{ opacity: 1; transform: none; }
+.anbox-part-08 .ablog__desktop > [data-ablog-reveal]:nth-child(2){ transition-delay: .1s; }
+
+@media (max-width: 840px){
+  .anbox-part-08 .ablog__shell{ width: min(100% - 32px, 640px); padding: 68px 0 80px; }
+  .anbox-part-08 .ablog__head{ margin-bottom: 30px; }
+  .anbox-part-08 .ablog__kicker{ margin-bottom: 20px; }
+  .anbox-part-08 .ablog__intro{ gap: 16px; }
+  .anbox-part-08 .ablog__intro{ grid-template-columns: 2px minmax(0, 1fr); }
+  .anbox-part-08 .ablog__intro h2{ max-width: 100%; font-size: 16px; line-height: 21px; }
+  .anbox-part-08 .ablog__desktop{ display: none; }
+  .anbox-part-08 .ablog__mobile{ display: grid; gap: 12px; }
+
+  .anbox-part-08 .ablog__m-feature,.anbox-part-08 .ablog__m-news{ overflow: hidden; border-radius: 8px; }
+  .anbox-part-08 .ablog__m-feature{ background: var(--ab-graphite); color: #fff; }
+  .anbox-part-08 .ablog__m-feature > a{ display: block; }
+  .anbox-part-08 .ablog__m-cover{
+    position: relative;
+    height: 246px;
+    overflow: hidden;
+    padding: 18px;
+    background: linear-gradient(135deg, #b39cf1 0 50%, #8d74d2 50%);
+  }
+  .anbox-part-08 .ablog__m-cover > span{ position: relative; z-index: 2; font-size: 10px; font-weight: 600; }
+  .anbox-part-08 .ablog__m-cover > b{ position: absolute; left: 18px; bottom: 13px; z-index: 2; font-size: 60px; line-height: .9; letter-spacing: -.08em; font-weight: 600; }
+  .anbox-part-08 .ablog__m-cover > div{ position: absolute; right: -2%; bottom: -12%; width: 47%; height: 110%; transform: rotate(9deg); }
+  .anbox-part-08 .ablog__m-cover > div i{ position: absolute; left: 0; width: 100%; height: 31%; border-radius: 7px; border: 1px solid rgba(255,255,255,.55); }
+  .anbox-part-08 .ablog__m-cover > div i:nth-child(1){ top: 0; background: #f7f6f2; }
+  .anbox-part-08 .ablog__m-cover > div i:nth-child(2){ top: 29%; background: #202123; }
+  .anbox-part-08 .ablog__m-cover > div i:nth-child(3){ top: 58%; background: var(--ab-lime); }
+  .anbox-part-08 .ablog__m-body{ padding: 20px; }
+  .anbox-part-08 .ablog__m-body p{ margin: 0 0 14px; color: rgba(255,255,255,.55); font-size: 10px; text-transform: uppercase; }
+  .anbox-part-08 .ablog__m-body h3{ margin: 0 0 24px; font-size: 23px; line-height: 1.08; letter-spacing: -.035em; font-weight: 500; }
+  .anbox-part-08 .ablog__m-body > span{ display: flex; justify-content: space-between; align-items: center; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.18); font-size: 11px; font-weight: 600; text-transform: uppercase; }
+  .anbox-part-08 .ablog__m-body > span i{ font-size: 17px; font-style: normal; }
+
+  .anbox-part-08 .ablog__m-news{ display: block; padding: 20px; border: 1px solid var(--ab-line); background: var(--ab-surface); }
+  .anbox-part-08 .ablog__m-news > p{ display: flex; justify-content: space-between; gap: 12px; margin: 0; font-size: 10px; font-weight: 600; text-transform: uppercase; }
+  .anbox-part-08 .ablog__m-news > p span{ display: flex; align-items: center; gap: 7px; color: var(--ab-muted); font-weight: 400; text-transform: none; }
+  .anbox-part-08 .ablog__m-news > p i{ width: 6px; height: 6px; border-radius: 50%; background: var(--ab-lime); }
+  .anbox-part-08 .ablog__m-news h3{ margin: 40px 0 34px; font-size: 31px; line-height: 1; letter-spacing: -.05em; font-weight: 500; }
+  .anbox-part-08 .ablog__m-news > div{ display: flex; justify-content: space-between; align-items: center; min-height: 58px; padding: 8px 8px 8px 16px; border-radius: 8px; background: var(--ab-lime); font-size: 11px; font-weight: 600; text-transform: uppercase; }
+  .anbox-part-08 .ablog__m-news > div i{ display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; color: #fff; background: var(--ab-ink); font-size: 16px; font-style: normal; }
+}
+
+@media (min-width: 1800px){
+  .anbox-part-08 .ablog__shell{ width: min(1440px, calc(100% - 96px)); }
+  .anbox-part-08 .ablog__feature,.anbox-part-08 .ablog__feed{ min-height: 590px; }
+  .anbox-part-08 .ablog__feature-link{ grid-template-rows: 332px 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .anbox-part-08 #ablog *,.anbox-part-08 #ablog *::before,.anbox-part-08 #ablog *::after{ scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  .anbox-part-08 [data-ablog-reveal]{ opacity: 1; transform: none; }
+  .anbox-part-08 .ablog__intro h2 span{ background-size: 100% 100%; }
+}
+</style>
+<style data-anbox-design-system="final-unified-v1">
+/*
+  Final shared rhythm for the assembled page.
+  The Hero keeps its display face and bespoke geometry; sections 02–09 share
+  one text family, one semantic type scale and one responsive spacing scale.
+*/
+.anbox-part-08 .anbox-composite{
+  --anbox-system-font:var(--anbox-font-text,"Onest",Arial,sans-serif);
+  --anbox-system-purple:#9b7cff;
+  --anbox-system-radius:8px;
+  --anbox-system-ease:cubic-bezier(.22,1,.36,1);
+}
+
+.anbox-part-08 .anbox-composite > section:not(#abx8),.anbox-part-08 .anbox-composite > section:not(#abx8) button,.anbox-part-08 .anbox-composite > section:not(#abx8) input,.anbox-part-08 .anbox-composite > section:not(#abx8) textarea,.anbox-part-08 .anbox-composite > section:not(#abx8) select{
+  font-family:var(--anbox-system-font);
+}
+
+/* Section labels: number / name. */
+.anbox-part-08 #abx-approach-v8 .abxa8__kicker,.anbox-part-08 #anxg-gallery .anxg__kicker,.anbox-part-08 #anxs-services .anxs__kicker,.anbox-part-08 #anxp-packages .anxp__kicker,.anbox-part-08 #anxt-team-training .anxt__label,.anbox-part-08 #ablog .ablog__kicker,.anbox-part-08 #abct-contacts .abct__kicker{
+  font-size:clamp(12px,.625vw,24px);
+  line-height:1.25;
+  font-weight:500;
+  letter-spacing:.02em;
+}
+
+.anbox-part-08 #abx-approach-v8 .abxa8__kicker > *,.anbox-part-08 #anxg-gallery .anxg__kicker > *,.anbox-part-08 #anxs-services .anxs__kicker > *,.anbox-part-08 #anxp-packages .anxp__kicker > *,.anbox-part-08 #anxt-team-training .anxt__label > *,.anbox-part-08 #ablog .ablog__kicker > *,.anbox-part-08 #abct-contacts .abct__kicker > *{
+  font-size:inherit;
+  line-height:inherit;
+  font-weight:inherit;
+  letter-spacing:inherit;
+}
+
+/* Repeated section statements use one editorial role. */
+.anbox-part-08 #abx-approach-v8 .abxa8__title,.anbox-part-08 #anxs-services .anxs__title-wrap h2,.anbox-part-08 #anxp-packages .anxp__header h2,.anbox-part-08 #ablog .ablog__intro h2,.anbox-part-08 #abct-contacts .abct__heading h2{
+  font-family:var(--anbox-system-font)!important;
+  font-size:clamp(18px,.938vw,36px)!important;
+  line-height:1.22!important;
+  font-weight:500!important;
+  letter-spacing:-.025em!important;
+  transform:none!important;
+}
+
+/* Same-level card titles. The two-tier approach grid stays intentionally hierarchical. */
+.anbox-part-08 #anxs-services .anxs__card h3,.anbox-part-08 #anxp-packages .anxp__card h3{
+  font-family:var(--anbox-system-font)!important;
+  font-size:clamp(26px,1.354vw,52px)!important;
+  line-height:1.08!important;
+  font-weight:600!important;
+  letter-spacing:-.025em!important;
+  transform:none!important;
+}
+
+/* Shared prose roles. */
+.anbox-part-08 #anxs-services .anxs__card-description,.anbox-part-08 #anxp-packages .anxp__card-lead,.anbox-part-08 #ablog .ablog__feature-copy p,.anbox-part-08 #ablog .ablog__feed-lead,.anbox-part-08 #abct-contacts .abct__lead{
+  font-size:clamp(14px,.729vw,28px);
+  line-height:1.42;
+  font-weight:400;
+}
+
+.anbox-part-08 #anxs-services .anxs__item-copy,.anbox-part-08 #anxp-packages .anxp__package li,.anbox-part-08 #anxt-team-training .anxt__program-list li{
+  font-size:clamp(12px,.625vw,24px);
+  line-height:1.4;
+  font-weight:400;
+}
+
+.anbox-part-08 #ablog .ablog__feature-copy h3{
+  font-size:clamp(28px,1.458vw,56px);
+  line-height:1.1;
+  letter-spacing:-.03em;
+}
+
+.anbox-part-08 #ablog .ablog__feed > h3{
+  font-size:clamp(40px,2.083vw,80px);
+  line-height:1;
+  letter-spacing:-.04em;
+}
+
+.anbox-part-08 #ablog .ablog__intro h2{
+  max-width:clamp(420px,21.875vw,840px);
+}
+
+.anbox-part-08 #abct-contacts .abct__heading h2{
+  max-width:clamp(470px,24.48vw,940px);
+}
+
+/* One radius for UI surfaces; large image frames keep their authored silhouette. */
+.anbox-part-08 #abx-approach-v8 .abxa8__card,.anbox-part-08 #anxg-gallery .anxg__rail,.anbox-part-08 #anxg-gallery .anxg__details,.anbox-part-08 #anxs-services .anxs__cards,.anbox-part-08 #anxp-packages .anxp__card,.anbox-part-08 #anxt-team-training .anxt__shell,.anbox-part-08 #ablog .ablog__feature,.anbox-part-08 #ablog .ablog__feed,.anbox-part-08 #abct-contacts .abct__form-card,.anbox-part-08 #abct-contacts .abct__footer{
+  border-radius:var(--anbox-system-radius);
+}
+
+@media (min-width:1025px){
+  .anbox-part-08 #anxs-services .anxs__stage,.anbox-part-08 #anxp-packages .anxp__stage,.anbox-part-08 #anxt-team-training .anxt__stage,.anbox-part-08 #ablog .ablog__shell{
+    padding-top:clamp(64px,3.333vw,128px);
+    padding-bottom:clamp(80px,4.167vw,160px);
+  }
+
+  .anbox-part-08 #abct-contacts .abct__stage{
+    padding-top:clamp(64px,3.333vw,128px);
+    padding-bottom:clamp(32px,1.667vw,64px);
+  }
+
+  /* Controls and supporting copy continue the same proportional scale on 4K. */
+  .anbox-part-08 #anxs-services .anxs__item-toggle{
+    min-height:clamp(56px,2.917vw,112px);
+    font-size:clamp(16px,.833vw,32px);
+    line-height:1.35;
+  }
+
+  .anbox-part-08 #anxs-services .anxs__item-number{
+    font-size:clamp(12px,.625vw,24px);
+  }
+
+  .anbox-part-08 #anxs-services .anxs__item-title{
+    font-size:inherit!important;
+    line-height:inherit!important;
+  }
+
+  .anbox-part-08 #anxs-services .anxs__item-arrow{
+    width:clamp(32px,1.667vw,64px);
+    height:clamp(32px,1.667vw,64px);
+  }
+
+  .anbox-part-08 #anxp-packages .anxp__package-label,.anbox-part-08 #anxt-team-training .anxt__program-label,.anbox-part-08 #ablog .ablog__meta,.anbox-part-08 #ablog .ablog__read,.anbox-part-08 #ablog .ablog__eyebrow,.anbox-part-08 #ablog .ablog__live,.anbox-part-08 #abct-contacts .abct__field label,.anbox-part-08 #abct-contacts .abct__choice legend{
+    font-size:clamp(10px,.521vw,20px);
+    line-height:1.25;
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__team-copy > p,.anbox-part-08 #anxt-team-training .anxt__training-copy > p:not(.anxt__program-label){
+    font-size:clamp(13px,.677vw,26px)!important;
+    line-height:1.4!important;
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__person h3{
+    font-size:clamp(14px,.729vw,28px);
+    line-height:1.15;
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__person > div > p,.anbox-part-08 #abct-contacts .abct__footer-line,.anbox-part-08 #abct-contacts .abct__contact small,.anbox-part-08 #abct-contacts .abct__social-row > p,.anbox-part-08 #abct-contacts .abct__footer-legal,.anbox-part-08 #abct-contacts .abct__footer-end{
+    font-size:clamp(11px,.573vw,22px);
+    line-height:1.35;
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__training-copy > .anxt__program-label{
+    font-size:clamp(10px,.521vw,20px)!important;
+    line-height:1.25!important;
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__training-copy > .anxt__program-label + ul > li{
+    font-size:clamp(12px,.625vw,24px)!important;
+    line-height:1.4!important;
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__proof-label,.anbox-part-08 #anxt-team-training .anxt__proof-row > span{
+    font-size:clamp(10px,.521vw,20px)!important;
+    line-height:1.25!important;
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__proof-row > strong{
+    font-size:clamp(30px,1.563vw,60px)!important;
+    line-height:1!important;
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__course-link,.anbox-part-08 #anxt-team-training .anxt__primary,.anbox-part-08 #anxp-packages .anxp__custom-button,.anbox-part-08 #ablog .ablog__feed-cta,.anbox-part-08 #abct-contacts .abct__submit,.anbox-part-08 #abct-contacts .abct__direct-note strong{
+    font-size:clamp(11px,.625vw,24px);
+  }
+
+  /* The training panel uses absolute copy/actions. Scale its usable geometry
+     together with type so the approved 1440 layout remains intact on 4K. */
+  .anbox-part-08 #anxt-team-training .anxt__half{
+    padding:clamp(28px,1.458vw,56px);
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__people{
+    margin-top:clamp(24px,1.25vw,48px)!important;
+    gap:clamp(12px,.625vw,24px);
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__person{
+    grid-template-rows:auto clamp(52px,2.708vw,104px);
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__training-copy{
+    top:clamp(80px,4.167vw,160px);
+    bottom:clamp(28px,1.458vw,56px);
+    left:clamp(28px,1.458vw,56px);
+    width:58%;
+    max-width:clamp(310px,16.146vw,620px);
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__training-copy > .anxt__program-label{
+    margin-top:clamp(20px,1.042vw,40px)!important;
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__training-copy > .anxt__program-label + ul{
+    margin-top:clamp(10px,.521vw,20px)!important;
+    gap:clamp(10px,.521vw,20px);
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__training-proof{
+    max-width:clamp(290px,15.104vw,580px);
+    margin-top:clamp(20px,1.042vw,40px);
+    padding-top:clamp(14px,.729vw,28px);
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__proof-row{
+    margin-top:clamp(10px,.521vw,20px);
+    gap:clamp(12px,.625vw,24px);
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__course-link{
+    width:clamp(210px,10.938vw,420px);
+    min-height:clamp(48px,2.5vw,96px)!important;
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__primary{
+    right:clamp(28px,1.458vw,56px);
+    bottom:clamp(28px,1.458vw,56px)!important;
+    width:clamp(160px,8.333vw,320px);
+    min-height:clamp(48px,2.5vw,96px)!important;
+  }
+
+  .anbox-part-08 #abct-contacts .abct__input,.anbox-part-08 #abct-contacts .abct__select,.anbox-part-08 #abct-contacts .abct__textarea,.anbox-part-08 #abct-contacts .abct__chips span{
+    font-size:clamp(13px,.677vw,26px);
+    line-height:1.4;
+  }
+
+  .anbox-part-08 #abct-contacts .abct__input,.anbox-part-08 #abct-contacts .abct__select,.anbox-part-08 #abct-contacts .abct__chips span{
+    min-height:clamp(48px,2.5vw,96px);
+  }
+
+  .anbox-part-08 #abct-contacts .abct__textarea{
+    min-height:clamp(108px,5.625vw,216px);
+  }
+
+  .anbox-part-08 #abct-contacts .abct__contact strong{
+    font-size:clamp(13px,.677vw,26px);
+    line-height:1.35;
+  }
+
+  .anbox-part-08 #abct-contacts .abct__direct-note small,.anbox-part-08 #abct-contacts .abct__consent small,.anbox-part-08 #abct-contacts .abct__footer-legal a,.anbox-part-08 #abct-contacts .abct__footer-end > span{
+    font-size:clamp(10px,.521vw,20px)!important;
+    line-height:1.4!important;
+  }
+}
+
+@media (min-width:1921px){
+  .anbox-part-08 #anxt-team-training .anxt__training-copy{
+    display:flex;
+    flex-direction:column;
+    max-width:760px;
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__program-list,.anbox-part-08 #anxt-team-training .anxt__training-copy li{
+    width:100%;
+    max-width:none;
+  }
+
+  .anbox-part-08 #anxt-team-training .anxt__actions{
+    position:static;
+    margin-top:auto!important;
+    padding-top:clamp(20px,1.042vw,40px);
+  }
+}
+
+@media (min-width:641px) and (max-width:1024px){
+  .anbox-part-08 #ablog .ablog__shell{
+    width:calc(100% - 40px);
+    max-width:none;
+    margin-inline:20px;
+    padding:56px 0 64px;
+  }
+
+  .anbox-part-08 #anxs-services .anxs__stage,.anbox-part-08 #anxp-packages .anxp__stage,.anbox-part-08 #anxt-team-training .anxt__stage{
+    padding-top:56px!important;
+    padding-bottom:64px!important;
+  }
+
+  .anbox-part-08 #abct-contacts .abct__stage{
+    padding-top:56px!important;
+    padding-bottom:20px!important;
+  }
+
+  .anbox-part-08 #abx-approach-v8 .abxa8__kicker,.anbox-part-08 #anxg-gallery .anxg__kicker,.anbox-part-08 #anxs-services .anxs__kicker,.anbox-part-08 #anxp-packages .anxp__kicker,.anbox-part-08 #anxt-team-training .anxt__label,.anbox-part-08 #ablog .ablog__kicker,.anbox-part-08 #abct-contacts .abct__kicker{
+    font-size:11px;
+    line-height:14px;
+  }
+
+  .anbox-part-08 #abx-approach-v8 .abxa8__title,.anbox-part-08 #anxs-services .anxs__title-wrap h2,.anbox-part-08 #anxp-packages .anxp__header h2,.anbox-part-08 #ablog .ablog__intro h2,.anbox-part-08 #abct-contacts .abct__heading h2{
+    font-size:17px!important;
+    line-height:21px!important;
+  }
+
+  .anbox-part-08 #anxs-services .anxs__card h3,.anbox-part-08 #anxp-packages .anxp__card h3{
+    font-size:24px!important;
+    line-height:28px!important;
+  }
+}
+
+@media (max-width:640px){
+  .anbox-part-08 #anxg-gallery .anxg__stage{
+    width:calc(100% - 32px);
+    margin-inline:16px;
+  }
+
+  .anbox-part-08 #ablog .ablog__shell{
+    width:calc(100% - 32px);
+    max-width:none;
+    margin-inline:16px;
+    padding:40px 0 56px;
+  }
+
+  .anbox-part-08 #abx-approach-v8 .abxa8__kicker,.anbox-part-08 #anxg-gallery .anxg__kicker,.anbox-part-08 #anxs-services .anxs__kicker,.anbox-part-08 #anxp-packages .anxp__kicker,.anbox-part-08 #anxt-team-training .anxt__label,.anbox-part-08 #ablog .ablog__kicker,.anbox-part-08 #abct-contacts .abct__kicker{
+    font-size:10px;
+    line-height:12px;
+  }
+
+  .anbox-part-08 #abx-approach-v8 .abxa8__title,.anbox-part-08 #anxs-services .anxs__title-wrap h2,.anbox-part-08 #anxp-packages .anxp__header h2,.anbox-part-08 #ablog .ablog__intro h2,.anbox-part-08 #abct-contacts .abct__heading h2{
+    font-size:16px!important;
+    line-height:21px!important;
+  }
+
+  .anbox-part-08 #anxs-services .anxs__card h3,.anbox-part-08 #anxp-packages .anxp__card h3{
+    font-size:22px!important;
+    line-height:26px!important;
+  }
+
+  .anbox-part-08 #anxs-services .anxs__card-description,.anbox-part-08 #anxp-packages .anxp__card-lead,.anbox-part-08 #ablog .ablog__feature-copy p,.anbox-part-08 #ablog .ablog__feed-lead,.anbox-part-08 #abct-contacts .abct__lead{
+    font-size:14px;
+    line-height:20px;
+  }
+}
+</style>
+<style data-anbox-section-intros="unified-v1">
+/* One geometry for section number, descriptor and statement (02/04/05/08/09). */
+.anbox-part-08 .anbox-composite{
+  --anbox-intro-gap:clamp(16px,.833vw,32px);
+  --anbox-intro-indent:clamp(16px,.938vw,36px);
+  --anbox-intro-label-gap:clamp(10px,.625vw,24px);
+  --anbox-intro-rule:2px;
+}
+
+.anbox-part-08 #abx-approach-v8 .abxa8__kicker,.anbox-part-08 #anxs-services .anxs__kicker,.anbox-part-08 #anxp-packages .anxp__kicker,.anbox-part-08 #ablog .ablog__kicker,.anbox-part-08 #abct-contacts .abct__kicker{
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  display:flex;
+  align-items:center;
+  gap:var(--anbox-intro-label-gap)!important;
+}
+
+.anbox-part-08 #abx-approach-v8 .abxa8__kicker > *,.anbox-part-08 #anxs-services .anxs__kicker > *,.anbox-part-08 #anxp-packages .anxp__kicker > *,.anbox-part-08 #ablog .ablog__kicker > *,.anbox-part-08 #abct-contacts .abct__kicker > *{
+  font-size:inherit!important;
+  font-weight:inherit!important;
+  line-height:inherit!important;
+}
+
+.anbox-part-08 #abx-approach-v8 .abxa8__title-wrap,.anbox-part-08 #anxs-services .anxs__title-wrap,.anbox-part-08 #anxp-packages .anxp__header h2,.anbox-part-08 #ablog .ablog__intro,.anbox-part-08 #abct-contacts .abct__heading h2{
+  box-sizing:border-box;
+  margin-top:var(--anbox-intro-gap)!important;
+  padding-top:0!important;
+  padding-right:0!important;
+  padding-bottom:0!important;
+  padding-left:var(--anbox-intro-indent)!important;
+}
+
+.anbox-part-08 #abx-approach-v8 .abxa8__title,.anbox-part-08 #anxs-services .anxs__title-wrap h2,.anbox-part-08 #ablog .ablog__intro h2{
+  margin:0!important;
+}
+
+.anbox-part-08 #anxp-packages .anxp__header h2,.anbox-part-08 #abct-contacts .abct__heading h2{
+  margin-right:0!important;
+  margin-bottom:0!important;
+  margin-left:0!important;
+}
+
+.anbox-part-08 #abx-approach-v8 .abxa8__title::before{
+  top:0!important;
+  bottom:0!important;
+  left:calc(-1 * var(--anbox-intro-indent))!important;
+  width:var(--anbox-intro-rule)!important;
+}
+
+.anbox-part-08 #anxs-services .anxs__title-wrap::before,.anbox-part-08 #anxp-packages .anxp__header h2::before{
+  inset:0 auto 0 0!important;
+  width:var(--anbox-intro-rule)!important;
+}
+
+.anbox-part-08 #ablog .ablog__intro{
+  position:relative;
+  display:block!important;
+}
+
+.anbox-part-08 #ablog .ablog__intro > i{
+  position:absolute;
+  inset:0 auto 0 0;
+  width:var(--anbox-intro-rule);
+  height:auto;
+  border-radius:99px;
+  background:var(--ab-purple);
+}
+
+.anbox-part-08 #abct-contacts .abct__heading h2{
+  border-left:var(--anbox-intro-rule) solid var(--abct-purple)!important;
+}
+
+@media (min-width:1025px){
+  .anbox-part-08 #abx-approach-v8 .abxa8__kicker,.anbox-part-08 #anxs-services .anxs__kicker,.anbox-part-08 #anxp-packages .anxp__kicker,.anbox-part-08 #ablog .ablog__kicker,.anbox-part-08 #abct-contacts .abct__kicker{
+    height:clamp(15px,.781vw,30px)!important;
+  }
+
+  .anbox-part-08 #abx-approach-v8 .abxa8__layout{
+    grid-template-rows:clamp(15px,.781vw,30px) auto 32px minmax(440px,auto);
+  }
+
+  .anbox-part-08 #anxs-services .anxs__title-wrap{
+    width:100%;
+    margin-left:0!important;
+  }
+
+}
+
+@media (min-width:641px) and (max-width:1024px){
+  .anbox-part-08 #abx-approach-v8 .abxa8__kicker,.anbox-part-08 #anxs-services .anxs__kicker,.anbox-part-08 #anxp-packages .anxp__kicker,.anbox-part-08 #ablog .ablog__kicker,.anbox-part-08 #abct-contacts .abct__kicker{
+    height:14px!important;
+  }
+}
+
+@media (min-width:961px) and (max-width:1024px){
+  .anbox-part-08 #abx-approach-v8 .abxa8__layout{
+    grid-template-rows:14px auto 32px minmax(440px,auto);
+  }
+
+  .anbox-part-08 #abx-approach-v8 .abxa8__kicker,.anbox-part-08 #abx-approach-v8 .abxa8__title-wrap,.anbox-part-08 #anxp-packages .anxp__kicker,.anbox-part-08 #anxp-packages .anxp__header h2{
+    margin-left:-20px!important;
+  }
+}
+
+@media (max-width:640px){
+  .anbox-part-08 #abx-approach-v8 .abxa8__kicker,.anbox-part-08 #anxs-services .anxs__kicker,.anbox-part-08 #anxp-packages .anxp__kicker,.anbox-part-08 #ablog .ablog__kicker,.anbox-part-08 #abct-contacts .abct__kicker{
+    height:12px!important;
+  }
+}
+
+.anbox-part-08 #abct-contacts .abct__heading{
+  width:calc(100% + (2 * clamp(21px,2.778vw,40px)));
+  margin-left:calc(-1 * clamp(21px,2.778vw,40px));
+}
+
+@media (min-width:961px){
+  .anbox-part-08 #abct-contacts .abct__heading{
+    width:calc(100% + 80px);
+    margin-left:-40px;
+  }
+
+  .anbox-part-08 #abct-contacts.abct .abct__form-card{
+    width:100%!important;
+    margin-inline:0!important;
+  }
+}
+
+@media (min-width:641px) and (max-width:960px){
+  .anbox-part-08 #abct-contacts .abct__heading{
+    width:calc(100% + 64px);
+    margin-left:-32px;
+  }
+}
+</style>
+<style data-anbox-action-color-system>
+.anbox-part-08{
+  --anbox-action: #dde63f;
+  --anbox-action-soft: rgba(221, 230, 63, .14);
+  --anbox-action-line: rgba(183, 193, 35, .58);
+  --anbox-action-ink: #171717;
+}
+
+/* Primary actions: one solid brand color everywhere. */
+.anbox-part-08 #abx8 .abx8__header-cta,.anbox-part-08 #abx8 .abx8__primary,.anbox-part-08 #abx8 .abx8__project-arrow,.anbox-part-08 #anxg-gallery .anxg__next-project,.anbox-part-08 #anxp-packages .anxp__custom-button,.anbox-part-08 #anxt-team-training .anxt__primary,.anbox-part-08 #ablog .ablog__feed-cta,.anbox-part-08 #abct-contacts .abct__submit,.anbox-part-08 #abct-contacts .abct__to-top{
+  border-color: var(--anbox-action) !important;
+  background: var(--anbox-action) !important;
+  color: var(--anbox-action-ink) !important;
+}
+
+/* Secondary actions: the only permitted translucent button fill. */
+.anbox-part-08 #abct-contacts .abct__direct-note,.anbox-part-08 #abct-contacts .abct__socials a{
+  border-color: var(--anbox-action-line) !important;
+  background: var(--anbox-action-soft) !important;
+}
+
+.anbox-part-08 #abct-contacts .abct__socials a{
+  color: var(--anbox-action-ink) !important;
+}
+
+@media (hover: hover) and (pointer: fine){
+  .anbox-part-08 #abx8 .abx8__header-cta:hover,.anbox-part-08 #abx8 .abx8__primary:hover,.anbox-part-08 #abx8 .abx8__project-arrow:hover,.anbox-part-08 #anxg-gallery .anxg__next-project:hover,.anbox-part-08 #anxp-packages .anxp__custom-button:hover,.anbox-part-08 #anxt-team-training .anxt__primary:hover,.anbox-part-08 #ablog .ablog__feed-cta:hover,.anbox-part-08 #abct-contacts .abct__submit:hover,.anbox-part-08 #abct-contacts .abct__to-top:hover{
+    opacity: .86;
+  }
+
+  .anbox-part-08 #abct-contacts .abct__direct-note:hover,.anbox-part-08 #abct-contacts .abct__socials a:hover{
+    background: rgba(221, 230, 63, .22) !important;
+  }
+}
+</style>
+<style data-anbox-highlight-height-system>
+.anbox-part-08 .anbox-composite{
+  --anbox-highlight-height: 93%;
+}
+
+.anbox-part-08 #anxs-services .anxs__highlight{
+  background-position: left center !important;
+  background-size: 0 var(--anbox-highlight-height) !important;
+}
+
+.anbox-part-08 #anxs-services.is-in .anxs__highlight{
+  background-size: 100% var(--anbox-highlight-height) !important;
+}
+
+.anbox-part-08 #anxp-packages .anxp__highlight{
+  background-position: left center !important;
+  background-size: 0 var(--anbox-highlight-height) !important;
+}
+
+.anbox-part-08 #anxp-packages.anxp-is-in .anxp__highlight{
+  background-size: 100% var(--anbox-highlight-height) !important;
+}
+
+.anbox-part-08 #ablog .ablog__intro h2 span{
+  background-position: left center !important;
+  background-size: 0 var(--anbox-highlight-height) !important;
+}
+
+.anbox-part-08 #ablog .ablog__head.is-visible .ablog__intro h2 span{
+  background-size: 100% var(--anbox-highlight-height) !important;
+}
+
+.anbox-part-08 #abct-contacts .abct__heading h2 span{
+  background-position: left center !important;
+  background-size: 0 var(--anbox-highlight-height) !important;
+  animation: none !important;
+  transition: background-size .72s cubic-bezier(.65,0,.35,1) .36s !important;
+}
+
+.anbox-part-08 #abct-contacts.abct-is-in .abct__heading h2 span{
+  animation: none !important;
+  background-size: 100% var(--anbox-highlight-height) !important;
+}
+
+@keyframes abct-highlight-height-in {
+  to { background-size: 100% 93%; }
+}
+</style>
+<style data-anbox-button-system>
+.anbox-part-08{--anbox-action:#dde63f;--anbox-action-soft:rgba(221,230,63,.14);--anbox-action-ink:#171717;--anbox-action-radius:8px;--anbox-action-height:42px}
+.anbox-part-08 :is(.abx8__primary,.anxg__next-project,.anxp__custom-button,#anxt-team-training .anxt__primary,.abct__submit,.anxs-v4__cta){box-sizing:border-box!important;height:var(--anbox-action-height)!important;min-height:var(--anbox-action-height)!important;padding:0 16px!important;border-radius:var(--anbox-action-radius)!important;background:var(--anbox-action)!important;color:var(--anbox-action-ink)!important;font-size:10px!important;font-weight:700!important;line-height:1!important;text-transform:uppercase;transition:filter .2s ease,transform .2s ease}
+.anbox-part-08 .abx8__header-cta{box-sizing:border-box!important;height:34px!important;min-height:34px!important;border-radius:var(--anbox-action-radius)!important;background:var(--anbox-action)!important;color:var(--anbox-action-ink)!important}
+.anbox-part-08 #abct-contacts .abct__direct-note{box-sizing:border-box!important;height:var(--anbox-action-height)!important;min-height:var(--anbox-action-height)!important;padding:5px 16px 5px 14px!important;border:1px solid #9b7cff!important;border-radius:var(--anbox-action-radius)!important;background:#9b7cff!important;color:#fff!important;font-size:10px!important;font-weight:600!important;line-height:1.2!important;text-transform:none}
+.anbox-part-08 #abct-contacts .abct__direct-note small{color:rgba(255,255,255,.68)!important;font-size:9px!important;font-weight:400!important;line-height:1.15!important}
+.anbox-part-08 #abct-contacts .abct__direct-note strong{margin-top:3px!important;color:#fff!important;font-size:11px!important;font-weight:600!important;line-height:1.15!important}
+.anbox-part-08 #abct-contacts .abct__direct-note i{background:transparent!important;color:#fff!important}
+.anbox-part-08 #abct-contacts :is(.abct__submit,.abct__direct-note){display:flex!important;align-items:center!important}
+.anbox-part-08 #abct-contacts :is(.abct__submit,.abct__direct-note) i{box-sizing:border-box!important;width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;flex:0 0 auto!important;margin:0!important;padding:0!important;display:block!important;border-radius:0!important;background:transparent!important;font-family:Arial,sans-serif!important;font-size:13px!important;font-style:normal!important;font-weight:400!important;line-height:1!important;transform:none!important}
+.anbox-part-08 #abct-contacts .abct__submit i{color:#171717!important}
+.anbox-part-08 #abct-contacts .abct__direct-note i{color:#fff!important}
+.anbox-part-08 #anxt-team-training .anxt__primary{display:flex!important;align-items:center!important;justify-content:space-between!important}
+.anbox-part-08 #ablog .ablog__feed-cta>i{width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;display:block!important;border:0!important;border-radius:0!important;background:transparent!important;color:#171717!important;font-size:13px!important;font-style:normal!important;line-height:1!important;transform:none!important}
+@media(hover:hover) and (pointer:fine){.anbox-part-08 #ablog .ablog__feed-cta:hover>i{transform:none!important}}
+.anbox-part-08 #abct-contacts .abct__textarea{height:92px!important;min-height:92px!important}
+@media(hover:hover) and (pointer:fine){.anbox-part-08 #abct-contacts .abct__direct-note:hover{border-color:#9b7cff!important;background:#9b7cff!important;filter:brightness(.94)}}
+@media(hover:hover) and (pointer:fine){.anbox-part-08 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__primary,.abct__submit,.anxs-v4__cta):hover{filter:brightness(.96)}}
+.anbox-part-08 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__course-link,.anxt__primary,.ablog__feed-cta,.abct__submit,.abct__direct-note,.anxs-v4__cta)>:is(svg,i,span:last-child){transition:transform 220ms cubic-bezier(.22,1,.36,1)!important;transform:translate(0,0)!important;will-change:transform}
+@media(hover:hover) and (pointer:fine){.anbox-part-08 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__course-link,.anxt__primary,.ablog__feed-cta,.abct__submit,.abct__direct-note,.anxs-v4__cta):is(:hover,:focus-visible)>:is(svg,i,span:last-child){transform:translate(3px,-3px) rotate(-45deg)!important}}
+.anbox-part-08 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__course-link,.anxt__primary,.ablog__feed-cta,.abct__submit,.abct__direct-note,.anxs-v4__cta):active>:is(svg,i,span:last-child){transform:translate(3px,-3px) rotate(-45deg)!important}
+@media(prefers-reduced-motion:reduce){.anbox-part-08 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__course-link,.anxt__primary,.ablog__feed-cta,.abct__submit,.abct__direct-note,.anxs-v4__cta)>:is(svg,i,span:last-child){transition:none!important;transform:none!important}}
+</style>
+<style data-anbox-blog-contact-actions="compact-motion-v1">
+.anbox-part-08 #ablog .ablog__feed-cta{
+  box-sizing: border-box !important;
+  min-height: 54px !important;
+  height: 54px !important;
+  padding: 8px 16px 8px 18px !important;
+}
+.anbox-part-08 #ablog .ablog__feed-cta > i,.anbox-part-08 #abct-contacts.abct .abct__submit > i,.anbox-part-08 #abct-contacts.abct .abct__direct-note > i{
+  transition: transform 220ms cubic-bezier(.22, 1, .36, 1) !important;
+  transform: translate(0, 0) rotate(0deg) !important;
+  transform-origin: center !important;
+  will-change: transform;
+}
+@media (hover: hover) and (pointer: fine){
+  .anbox-part-08 #ablog .ablog__feed-cta:is(:hover, :focus-visible) > i,.anbox-part-08 #abct-contacts.abct .abct__submit:is(:hover, :focus-visible) > i,.anbox-part-08 #abct-contacts.abct .abct__direct-note:is(:hover, :focus-visible) > i{
+    transform: translate(3px, -3px) rotate(-45deg) !important;
+  }
+}
+.anbox-part-08 #ablog .ablog__feed-cta:active > i,.anbox-part-08 #abct-contacts.abct .abct__submit:active > i,.anbox-part-08 #abct-contacts.abct .abct__direct-note:active > i{
+  transform: translate(3px, -3px) rotate(-45deg) !important;
+}
+@media (prefers-reduced-motion: reduce){
+  .anbox-part-08 #ablog .ablog__feed-cta > i,.anbox-part-08 #abct-contacts.abct .abct__submit > i,.anbox-part-08 #abct-contacts.abct .abct__direct-note > i{
+    transition: none !important;
+  }
+}
+</style>
+<style data-anbox-blog-cover-image="v1">
+.anbox-part-08 #ablog .ablog__cover-image {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  padding: 0 !important;
+  display: block;
+  object-fit: cover;
+  background: #e8e6e1;
+}
+</style>
+<style data-anbox-screen-spacing="desktop-mobile-v1">
+@media(min-width:1025px){
+  .anbox-part-08 #ablog .ablog__shell{box-sizing:border-box;width:100%;max-width:none;margin:0;padding:64px var(--anbox-content-inset) 80px}
+}
+@media(max-width:640px){
+  .anbox-part-08 #ablog .ablog__shell{box-sizing:border-box;width:100%;max-width:none;margin:0;padding:var(--anbox-mobile-section-space) var(--anbox-content-inset)}
+}
+</style>
+<div class="anbox-part-08"><div class="anbox-full-page anbox-composite"><section id="ablog" class="ablog" lang="ru" aria-labelledby="ablog-title">
+  <div class="ablog__shell">
+    <header class="ablog__head" data-ablog-reveal>
+      <div class="ablog__kicker">
+        <span>08</span><span>/</span><span>Блог</span>
+      </div>
+
+      <div class="ablog__intro">
+        <i aria-hidden="true"></i>
+        <h2 id="ablog-title">Делимся практикой и&nbsp;<span>наблюдениями</span> <br>о дизайне, брендах и&nbsp;упаковке.</h2>
+      </div>
+    </header>
+
+    <div class="ablog__desktop" aria-label="Материалы ANBOX">
+      <article class="ablog__feature" data-ablog-reveal>
+        <a class="ablog__feature-link" href="https://world-food.ru/ru/business-program/bp26/1Forum/DAY4-Pitch/" target="_blank" rel="noopener noreferrer" aria-label="Подробнее о сессии «Упаковка» на WorldFood 2026">
+          <img class="ablog__cover ablog__cover-image" data-ablog-editable-cover src="https://static.tildacdn.com/tild3564-3961-4336-b563-366136363136/4aedec97-a87f-4eed-a.png" alt="" width="1670" height="941" loading="lazy" decoding="async">
+
+          <div class="ablog__feature-body">
+            <div class="ablog__meta"><span>Новости</span><span>Дизайн упаковки</span></div>
+            <div class="ablog__feature-copy">
+              <h3>ANBOX Studio — соорганизатор сессии «Упаковка» на WorldFood 2026</h3>
+              <p>Приглашаем посетить экспертную сессию 18 сентября.</p>
+            </div>
+            <span class="ablog__read">Подробнее на сайте <i aria-hidden="true">↗</i></span>
+          </div>
+        </a>
+      </article>
+
+      <aside class="ablog__feed" data-ablog-reveal aria-labelledby="ablog-feed-title">
+        <div class="ablog__feed-top">
+          <span class="ablog__eyebrow">Новости студии</span>
+          <span class="ablog__live"><i></i> Живая лента</span>
+        </div>
+
+        <h3 id="ablog-feed-title">Проекты, процессы<br>и жизнь ANBOX.</h3>
+        <p class="ablog__feed-lead">Короткие наблюдения, рабочие фрагменты и новости команды публикуем в Telegram.</p>
+
+        <ul class="ablog__topics" aria-label="Темы новостей">
+          <li><span>01</span><strong>Кейсы и рабочий процесс</strong><i aria-hidden="true"></i></li>
+          <li><span>02</span><strong>Упаковка, брендинг и полка</strong><i aria-hidden="true"></i></li>
+          <li><span>03</span><strong>Студия и обучение</strong><i aria-hidden="true"></i></li>
+        </ul>
+
+        <a class="ablog__feed-cta" href="https://anboxdesign.ru/news" target="_blank" rel="noopener">
+          <span><small>Все обновления</small><strong>Перейти к новостям</strong></span>
+          <i aria-hidden="true">→</i>
+        </a>
+      </aside>
+    </div>
+
+    <div class="ablog__mobile" aria-label="Материалы ANBOX — мобильная версия">
+      <article class="ablog__m-feature" data-ablog-reveal>
+        <a href="https://world-food.ru/ru/business-program/bp26/1Forum/DAY4-Pitch/" target="_blank" rel="noopener noreferrer" aria-label="Подробнее о сессии «Упаковка» на WorldFood 2026">
+          <img class="ablog__m-cover ablog__cover-image" data-ablog-editable-cover src="https://static.tildacdn.com/tild3666-3135-4166-b461-646139366566/dd4e719d-6946-4e2f-a.png" alt="" width="900" height="1200" loading="lazy" decoding="async">
+          <div class="ablog__m-body">
+            <p>Новости · Дизайн упаковки</p>
+            <h3>ANBOX Studio — соорганизатор сессии «Упаковка» на WorldFood 2026</h3>
+            <span>Подробнее на сайте <i aria-hidden="true">↗</i></span>
+          </div>
+        </a>
+      </article>
+
+      <a class="ablog__m-news" href="https://anboxdesign.ru/news" target="_blank" rel="noopener" data-ablog-reveal>
+        <p>Новости студии <span><i></i> Живая лента</span></p>
+        <h3>Проекты, процессы<br>и жизнь ANBOX.</h3>
+        <div><span>Перейти к новостям</span><i aria-hidden="true">↗</i></div>
+      </a>
+    </div>
+  </div>
+</section></div></div>
+<script>
+(() => {
+  const root = document.getElementById('ablog');
+  if (!root) return;
+  const items = root.querySelectorAll('[data-ablog-reveal]');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(item => item.classList.add('is-visible'));
+    return;
+  }
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: .16 });
+  items.forEach(item => observer.observe(item));
+})();
+</script>
+<script data-anbox-scroll-replay>
+(function () {
+  "use strict";
+
+  function initANBOXScrollReplay() {
+    if (!window.IntersectionObserver || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+
+    var sections = [
+      ["abx8", "abx8-entry-in"],
+      ["abx-approach-v8", "is-in"],
+      ["anxg-gallery", "anxg-entry-in"],
+      ["anxs-services", "is-in"],
+      ["anxp-packages", "anxp-is-in"],
+      ["anxt-team-training", "anxt-is-in"],
+      ["abct-contacts", "abct-is-in"]
+    ];
+
+    sections.forEach(function (pair) {
+      var root = document.getElementById(pair[0]);
+      var activeClass = pair[1];
+      if (!root || root.dataset.anboxReplayReady === "true") return;
+      root.dataset.anboxReplayReady = "true";
+
+      var visible = false;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.intersectionRatio >= 0.12) {
+            visible = true;
+            root.classList.add(activeClass);
+          } else if (!entry.isIntersecting) {
+            visible = false;
+            root.classList.remove(activeClass);
+          }
+        });
+      }, { threshold: [0, 0.12], rootMargin: "0px 0px -6% 0px" });
+
+      observer.observe(root);
+      window.setTimeout(function () {
+        if (!visible) root.classList.remove(activeClass);
+      }, 750);
+    });
+
+    var blogItems = document.querySelectorAll("#ablog [data-ablog-reveal]");
+    var blogObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.intersectionRatio >= 0.12) entry.target.classList.add("is-visible");
+        else if (!entry.isIntersecting) entry.target.classList.remove("is-visible");
+      });
+    }, { threshold: [0, 0.12], rootMargin: "0px 0px -6% 0px" });
+
+    blogItems.forEach(function (item) { blogObserver.observe(item); });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initANBOXScrollReplay, { once: true });
+  } else {
+    initANBOXScrollReplay();
+  }
+})();
+</script>
+<style data-anbox-4k="v1">
+@media (min-width:1921px){
+  .anbox-part-08{--anbox-action-height:clamp(42px,2.188vw,84px)}
+  .anbox-part-08 :is(.abx8__primary,.anxg__next-project,.anxp__custom-button,#anxt-team-training .anxt__primary,.abct__submit,.anxs-v4__cta){
+    height:var(--anbox-action-height)!important;min-height:var(--anbox-action-height)!important;
+    padding-inline:clamp(16px,.833vw,32px)!important;font-size:clamp(10px,.521vw,20px)!important
+  }
+  .anbox-part-08 :is(.abx8__primary,.anxg__next-project,.anxp__custom-button,#anxt-team-training .anxt__primary,.abct__submit,.anxs-v4__cta)>:is(svg,i,span:last-child){font-size:clamp(13px,.677vw,26px)!important}
+}
+@media (min-width:1921px){
+  .anbox-part-08 #ablog .ablog__meta,.anbox-part-08 #ablog .ablog__read,.anbox-part-08 #ablog .ablog__eyebrow,.anbox-part-08 #ablog .ablog__live{font-size:clamp(11px,.573vw,22px)!important}
+  .anbox-part-08 #ablog .ablog__feature-copy h3{font-size:clamp(30px,1.563vw,60px)!important;line-height:1.05!important}
+  .anbox-part-08 #ablog .ablog__feature-copy p,.anbox-part-08 #ablog .ablog__feed-lead{font-size:clamp(14px,.729vw,28px)!important;line-height:1.45!important}
+  .anbox-part-08 #ablog .ablog__feed>h3{font-size:clamp(42px,2.188vw,84px)!important;line-height:1.02!important}
+  .anbox-part-08 #ablog .ablog__feed-row{min-height:clamp(52px,2.708vw,104px)!important;font-size:clamp(14px,.729vw,28px)!important}
+}
+</style>

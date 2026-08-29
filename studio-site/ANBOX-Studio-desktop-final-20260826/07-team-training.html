@@ -1,0 +1,2554 @@
+<!--
+ANBOX STUDIO · 07 · Команда и обучение
+Статус: branch/current
+Назначение: один VibeBlock, desktop + mobile
+Вставляйте целиком в порядке файлов из README.md.
+-->
+<style data-anbox-full-page>
+  .anbox-part-07{ scroll-behavior: smooth; background: #f5f3ef; }
+  .anbox-part-07{ margin: 0; overflow-x: hidden; background: #f5f3ef; color: #171717; }
+  .anbox-part-07 .anbox-full-page{ width: 100%; overflow: clip; }
+  .anbox-part-07 .anbox-full-page > section{ display: block; position: relative; }
+  .anbox-part-07 :focus-visible{ outline: 2px solid #8f71e6; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce){ .anbox-part-07{ scroll-behavior: auto; } }
+
+.anbox-part-07{
+  --anbox-shell:1200px;
+  --anbox-page-gutter:20px;
+  --anbox-content-inset:6.6667vw;
+  --anbox-mobile-section-space:clamp(56px,16vw,72px);
+}
+@media(max-width:640px){
+  .anbox-part-07{--anbox-content-inset:clamp(16px,4.6vw,24px)}
+}
+</style>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap");
+
+#anxt-team-training {
+  --anxt-paper: var(--anbox-paper, #f4f1ed);
+  --anxt-surface: var(--anbox-surface, #fbfaf7);
+  --anxt-graphite: var(--anbox-graphite, #202123);
+  --anxt-ink: var(--anbox-ink, #171717);
+  --anxt-muted: var(--anbox-muted, #66645f);
+  --anxt-on-dark: var(--anbox-on-dark, #f5f3ef);
+  --anxt-dark-muted: var(--anbox-muted-dark, #aaa9a5);
+  --anxt-line: var(--anbox-line-light, rgba(23, 23, 23, .14));
+  --anxt-purple: var(--anbox-purple, #ad95ee);
+  --anxt-lime: var(--anbox-lime, #dde63f);
+  --anxt-shell: var(--anbox-shell, 1200px);
+  --anxt-page-gutter: var(--anbox-page-gutter, 20px);
+  --anxt-display: var(--anbox-ds-font-heading, var(--anbox-font-text, "Onest", Arial, sans-serif));
+  --anxt-text: var(--anbox-font-text, "Onest", Arial, sans-serif);
+  --anxt-ease: var(--anbox-ease, cubic-bezier(.22, 1, .36, 1));
+
+  width: 100%;
+  overflow-x: clip;
+  background: var(--anxt-paper);
+  color: var(--anxt-ink);
+  font-family: var(--anxt-text);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.anbox-part-07 #anxt-team-training,.anbox-part-07 #anxt-team-training *{
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.anbox-part-07 #anxt-team-training h2,.anbox-part-07 #anxt-team-training h3,.anbox-part-07 #anxt-team-training p,.anbox-part-07 #anxt-team-training figure,.anbox-part-07 #anxt-team-training ul{
+  margin: 0;
+}
+
+.anbox-part-07 #anxt-team-training ul{
+  padding: 0;
+  list-style: none;
+}
+
+.anbox-part-07 #anxt-team-training a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.anbox-part-07 #anxt-team-training a:focus-visible{
+  outline: 3px solid var(--anxt-purple);
+  outline-offset: 3px;
+}
+
+.anbox-part-07 .anxt__stage{
+  width: min(
+    var(--anxt-shell),
+    calc(100% - (var(--anxt-page-gutter) * 2))
+  );
+  height: 460px;
+  margin: 0 auto;
+  padding: 20px 0;
+  overflow: hidden;
+  container-type: inline-size;
+}
+
+.anbox-part-07 .anxt__shell{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border: 1px solid var(--anxt-line);
+  border-radius: 18px;
+  background: var(--anxt-surface);
+  box-shadow: 0 8px 24px rgba(23, 23, 23, .035);
+}
+
+.anbox-part-07 .anxt__half{
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  padding: 18px 24px;
+}
+
+.anbox-part-07 .anxt__team{
+  display: grid;
+  grid-template-rows: 32px auto minmax(0, 1fr);
+  background: var(--anxt-surface);
+}
+
+.anbox-part-07 .anxt__training{
+  padding: 24px 26px;
+  color: var(--anxt-on-dark);
+  background: var(--anxt-graphite);
+}
+
+.anbox-part-07 .anxt__training-side{
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  pointer-events: none;
+}
+
+.anbox-part-07 .anxt__training-visual{
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #17181a;
+}
+
+.anbox-part-07 .anxt__training-image{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.anbox-part-07 .anxt__header{
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.anbox-part-07 .anxt__label{
+  padding-top: 8px;
+  color: var(--anxt-muted);
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.anbox-part-07 .anxt__training .anxt__label{
+  color: var(--anxt-dark-muted);
+}
+
+.anbox-part-07 .anxt__dot{
+  width: 32px;
+  height: 32px;
+  display: block;
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+.anbox-part-07 .anxt__dot--lime{
+  background: var(--anxt-lime);
+}
+
+.anbox-part-07 .anxt__dot--purple{
+  border: 2px solid var(--anxt-purple);
+  background: transparent;
+}
+
+.anbox-part-07 .anxt__team-copy{
+  margin-top: -1px;
+}
+
+.anbox-part-07 .anxt__team-copy h2,.anbox-part-07 .anxt__training-copy h2{
+  font-family: var(--anxt-display);
+  font-size: 44px;
+  font-weight: var(--anbox-font-display-weight, 700);
+  line-height: .84;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.anbox-part-07 .anxt__team-copy > p,.anbox-part-07 .anxt__training-copy > p{
+  margin-top: 7px !important;
+  font-size: 12px;
+  line-height: 1.42;
+}
+
+.anbox-part-07 .anxt__team-copy > p{
+  color: var(--anxt-muted);
+}
+
+.anbox-part-07 .anxt__people{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: end;
+  gap: 12px;
+}
+
+.anbox-part-07 .anxt__person{
+  display: block;
+}
+
+.anbox-part-07 .anxt__portrait{
+  position: relative;
+  width: 100%;
+  height: 148px;
+  overflow: hidden;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 50% 32%, #c5c4c0 0 17%, transparent 17.5%),
+    radial-gradient(ellipse at 50% 108%, #8d8e8c 0 45%, transparent 45.5%),
+    linear-gradient(145deg, #e7e4df, #cbc9c4);
+}
+
+.anbox-part-07 .anxt__portrait img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(1);
+  transition: transform .8s var(--anxt-ease);
+}
+
+.anbox-part-07 .anxt__portrait--placeholder img{
+  opacity: 0;
+}
+
+.anbox-part-07 .anxt__portrait > span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: rgba(23, 23, 23, .42);
+  font-size: 10px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  transform: translate(-50%, -50%);
+}
+
+.anbox-part-07 .anxt__portrait:not(.anxt__portrait--placeholder) > span{
+  display: none;
+}
+
+.anbox-part-07 .anxt__person h3{
+  margin-top: 6px !important;
+  font-family: var(--anxt-display);
+  font-size: 15px;
+  font-weight: var(--anbox-font-display-weight, 700);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.anbox-part-07 .anxt__person > div > p{
+  margin-top: 5px !important;
+  color: var(--anxt-muted);
+  font-size: 9.5px;
+  line-height: 1.35;
+}
+
+.anbox-part-07 .anxt__training-copy{
+  position: relative;
+  z-index: 3;
+  width: 58%;
+  margin-top: -1px;
+}
+
+.anbox-part-07 .anxt__training-copy h2{
+  font-size: 46px;
+  line-height: .82;
+}
+
+.anbox-part-07 .anxt__training-copy > p{
+  margin-top: 12px !important;
+  color: var(--anxt-dark-muted);
+  font-size: 12px;
+  line-height: 1.34;
+}
+
+.anbox-part-07 .anxt__training-copy ul{
+  margin-top: 14px;
+  display: grid;
+  gap: 9px;
+}
+
+.anbox-part-07 .anxt__training-copy li{
+  position: relative;
+  padding-left: 13px;
+  color: #c4c2bd;
+  font-size: 10.5px;
+  line-height: 1.28;
+}
+
+.anbox-part-07 .anxt__training-copy li::before{
+  position: absolute;
+  top: .42em;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--anxt-lime);
+  content: "";
+}
+
+.anbox-part-07 .anxt__actions{
+  margin-top: 16px;
+  display: grid;
+  justify-items: start;
+  gap: 8px;
+}
+
+.anbox-part-07 .anxt__primary{
+  position: absolute;
+  z-index: 4;
+  right: 24px;
+  bottom: 18px;
+  min-height: 28px;
+  width: 122px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background: var(--anxt-lime);
+  color: var(--anxt-ink) !important;
+  font-family: var(--anxt-display);
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1.02;
+  text-transform: uppercase;
+  pointer-events: auto;
+  transition:
+    filter .3s ease,
+    transform .4s var(--anxt-ease);
+}
+
+.anbox-part-07 .anxt__course-link{
+  width: 132px;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  border-bottom: 1px solid rgba(245, 243, 239, .7);
+  color: var(--anxt-on-dark) !important;
+  font-family: var(--anxt-display);
+  font-size: 11px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.anbox-part-07 .anxt__course-link i{
+  font-family: var(--anxt-text);
+  font-size: 12px;
+  font-style: normal;
+  transition: transform .4s var(--anxt-ease);
+}
+
+@media (hover: hover) and (pointer: fine){
+  .anbox-part-07 .anxt__portrait:hover img{
+    transform: scale(1.025);
+  }
+
+  .anbox-part-07 .anxt__primary:hover{
+    filter: brightness(1.04);
+    transform: translateY(-2px);
+  }
+
+  .anbox-part-07 .anxt__course-link:hover i{
+    transform: translateX(4px);
+  }
+}
+
+.anbox-part-07 .anxt__root.anxt-is-js [data-anxt-reveal]{
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.anbox-part-07 .anxt__root.anxt-is-js.anxt-is-in [data-anxt-reveal]{
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity .65s ease,
+    transform .75s var(--anxt-ease);
+}
+
+.anbox-part-07 .anxt__root.anxt-is-js.anxt-is-in .anxt__training{
+  transition-delay: .07s;
+}
+
+@media (max-width: 900px){
+  .anbox-part-07 .anxt__stage{
+    width: calc(100% - 40px);
+    height: auto;
+    padding: 28px 0;
+    overflow: visible;
+  }
+
+  .anbox-part-07 .anxt__shell{
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .anbox-part-07 .anxt__half{
+    padding: 28px;
+  }
+
+  .anbox-part-07 .anxt__training{
+    min-height: 540px;
+  }
+
+  .anbox-part-07 .anxt__team{
+    grid-template-rows: auto;
+  }
+
+  .anbox-part-07 .anxt__team-copy,.anbox-part-07 .anxt__training-copy{
+    margin-top: 18px;
+  }
+
+  .anbox-part-07 .anxt__team-copy h2,.anbox-part-07 .anxt__training-copy h2{
+    font-size: 46px;
+  }
+
+  .anbox-part-07 .anxt__team-copy > p,.anbox-part-07 .anxt__training-copy > p{
+    font-size: 11px;
+  }
+
+  .anbox-part-07 .anxt__people{
+    margin-top: 30px;
+  }
+
+  .anbox-part-07 .anxt__person{
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .anbox-part-07 .anxt__portrait{
+    width: 100%;
+    height: auto;
+    aspect-ratio: .8;
+  }
+
+  .anbox-part-07 .anxt__person h3{
+    font-size: 17px;
+  }
+
+  .anbox-part-07 .anxt__person > div > p{
+    font-size: 9px;
+  }
+
+  .anbox-part-07 .anxt__training-copy{
+    width: 58%;
+    margin-top: 18px;
+  }
+
+  .anbox-part-07 .anxt__training-side{
+    margin-top: 0;
+  }
+
+  .anbox-part-07 .anxt__training-copy ul{
+    margin-top: 30px;
+    gap: 16px;
+  }
+
+  .anbox-part-07 .anxt__training-copy li{
+    padding-left: 17px;
+    font-size: 10px;
+  }
+
+  .anbox-part-07 .anxt__training-copy li::before{
+    width: 5px;
+    height: 5px;
+  }
+
+  .anbox-part-07 .anxt__actions{
+    margin-top: 28px;
+    gap: 20px;
+  }
+
+  .anbox-part-07 .anxt__primary{
+    min-height: 52px;
+    right: 28px;
+    bottom: 28px;
+    width: 250px;
+    padding: 9px 18px;
+    font-size: 15px;
+  }
+
+  .anbox-part-07 .anxt__course-link{
+    width: 210px;
+    padding-bottom: 9px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 640px){
+  .anbox-part-07 .anxt__stage{
+    width: calc(100% - 24px);
+    padding: 22px 0;
+  }
+
+  .anbox-part-07 .anxt__shell{
+    border-radius: 16px;
+  }
+
+  .anbox-part-07 .anxt__half{
+    padding: 22px 18px;
+  }
+
+  .anbox-part-07 .anxt__dot{
+    width: 30px;
+    height: 30px;
+  }
+
+  .anbox-part-07 .anxt__team-copy h2,.anbox-part-07 .anxt__training-copy h2{
+    font-size: 40px;
+  }
+
+  .anbox-part-07 .anxt__team-copy > p br,.anbox-part-07 .anxt__training-copy > p br{
+    display: none;
+  }
+
+  .anbox-part-07 .anxt__team-copy > p,.anbox-part-07 .anxt__training-copy > p{
+    max-width: 34ch;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .anbox-part-07 .anxt__people{
+    padding-bottom: 6px;
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    overscroll-behavior-inline: contain;
+  }
+
+  .anbox-part-07 .anxt__person{
+    width: min(67vw, 220px);
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .anbox-part-07 .anxt__training{
+    min-height: 590px;
+  }
+
+  .anbox-part-07 .anxt__training-copy{
+    width: 100%;
+  }
+
+  .anbox-part-07 .anxt__training-visual{
+    top: auto;
+    height: 48%;
+  }
+
+  .anbox-part-07 .anxt__training-image{
+    object-position: 68% center;
+  }
+
+  .anbox-part-07 .anxt__primary{
+    right: 18px;
+    bottom: 20px;
+    width: calc(100% - 36px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .anbox-part-07 #anxt-team-training *,.anbox-part-07 #anxt-team-training *::before,.anbox-part-07 #anxt-team-training *::after{
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .anbox-part-07 .anxt__root.anxt-is-js [data-anxt-reveal]{
+    opacity: 1;
+  }
+}
+</style>
+<style data-anbox-team-type-polish="v3">
+/* Typography aligned with the approved ANBOX system. */
+.anbox-part-07 #anxt-team-training .anxt__header{
+  min-height:24px;
+  align-items:center;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__label{
+  padding-top:0;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--anxt-ink);
+  font-family:var(--anxt-text);
+  font-size:11px;
+  font-weight:500;
+  line-height:1;
+  letter-spacing:.015em;
+  text-transform:uppercase;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__label-index{
+  color:var(--anxt-purple);
+  font-size:12px;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__label i{
+  color:rgba(23,23,23,.35);
+  font-style:normal;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training .anxt__label{
+  color:var(--anxt-on-dark);
+}
+
+.anbox-part-07 #anxt-team-training .anxt__dot{
+  display:none;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+  font-family:var(--anxt-text);
+  font-size:32px;
+  font-weight:500;
+  line-height:1.04;
+  letter-spacing:-.035em;
+  text-transform:none;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+  font-weight:500;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__team-copy>p,.anbox-part-07 #anxt-team-training .anxt__training-copy>p{
+  font-family:var(--anxt-text);
+  font-size:13px;
+  font-weight:400;
+  line-height:1.4;
+  letter-spacing:-.01em;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__portrait img{
+  object-position:50% 34%;
+  filter:grayscale(.18) saturate(.78) contrast(1.02);
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person:nth-child(1) .anxt__portrait img{
+  transform:translateY(0) scale(1.04);
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person:nth-child(2) .anxt__portrait img{
+  transform:translateY(-.6%) scale(1.04);
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person:nth-child(3) .anxt__portrait img{
+  transform:translateY(1.5%) scale(1.04);
+}
+
+@media(hover:hover) and (pointer:fine){
+  .anbox-part-07 #anxt-team-training .anxt__person:nth-child(1) .anxt__portrait:hover img{
+    transform:translateY(0) scale(1.075);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person:nth-child(2) .anxt__portrait:hover img{
+    transform:translateY(-.6%) scale(1.075);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person:nth-child(3) .anxt__portrait:hover img{
+    transform:translateY(1.5%) scale(1.075);
+  }
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person h3{
+  font-family:var(--anxt-text);
+  font-size:14px;
+  font-weight:600;
+  line-height:1.15;
+  letter-spacing:-.015em;
+  text-transform:none;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person>div>p{
+  font-family:var(--anxt-text);
+  font-size:11px;
+  font-weight:400;
+  line-height:1.35;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training-copy li{
+  font-family:var(--anxt-text);
+  font-weight:400;
+  line-height:1.4;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__course-link,.anbox-part-07 #anxt-team-training .anxt__primary{
+  font-family:var(--anxt-text);
+  font-weight:600;
+  letter-spacing:0;
+}
+
+@media(min-width:961px){
+  .anbox-part-07 #anxt-team-training .anxt__team-copy,.anbox-part-07 #anxt-team-training .anxt__training-copy{
+    margin-top:20px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    font-size:32px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy>p,.anbox-part-07 #anxt-team-training .anxt__training-copy>p{
+    margin-top:12px!important;
+    font-size:13px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__people{
+    margin-top:28px;
+  }
+}
+
+@media(max-width:960px){
+  .anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    font-size:clamp(28px,6vw,34px);
+  }
+}
+
+@media(max-width:640px){
+  .anbox-part-07 #anxt-team-training .anxt__label{
+    font-size:10px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__label-index{
+    font-size:11px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    font-size:28px;
+    line-height:1.06;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy>p,.anbox-part-07 #anxt-team-training .anxt__training-copy>p{
+    font-size:13px;
+    line-height:1.4;
+  }
+}
+
+
+@media (min-width: 901px){
+  .anbox-part-07 #anxt-team-training .anxt__primary{
+    width: 154px;
+    min-height: 36px;
+    padding: 7px 12px;
+    font-size: 11px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__course-link{
+    width: 154px;
+    min-height: 28px;
+  }
+}
+
+@media (max-width: 640px){
+  .anbox-part-07 #anxt-team-training .anxt__shell{
+    display: grid;
+    gap: 12px;
+    overflow: visible;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__half{
+    overflow: hidden;
+    border: 1px solid var(--anxt-line);
+    border-radius: 16px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training{
+    min-height: 0;
+    padding: 24px 20px 26px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: auto;
+    align-content: start;
+    border-color: rgba(245, 243, 239, .12);
+    border-radius: 20px;
+    background:
+      radial-gradient(circle at 78% 8%, rgba(173, 149, 238, .08), transparent 30%),
+      var(--anxt-graphite);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy,.anbox-part-07 #anxt-team-training .anxt__training-side{
+    display: contents;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training .anxt__header{
+    order: 1;
+    margin-bottom: 28px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training .anxt__dot--purple{
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--anxt-purple);
+    background: transparent;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    order: 2;
+    max-width: 8.6ch;
+    font-size: clamp(40px, 11vw, 44px);
+    line-height: .9;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy > p{
+    order: 3;
+    max-width: 34ch;
+    margin-top: 24px !important;
+    color: #d1cfca;
+    font-size: 14px;
+    line-height: 1.36;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy ul{
+    order: 4;
+    margin-top: 24px;
+    display: grid;
+    gap: 14px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy li{
+    padding-left: 20px;
+    color: #dedcd7;
+    font-size: 13px;
+    line-height: 1.36;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy li::before{
+    top: .48em;
+    width: 6px;
+    height: 6px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-visual{
+    position: relative;
+    inset: auto;
+    order: 5;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.34;
+    margin-top: 30px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #17181a;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-image{
+    object-fit: cover;
+    object-position: right center;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__primary{
+    position: static;
+    order: 6;
+    width: 100%;
+    min-height: 54px;
+    margin-top: 18px;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__actions{
+    order: 7;
+    margin-top: 20px;
+    display: grid;
+    justify-items: center;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__course-link{
+    width: max-content;
+    min-height: 34px;
+    padding-bottom: 6px;
+    font-size: 14px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-side{
+    pointer-events: auto;
+  }
+}
+
+
+.anbox-part-07 #anxt-team-training .anxt__stage{
+  width:min(var(--anbox-shell,1200px),calc(100% - (var(--anbox-page-gutter,20px) * 2)));
+  height:460px;
+  padding:var(--anbox-section-gap,20px) 0;
+}
+.anbox-part-07 #anxt-team-training .anxt__shell{
+  border-radius:var(--anbox-radius-lg,22px);
+}
+.anbox-part-07 #anxt-team-training .anxt__half{
+  padding:26px 28px;
+}
+.anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+  font-size:var(--anbox-type-h2,clamp(35px,3.84vw,46px));
+  line-height:.9;
+}
+.anbox-part-07 #anxt-team-training .anxt__team-copy>p,.anbox-part-07 #anxt-team-training .anxt__training-copy>p{
+  margin-top:12px!important;
+  font-size:var(--anbox-type-caption,12px);
+  line-height:1.38;
+}
+.anbox-part-07 #anxt-team-training .anxt__people{
+  margin-top:16px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:end;
+  gap:var(--anbox-space-3,12px);
+}
+.anbox-part-07 #anxt-team-training .anxt__person{
+  height:100%;
+  display:grid;
+  grid-template-rows:minmax(0,1fr) auto;
+  align-content:end;
+}
+.anbox-part-07 #anxt-team-training .anxt__portrait{
+  height:100%;
+  min-height:150px;
+  border-radius:var(--anbox-radius-sm,12px);
+}
+.anbox-part-07 #anxt-team-training .anxt__person h3{
+  font-size:16px;
+}
+.anbox-part-07 #anxt-team-training .anxt__person>div>p{
+  min-height:2.7em;
+  font-size:10px;
+  line-height:1.35;
+}
+.anbox-part-07 #anxt-team-training .anxt__training{
+  padding:26px 28px;
+}
+.anbox-part-07 #anxt-team-training .anxt__training-copy{
+  width:55%;
+}
+.anbox-part-07 #anxt-team-training .anxt__training-visual::after{
+  position:absolute;inset:0;content:"";
+  background:linear-gradient(90deg,rgba(23,24,26,.96) 0%,rgba(23,24,26,.76) 42%,rgba(23,24,26,.06) 72%);
+  pointer-events:none;
+}
+.anbox-part-07 #anxt-team-training .anxt__training-copy ul{
+  margin-top:18px;
+  gap:10px;
+}
+.anbox-part-07 #anxt-team-training .anxt__training-copy li{
+  font-size:11px;
+  line-height:1.32;
+}
+.anbox-part-07 #anxt-team-training .anxt__primary{
+  right:28px;
+  bottom:24px;
+  width:156px;
+  min-height:40px;
+  border-radius:var(--anbox-button-radius,14px);
+}
+.anbox-part-07 #anxt-team-training .anxt__course-link{
+  width:156px;
+}
+@media(max-width:640px){
+  .anbox-part-07 #anxt-team-training .anxt__stage{
+    width:calc(100% - (var(--anbox-page-gutter,16px) * 2));
+    height:auto;
+    padding:var(--anbox-section-y-compact,40px) 0;
+    overflow:visible;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__half{
+    padding:24px 20px 26px;
+    border-radius:var(--anbox-radius-md,16px);
+  }
+  .anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    font-size:var(--anbox-type-h2,clamp(32px,9.5vw,42px));
+  }
+  .anbox-part-07 #anxt-team-training .anxt__team-copy>p,.anbox-part-07 #anxt-team-training .anxt__training-copy>p{
+    font-size:14px;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__people{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:8px;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__portrait{
+    min-height:128px;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__training-visual::after{
+    display:none;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__training-copy{
+    width:auto;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__primary{
+    border-radius:var(--anbox-button-radius,14px);
+  }
+}
+
+
+@media (min-width: 901px){
+  .anbox-part-07 #anxt-team-training .anxt__stage{
+    width:min(var(--anbox-shell,1200px),calc(100% - (var(--anbox-page-gutter,20px) * 2)));
+    height: 520px;
+    padding: var(--anbox-section-gap, 20px) var(--anbox-content-inset,40px);
+  }
+  .anbox-part-07 #anxt-team-training .anxt__half{
+    padding: 24px 28px 22px;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__team{
+    grid-template-rows: 32px 120px minmax(0, 1fr);
+  }
+  .anbox-part-07 #anxt-team-training .anxt__team-copy,.anbox-part-07 #anxt-team-training .anxt__training-copy{
+    margin-top: 0;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    font-size: 42px;
+    line-height: .88;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__team-copy > p,.anbox-part-07 #anxt-team-training .anxt__training-copy > p{
+    margin-top: 10px !important;
+    line-height: 1.32;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__people{
+    min-height: 0;
+    margin-top: 10px;
+    align-items: stretch;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__person{
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr) 46px;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__portrait{
+    height: auto;
+    min-height: 0;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__person h3{
+    margin-top: 7px !important;
+    font-size: 15px;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__person > div > p{
+    min-height: 0;
+    margin-top: 4px !important;
+    font-size: 9px;
+    line-height: 1.22;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__training-copy{
+    width: 48%;
+    max-width: 240px;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__training-copy > p{
+    font-size: 11px;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__training-copy ul{
+    margin-top: 14px;
+    gap: 8px;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__training-copy li{
+    max-width: 220px;
+    font-size: 10px;
+    line-height: 1.25;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__actions{
+    margin-top: 14px;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__course-link{
+    width: 190px;
+    min-height: 32px;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__training-image{
+    object-position: 86% center;
+  }
+  .anbox-part-07 #anxt-team-training .anxt__training-visual::after{
+    background:
+      linear-gradient(
+        90deg,
+        rgba(23, 24, 26, .98) 0%,
+        rgba(23, 24, 26, .94) 46%,
+        rgba(23, 24, 26, .36) 68%,
+        rgba(23, 24, 26, .04) 100%
+      );
+  }
+  .anbox-part-07 #anxt-team-training .anxt__primary{
+    right: 24px;
+    bottom: 22px;
+    width: 160px;
+    min-height: 42px;
+  }
+}
+</style>
+<style data-anbox-final-audit="team-training-v2">
+/* Core typography: Bebas Neue is reserved for the page HERO only. */
+.anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2,.anbox-part-07 #anxt-team-training .anxt__person h3,.anbox-part-07 #anxt-team-training .anxt__course-link,.anbox-part-07 #anxt-team-training .anxt__primary{
+  font-family: var(--anbox-ds-font-heading, var(--anbox-font-text, "Onest", Arial, sans-serif));
+  letter-spacing: 0;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+/* Optical compensation: light type on graphite reads heavier at equal weight. */
+.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+  font-weight: 700;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person h3{
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__course-link,.anbox-part-07 #anxt-team-training .anxt__primary{
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+@media (min-width: 961px){
+  .anbox-part-07 #anxt-team-training .anxt__stage{
+    width: min(
+      var(--anbox-shell, 1200px),
+      calc(100% - (var(--anbox-page-gutter, 20px) * 2))
+    );
+    height: auto;
+    min-height: 0;
+    padding: 64px 0 80px;
+    overflow: visible;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__shell{
+    height: auto;
+    min-height: 540px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-radius: var(--anbox-radius-md, 8px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__half{
+    min-height: 540px;
+    padding: 28px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team{
+    grid-template-rows: 32px auto auto;
+    align-content: start;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy,.anbox-part-07 #anxt-team-training .anxt__training-copy{
+    margin-top: 24px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    font-size: 40px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy > p,.anbox-part-07 #anxt-team-training .anxt__training-copy > p{
+    margin-top: 12px !important;
+    font-size: 14px;
+    line-height: 1.42;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__people{
+    min-height: 0;
+    margin-top: 32px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 12px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person{
+    height: auto;
+    display: block;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__portrait{
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--anbox-radius-md, 8px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person h3{
+    margin-top: 12px !important;
+    font-size: 16px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person > div > p{
+    min-height: 0;
+    margin-top: 6px !important;
+    padding-right: 4px;
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy{
+    width: 58%;
+    max-width: 310px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy ul{
+    margin-top: 24px;
+    gap: 12px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy li{
+    max-width: 290px;
+    padding-left: 16px;
+    font-size: 13px;
+    line-height: 1.42;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__actions{
+    margin-top: 24px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__course-link{
+    width: 210px;
+    min-height: 40px;
+    padding-bottom: 8px;
+    font-size: 12px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-image{
+    object-position: 82% center;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-visual::after{
+    display: block;
+    background: linear-gradient(
+      90deg,
+      rgba(23, 24, 26, .99) 0%,
+      rgba(23, 24, 26, .94) 49%,
+      rgba(23, 24, 26, .36) 72%,
+      rgba(23, 24, 26, .06) 100%
+    );
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__primary{
+    right: 28px;
+    bottom: 28px;
+    width: 176px;
+    min-height: 44px;
+    padding: 10px 16px;
+    border-radius: var(--anbox-button-radius, 8px);
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 960px){
+  .anbox-part-07 #anxt-team-training .anxt__stage{
+    width: calc(100% - (var(--anbox-page-gutter, 20px) * 2));
+    height: auto;
+    min-height: 0;
+    padding: 56px 0 64px;
+    overflow: visible;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__shell{
+    height: auto;
+    grid-template-columns: 1fr;
+    border-radius: var(--anbox-radius-md, 8px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__half{
+    padding: 28px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team{
+    grid-template-rows: auto;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy,.anbox-part-07 #anxt-team-training .anxt__training-copy{
+    margin-top: 24px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    font-size: 40px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy > p,.anbox-part-07 #anxt-team-training .anxt__training-copy > p{
+    margin-top: 12px !important;
+    font-size: 14px;
+    line-height: 1.42;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__people{
+    margin-top: 32px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person{
+    height: auto;
+    display: block;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__portrait{
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--anbox-radius-md, 8px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person h3{
+    margin-top: 12px !important;
+    font-size: 16px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person > div > p{
+    min-height: 0;
+    margin-top: 6px !important;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training{
+    min-height: 520px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy{
+    width: 58%;
+    max-width: 330px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy ul{
+    margin-top: 24px;
+    gap: 12px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy li{
+    padding-left: 16px;
+    font-size: 13px;
+    line-height: 1.42;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__actions{
+    margin-top: 24px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__course-link{
+    width: 210px;
+    min-height: 44px;
+    font-size: 12px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-image{
+    object-position: 78% center;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-visual::after{
+    display: block;
+    background: linear-gradient(
+      90deg,
+      rgba(23, 24, 26, .99) 0%,
+      rgba(23, 24, 26, .92) 48%,
+      rgba(23, 24, 26, .28) 76%,
+      rgba(23, 24, 26, .04) 100%
+    );
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__primary{
+    right: 28px;
+    bottom: 28px;
+    width: 190px;
+    min-height: 44px;
+    border-radius: var(--anbox-button-radius, 8px);
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 640px){
+  .anbox-part-07 #anxt-team-training .anxt__stage{
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 40px 16px 56px;
+    overflow: visible;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__shell{
+    gap: 12px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__half{
+    padding: 24px 20px 28px;
+    border-radius: var(--anbox-radius-md, 8px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy,.anbox-part-07 #anxt-team-training .anxt__training-copy{
+    margin-top: 24px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    max-width: none;
+    font-size: 36px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    font-size: clamp(26px, 8.4vw, 33px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy > p,.anbox-part-07 #anxt-team-training .anxt__training-copy > p{
+    margin-top: 12px !important;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__people{
+    width: 100%;
+    margin-top: 32px;
+    padding: 0 0 10px;
+    display: flex;
+    grid-template-columns: none;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    overscroll-behavior-inline: contain;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person{
+    width: min(100%, 248px);
+    height: auto;
+    display: block;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__portrait{
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 5;
+    border-radius: var(--anbox-radius-md, 8px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person h3{
+    margin-top: 12px !important;
+    font-size: 16px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person > div > p{
+    min-height: 0;
+    margin-top: 6px !important;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training{
+    min-height: 0;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy{
+    width: auto;
+    max-width: none;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy ul{
+    margin-top: 24px;
+    gap: 14px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy li{
+    padding-left: 18px;
+    font-size: 13px;
+    line-height: 1.42;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-visual{
+    margin-top: 28px;
+    border-radius: var(--anbox-radius-md, 8px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__primary{
+    min-height: 52px;
+    margin-top: 16px;
+    border-radius: var(--anbox-button-radius, 8px);
+    font-size: 14px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__actions{
+    margin-top: 20px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__course-link{
+    min-height: 44px;
+    font-size: 13px;
+  }
+}
+</style>
+<style data-anbox-team-type-polish-final="v5">
+@media(min-width:961px){
+  .anbox-part-07 #anxt-team-training .anxt__shell,.anbox-part-07 #anxt-team-training .anxt__half{
+    min-height:500px!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__people{
+    margin-top:24px!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person{
+    display:grid;
+    grid-template-rows:auto 52px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__portrait{
+    aspect-ratio:2 / 3!important;
+  }
+}
+
+.anbox-part-07 #anxt-team-training .anxt__portrait img{
+  transition:
+    transform .72s var(--anxt-ease),
+    filter .48s ease;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person h3{
+  transition:color .36s ease;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training-proof{
+  position:relative;
+  z-index:3;
+  width:100%;
+  max-width:290px;
+  margin-top:20px;
+  padding-top:14px;
+  display:block;
+  border-top:1px solid rgba(245,243,239,.14);
+}
+
+.anbox-part-07 #anxt-team-training .anxt__proof-label{
+  display:block;
+  color:rgba(245,243,239,.52)!important;
+  font-size:10px!important;
+  font-weight:600!important;
+  line-height:1.2!important;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__proof-row{
+  margin-top:10px;
+  display:flex;
+  align-items:flex-end;
+  gap:12px;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training-proof strong{
+  color:var(--anxt-purple);
+  font-family:var(--anxt-text);
+  font-size:30px;
+  font-weight:500;
+  line-height:.9;
+  letter-spacing:-.04em;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training-proof span{
+  color:var(--anxt-dark-muted);
+  font-family:var(--anxt-text);
+  font-size:10px;
+  font-weight:500;
+  line-height:1.15;
+  text-transform:uppercase;
+}
+
+@media(hover:hover) and (pointer:fine){
+  .anbox-part-07 #anxt-team-training .anxt__person:hover h3{
+    color:var(--anxt-purple);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person:hover .anxt__portrait img{
+    filter:grayscale(0) saturate(.94) contrast(1.02);
+  }
+}
+
+/* Final shared heading rhythm for both halves. */
+.anbox-part-07 #anxt-team-training .anxt__team-copy,.anbox-part-07 #anxt-team-training .anxt__training-copy{
+  margin-top:20px!important;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+  position:relative;
+  min-height:40px;
+  padding-left:16px;
+  font-size:18px!important;
+  font-weight:500!important;
+  line-height:1.1!important;
+  letter-spacing:-.02em!important;
+  text-transform:none!important;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__team-copy h2::before,.anbox-part-07 #anxt-team-training .anxt__training-copy h2::before{
+  position:absolute;
+  inset:0 auto 0 0;
+  width:2px;
+  border-radius:99px;
+  background:var(--anxt-purple);
+  content:"";
+}
+
+.anbox-part-07 #anxt-team-training .anxt__team-copy>p,.anbox-part-07 #anxt-team-training .anxt__training-copy>p{
+  position:relative;
+  min-height:38px;
+  margin-top:12px!important;
+  padding-left:16px;
+  font-size:13px!important;
+  line-height:1.4!important;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__team-copy>p::before,.anbox-part-07 #anxt-team-training .anxt__training-copy>p::before{
+  position:absolute;
+  inset:0 auto 0 0;
+  width:2px;
+  border-radius:99px;
+  background:var(--anxt-purple);
+  content:"";
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training-copy>.anxt__program-label{
+  min-height:0;
+  margin-top:20px!important;
+  padding-left:0;
+  color:rgba(245,243,239,.52);
+  font-size:10px!important;
+  font-weight:600;
+  line-height:1.2!important;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training-copy>.anxt__program-label::before{
+  display:none;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training-copy>.anxt__program-label+ul{
+  margin-top:10px!important;
+  gap:10px;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training-copy>p:not(.anxt__program-label){
+  color:#dfdcd6;
+  font-size:13.5px!important;
+  line-height:1.42!important;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training-copy li{
+  color:#c8c5bf;
+  font-size:12px!important;
+  font-weight:400!important;
+  line-height:1.4!important;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training .anxt__label i{
+  color:rgba(245,243,239,.38);
+}
+
+@media(min-width:961px){
+  .anbox-part-07 #anxt-team-training .anxt__training-copy{
+    position:absolute;
+    z-index:3;
+    top:80px;
+    bottom:28px;
+    left:28px;
+    margin:0!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__actions{
+    position:absolute;
+    z-index:4;
+    left:0;
+    bottom:0;
+    margin:0!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__course-link,.anbox-part-07 #anxt-team-training .anxt__primary{
+    min-height:var(--anbox-control-min,48px)!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__course-link{
+    width:210px;
+    padding:0;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__primary{
+    bottom:28px!important;
+  }
+}
+
+.anbox-part-07 #anxt-team-training .anxt__header{
+  min-height:24px;
+  align-items:center;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__label{
+  padding-top:0;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--anxt-ink);
+  font-family:var(--anxt-text);
+  font-size:11px;
+  font-weight:500;
+  line-height:1;
+  letter-spacing:.015em;
+  text-transform:uppercase;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__label-index{
+  color:var(--anxt-purple);
+  font-size:12px;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__label i{
+  color:rgba(23,23,23,.35);
+  font-style:normal;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training .anxt__label{
+  color:var(--anxt-on-dark);
+}
+
+.anbox-part-07 #anxt-team-training .anxt__dot{
+  display:none;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+  font-family:var(--anxt-text);
+  font-size:32px;
+  font-weight:500;
+  line-height:1.04;
+  letter-spacing:-.035em;
+  text-transform:none;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+  font-weight:500;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__team-copy>p,.anbox-part-07 #anxt-team-training .anxt__training-copy>p{
+  font-family:var(--anxt-text);
+  font-size:13px;
+  font-weight:400;
+  line-height:1.4;
+  letter-spacing:-.01em;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__portrait img{
+  object-position:50% 34%;
+  filter:grayscale(.18) saturate(.78) contrast(1.02);
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person h3{
+  font-family:var(--anxt-text);
+  font-size:14px;
+  font-weight:600;
+  line-height:1.15;
+  letter-spacing:-.015em;
+  text-transform:none;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person>div>p{
+  font-family:var(--anxt-text);
+  font-size:11px;
+  font-weight:400;
+  line-height:1.35;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__training-copy li{
+  font-family:var(--anxt-text);
+  font-weight:400;
+  line-height:1.4;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__course-link,.anbox-part-07 #anxt-team-training .anxt__primary{
+  font-family:var(--anxt-text);
+  font-weight:600;
+  letter-spacing:0;
+}
+
+@media(min-width:961px){
+  .anbox-part-07 #anxt-team-training .anxt__team-copy,.anbox-part-07 #anxt-team-training .anxt__training-copy{
+    margin-top:20px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    font-size:32px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy>p,.anbox-part-07 #anxt-team-training .anxt__training-copy>p{
+    margin-top:12px!important;
+    font-size:13px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__people{
+    margin-top:28px;
+  }
+}
+
+@media(max-width:960px){
+  .anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    font-size:clamp(28px,6vw,34px);
+  }
+}
+
+@media(max-width:640px){
+  .anbox-part-07 #anxt-team-training .anxt__label{
+    font-size:10px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__label-index{
+    font-size:11px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy h2,.anbox-part-07 #anxt-team-training .anxt__training-copy h2{
+    font-size:28px;
+    line-height:1.06;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy>p,.anbox-part-07 #anxt-team-training .anxt__training-copy>p{
+    font-size:13px;
+    line-height:1.4;
+  }
+
+  /* Explicit order is required because the bespoke mobile build uses display:contents. */
+  .anbox-part-07 #anxt-team-training .anxt__training .anxt__header{
+    order:1;
+    margin-bottom:0;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy>p:not(.anxt__program-label){
+    order:2;
+    margin-top:24px!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy>.anxt__program-label{
+    order:3;
+    margin-top:20px!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy>.anxt__program-label+ul{
+    order:4;
+    margin-top:12px!important;
+    gap:12px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-proof{
+    order:5;
+    width:100%;
+    max-width:none;
+    margin-top:24px;
+    padding-top:16px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-visual{
+    order:6;
+    margin-top:24px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__primary{
+    order:7;
+    width:100%;
+    min-height:52px!important;
+    margin-top:16px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__actions{
+    order:8;
+    margin-top:12px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__course-link{
+    width:210px;
+    min-height:48px;
+    white-space:nowrap;
+  }
+}
+</style>
+<style data-anbox-design-system="final-unified-v1">
+/*
+  Final shared rhythm for the assembled page.
+  The Hero keeps its display face and bespoke geometry; sections 02–09 share
+  one text family, one semantic type scale and one responsive spacing scale.
+*/
+.anbox-part-07 .anbox-composite{
+  --anbox-system-font:var(--anbox-font-text,"Onest",Arial,sans-serif);
+  --anbox-system-purple:#9b7cff;
+  --anbox-system-radius:8px;
+  --anbox-system-ease:cubic-bezier(.22,1,.36,1);
+}
+
+.anbox-part-07 .anbox-composite > section:not(#abx8),.anbox-part-07 .anbox-composite > section:not(#abx8) button,.anbox-part-07 .anbox-composite > section:not(#abx8) input,.anbox-part-07 .anbox-composite > section:not(#abx8) textarea,.anbox-part-07 .anbox-composite > section:not(#abx8) select{
+  font-family:var(--anbox-system-font);
+}
+
+/* Section labels: number / name. */
+.anbox-part-07 #abx-approach-v8 .abxa8__kicker,.anbox-part-07 #anxg-gallery .anxg__kicker,.anbox-part-07 #anxs-services .anxs__kicker,.anbox-part-07 #anxp-packages .anxp__kicker,.anbox-part-07 #anxt-team-training .anxt__label,.anbox-part-07 #ablog .ablog__kicker,.anbox-part-07 #abct-contacts .abct__kicker{
+  font-size:clamp(12px,.625vw,24px);
+  line-height:1.25;
+  font-weight:500;
+  letter-spacing:.02em;
+}
+
+.anbox-part-07 #abx-approach-v8 .abxa8__kicker > *,.anbox-part-07 #anxg-gallery .anxg__kicker > *,.anbox-part-07 #anxs-services .anxs__kicker > *,.anbox-part-07 #anxp-packages .anxp__kicker > *,.anbox-part-07 #anxt-team-training .anxt__label > *,.anbox-part-07 #ablog .ablog__kicker > *,.anbox-part-07 #abct-contacts .abct__kicker > *{
+  font-size:inherit;
+  line-height:inherit;
+  font-weight:inherit;
+  letter-spacing:inherit;
+}
+
+/* Repeated section statements use one editorial role. */
+.anbox-part-07 #abx-approach-v8 .abxa8__title,.anbox-part-07 #anxs-services .anxs__title-wrap h2,.anbox-part-07 #anxp-packages .anxp__header h2,.anbox-part-07 #ablog .ablog__intro h2,.anbox-part-07 #abct-contacts .abct__heading h2{
+  font-family:var(--anbox-system-font)!important;
+  font-size:clamp(18px,.938vw,36px)!important;
+  line-height:1.22!important;
+  font-weight:500!important;
+  letter-spacing:-.025em!important;
+  transform:none!important;
+}
+
+/* Same-level card titles. The two-tier approach grid stays intentionally hierarchical. */
+.anbox-part-07 #anxs-services .anxs__card h3,.anbox-part-07 #anxp-packages .anxp__card h3{
+  font-family:var(--anbox-system-font)!important;
+  font-size:clamp(26px,1.354vw,52px)!important;
+  line-height:1.08!important;
+  font-weight:600!important;
+  letter-spacing:-.025em!important;
+  transform:none!important;
+}
+
+/* Shared prose roles. */
+.anbox-part-07 #anxs-services .anxs__card-description,.anbox-part-07 #anxp-packages .anxp__card-lead,.anbox-part-07 #ablog .ablog__feature-copy p,.anbox-part-07 #ablog .ablog__feed-lead,.anbox-part-07 #abct-contacts .abct__lead{
+  font-size:clamp(14px,.729vw,28px);
+  line-height:1.42;
+  font-weight:400;
+}
+
+.anbox-part-07 #anxs-services .anxs__item-copy,.anbox-part-07 #anxp-packages .anxp__package li,.anbox-part-07 #anxt-team-training .anxt__program-list li{
+  font-size:clamp(12px,.625vw,24px);
+  line-height:1.4;
+  font-weight:400;
+}
+
+.anbox-part-07 #ablog .ablog__feature-copy h3{
+  font-size:clamp(28px,1.458vw,56px);
+  line-height:1.1;
+  letter-spacing:-.03em;
+}
+
+.anbox-part-07 #ablog .ablog__feed > h3{
+  font-size:clamp(40px,2.083vw,80px);
+  line-height:1;
+  letter-spacing:-.04em;
+}
+
+.anbox-part-07 #ablog .ablog__intro h2{
+  max-width:clamp(420px,21.875vw,840px);
+}
+
+.anbox-part-07 #abct-contacts .abct__heading h2{
+  max-width:clamp(470px,24.48vw,940px);
+}
+
+/* One radius for UI surfaces; large image frames keep their authored silhouette. */
+.anbox-part-07 #abx-approach-v8 .abxa8__card,.anbox-part-07 #anxg-gallery .anxg__rail,.anbox-part-07 #anxg-gallery .anxg__details,.anbox-part-07 #anxs-services .anxs__cards,.anbox-part-07 #anxp-packages .anxp__card,.anbox-part-07 #anxt-team-training .anxt__shell,.anbox-part-07 #ablog .ablog__feature,.anbox-part-07 #ablog .ablog__feed,.anbox-part-07 #abct-contacts .abct__form-card,.anbox-part-07 #abct-contacts .abct__footer{
+  border-radius:var(--anbox-system-radius);
+}
+
+@media (min-width:1025px){
+  .anbox-part-07 #anxs-services .anxs__stage,.anbox-part-07 #anxp-packages .anxp__stage,.anbox-part-07 #anxt-team-training .anxt__stage,.anbox-part-07 #ablog .ablog__shell{
+    padding-top:clamp(64px,3.333vw,128px);
+    padding-bottom:clamp(80px,4.167vw,160px);
+  }
+
+  .anbox-part-07 #abct-contacts .abct__stage{
+    padding-top:clamp(64px,3.333vw,128px);
+    padding-bottom:clamp(32px,1.667vw,64px);
+  }
+
+  /* Controls and supporting copy continue the same proportional scale on 4K. */
+  .anbox-part-07 #anxs-services .anxs__item-toggle{
+    min-height:clamp(56px,2.917vw,112px);
+    font-size:clamp(16px,.833vw,32px);
+    line-height:1.35;
+  }
+
+  .anbox-part-07 #anxs-services .anxs__item-number{
+    font-size:clamp(12px,.625vw,24px);
+  }
+
+  .anbox-part-07 #anxs-services .anxs__item-title{
+    font-size:inherit!important;
+    line-height:inherit!important;
+  }
+
+  .anbox-part-07 #anxs-services .anxs__item-arrow{
+    width:clamp(32px,1.667vw,64px);
+    height:clamp(32px,1.667vw,64px);
+  }
+
+  .anbox-part-07 #anxp-packages .anxp__package-label,.anbox-part-07 #anxt-team-training .anxt__program-label,.anbox-part-07 #ablog .ablog__meta,.anbox-part-07 #ablog .ablog__read,.anbox-part-07 #ablog .ablog__eyebrow,.anbox-part-07 #ablog .ablog__live,.anbox-part-07 #abct-contacts .abct__field label,.anbox-part-07 #abct-contacts .abct__choice legend{
+    font-size:clamp(10px,.521vw,20px);
+    line-height:1.25;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__team-copy > p,.anbox-part-07 #anxt-team-training .anxt__training-copy > p:not(.anxt__program-label){
+    font-size:clamp(13px,.677vw,26px)!important;
+    line-height:1.4!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person h3{
+    font-size:clamp(14px,.729vw,28px);
+    line-height:1.15;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person > div > p,.anbox-part-07 #abct-contacts .abct__footer-line,.anbox-part-07 #abct-contacts .abct__contact small,.anbox-part-07 #abct-contacts .abct__social-row > p,.anbox-part-07 #abct-contacts .abct__footer-legal,.anbox-part-07 #abct-contacts .abct__footer-end{
+    font-size:clamp(11px,.573vw,22px);
+    line-height:1.35;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy > .anxt__program-label{
+    font-size:clamp(10px,.521vw,20px)!important;
+    line-height:1.25!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy > .anxt__program-label + ul > li{
+    font-size:clamp(12px,.625vw,24px)!important;
+    line-height:1.4!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__proof-label,.anbox-part-07 #anxt-team-training .anxt__proof-row > span{
+    font-size:clamp(10px,.521vw,20px)!important;
+    line-height:1.25!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__proof-row > strong{
+    font-size:clamp(30px,1.563vw,60px)!important;
+    line-height:1!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__course-link,.anbox-part-07 #anxt-team-training .anxt__primary,.anbox-part-07 #anxp-packages .anxp__custom-button,.anbox-part-07 #ablog .ablog__feed-cta,.anbox-part-07 #abct-contacts .abct__submit,.anbox-part-07 #abct-contacts .abct__direct-note strong{
+    font-size:clamp(11px,.625vw,24px);
+  }
+
+  /* The training panel uses absolute copy/actions. Scale its usable geometry
+     together with type so the approved 1440 layout remains intact on 4K. */
+  .anbox-part-07 #anxt-team-training .anxt__half{
+    padding:clamp(28px,1.458vw,56px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__people{
+    margin-top:clamp(24px,1.25vw,48px)!important;
+    gap:clamp(12px,.625vw,24px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person{
+    grid-template-rows:auto clamp(52px,2.708vw,104px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy{
+    top:clamp(80px,4.167vw,160px);
+    bottom:clamp(28px,1.458vw,56px);
+    left:clamp(28px,1.458vw,56px);
+    width:58%;
+    max-width:clamp(310px,16.146vw,620px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy > .anxt__program-label{
+    margin-top:clamp(20px,1.042vw,40px)!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-copy > .anxt__program-label + ul{
+    margin-top:clamp(10px,.521vw,20px)!important;
+    gap:clamp(10px,.521vw,20px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__training-proof{
+    max-width:clamp(290px,15.104vw,580px);
+    margin-top:clamp(20px,1.042vw,40px);
+    padding-top:clamp(14px,.729vw,28px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__proof-row{
+    margin-top:clamp(10px,.521vw,20px);
+    gap:clamp(12px,.625vw,24px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__course-link{
+    width:clamp(210px,10.938vw,420px);
+    min-height:clamp(48px,2.5vw,96px)!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__primary{
+    right:clamp(28px,1.458vw,56px);
+    bottom:clamp(28px,1.458vw,56px)!important;
+    width:clamp(160px,8.333vw,320px);
+    min-height:clamp(48px,2.5vw,96px)!important;
+  }
+
+  .anbox-part-07 #abct-contacts .abct__input,.anbox-part-07 #abct-contacts .abct__select,.anbox-part-07 #abct-contacts .abct__textarea,.anbox-part-07 #abct-contacts .abct__chips span{
+    font-size:clamp(13px,.677vw,26px);
+    line-height:1.4;
+  }
+
+  .anbox-part-07 #abct-contacts .abct__input,.anbox-part-07 #abct-contacts .abct__select,.anbox-part-07 #abct-contacts .abct__chips span{
+    min-height:clamp(48px,2.5vw,96px);
+  }
+
+  .anbox-part-07 #abct-contacts .abct__textarea{
+    min-height:clamp(108px,5.625vw,216px);
+  }
+
+  .anbox-part-07 #abct-contacts .abct__contact strong{
+    font-size:clamp(13px,.677vw,26px);
+    line-height:1.35;
+  }
+
+  .anbox-part-07 #abct-contacts .abct__direct-note small,.anbox-part-07 #abct-contacts .abct__consent small,.anbox-part-07 #abct-contacts .abct__footer-legal a,.anbox-part-07 #abct-contacts .abct__footer-end > span{
+    font-size:clamp(10px,.521vw,20px)!important;
+    line-height:1.4!important;
+  }
+}
+
+@media (min-width:1921px){
+  .anbox-part-07 #anxt-team-training .anxt__training-copy{
+    display:flex;
+    flex-direction:column;
+    max-width:760px;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__program-list,.anbox-part-07 #anxt-team-training .anxt__training-copy li{
+    width:100%;
+    max-width:none;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__actions{
+    position:static;
+    margin-top:auto!important;
+    padding-top:clamp(20px,1.042vw,40px);
+  }
+}
+
+@media (min-width:641px) and (max-width:1024px){
+  .anbox-part-07 #ablog .ablog__shell{
+    width:calc(100% - 40px);
+    max-width:none;
+    margin-inline:20px;
+    padding:56px 0 64px;
+  }
+
+  .anbox-part-07 #anxs-services .anxs__stage,.anbox-part-07 #anxp-packages .anxp__stage,.anbox-part-07 #anxt-team-training .anxt__stage{
+    padding-top:56px!important;
+    padding-bottom:64px!important;
+  }
+
+  .anbox-part-07 #abct-contacts .abct__stage{
+    padding-top:56px!important;
+    padding-bottom:20px!important;
+  }
+
+  .anbox-part-07 #abx-approach-v8 .abxa8__kicker,.anbox-part-07 #anxg-gallery .anxg__kicker,.anbox-part-07 #anxs-services .anxs__kicker,.anbox-part-07 #anxp-packages .anxp__kicker,.anbox-part-07 #anxt-team-training .anxt__label,.anbox-part-07 #ablog .ablog__kicker,.anbox-part-07 #abct-contacts .abct__kicker{
+    font-size:11px;
+    line-height:14px;
+  }
+
+  .anbox-part-07 #abx-approach-v8 .abxa8__title,.anbox-part-07 #anxs-services .anxs__title-wrap h2,.anbox-part-07 #anxp-packages .anxp__header h2,.anbox-part-07 #ablog .ablog__intro h2,.anbox-part-07 #abct-contacts .abct__heading h2{
+    font-size:17px!important;
+    line-height:21px!important;
+  }
+
+  .anbox-part-07 #anxs-services .anxs__card h3,.anbox-part-07 #anxp-packages .anxp__card h3{
+    font-size:24px!important;
+    line-height:28px!important;
+  }
+}
+
+@media (max-width:640px){
+  .anbox-part-07 #anxg-gallery .anxg__stage{
+    width:calc(100% - 32px);
+    margin-inline:16px;
+  }
+
+  .anbox-part-07 #ablog .ablog__shell{
+    width:calc(100% - 32px);
+    max-width:none;
+    margin-inline:16px;
+    padding:40px 0 56px;
+  }
+
+  .anbox-part-07 #abx-approach-v8 .abxa8__kicker,.anbox-part-07 #anxg-gallery .anxg__kicker,.anbox-part-07 #anxs-services .anxs__kicker,.anbox-part-07 #anxp-packages .anxp__kicker,.anbox-part-07 #anxt-team-training .anxt__label,.anbox-part-07 #ablog .ablog__kicker,.anbox-part-07 #abct-contacts .abct__kicker{
+    font-size:10px;
+    line-height:12px;
+  }
+
+  .anbox-part-07 #abx-approach-v8 .abxa8__title,.anbox-part-07 #anxs-services .anxs__title-wrap h2,.anbox-part-07 #anxp-packages .anxp__header h2,.anbox-part-07 #ablog .ablog__intro h2,.anbox-part-07 #abct-contacts .abct__heading h2{
+    font-size:16px!important;
+    line-height:21px!important;
+  }
+
+  .anbox-part-07 #anxs-services .anxs__card h3,.anbox-part-07 #anxp-packages .anxp__card h3{
+    font-size:22px!important;
+    line-height:26px!important;
+  }
+
+  .anbox-part-07 #anxs-services .anxs__card-description,.anbox-part-07 #anxp-packages .anxp__card-lead,.anbox-part-07 #ablog .ablog__feature-copy p,.anbox-part-07 #ablog .ablog__feed-lead,.anbox-part-07 #abct-contacts .abct__lead{
+    font-size:14px;
+    line-height:20px;
+  }
+}
+</style>
+<style data-anbox-action-color-system>
+.anbox-part-07{
+  --anbox-action: #dde63f;
+  --anbox-action-soft: rgba(221, 230, 63, .14);
+  --anbox-action-line: rgba(183, 193, 35, .58);
+  --anbox-action-ink: #171717;
+}
+
+/* Primary actions: one solid brand color everywhere. */
+.anbox-part-07 #abx8 .abx8__header-cta,.anbox-part-07 #abx8 .abx8__primary,.anbox-part-07 #abx8 .abx8__project-arrow,.anbox-part-07 #anxg-gallery .anxg__next-project,.anbox-part-07 #anxp-packages .anxp__custom-button,.anbox-part-07 #anxt-team-training .anxt__primary,.anbox-part-07 #ablog .ablog__feed-cta,.anbox-part-07 #abct-contacts .abct__submit,.anbox-part-07 #abct-contacts .abct__to-top{
+  border-color: var(--anbox-action) !important;
+  background: var(--anbox-action) !important;
+  color: var(--anbox-action-ink) !important;
+}
+
+/* Secondary actions: the only permitted translucent button fill. */
+.anbox-part-07 #abct-contacts .abct__direct-note,.anbox-part-07 #abct-contacts .abct__socials a{
+  border-color: var(--anbox-action-line) !important;
+  background: var(--anbox-action-soft) !important;
+}
+
+.anbox-part-07 #abct-contacts .abct__socials a{
+  color: var(--anbox-action-ink) !important;
+}
+
+@media (hover: hover) and (pointer: fine){
+  .anbox-part-07 #abx8 .abx8__header-cta:hover,.anbox-part-07 #abx8 .abx8__primary:hover,.anbox-part-07 #abx8 .abx8__project-arrow:hover,.anbox-part-07 #anxg-gallery .anxg__next-project:hover,.anbox-part-07 #anxp-packages .anxp__custom-button:hover,.anbox-part-07 #anxt-team-training .anxt__primary:hover,.anbox-part-07 #ablog .ablog__feed-cta:hover,.anbox-part-07 #abct-contacts .abct__submit:hover,.anbox-part-07 #abct-contacts .abct__to-top:hover{
+    opacity: .86;
+  }
+
+  .anbox-part-07 #abct-contacts .abct__direct-note:hover,.anbox-part-07 #abct-contacts .abct__socials a:hover{
+    background: rgba(221, 230, 63, .22) !important;
+  }
+}
+</style>
+<style data-anbox-button-system>
+.anbox-part-07{--anbox-action:#dde63f;--anbox-action-soft:rgba(221,230,63,.14);--anbox-action-ink:#171717;--anbox-action-radius:8px;--anbox-action-height:42px}
+.anbox-part-07 :is(.abx8__primary,.anxg__next-project,.anxp__custom-button,#anxt-team-training .anxt__primary,.abct__submit,.anxs-v4__cta){box-sizing:border-box!important;height:var(--anbox-action-height)!important;min-height:var(--anbox-action-height)!important;padding:0 16px!important;border-radius:var(--anbox-action-radius)!important;background:var(--anbox-action)!important;color:var(--anbox-action-ink)!important;font-size:10px!important;font-weight:700!important;line-height:1!important;text-transform:uppercase;transition:filter .2s ease,transform .2s ease}
+.anbox-part-07 .abx8__header-cta{box-sizing:border-box!important;height:34px!important;min-height:34px!important;border-radius:var(--anbox-action-radius)!important;background:var(--anbox-action)!important;color:var(--anbox-action-ink)!important}
+.anbox-part-07 #abct-contacts .abct__direct-note{box-sizing:border-box!important;height:var(--anbox-action-height)!important;min-height:var(--anbox-action-height)!important;padding:5px 16px 5px 14px!important;border:1px solid #9b7cff!important;border-radius:var(--anbox-action-radius)!important;background:#9b7cff!important;color:#fff!important;font-size:10px!important;font-weight:600!important;line-height:1.2!important;text-transform:none}
+.anbox-part-07 #abct-contacts .abct__direct-note small{color:rgba(255,255,255,.68)!important;font-size:9px!important;font-weight:400!important;line-height:1.15!important}
+.anbox-part-07 #abct-contacts .abct__direct-note strong{margin-top:3px!important;color:#fff!important;font-size:11px!important;font-weight:600!important;line-height:1.15!important}
+.anbox-part-07 #abct-contacts .abct__direct-note i{background:transparent!important;color:#fff!important}
+.anbox-part-07 #abct-contacts :is(.abct__submit,.abct__direct-note){display:flex!important;align-items:center!important}
+.anbox-part-07 #abct-contacts :is(.abct__submit,.abct__direct-note) i{box-sizing:border-box!important;width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;flex:0 0 auto!important;margin:0!important;padding:0!important;display:block!important;border-radius:0!important;background:transparent!important;font-family:Arial,sans-serif!important;font-size:13px!important;font-style:normal!important;font-weight:400!important;line-height:1!important;transform:none!important}
+.anbox-part-07 #abct-contacts .abct__submit i{color:#171717!important}
+.anbox-part-07 #abct-contacts .abct__direct-note i{color:#fff!important}
+.anbox-part-07 #anxt-team-training .anxt__primary{display:flex!important;align-items:center!important;justify-content:space-between!important}
+.anbox-part-07 #ablog .ablog__feed-cta>i{width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;display:block!important;border:0!important;border-radius:0!important;background:transparent!important;color:#171717!important;font-size:13px!important;font-style:normal!important;line-height:1!important;transform:none!important}
+@media(hover:hover) and (pointer:fine){.anbox-part-07 #ablog .ablog__feed-cta:hover>i{transform:none!important}}
+.anbox-part-07 #abct-contacts .abct__textarea{height:92px!important;min-height:92px!important}
+@media(hover:hover) and (pointer:fine){.anbox-part-07 #abct-contacts .abct__direct-note:hover{border-color:#9b7cff!important;background:#9b7cff!important;filter:brightness(.94)}}
+@media(hover:hover) and (pointer:fine){.anbox-part-07 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__primary,.abct__submit,.anxs-v4__cta):hover{filter:brightness(.96)}}
+.anbox-part-07 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__course-link,.anxt__primary,.ablog__feed-cta,.abct__submit,.abct__direct-note,.anxs-v4__cta)>:is(svg,i,span:last-child){transition:transform 220ms cubic-bezier(.22,1,.36,1)!important;transform:translate(0,0)!important;will-change:transform}
+@media(hover:hover) and (pointer:fine){.anbox-part-07 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__course-link,.anxt__primary,.ablog__feed-cta,.abct__submit,.abct__direct-note,.anxs-v4__cta):is(:hover,:focus-visible)>:is(svg,i,span:last-child){transform:translate(3px,-3px) rotate(-45deg)!important}}
+.anbox-part-07 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__course-link,.anxt__primary,.ablog__feed-cta,.abct__submit,.abct__direct-note,.anxs-v4__cta):active>:is(svg,i,span:last-child){transform:translate(3px,-3px) rotate(-45deg)!important}
+@media(prefers-reduced-motion:reduce){.anbox-part-07 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__course-link,.anxt__primary,.ablog__feed-cta,.abct__submit,.abct__direct-note,.anxs-v4__cta)>:is(svg,i,span:last-child){transition:none!important;transform:none!important}}
+</style>
+<style data-anbox-screen-spacing="desktop-mobile-v1">
+@media(min-width:1025px){
+  .anbox-part-07 #anxt-team-training .anxt__stage{box-sizing:border-box;width:100%;max-width:none;margin:0;padding:64px var(--anbox-content-inset) 80px}
+}
+@media(max-width:640px){
+  .anbox-part-07 #anxt-team-training .anxt__stage{box-sizing:border-box;width:100%;max-width:none;margin:0;padding:var(--anbox-mobile-section-space) var(--anbox-content-inset)}
+}
+</style>
+<div class="anbox-part-07"><div class="anbox-full-page anbox-composite"><section
+  id="anxt-team-training"
+  class="anxt__root"
+  lang="ru"
+  aria-label="Команда и корпоративное обучение"
+>
+  <div class="anxt__stage">
+    <div class="anxt__shell">
+      <article class="anxt__half anxt__team" data-anxt-reveal>
+        <header class="anxt__header">
+          <p class="anxt__label">
+            <span class="anxt__label-index">06</span>
+            <i aria-hidden="true">/</i>
+            <span>Команда</span>
+          </p>
+          <span class="anxt__dot anxt__dot--lime" aria-hidden="true"></span>
+        </header>
+
+        <div class="anxt__team-copy">
+          <p>
+            Стратеги, дизайнеры и&nbsp;менеджеры проектов<br>
+            с&nbsp;опытом в&nbsp;индустрии и&nbsp;вниманием к&nbsp;деталям.
+          </p>
+        </div>
+
+        <div class="anxt__people">
+          <article class="anxt__person">
+            <figure class="anxt__portrait">
+              <img
+                src="https://static.tildacdn.com/tild6437-3965-4565-a234-393630613862/61c0866d-795d-40c7-8.png"
+                alt="Анна Плавская"
+                width="1122"
+                height="1402"
+                loading="lazy"
+              >
+            </figure>
+            <div>
+              <h3>Анна Плавская</h3>
+              <p>Основатель, арт-директор</p>
+            </div>
+          </article>
+
+          <article class="anxt__person">
+            <figure class="anxt__portrait">
+              <img
+                src="https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png"
+                alt="Артем Капустин"
+                width="1122"
+                height="1402"
+                loading="lazy"
+              >
+            </figure>
+            <div>
+              <h3>Артем Капустин</h3>
+              <p>Директор по развитию</p>
+            </div>
+          </article>
+
+          <article class="anxt__person">
+            <figure class="anxt__portrait">
+              <img
+                src="https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
+                alt="Дарья Дарев"
+                width="1122"
+                height="1402"
+                loading="lazy"
+              >
+            </figure>
+            <div>
+              <h3>Дарья Дарев</h3>
+              <p>Маркетинг-партнер, <a href="https://fouraces.agency" target="_blank" rel="noopener noreferrer">fouraces.agency</a></p>
+            </div>
+          </article>
+        </div>
+      </article>
+
+      <article class="anxt__half anxt__training" data-anxt-reveal>
+        <header class="anxt__header">
+          <p class="anxt__label">
+            <span class="anxt__label-index">07</span>
+            <i aria-hidden="true">/</i>
+            <span>Корпоративное обучение</span>
+          </p>
+          <span class="anxt__dot anxt__dot--purple" aria-hidden="true"></span>
+        </header>
+
+        <div class="anxt__training-copy">
+          <p>
+            Курс-наставничество по&nbsp;дизайну упаковки<br>
+            для&nbsp;in-house-дизайнеров и&nbsp;команд брендов.
+          </p>
+
+          <p class="anxt__program-label">В программе</p>
+          <ul>
+            <li>Полный цикл коммерческого проекта: от&nbsp;аналитики и&nbsp;визуальной стратегии до&nbsp;предпечатной подготовки</li>
+            <li>Материалы, конструкции, печать и&nbsp;требования производства</li>
+            <li>Визуализация в&nbsp;Photoshop и&nbsp;нейросетях</li>
+            <li>Персональная обратная связь автора курса</li>
+          </ul>
+
+          <div class="anxt__training-proof" aria-label="Четыре и более SKU в итоговом учебном проекте">
+            <span class="anxt__proof-label">Результат</span>
+            <div class="anxt__proof-row">
+              <strong>4+ SKU</strong>
+              <span>в итоговом<br>учебном проекте</span>
+            </div>
+          </div>
+
+          <div class="anxt__actions">
+          <a class="anxt__course-link" href="#abct-contacts">
+              <span>Перейти на сайт курса</span>
+              <i aria-hidden="true">→</i>
+            </a>
+          </div>
+        </div>
+
+        <div class="anxt__training-side">
+          <figure class="anxt__training-visual">
+            <!-- REPLACE: select this image in VibeBlock and upload the final wide background -->
+            <img
+              class="anxt__training-image"
+              src="data:image/jpeg;base64,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"
+              alt="Кубы для блока корпоративного обучения"
+              width="700"
+              height="348"
+              loading="lazy"
+            >
+          </figure>
+
+          <a class="anxt__primary" href="#abct-contacts">
+            <span>Обсудить условия</span>
+            <svg class="anxt__primary-arrow" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 12h14M14 6l6 6-6 6"></path>
+            </svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section></div></div>
+<script>
+(function () {
+  "use strict";
+
+  function anxtInit() {
+    var root = document.getElementById("anxt-team-training");
+
+    if (!root || root.dataset.anxtReady === "true") {
+      return;
+    }
+
+    root.dataset.anxtReady = "true";
+    root.classList.add("anxt-is-js");
+
+    var reduced = window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduced || !("IntersectionObserver" in window)) {
+      root.classList.add("anxt-is-in");
+      return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        root.classList.add("anxt-is-in");
+        observer.disconnect();
+      });
+    }, {
+      threshold: .12,
+      rootMargin: "0px 0px -7% 0px"
+    });
+
+    observer.observe(root);
+    root.anxtObserver = observer;
+  }
+
+  if (typeof window.t_onReady === "function") {
+    window.t_onReady(anxtInit);
+  } else if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", anxtInit, { once: true });
+  } else {
+    anxtInit();
+  }
+})();
+</script>
+<script data-anbox-scroll-replay>
+(function () {
+  "use strict";
+
+  function initANBOXScrollReplay() {
+    if (!window.IntersectionObserver || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+
+    var sections = [
+      ["abx8", "abx8-entry-in"],
+      ["abx-approach-v8", "is-in"],
+      ["anxg-gallery", "anxg-entry-in"],
+      ["anxs-services", "is-in"],
+      ["anxp-packages", "anxp-is-in"],
+      ["anxt-team-training", "anxt-is-in"],
+      ["abct-contacts", "abct-is-in"]
+    ];
+
+    sections.forEach(function (pair) {
+      var root = document.getElementById(pair[0]);
+      var activeClass = pair[1];
+      if (!root || root.dataset.anboxReplayReady === "true") return;
+      root.dataset.anboxReplayReady = "true";
+
+      var visible = false;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.intersectionRatio >= 0.12) {
+            visible = true;
+            root.classList.add(activeClass);
+          } else if (!entry.isIntersecting) {
+            visible = false;
+            root.classList.remove(activeClass);
+          }
+        });
+      }, { threshold: [0, 0.12], rootMargin: "0px 0px -6% 0px" });
+
+      observer.observe(root);
+      window.setTimeout(function () {
+        if (!visible) root.classList.remove(activeClass);
+      }, 750);
+    });
+
+    var blogItems = document.querySelectorAll("#ablog [data-ablog-reveal]");
+    var blogObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.intersectionRatio >= 0.12) entry.target.classList.add("is-visible");
+        else if (!entry.isIntersecting) entry.target.classList.remove("is-visible");
+      });
+    }, { threshold: [0, 0.12], rootMargin: "0px 0px -6% 0px" });
+
+    blogItems.forEach(function (item) { blogObserver.observe(item); });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initANBOXScrollReplay, { once: true });
+  } else {
+    initANBOXScrollReplay();
+  }
+})();
+</script>
+<style data-anbox-4k="v1">
+@media (min-width:1921px){
+  .anbox-part-07{--anbox-action-height:clamp(42px,2.188vw,84px)}
+  .anbox-part-07 :is(.abx8__primary,.anxg__next-project,.anxp__custom-button,#anxt-team-training .anxt__primary,.abct__submit,.anxs-v4__cta){
+    height:var(--anbox-action-height)!important;min-height:var(--anbox-action-height)!important;
+    padding-inline:clamp(16px,.833vw,32px)!important;font-size:clamp(10px,.521vw,20px)!important
+  }
+  .anbox-part-07 :is(.abx8__primary,.anxg__next-project,.anxp__custom-button,#anxt-team-training .anxt__primary,.abct__submit,.anxs-v4__cta)>:is(svg,i,span:last-child){font-size:clamp(13px,.677vw,26px)!important}
+}
+@media (min-width:1921px){
+  .anbox-part-07 #anxt-team-training .anxt__team-copy>p,.anbox-part-07 #anxt-team-training .anxt__training-copy>p:not(.anxt__program-label){font-size:clamp(14px,.729vw,28px)!important;line-height:1.45!important}
+  .anbox-part-07 #anxt-team-training .anxt__person h3{font-size:clamp(18px,.938vw,36px)!important}
+  .anbox-part-07 #anxt-team-training .anxt__person>div>p{font-size:clamp(11px,.573vw,22px)!important}
+  .anbox-part-07 #anxt-team-training .anxt__program-label{font-size:clamp(11px,.573vw,22px)!important}
+  .anbox-part-07 #anxt-team-training .anxt__program-list li{font-size:clamp(13px,.677vw,26px)!important;line-height:1.4!important}
+  .anbox-part-07 #anxt-team-training .anxt__proof-row strong{font-size:clamp(30px,1.563vw,60px)!important}
+  .anbox-part-07 #anxt-team-training .anxt__course-link{font-size:clamp(11px,.573vw,22px)!important}
+}
+</style>

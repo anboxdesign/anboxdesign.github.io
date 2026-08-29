@@ -1,0 +1,3360 @@
+{
+  "generatedAt": "2026-08-29T12:07:00.712Z",
+  "status": "PASS",
+  "failures": [],
+  "structure": [
+    {
+      "name": "00-header.html",
+      "visualRoots": 2,
+      "desktopRoots": 1,
+      "mobileRoots": 1,
+      "duplicateIds": []
+    },
+    {
+      "name": "01-hero.html",
+      "visualRoots": 2,
+      "desktopRoots": 1,
+      "mobileRoots": 1,
+      "duplicateIds": []
+    },
+    {
+      "name": "02-approach.html",
+      "visualRoots": 2,
+      "desktopRoots": 1,
+      "mobileRoots": 1,
+      "duplicateIds": []
+    },
+    {
+      "name": "03B-portfolio.html",
+      "visualRoots": 2,
+      "desktopRoots": 1,
+      "mobileRoots": 1,
+      "duplicateIds": []
+    },
+    {
+      "name": "04-services.html",
+      "visualRoots": 2,
+      "desktopRoots": 1,
+      "mobileRoots": 1,
+      "duplicateIds": []
+    },
+    {
+      "name": "05-packages.html",
+      "visualRoots": 2,
+      "desktopRoots": 1,
+      "mobileRoots": 1,
+      "duplicateIds": []
+    },
+    {
+      "name": "06-clients.html",
+      "visualRoots": 2,
+      "desktopRoots": 1,
+      "mobileRoots": 1,
+      "duplicateIds": []
+    },
+    {
+      "name": "07-team-training.html",
+      "visualRoots": 2,
+      "desktopRoots": 1,
+      "mobileRoots": 1,
+      "duplicateIds": []
+    },
+    {
+      "name": "08-blog.html",
+      "visualRoots": 2,
+      "desktopRoots": 1,
+      "mobileRoots": 1,
+      "duplicateIds": []
+    },
+    {
+      "name": "09-contacts.html",
+      "visualRoots": 2,
+      "desktopRoots": 1,
+      "mobileRoots": 1,
+      "duplicateIds": []
+    },
+    {
+      "name": "10-footer.html",
+      "visualRoots": 2,
+      "desktopRoots": 1,
+      "mobileRoots": 1,
+      "duplicateIds": []
+    },
+    {
+      "name": "03A-portfolio-system.html",
+      "visualRoots": 0,
+      "desktopRoots": 0,
+      "mobileRoots": 0,
+      "duplicateIds": []
+    }
+  ],
+  "scriptSyntaxErrors": [],
+  "runtimeErrors": [],
+  "viewportResults": [
+    {
+      "width": 320,
+      "visibleDesktop": 0,
+      "visibleMobile": 11,
+      "pageOverflow": 0,
+      "duplicateIds": [],
+      "missingImageMetadata": 0,
+      "heroShellWidth": 0,
+      "footer": {
+        "display": "block",
+        "left": 0,
+        "width": 320,
+        "height": 328,
+        "socialTargets": [
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          }
+        ],
+        "logo": {
+          "tag": "svg",
+          "width": 148,
+          "height": 19,
+          "pathCount": 11,
+          "visible": true
+        }
+      },
+      "headerNav": null,
+      "contactCtas": null,
+      "approachLogo": null,
+      "portfolioActions": null,
+      "mobilePortfolioRadii": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tokens": {
+        "paper": "#f3f4f0",
+        "ink": "#151716",
+        "purple": "#ad95ee",
+        "purpleStrong": "#7658d0",
+        "lime": "#dde63f"
+      },
+      "video": {
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "preload": "auto"
+      }
+    },
+    {
+      "width": 360,
+      "visibleDesktop": 0,
+      "visibleMobile": 11,
+      "pageOverflow": 0,
+      "duplicateIds": [],
+      "missingImageMetadata": 0,
+      "heroShellWidth": 0,
+      "footer": {
+        "display": "block",
+        "left": 0,
+        "width": 360,
+        "height": 272,
+        "socialTargets": [
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          }
+        ],
+        "logo": {
+          "tag": "svg",
+          "width": 148,
+          "height": 19,
+          "pathCount": 11,
+          "visible": true
+        }
+      },
+      "headerNav": null,
+      "contactCtas": null,
+      "approachLogo": null,
+      "portfolioActions": null,
+      "mobilePortfolioRadii": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tokens": {
+        "paper": "#f3f4f0",
+        "ink": "#151716",
+        "purple": "#ad95ee",
+        "purpleStrong": "#7658d0",
+        "lime": "#dde63f"
+      },
+      "video": {
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "preload": "auto"
+      }
+    },
+    {
+      "width": 375,
+      "visibleDesktop": 0,
+      "visibleMobile": 11,
+      "pageOverflow": 0,
+      "duplicateIds": [],
+      "missingImageMetadata": 0,
+      "heroShellWidth": 0,
+      "footer": {
+        "display": "block",
+        "left": 0,
+        "width": 375,
+        "height": 272,
+        "socialTargets": [
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          }
+        ],
+        "logo": {
+          "tag": "svg",
+          "width": 154,
+          "height": 20,
+          "pathCount": 11,
+          "visible": true
+        }
+      },
+      "headerNav": null,
+      "contactCtas": null,
+      "approachLogo": null,
+      "portfolioActions": null,
+      "mobilePortfolioRadii": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tokens": {
+        "paper": "#f3f4f0",
+        "ink": "#151716",
+        "purple": "#ad95ee",
+        "purpleStrong": "#7658d0",
+        "lime": "#dde63f"
+      },
+      "video": {
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "preload": "auto"
+      }
+    },
+    {
+      "width": 390,
+      "visibleDesktop": 0,
+      "visibleMobile": 11,
+      "pageOverflow": 0,
+      "duplicateIds": [],
+      "missingImageMetadata": 0,
+      "heroShellWidth": 0,
+      "footer": {
+        "display": "block",
+        "left": 0,
+        "width": 390,
+        "height": 274,
+        "socialTargets": [
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          }
+        ],
+        "logo": {
+          "tag": "svg",
+          "width": 160,
+          "height": 20,
+          "pathCount": 11,
+          "visible": true
+        }
+      },
+      "headerNav": null,
+      "contactCtas": null,
+      "approachLogo": null,
+      "portfolioActions": null,
+      "mobilePortfolioRadii": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tokens": {
+        "paper": "#f3f4f0",
+        "ink": "#151716",
+        "purple": "#ad95ee",
+        "purpleStrong": "#7658d0",
+        "lime": "#dde63f"
+      },
+      "video": {
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "preload": "auto"
+      }
+    },
+    {
+      "width": 412,
+      "visibleDesktop": 0,
+      "visibleMobile": 11,
+      "pageOverflow": 0,
+      "duplicateIds": [],
+      "missingImageMetadata": 0,
+      "heroShellWidth": 0,
+      "footer": {
+        "display": "block",
+        "left": 0,
+        "width": 412,
+        "height": 275,
+        "socialTargets": [
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          }
+        ],
+        "logo": {
+          "tag": "svg",
+          "width": 168,
+          "height": 21,
+          "pathCount": 11,
+          "visible": true
+        }
+      },
+      "headerNav": null,
+      "contactCtas": null,
+      "approachLogo": null,
+      "portfolioActions": null,
+      "mobilePortfolioRadii": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tokens": {
+        "paper": "#f3f4f0",
+        "ink": "#151716",
+        "purple": "#ad95ee",
+        "purpleStrong": "#7658d0",
+        "lime": "#dde63f"
+      },
+      "video": {
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "preload": "auto"
+      }
+    },
+    {
+      "width": 640,
+      "visibleDesktop": 0,
+      "visibleMobile": 11,
+      "pageOverflow": 0,
+      "duplicateIds": [],
+      "missingImageMetadata": 0,
+      "heroShellWidth": 0,
+      "footer": {
+        "display": "block",
+        "left": 0,
+        "width": 640,
+        "height": 226,
+        "socialTargets": [
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          },
+          {
+            "width": 44,
+            "height": 44
+          }
+        ],
+        "logo": {
+          "tag": "svg",
+          "width": 168,
+          "height": 21,
+          "pathCount": 11,
+          "visible": true
+        }
+      },
+      "headerNav": null,
+      "contactCtas": null,
+      "approachLogo": null,
+      "portfolioActions": null,
+      "mobilePortfolioRadii": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "tokens": {
+        "paper": "#f3f4f0",
+        "ink": "#151716",
+        "purple": "#ad95ee",
+        "purpleStrong": "#7658d0",
+        "lime": "#dde63f"
+      },
+      "video": {
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "preload": "auto"
+      }
+    },
+    {
+      "width": 641,
+      "visibleDesktop": 11,
+      "visibleMobile": 0,
+      "pageOverflow": 0,
+      "duplicateIds": [],
+      "missingImageMetadata": 0,
+      "heroShellWidth": 641,
+      "footer": {
+        "display": "grid",
+        "left": 0,
+        "width": 641,
+        "height": 175,
+        "socialTargets": [
+          {
+            "width": 24,
+            "height": 24
+          },
+          {
+            "width": 24,
+            "height": 24
+          },
+          {
+            "width": 24,
+            "height": 24
+          }
+        ],
+        "logo": {
+          "tag": "svg",
+          "width": 150,
+          "height": 19,
+          "pathCount": 11,
+          "visible": true
+        }
+      },
+      "headerNav": {
+        "header": {
+          "left": 42.74,
+          "top": 14,
+          "right": 598.26,
+          "bottom": 68,
+          "width": 555.52,
+          "height": 54
+        },
+        "nav": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "links": [
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        ],
+        "linkText": [
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          }
+        ],
+        "navVisible": false,
+        "logo": {
+          "left": 42.74,
+          "top": 31.22,
+          "right": 196.74,
+          "bottom": 50.78,
+          "width": 154,
+          "height": 19.56
+        },
+        "logoMark": {
+          "left": 42.74,
+          "top": 31.22,
+          "right": 196.74,
+          "bottom": 50.78,
+          "width": 154,
+          "height": 19.56
+        },
+        "cta": {
+          "left": 408.09,
+          "top": 24,
+          "right": 526.26,
+          "bottom": 58,
+          "width": 118.17,
+          "height": 34
+        },
+        "ctaText": {
+          "top": 32,
+          "bottom": 48,
+          "height": 16
+        },
+        "logoVisible": true,
+        "ctaVisible": true,
+        "ctaArrowHidden": true,
+        "ctaUnderline": 2,
+        "navType": "12px/700/12px",
+        "ctaType": "12px/700/12px",
+        "itemGaps": [
+          -196.74,
+          0,
+          0,
+          0,
+          0,
+          0,
+          408.09
+        ],
+        "menuVisible": true
+      },
+      "contactCtas": {
+        "textarea": {
+          "left": 53,
+          "top": 8151.95,
+          "right": 588,
+          "bottom": 8243.95,
+          "width": 535,
+          "height": 92
+        },
+        "submit": {
+          "left": 53,
+          "top": 8315.95,
+          "right": 588,
+          "bottom": 8371.95,
+          "width": 535,
+          "height": 56
+        },
+        "direct": {
+          "left": 53,
+          "top": 8383.95,
+          "right": 588,
+          "bottom": 8439.95,
+          "width": 535,
+          "height": 56
+        },
+        "submitArrowColor": "rgb(21, 23, 22)",
+        "submitArrowBackground": "rgb(221, 230, 63)"
+      },
+      "approachLogo": {
+        "embedded": true,
+        "naturalWidth": 309,
+        "naturalHeight": 309,
+        "filter": "brightness(0) invert(1)"
+      },
+      "portfolioActions": {
+        "caseLinkCount": 0,
+        "nextProject": {
+          "left": 20,
+          "top": 2597.31,
+          "right": 621,
+          "bottom": 2639.31,
+          "width": 601,
+          "height": 42
+        },
+        "nextProjectVisible": true
+      },
+      "mobilePortfolioRadii": null,
+      "tokens": {
+        "paper": "#f3f4f0",
+        "ink": "#151716",
+        "purple": "#ad95ee",
+        "purpleStrong": "#7658d0",
+        "lime": "#dde63f"
+      },
+      "video": {
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "preload": "auto"
+      }
+    },
+    {
+      "width": 768,
+      "visibleDesktop": 11,
+      "visibleMobile": 0,
+      "pageOverflow": 0,
+      "duplicateIds": [],
+      "missingImageMetadata": 0,
+      "heroShellWidth": 768,
+      "footer": {
+        "display": "grid",
+        "left": 0,
+        "width": 768,
+        "height": 147,
+        "socialTargets": [
+          {
+            "width": 24,
+            "height": 24
+          },
+          {
+            "width": 24,
+            "height": 24
+          },
+          {
+            "width": 24,
+            "height": 24
+          }
+        ],
+        "logo": {
+          "tag": "svg",
+          "width": 150,
+          "height": 19,
+          "pathCount": 11,
+          "visible": true
+        }
+      },
+      "headerNav": {
+        "header": {
+          "left": 51.2,
+          "top": 14,
+          "right": 716.8,
+          "bottom": 68,
+          "width": 665.59,
+          "height": 54
+        },
+        "nav": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "links": [
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        ],
+        "linkText": [
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          }
+        ],
+        "navVisible": false,
+        "logo": {
+          "left": 51.2,
+          "top": 31.22,
+          "right": 205.2,
+          "bottom": 50.78,
+          "width": 154,
+          "height": 19.56
+        },
+        "logoMark": {
+          "left": 51.2,
+          "top": 31.22,
+          "right": 205.2,
+          "bottom": 50.78,
+          "width": 154,
+          "height": 19.56
+        },
+        "cta": {
+          "left": 526.63,
+          "top": 24,
+          "right": 644.8,
+          "bottom": 58,
+          "width": 118.17,
+          "height": 34
+        },
+        "ctaText": {
+          "top": 32,
+          "bottom": 48,
+          "height": 16
+        },
+        "logoVisible": true,
+        "ctaVisible": true,
+        "ctaArrowHidden": true,
+        "ctaUnderline": 2,
+        "navType": "12px/700/12px",
+        "ctaType": "12px/700/12px",
+        "itemGaps": [
+          -205.2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          526.63
+        ],
+        "menuVisible": true
+      },
+      "contactCtas": {
+        "textarea": {
+          "left": 53,
+          "top": 8045.58,
+          "right": 715,
+          "bottom": 8137.58,
+          "width": 662,
+          "height": 92
+        },
+        "submit": {
+          "left": 53,
+          "top": 8199.58,
+          "right": 715,
+          "bottom": 8255.58,
+          "width": 662,
+          "height": 56
+        },
+        "direct": {
+          "left": 53,
+          "top": 8267.58,
+          "right": 715,
+          "bottom": 8323.58,
+          "width": 662,
+          "height": 56
+        },
+        "submitArrowColor": "rgb(21, 23, 22)",
+        "submitArrowBackground": "rgb(221, 230, 63)"
+      },
+      "approachLogo": {
+        "embedded": true,
+        "naturalWidth": 309,
+        "naturalHeight": 309,
+        "filter": "brightness(0) invert(1)"
+      },
+      "portfolioActions": {
+        "caseLinkCount": 0,
+        "nextProject": {
+          "left": 20,
+          "top": 2644.13,
+          "right": 748,
+          "bottom": 2686.13,
+          "width": 728,
+          "height": 42
+        },
+        "nextProjectVisible": true
+      },
+      "mobilePortfolioRadii": null,
+      "tokens": {
+        "paper": "#f3f4f0",
+        "ink": "#151716",
+        "purple": "#ad95ee",
+        "purpleStrong": "#7658d0",
+        "lime": "#dde63f"
+      },
+      "video": {
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "preload": "auto"
+      }
+    },
+    {
+      "width": 1024,
+      "visibleDesktop": 11,
+      "visibleMobile": 0,
+      "pageOverflow": 0,
+      "duplicateIds": [],
+      "missingImageMetadata": 0,
+      "heroShellWidth": 1024,
+      "footer": {
+        "display": "grid",
+        "left": 0,
+        "width": 1024,
+        "height": 133,
+        "socialTargets": [
+          {
+            "width": 24,
+            "height": 24
+          },
+          {
+            "width": 24,
+            "height": 24
+          },
+          {
+            "width": 24,
+            "height": 24
+          }
+        ],
+        "logo": {
+          "tag": "svg",
+          "width": 150,
+          "height": 19,
+          "pathCount": 11,
+          "visible": true
+        }
+      },
+      "headerNav": {
+        "header": {
+          "left": 68.27,
+          "top": 14,
+          "right": 955.73,
+          "bottom": 68,
+          "width": 887.45,
+          "height": 54
+        },
+        "nav": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "links": [
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          {
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        ],
+        "linkText": [
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          },
+          {
+            "top": 0,
+            "bottom": 0,
+            "height": 0
+          }
+        ],
+        "navVisible": false,
+        "logo": {
+          "left": 68.27,
+          "top": 31.22,
+          "right": 222.27,
+          "bottom": 50.78,
+          "width": 154,
+          "height": 19.56
+        },
+        "logoMark": {
+          "left": 68.27,
+          "top": 31.22,
+          "right": 222.27,
+          "bottom": 50.78,
+          "width": 154,
+          "height": 19.56
+        },
+        "cta": {
+          "left": 765.55,
+          "top": 24,
+          "right": 883.73,
+          "bottom": 58,
+          "width": 118.17,
+          "height": 34
+        },
+        "ctaText": {
+          "top": 32,
+          "bottom": 48,
+          "height": 16
+        },
+        "logoVisible": true,
+        "ctaVisible": true,
+        "ctaArrowHidden": true,
+        "ctaUnderline": 2,
+        "navType": "12px/700/12px",
+        "ctaType": "12px/700/12px",
+        "itemGaps": [
+          -222.27,
+          0,
+          0,
+          0,
+          0,
+          0,
+          765.55
+        ],
+        "menuVisible": true
+      },
+      "contactCtas": {
+        "textarea": {
+          "left": 61,
+          "top": 6463.77,
+          "right": 655.66,
+          "bottom": 6555.77,
+          "width": 594.66,
+          "height": 92
+        },
+        "submit": {
+          "left": 675.66,
+          "top": 6463.58,
+          "right": 963,
+          "bottom": 6505.58,
+          "width": 287.34,
+          "height": 42
+        },
+        "direct": {
+          "left": 675.66,
+          "top": 6513.58,
+          "right": 963,
+          "bottom": 6555.58,
+          "width": 287.34,
+          "height": 42
+        },
+        "submitArrowColor": "rgb(21, 23, 22)",
+        "submitArrowBackground": "rgb(221, 230, 63)"
+      },
+      "approachLogo": {
+        "embedded": true,
+        "naturalWidth": 309,
+        "naturalHeight": 309,
+        "filter": "brightness(0) invert(1)"
+      },
+      "portfolioActions": {
+        "caseLinkCount": 0,
+        "nextProject": {
+          "left": 20,
+          "top": 2618.98,
+          "right": 1004,
+          "bottom": 2660.98,
+          "width": 984,
+          "height": 42
+        },
+        "nextProjectVisible": true
+      },
+      "mobilePortfolioRadii": null,
+      "tokens": {
+        "paper": "#f3f4f0",
+        "ink": "#151716",
+        "purple": "#ad95ee",
+        "purpleStrong": "#7658d0",
+        "lime": "#dde63f"
+      },
+      "video": {
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "preload": "auto"
+      }
+    },
+    {
+      "width": 1440,
+      "visibleDesktop": 11,
+      "visibleMobile": 0,
+      "pageOverflow": 0,
+      "duplicateIds": [],
+      "missingImageMetadata": 0,
+      "heroShellWidth": 1440,
+      "footer": {
+        "display": "grid",
+        "left": 0,
+        "width": 1440,
+        "height": 133,
+        "socialTargets": [
+          {
+            "width": 24,
+            "height": 24
+          },
+          {
+            "width": 24,
+            "height": 24
+          },
+          {
+            "width": 24,
+            "height": 24
+          }
+        ],
+        "logo": {
+          "tag": "svg",
+          "width": 150,
+          "height": 19,
+          "pathCount": 11,
+          "visible": true
+        }
+      },
+      "headerNav": {
+        "header": {
+          "left": 96.01,
+          "top": 14,
+          "right": 1343.99,
+          "bottom": 68,
+          "width": 1247.98,
+          "height": 54
+        },
+        "nav": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "links": [
+          {
+            "left": 338.52,
+            "top": 36,
+            "right": 424.49,
+            "bottom": 68,
+            "width": 85.97,
+            "height": 32
+          },
+          {
+            "left": 513.01,
+            "top": 36,
+            "right": 572.55,
+            "bottom": 68,
+            "width": 59.55,
+            "height": 32
+          },
+          {
+            "left": 661.07,
+            "top": 36,
+            "right": 709.34,
+            "bottom": 68,
+            "width": 48.27,
+            "height": 32
+          },
+          {
+            "left": 797.85,
+            "top": 36,
+            "right": 860.51,
+            "bottom": 68,
+            "width": 62.66,
+            "height": 32
+          },
+          {
+            "left": 949.02,
+            "top": 36,
+            "right": 981.84,
+            "bottom": 68,
+            "width": 32.81,
+            "height": 32
+          },
+          {
+            "left": 1070.35,
+            "top": 36,
+            "right": 1137.21,
+            "bottom": 68,
+            "width": 66.86,
+            "height": 32
+          }
+        ],
+        "linkText": [
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          }
+        ],
+        "navVisible": true,
+        "logo": {
+          "left": 96.01,
+          "top": 40.44,
+          "right": 250.01,
+          "bottom": 68,
+          "width": 154,
+          "height": 27.56
+        },
+        "logoMark": {
+          "left": 96.01,
+          "top": 40.44,
+          "right": 250.01,
+          "bottom": 60,
+          "width": 154,
+          "height": 19.56
+        },
+        "cta": {
+          "left": 1225.73,
+          "top": 36,
+          "right": 1343.9,
+          "bottom": 68,
+          "width": 118.17,
+          "height": 32
+        },
+        "ctaText": {
+          "top": 44,
+          "bottom": 60,
+          "height": 16
+        },
+        "logoVisible": true,
+        "ctaVisible": true,
+        "ctaArrowHidden": true,
+        "ctaUnderline": 2,
+        "navType": "12px/700/12px",
+        "ctaType": "12px/700/12px",
+        "itemGaps": [
+          88.51,
+          88.52,
+          88.52,
+          88.51,
+          88.51,
+          88.51,
+          88.52
+        ],
+        "menuVisible": false
+      },
+      "contactCtas": {
+        "textarea": {
+          "left": 137,
+          "top": 7212.14,
+          "right": 907.66,
+          "bottom": 7304.14,
+          "width": 770.66,
+          "height": 92
+        },
+        "submit": {
+          "left": 927.66,
+          "top": 7212.64,
+          "right": 1303,
+          "bottom": 7254.64,
+          "width": 375.34,
+          "height": 42
+        },
+        "direct": {
+          "left": 927.66,
+          "top": 7262.64,
+          "right": 1303,
+          "bottom": 7304.64,
+          "width": 375.34,
+          "height": 42
+        },
+        "submitArrowColor": "rgb(21, 23, 22)",
+        "submitArrowBackground": "rgb(221, 230, 63)"
+      },
+      "approachLogo": {
+        "embedded": true,
+        "naturalWidth": 309,
+        "naturalHeight": 309,
+        "filter": "brightness(0) invert(1)"
+      },
+      "portfolioActions": {
+        "caseLinkCount": 0,
+        "nextProject": {
+          "left": 1146,
+          "top": 2072.22,
+          "right": 1326,
+          "bottom": 2114.22,
+          "width": 180,
+          "height": 42
+        },
+        "nextProjectVisible": true
+      },
+      "mobilePortfolioRadii": null,
+      "tokens": {
+        "paper": "#f3f4f0",
+        "ink": "#151716",
+        "purple": "#ad95ee",
+        "purpleStrong": "#7658d0",
+        "lime": "#dde63f"
+      },
+      "video": {
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "preload": "auto"
+      }
+    },
+    {
+      "width": 1920,
+      "visibleDesktop": 11,
+      "visibleMobile": 0,
+      "pageOverflow": 0,
+      "duplicateIds": [],
+      "missingImageMetadata": 0,
+      "heroShellWidth": 1920,
+      "footer": {
+        "display": "grid",
+        "left": 0,
+        "width": 1920,
+        "height": 133,
+        "socialTargets": [
+          {
+            "width": 24,
+            "height": 24
+          },
+          {
+            "width": 24,
+            "height": 24
+          },
+          {
+            "width": 24,
+            "height": 24
+          }
+        ],
+        "logo": {
+          "tag": "svg",
+          "width": 150,
+          "height": 19,
+          "pathCount": 11,
+          "visible": true
+        }
+      },
+      "headerNav": {
+        "header": {
+          "left": 128.01,
+          "top": 14,
+          "right": 1791.99,
+          "bottom": 68,
+          "width": 1663.98,
+          "height": 54
+        },
+        "nav": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "links": [
+          {
+            "left": 429.96,
+            "top": 36,
+            "right": 515.93,
+            "bottom": 68,
+            "width": 85.97,
+            "height": 32
+          },
+          {
+            "left": 663.88,
+            "top": 36,
+            "right": 723.43,
+            "bottom": 68,
+            "width": 59.55,
+            "height": 32
+          },
+          {
+            "left": 871.38,
+            "top": 36,
+            "right": 919.65,
+            "bottom": 68,
+            "width": 48.27,
+            "height": 32
+          },
+          {
+            "left": 1067.6,
+            "top": 36,
+            "right": 1130.26,
+            "bottom": 68,
+            "width": 62.66,
+            "height": 32
+          },
+          {
+            "left": 1278.21,
+            "top": 36,
+            "right": 1311.02,
+            "bottom": 68,
+            "width": 32.81,
+            "height": 32
+          },
+          {
+            "left": 1458.98,
+            "top": 36,
+            "right": 1525.84,
+            "bottom": 68,
+            "width": 66.86,
+            "height": 32
+          }
+        ],
+        "linkText": [
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          }
+        ],
+        "navVisible": true,
+        "logo": {
+          "left": 128.01,
+          "top": 40.44,
+          "right": 282.01,
+          "bottom": 68,
+          "width": 154,
+          "height": 27.56
+        },
+        "logoMark": {
+          "left": 128.01,
+          "top": 40.44,
+          "right": 282.01,
+          "bottom": 60,
+          "width": 154,
+          "height": 19.56
+        },
+        "cta": {
+          "left": 1673.79,
+          "top": 36,
+          "right": 1791.96,
+          "bottom": 68,
+          "width": 118.17,
+          "height": 32
+        },
+        "ctaText": {
+          "top": 44,
+          "bottom": 60,
+          "height": 16
+        },
+        "logoVisible": true,
+        "ctaVisible": true,
+        "ctaArrowHidden": true,
+        "ctaUnderline": 2,
+        "navType": "12px/700/12px",
+        "ctaType": "12px/700/12px",
+        "itemGaps": [
+          147.95,
+          147.95,
+          147.95,
+          147.95,
+          147.95,
+          147.96,
+          147.95
+        ],
+        "menuVisible": false
+      },
+      "contactCtas": {
+        "textarea": {
+          "left": 169,
+          "top": 7868.03,
+          "right": 1217,
+          "bottom": 7960.03,
+          "width": 1048,
+          "height": 92
+        },
+        "submit": {
+          "left": 1237,
+          "top": 7868.53,
+          "right": 1751,
+          "bottom": 7910.53,
+          "width": 514,
+          "height": 42
+        },
+        "direct": {
+          "left": 1237,
+          "top": 7918.53,
+          "right": 1751,
+          "bottom": 7960.53,
+          "width": 514,
+          "height": 42
+        },
+        "submitArrowColor": "rgb(21, 23, 22)",
+        "submitArrowBackground": "rgb(221, 230, 63)"
+      },
+      "approachLogo": {
+        "embedded": true,
+        "naturalWidth": 309,
+        "naturalHeight": 309,
+        "filter": "brightness(0) invert(1)"
+      },
+      "portfolioActions": {
+        "caseLinkCount": 0,
+        "nextProject": {
+          "left": 1594,
+          "top": 2502.45,
+          "right": 1774,
+          "bottom": 2544.45,
+          "width": 180,
+          "height": 42
+        },
+        "nextProjectVisible": true
+      },
+      "mobilePortfolioRadii": null,
+      "tokens": {
+        "paper": "#f3f4f0",
+        "ink": "#151716",
+        "purple": "#ad95ee",
+        "purpleStrong": "#7658d0",
+        "lime": "#dde63f"
+      },
+      "video": {
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "preload": "auto"
+      }
+    },
+    {
+      "width": 3840,
+      "visibleDesktop": 11,
+      "visibleMobile": 0,
+      "pageOverflow": 0,
+      "duplicateIds": [],
+      "missingImageMetadata": 0,
+      "heroShellWidth": 3840,
+      "footer": {
+        "display": "grid",
+        "left": 256,
+        "width": 3328,
+        "height": 266,
+        "socialTargets": [
+          {
+            "width": 48,
+            "height": 48
+          },
+          {
+            "width": 48,
+            "height": 48
+          },
+          {
+            "width": 48,
+            "height": 48
+          }
+        ],
+        "logo": {
+          "tag": "svg",
+          "width": 300,
+          "height": 38,
+          "pathCount": 11,
+          "visible": true
+        }
+      },
+      "headerNav": {
+        "header": {
+          "left": 256,
+          "top": 14,
+          "right": 3584,
+          "bottom": 68,
+          "width": 3328,
+          "height": 54
+        },
+        "nav": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "links": [
+          {
+            "left": 795.67,
+            "top": 36,
+            "right": 881.64,
+            "bottom": 68,
+            "width": 85.97,
+            "height": 32
+          },
+          {
+            "left": 1267.31,
+            "top": 36,
+            "right": 1326.86,
+            "bottom": 68,
+            "width": 59.55,
+            "height": 32
+          },
+          {
+            "left": 1712.53,
+            "top": 36,
+            "right": 1760.8,
+            "bottom": 68,
+            "width": 48.27,
+            "height": 32
+          },
+          {
+            "left": 2146.47,
+            "top": 36,
+            "right": 2209.13,
+            "bottom": 68,
+            "width": 62.66,
+            "height": 32
+          },
+          {
+            "left": 2594.8,
+            "top": 36,
+            "right": 2627.61,
+            "bottom": 68,
+            "width": 32.81,
+            "height": 32
+          },
+          {
+            "left": 3013.28,
+            "top": 36,
+            "right": 3080.14,
+            "bottom": 68,
+            "width": 66.86,
+            "height": 32
+          }
+        ],
+        "linkText": [
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          },
+          {
+            "top": 44,
+            "bottom": 60,
+            "height": 16
+          }
+        ],
+        "navVisible": true,
+        "logo": {
+          "left": 256,
+          "top": 40.44,
+          "right": 410,
+          "bottom": 68,
+          "width": 154,
+          "height": 27.56
+        },
+        "logoMark": {
+          "left": 256,
+          "top": 40.44,
+          "right": 410,
+          "bottom": 60,
+          "width": 154,
+          "height": 19.56
+        },
+        "cta": {
+          "left": 3465.81,
+          "top": 36,
+          "right": 3583.98,
+          "bottom": 68,
+          "width": 118.17,
+          "height": 32
+        },
+        "ctaText": {
+          "top": 44,
+          "bottom": 60,
+          "height": 16
+        },
+        "logoVisible": true,
+        "ctaVisible": true,
+        "ctaArrowHidden": true,
+        "ctaUnderline": 2,
+        "navType": "12px/700/12px",
+        "ctaType": "12px/700/12px",
+        "itemGaps": [
+          385.67,
+          385.67,
+          385.67,
+          385.67,
+          385.67,
+          385.67,
+          385.67
+        ],
+        "menuVisible": false
+      },
+      "contactCtas": {
+        "textarea": {
+          "left": 297,
+          "top": 11136.55,
+          "right": 2454.33,
+          "bottom": 11228.55,
+          "width": 2157.33,
+          "height": 92
+        },
+        "submit": {
+          "left": 2474.33,
+          "top": 11136.55,
+          "right": 3543,
+          "bottom": 11178.55,
+          "width": 1068.67,
+          "height": 42
+        },
+        "direct": {
+          "left": 2474.33,
+          "top": 11186.55,
+          "right": 3543,
+          "bottom": 11228.55,
+          "width": 1068.67,
+          "height": 42
+        },
+        "submitArrowColor": "rgb(21, 23, 22)",
+        "submitArrowBackground": "rgb(221, 230, 63)"
+      },
+      "approachLogo": {
+        "embedded": true,
+        "naturalWidth": 309,
+        "naturalHeight": 309,
+        "filter": "brightness(0) invert(1)"
+      },
+      "portfolioActions": {
+        "caseLinkCount": 0,
+        "nextProject": {
+          "left": 3386,
+          "top": 3652.44,
+          "right": 3566,
+          "bottom": 3736.44,
+          "width": 180,
+          "height": 84
+        },
+        "nextProjectVisible": true
+      },
+      "mobilePortfolioRadii": null,
+      "tokens": {
+        "paper": "#f3f4f0",
+        "ink": "#151716",
+        "purple": "#ad95ee",
+        "purpleStrong": "#7658d0",
+        "lime": "#dde63f"
+      },
+      "video": {
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "playsInline": true,
+        "preload": "auto"
+      }
+    }
+  ],
+  "headerScrollBehavior": [
+    {
+      "width": 390,
+      "top": {
+        "hidden": false,
+        "top": 0
+      },
+      "down": {
+        "hidden": true,
+        "bottom": 0
+      },
+      "up": {
+        "hidden": false,
+        "top": 0
+      }
+    },
+    {
+      "width": 1440,
+      "top": {
+        "hidden": false,
+        "top": 0
+      },
+      "down": {
+        "hidden": true,
+        "bottom": 0
+      },
+      "up": {
+        "hidden": false,
+        "top": 0
+      }
+    }
+  ],
+  "heroLayouts": [
+    {
+      "width": 320,
+      "height": 667,
+      "hero": {
+        "top": 0,
+        "right": 320,
+        "bottom": 667,
+        "left": 0,
+        "width": 320,
+        "height": 667
+      },
+      "content": {
+        "top": 349.0625,
+        "right": 304,
+        "bottom": 625,
+        "left": 16,
+        "width": 288,
+        "height": 275.9375
+      },
+      "title": {
+        "top": 349.0625,
+        "right": 304,
+        "bottom": 478.0625,
+        "left": 16,
+        "width": 288,
+        "height": 129
+      },
+      "rule": {
+        "top": 496.0625,
+        "right": 58,
+        "bottom": 498.0625,
+        "left": 16,
+        "width": 42,
+        "height": 2
+      },
+      "intro": {
+        "top": 514.0625,
+        "right": 304,
+        "bottom": 551,
+        "left": 16,
+        "width": 288,
+        "height": 36.9375
+      },
+      "actionRects": [
+        {
+          "top": 571,
+          "right": 304,
+          "bottom": 625,
+          "left": 16,
+          "width": 288,
+          "height": 54
+        }
+      ],
+      "titleText": "Создаём бренды, которые выбирают",
+      "introText": "Стратегический дизайн — от анализа рынка до запуска в производство",
+      "actionTexts": [
+        "Обсудить проект"
+      ],
+      "actionTargets": [
+        "#abm-contact"
+      ]
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "hero": {
+        "top": 0,
+        "right": 390,
+        "bottom": 844,
+        "left": 0,
+        "width": 390,
+        "height": 844
+      },
+      "content": {
+        "top": 555.65625,
+        "right": 372.0625,
+        "bottom": 802,
+        "left": 17.9375,
+        "width": 354.125,
+        "height": 246.34375
+      },
+      "title": {
+        "top": 555.65625,
+        "right": 372.0625,
+        "bottom": 652.90625,
+        "left": 17.9375,
+        "width": 354.125,
+        "height": 97.25
+      },
+      "rule": {
+        "top": 670.90625,
+        "right": 59.9375,
+        "bottom": 672.90625,
+        "left": 17.9375,
+        "width": 42,
+        "height": 2
+      },
+      "intro": {
+        "top": 688.90625,
+        "right": 323.4375,
+        "bottom": 728,
+        "left": 17.9375,
+        "width": 305.5,
+        "height": 39.09375
+      },
+      "actionRects": [
+        {
+          "top": 748,
+          "right": 361.9375,
+          "bottom": 802,
+          "left": 17.9375,
+          "width": 344,
+          "height": 54
+        }
+      ],
+      "titleText": "Создаём бренды, которые выбирают",
+      "introText": "Стратегический дизайн — от анализа рынка до запуска в производство",
+      "actionTexts": [
+        "Обсудить проект"
+      ],
+      "actionTargets": [
+        "#abm-contact"
+      ]
+    },
+    {
+      "width": 412,
+      "height": 915,
+      "hero": {
+        "top": 0,
+        "right": 412,
+        "bottom": 915,
+        "left": 0,
+        "width": 412,
+        "height": 915
+      },
+      "content": {
+        "top": 618.96875,
+        "right": 393.0625,
+        "bottom": 873,
+        "left": 18.9375,
+        "width": 374.125,
+        "height": 254.03125
+      },
+      "title": {
+        "top": 618.96875,
+        "right": 393.0625,
+        "bottom": 721.6875,
+        "left": 18.9375,
+        "width": 374.125,
+        "height": 102.71875
+      },
+      "rule": {
+        "top": 739.6875,
+        "right": 60.9375,
+        "bottom": 741.6875,
+        "left": 18.9375,
+        "width": 42,
+        "height": 2
+      },
+      "intro": {
+        "top": 757.6875,
+        "right": 341.546875,
+        "bottom": 799,
+        "left": 18.9375,
+        "width": 322.609375,
+        "height": 41.3125
+      },
+      "actionRects": [
+        {
+          "top": 819,
+          "right": 362.9375,
+          "bottom": 873,
+          "left": 18.9375,
+          "width": 344,
+          "height": 54
+        }
+      ],
+      "titleText": "Создаём бренды, которые выбирают",
+      "introText": "Стратегический дизайн — от анализа рынка до запуска в производство",
+      "actionTexts": [
+        "Обсудить проект"
+      ],
+      "actionTargets": [
+        "#abm-contact"
+      ]
+    }
+  ],
+  "mobileInteraction": {
+    "menuOpened": true,
+    "approachAdvanced": true,
+    "serviceTabSelected": true,
+    "packageTabSelected": true,
+    "portfolioRevealed": true,
+    "portfolioReverseStable": true,
+    "formSuccess": true
+  },
+  "portfolioRevealFlow": [
+    {
+      "batch": 2,
+      "revealedCount": 5,
+      "gatePinStable": true,
+      "visibleSlides": 10,
+      "firstTop": 68,
+      "captionsKeepLayout": true,
+      "nextButtonVisible": true,
+      "firstCase": "06",
+      "topCase": "06",
+      "dockMatchesFirst": true,
+      "edgePair": [
+        "06",
+        "07"
+      ],
+      "edgePairStable": true,
+      "stackedAtTop": 6,
+      "paintedStackedAtTop": 1,
+      "pastSlides": 5,
+      "stackPaintStable": true,
+      "flowStable": true,
+      "ok": true
+    },
+    {
+      "batch": 3,
+      "revealedCount": 5,
+      "gatePinStable": true,
+      "visibleSlides": 15,
+      "firstTop": 68,
+      "captionsKeepLayout": true,
+      "nextButtonVisible": true,
+      "firstCase": "11",
+      "topCase": "11",
+      "dockMatchesFirst": true,
+      "edgePair": [
+        "10",
+        "11"
+      ],
+      "edgePairStable": true,
+      "stackedAtTop": 11,
+      "paintedStackedAtTop": 1,
+      "pastSlides": 10,
+      "stackPaintStable": true,
+      "flowStable": true,
+      "ok": true
+    },
+    {
+      "batch": 4,
+      "revealedCount": 5,
+      "gatePinStable": true,
+      "visibleSlides": 20,
+      "firstTop": 68,
+      "captionsKeepLayout": true,
+      "nextButtonVisible": false,
+      "firstCase": "16",
+      "topCase": "16",
+      "dockMatchesFirst": true,
+      "edgePair": [
+        "15",
+        "16"
+      ],
+      "edgePairStable": true,
+      "stackedAtTop": 16,
+      "paintedStackedAtTop": 1,
+      "pastSlides": 15,
+      "stackPaintStable": true,
+      "flowStable": true,
+      "ok": true
+    }
+  ],
+  "mobilePortfolioAppearance": {
+    "dockVisible": true,
+    "dockedState": true,
+    "titleAccentVisible": true,
+    "moreButtonPurpleBorder": true,
+    "visibleInlineCaptions": 0,
+    "caseLinkCount": 0
+  },
+  "blogCoverAudit": {
+    "total": 3,
+    "placeholders": 0,
+    "dimensions": [
+      [
+        "1670",
+        "941"
+      ],
+      [
+        "900",
+        "1200"
+      ],
+      [
+        "1200",
+        "680"
+      ]
+    ],
+    "sourcesEditable": true,
+    "desktopObjectFit": "cover",
+    "desktopFrameRatio": 1.774736760606999,
+    "desktopNaturalRatio": 1.7747077577045696,
+    "desktopRowsAligned": true,
+    "mobileTag": "IMG",
+    "desktopType": "Новости",
+    "desktopTitle": "ANBOX Studio — соорганизатор сессии «Упаковка» на WorldFood 2026",
+    "desktopLead": "Приглашаем посетить экспертную сессию 18 сентября.",
+    "desktopAction": "Подробнее на сайте ↗",
+    "desktopTarget": "https://world-food.ru/ru/business-program/bp26/1Forum/DAY4-Pitch/",
+    "mobileType": "Новости · дизайн упаковки",
+    "mobileTitle": "ANBOX Studio — соорганизатор сессии «Упаковка» на WorldFood 2026",
+    "mobileTarget": "https://world-food.ru/ru/business-program/bp26/1Forum/DAY4-Pitch/"
+  },
+  "portfolioReverseFlow": {
+    "targetVisible": true,
+    "topCase": "10",
+    "paintedStacked": 1,
+    "pastSlides": 9
+  },
+  "desktopInteraction": {
+    "heroDotSelected": true,
+    "portfolioAdvanced": true,
+    "packageSelected": true,
+    "teamPortraitsEditable": true
+  },
+  "desktopContactStates": {
+    "consentError": {
+      "text": "Пожалуйста, подтвердите ознакомление",
+      "fontSize": 8,
+      "width": 745,
+      "height": 10,
+      "invalid": "true",
+      "describedBy": "abct-consent-error",
+      "visible": true
+    },
+    "consentCleared": true,
+    "success": {
+      "state": "1",
+      "bodyHidden": true,
+      "visible": true,
+      "popupHidden": true,
+      "focused": true,
+      "hasMark": true,
+      "actionTargets": [
+        "#anxg-gallery",
+        "https://t.me/anbox_design"
+      ]
+    }
+  },
+  "desktopPortfolioGeometry": [
+    {
+      "width": 1200,
+      "mediaWidth": 686.67,
+      "mediaHeight": 457.77,
+      "mediaRatio": 1.5,
+      "detailsHeight": 124,
+      "detailsOverflow": 0,
+      "technicalCount": 20,
+      "technicalBottomValues": [
+        "15px"
+      ],
+      "technicalButtonBottomDiff": 0
+    },
+    {
+      "width": 1440,
+      "mediaWidth": 825.34,
+      "mediaHeight": 550.22,
+      "mediaRatio": 1.5,
+      "detailsHeight": 124,
+      "detailsOverflow": 0,
+      "technicalCount": 20,
+      "technicalBottomValues": [
+        "15px"
+      ],
+      "technicalButtonBottomDiff": 0
+    },
+    {
+      "width": 1920,
+      "mediaWidth": 1101.34,
+      "mediaHeight": 734.22,
+      "mediaRatio": 1.5,
+      "detailsHeight": 134.39,
+      "detailsOverflow": 0,
+      "technicalCount": 20,
+      "technicalBottomValues": [
+        "15px"
+      ],
+      "technicalButtonBottomDiff": -0.02
+    },
+    {
+      "width": 3840,
+      "mediaWidth": 2202.67,
+      "mediaHeight": 1468.44,
+      "mediaRatio": 1.5,
+      "detailsHeight": 140,
+      "detailsOverflow": 0,
+      "technicalCount": 20,
+      "technicalBottomValues": [
+        "15px"
+      ],
+      "technicalButtonBottomDiff": 0
+    }
+  ],
+  "desktopGalleryPin": {
+    "width": 1440,
+    "height": 1000,
+    "position": "sticky",
+    "dwell": 1000,
+    "exitGap": 64,
+    "entered": {
+      "rootTop": 151,
+      "rootBottom": 1845.22,
+      "stageTop": 152.88,
+      "stageBottom": 847.09,
+      "headerHidden": true,
+      "headerBottom": 0
+    },
+    "held": {
+      "rootTop": -399,
+      "rootBottom": 1295.22,
+      "stageTop": 152.88,
+      "stageBottom": 847.09,
+      "headerHidden": true,
+      "headerBottom": 0
+    },
+    "released": {
+      "rootTop": -999,
+      "rootBottom": 695.22,
+      "stageTop": 1,
+      "stageBottom": 695.22,
+      "headerHidden": true,
+      "headerBottom": 0
+    }
+  },
+  "desktopIntroLines": [
+    {
+      "part": "04",
+      "width": 2,
+      "color": "rgb(173, 149, 238)",
+      "maskSize": "535px 23px, 538px 23px, 152px 23px, 3px 100%",
+      "preserveLayer": true,
+      "visible": true
+    },
+    {
+      "part": "05",
+      "width": 2,
+      "color": "rgb(173, 149, 238)",
+      "maskSize": "361px 23px, 401px 23px, 3px 100%",
+      "preserveLayer": true,
+      "visible": true
+    },
+    {
+      "part": "07",
+      "width": 2,
+      "color": "rgb(173, 149, 238)",
+      "maskSize": "321px 18px, 331px 18px, 3px 100%",
+      "preserveLayer": true,
+      "visible": true
+    },
+    {
+      "part": "08",
+      "width": 2,
+      "color": "rgb(173, 149, 238)",
+      "maskSize": "355px 23px, 307px 23px, 3px 100%",
+      "preserveLayer": true,
+      "visible": true
+    },
+    {
+      "part": "09",
+      "width": 2,
+      "color": "rgb(173, 149, 238)",
+      "maskSize": "300px 23px, 3px 100%",
+      "preserveLayer": true,
+      "visible": true
+    }
+  ],
+  "heroMediaBehavior": {
+    "videoKeepsPlaying": true,
+    "marqueeStartsAtBeginning": true,
+    "marqueeMovesAfterHold": true,
+    "samples": {
+      "heroVideoBefore": {
+        "currentTime": 3.590583,
+        "paused": false,
+        "loop": true,
+        "opacity": "1",
+        "introState": "ready"
+      },
+      "heroVideoAfter": {
+        "currentTime": 4.301038,
+        "paused": false
+      },
+      "marqueeAtFullReveal": 0,
+      "marqueeAfterHold": -89.39
+    }
+  },
+  "parity": {
+    "mobileSource390": {
+      "hero": {
+        "width": 390,
+        "height": 1000
+      },
+      "approach": {
+        "width": 390,
+        "height": 391
+      },
+      "portfolio": {
+        "width": 390,
+        "height": 6782
+      }
+    },
+    "mobileFinal390": {
+      "hero": {
+        "width": 390,
+        "height": 1000
+      },
+      "approach": {
+        "width": 390,
+        "height": 391
+      },
+      "portfolio": {
+        "width": 390,
+        "height": 6782
+      }
+    },
+    "desktopSource1440": {
+      "hero": {
+        "width": 1424,
+        "height": 760
+      },
+      "approach": {
+        "width": 1424,
+        "height": 676
+      },
+      "portfolio": {
+        "width": 1424,
+        "height": 848
+      }
+    },
+    "desktopFinal1440": {
+      "hero": {
+        "width": 1440,
+        "height": 760
+      },
+      "approach": {
+        "width": 1440,
+        "height": 676
+      },
+      "portfolio": {
+        "width": 1440,
+        "height": 1858
+      }
+    },
+    "desktopSource3840": {
+      "hero": {
+        "width": 3824,
+        "height": 800
+      },
+      "approach": {
+        "width": 3824,
+        "height": 1296
+      },
+      "portfolio": {
+        "width": 3824,
+        "height": 848
+      }
+    },
+    "desktopFinal3840": {
+      "hero": {
+        "width": 3840,
+        "height": 800
+      },
+      "approach": {
+        "width": 3840,
+        "height": 1296
+      },
+      "portfolio": {
+        "width": 3840,
+        "height": 2916
+      }
+    }
+  },
+  "casesAudit": {
+    "desktopOrder": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+    ],
+    "desktopTitles": [
+      "Мистраль",
+      "BEZOOM",
+      "Lakom",
+      "Plantago",
+      "Juvio",
+      "Vitaminum",
+      "Schwarz",
+      "Purera",
+      "Beauty Bite",
+      "CLARETTE",
+      "KRUNO",
+      "Remarine",
+      "IRON MAN",
+      "Баден-Баден",
+      "НА СПОРТЕ",
+      "Cosmobar",
+      "EGO KIDS",
+      "ПП",
+      "Rebel scandle",
+      "Avella"
+    ],
+    "mobileOrder": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+    ],
+    "mobileTitles": [
+      "Мистраль",
+      "BEZOOM",
+      "Lakom",
+      "Plantago",
+      "Juvio",
+      "Vitaminum",
+      "Schwarz",
+      "Purera",
+      "Beauty Bite",
+      "CLARETTE",
+      "KRUNO",
+      "Remarine",
+      "IRON MAN",
+      "Баден-Баден",
+      "НА СПОРТЕ",
+      "Cosmobar",
+      "EGO KIDS",
+      "ПП",
+      "Rebel scandle",
+      "Avella"
+    ],
+    "heroOrder": [
+      "01",
+      "06",
+      "07",
+      "12",
+      "15"
+    ],
+    "desktopUrls": [
+      "https://static.tildacdn.com/tild3131-3837-4135-b764-386661393639/5.jpg",
+      "https://static.tildacdn.com/tild3064-3336-4136-a334-373034643733/--2-tilda-1680.webp",
+      "https://static.tildacdn.com/tild3334-3563-4237-a166-626334666133/04_paint_buckets.jpg",
+      "https://static.tildacdn.com/tild3537-3263-4437-a631-346331656336/aa605cbc-4307-44c4-b.png",
+      "https://static.tildacdn.com/tild3362-6231-4035-a433-353339376362/35b0bef6-b210-480c-9.webp",
+      "https://static.tildacdn.com/tild6336-3830-4632-a164-643966656131/--7-tilda-1680_1.webp",
+      "https://static.tildacdn.com/tild6134-3734-4034-b135-653863643738/__2026-07-16_192927.png",
+      "https://static.tildacdn.com/tild6434-3930-4566-a563-636232383764/01_cherry_wet_botani.png",
+      "https://static.tildacdn.com/tild3833-6464-4862-a263-656361623238/_-1.png",
+      "https://static.tildacdn.com/tild3366-3066-4264-b530-636566353232/02_complete_product_.jpg",
+      "https://static.tildacdn.com/tild6362-6236-4835-a333-653636336566/807ca8dd-9a0e-4929-a.png",
+      "https://static.tildacdn.com/tild3932-3637-4362-b164-636338376464/01_footcare_box_volc.jpg",
+      "https://static.tildacdn.com/tild6430-3664-4661-b866-626562353533/IRON_MAN.jpg",
+      "https://static.tildacdn.com/tild3537-3966-4831-b463-666136383935/_-4.png",
+      "https://static.tildacdn.com/tild3964-6136-4562-b530-623666303635/06_-tilda-1680.webp",
+      "https://static.tildacdn.com/tild3331-6464-4633-b133-623662633635/1.png",
+      "https://static.tildacdn.com/tild6534-6164-4465-b961-356163663034/photo.png",
+      "https://static.tildacdn.com/tild6162-3537-4535-b465-613132373566/7886c5fa-49d0-4c89-b.png",
+      "https://static.tildacdn.com/tild3234-3739-4235-a366-383838373666/02_afterhours_packag.jpg",
+      "https://static.tildacdn.com/tild3839-3361-4136-a530-313530626435/1-tilda-1680_1.webp"
+    ],
+    "mobileUrls": [
+      "https://static.tildacdn.com/tild3131-3837-4135-b764-386661393639/5.jpg",
+      "https://static.tildacdn.com/tild3865-3835-4564-a632-626633623962/837023aa-d8b0-4c0e-a.webp",
+      "https://static.tildacdn.com/tild3537-3534-4530-a135-656566393464/05_factory_lineup.jpg",
+      "https://static.tildacdn.com/tild3235-6337-4437-a366-633662386566/_-2.png",
+      "https://static.tildacdn.com/tild3262-3330-4162-b563-353937343634/c7595ae5-9944-4505-9.webp",
+      "https://static.tildacdn.com/tild6431-3532-4432-a134-363834323632/1-tilda-1680.webp",
+      "https://static.tildacdn.com/tild6134-3734-4034-b135-653863643738/__2026-07-16_192927.png",
+      "https://static.tildacdn.com/tild6434-3930-4566-a563-636232383764/01_cherry_wet_botani.png",
+      "https://static.tildacdn.com/tild6337-6435-4336-a333-663561653663/13.png",
+      "https://static.tildacdn.com/tild3366-3066-4264-b530-636566353232/02_complete_product_.jpg",
+      "https://static.tildacdn.com/tild3763-6532-4830-b138-316237356534/8a9c40dc-2b81-4862-a.png",
+      "https://static.tildacdn.com/tild3932-3637-4362-b164-636338376464/01_footcare_box_volc.jpg",
+      "https://static.tildacdn.com/tild6365-6565-4166-b263-656366313437/02.png",
+      "https://static.tildacdn.com/tild6561-6432-4864-b866-636438653461/3.jpg",
+      "https://static.tildacdn.com/tild6162-3862-4433-a133-376537616430/--7-tilda-1680.webp",
+      "https://static.tildacdn.com/tild6362-3064-4132-b366-313137333763/noroot.png",
+      "https://static.tildacdn.com/tild6534-6164-4465-b961-356163663034/photo.png",
+      "https://static.tildacdn.com/tild6630-6533-4533-b437-623664666264/92ba63cf-0eb9-49ea-b.png",
+      "https://static.tildacdn.com/tild6461-3063-4533-b436-383738386165/03_molten_wax_topdow.jpg",
+      "https://static.tildacdn.com/tild3839-3361-4136-a530-313530626435/1-tilda-1680_1.webp"
+    ],
+    "heroUrls": [
+      "https://static.tildacdn.com/tild3131-3837-4135-b764-386661393639/5.jpg",
+      "https://static.tildacdn.com/tild6336-3830-4632-a164-643966656131/--7-tilda-1680_1.webp",
+      "https://static.tildacdn.com/tild6134-3734-4034-b135-653863643738/__2026-07-16_192927.png",
+      "https://static.tildacdn.com/tild3932-3637-4362-b164-636338376464/01_footcare_box_volc.jpg",
+      "https://static.tildacdn.com/tild3964-6136-4562-b530-623666303635/06_-tilda-1680.webp"
+    ],
+    "heroMarkedDesktop": [
+      "01",
+      "06",
+      "07",
+      "12",
+      "15"
+    ],
+    "heroMarkedMobile": [
+      "01",
+      "06",
+      "07",
+      "12",
+      "15"
+    ],
+    "watchCaseButtons": 0
+  },
+  "desktopHeroShelfAudit": {
+    "total": 8,
+    "loaded": 8
+  },
+  "mobileHeroShelfAudit": {
+    "total": 8,
+    "loaded": 8
+  },
+  "cleanupAudit": {
+    "sourceBytes": 816357,
+    "blockBytes": 626462,
+    "reductionPercent": 23.3,
+    "styleTagsByFile": {
+      "00-header.html": 6,
+      "01-hero.html": 3,
+      "02-approach.html": 2,
+      "03B-portfolio.html": 3,
+      "04-services.html": 2,
+      "05-packages.html": 2,
+      "06-clients.html": 3,
+      "07-team-training.html": 2,
+      "08-blog.html": 2,
+      "09-contacts.html": 2,
+      "10-footer.html": 3,
+      "03A-portfolio-system.html": 1
+    },
+    "importCount": 1,
+    "scrollReplayRuntimeCount": 0,
+    "legacyColors": []
+  },
+  "headingAudit": {
+    "h1ByFile": {
+      "00-header.html": 0,
+      "01-hero.html": 1,
+      "02-approach.html": 0,
+      "03B-portfolio.html": 0,
+      "04-services.html": 0,
+      "05-packages.html": 0,
+      "06-clients.html": 0,
+      "07-team-training.html": 0,
+      "08-blog.html": 0,
+      "09-contacts.html": 0,
+      "10-footer.html": 0,
+      "03A-portfolio-system.html": 0
+    },
+    "previewH1Count": 1,
+    "desktopTitle": "Создаём бренды, которые выбирают",
+    "mobileTitle": "Создаём бренды, которые выбирают",
+    "desktopLevelOneRoleCount": 1
+  },
+  "navigationAudit": {
+    "legacyApproachLabels": 0,
+    "desktopBlogTarget": true,
+    "desktopDesignersFirst": true,
+    "mobileBlogTargets": 2,
+    "mobileBlogAnchor": true,
+    "mobileDesignersFirst": true
+  },
+  "revealStructureAudit": {
+    "coreStyleCount": 1,
+    "coreRuntimeCount": 1,
+    "initByFile": {
+      "00-header.html": 0,
+      "01-hero.html": 1,
+      "02-approach.html": 1,
+      "03B-portfolio.html": 1,
+      "04-services.html": 1,
+      "05-packages.html": 1,
+      "06-clients.html": 0,
+      "07-team-training.html": 1,
+      "08-blog.html": 1,
+      "09-contacts.html": 1,
+      "10-footer.html": 1
+    },
+    "serviceInitCount": 0
+  },
+  "revealAudit": {
+    "desktop": {
+      "width": 1440,
+      "selector": ".anbox-desktop-part--08 .ablog__intro",
+      "before": {
+        "in": false,
+        "edge": "bottom",
+        "top": 1006.9,
+        "bottom": 1050.8,
+        "opacity": 1,
+        "translateX": 0,
+        "translateY": 0,
+        "clipPath": "none",
+        "clipValues": [],
+        "maskSize": "355px 23px, 307px 23px, 3px 100%",
+        "maskWidths": [
+          100
+        ],
+        "maskPosition": "-339px 0px, -291px 21px, 0px 0px",
+        "maskXs": [
+          -339,
+          -291,
+          0
+        ],
+        "maskProgress": [
+          0,
+          0
+        ],
+        "wordCount": 0,
+        "wordsIntact": true,
+        "lineOpacities": [],
+        "lineCount": 2
+      },
+      "entered": {
+        "in": true,
+        "edge": "bottom",
+        "top": 953,
+        "bottom": 996.9,
+        "opacity": 1,
+        "translateX": 0,
+        "translateY": 0,
+        "clipPath": "none",
+        "clipValues": [],
+        "maskSize": "355px 23px, 307px 23px, 3px 100%",
+        "maskWidths": [
+          100
+        ],
+        "maskPosition": "-177.107px 0px, -281.721px 21px, -177.107px 0px",
+        "maskXs": [
+          -177.107,
+          -281.721,
+          -177.107
+        ],
+        "maskProgress": [
+          0.4560366197183099,
+          0.03022475570032572
+        ],
+        "wordCount": 0,
+        "wordsIntact": true,
+        "lineOpacities": [],
+        "lineCount": 2
+      },
+      "exitedTop": {
+        "in": false,
+        "edge": "top",
+        "top": -152.2,
+        "bottom": -108.3,
+        "opacity": 1,
+        "translateX": 0,
+        "translateY": 0,
+        "clipPath": "none",
+        "clipValues": [],
+        "maskSize": "355px 23px, 307px 23px, 3px 100%",
+        "maskWidths": [
+          100
+        ],
+        "maskPosition": "-339px 0px, -291px 21px, 0px 0px",
+        "maskXs": [
+          -339,
+          -291,
+          0
+        ],
+        "maskProgress": [
+          0,
+          0
+        ],
+        "wordCount": 0,
+        "wordsIntact": true,
+        "lineOpacities": [],
+        "lineCount": 2
+      },
+      "returnedTop": {
+        "in": true,
+        "edge": "top",
+        "top": 53.4,
+        "bottom": 97.3,
+        "opacity": 1,
+        "translateX": 0,
+        "translateY": 0,
+        "clipPath": "none",
+        "clipValues": [],
+        "maskSize": "355px 23px, 307px 24px, 3px 100%",
+        "maskWidths": [
+          100
+        ],
+        "maskPosition": "-177.022px 0px, -281.681px 21px, -177.022px 0px",
+        "maskXs": [
+          -177.022,
+          -281.681,
+          -177.022
+        ],
+        "maskProgress": [
+          0.4562760563380282,
+          0.030355048859934907
+        ],
+        "wordCount": 0,
+        "wordsIntact": true,
+        "lineOpacities": [],
+        "lineCount": 2
+      },
+      "nestedTargets": 0,
+      "clientTargets": 0
+    },
+    "clientsDesktop": {
+      "width": 1440,
+      "before": "matrix(1, 0, 0, 1, -6.41374, 0)",
+      "after": "matrix(1, 0, 0, 1, -20.6431, 0)",
+      "moved": true
+    },
+    "clientsMobile": {
+      "width": 390,
+      "before": "matrix(1, 0, 0, 1, -95.15, 0)",
+      "after": "matrix(1, 0, 0, 1, -77.74, 0)",
+      "moved": true
+    },
+    "cardSequence": [
+      [
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        }
+      ],
+      [
+        {
+          "opacity": 0.492696,
+          "translateX": 0,
+          "translateY": 4.05843,
+          "filter": "blur(0.760956px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        }
+      ],
+      [
+        {
+          "opacity": 0.919716,
+          "translateX": 0,
+          "translateY": 0.64227,
+          "filter": "blur(0.120426px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0.663715,
+          "translateX": 0,
+          "translateY": 2.69028,
+          "filter": "blur(0.504428px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        },
+        {
+          "opacity": 0,
+          "translateX": 0,
+          "translateY": 8,
+          "filter": "blur(1.5px)",
+          "clipPath": "none"
+        }
+      ]
+    ],
+    "approachHover": {
+      "before": {
+        "translateY": 0,
+        "shadow": "none",
+        "sealTransform": "none",
+        "moving": ""
+      },
+      "hovered": {
+        "translateY": -4.7952,
+        "shadow": "rgba(22, 22, 22, 0.043) 0px 21.6px 50.4px 0px",
+        "sealTransform": "matrix(1.02988, 0.14474, -0.14474, 1.02988, 0, 0)",
+        "moving": ""
+      }
+    },
+    "approachScrollStability": {
+      "before": {
+        "scrollY": 760,
+        "isIn": true,
+        "cards": [
+          {
+            "documentTop": 949.453125,
+            "opacity": 1,
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "documentTop": 949.453125,
+            "opacity": 1,
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "documentTop": 1184.71875,
+            "opacity": 1,
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "documentTop": 1184.71875,
+            "opacity": 1,
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "documentTop": 1184.71875,
+            "opacity": 1,
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "documentTop": 1184.71875,
+            "opacity": 1,
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        ]
+      },
+      "after": {
+        "scrollY": 1020,
+        "isIn": true,
+        "cards": [
+          {
+            "documentTop": 949.453125,
+            "opacity": 1,
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "documentTop": 949.453125,
+            "opacity": 1,
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "documentTop": 1184.71875,
+            "opacity": 1,
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "documentTop": 1184.71875,
+            "opacity": 1,
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "documentTop": 1184.71875,
+            "opacity": 1,
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "documentTop": 1184.71875,
+            "opacity": 1,
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        ]
+      }
+    },
+    "ownedRevealClasses": [
+      {
+        "part": "02",
+        "entered": true,
+        "active": true,
+        "lineVisible": true,
+        "width": 2,
+        "color": "rgb(173, 149, 238)"
+      },
+      {
+        "part": "04",
+        "entered": true,
+        "active": true,
+        "lineVisible": true,
+        "width": 2,
+        "color": "rgb(173, 149, 238)"
+      },
+      {
+        "part": "05",
+        "entered": true,
+        "active": true,
+        "lineVisible": true,
+        "width": 2,
+        "color": "rgb(173, 149, 238)"
+      },
+      {
+        "part": "07",
+        "entered": true,
+        "active": true,
+        "lineVisible": true,
+        "width": 2,
+        "color": "rgb(173, 149, 238)"
+      },
+      {
+        "part": "08",
+        "entered": true,
+        "active": true,
+        "lineVisible": true,
+        "width": 2,
+        "color": "rgb(173, 149, 238)"
+      },
+      {
+        "part": "09",
+        "entered": true,
+        "active": true,
+        "lineVisible": true,
+        "width": 2,
+        "color": "rgb(173, 149, 238)"
+      }
+    ],
+    "contentSequences": {
+      "approach": [
+        {
+          "kind": "panel",
+          "order": 1,
+          "total": 6,
+          "down": 170,
+          "up": 820
+        },
+        {
+          "kind": "panel",
+          "order": 2,
+          "total": 6,
+          "down": 300,
+          "up": 690
+        },
+        {
+          "kind": "panel",
+          "order": 3,
+          "total": 6,
+          "down": 430,
+          "up": 560
+        },
+        {
+          "kind": "panel",
+          "order": 4,
+          "total": 6,
+          "down": 560,
+          "up": 430
+        },
+        {
+          "kind": "panel",
+          "order": 5,
+          "total": 6,
+          "down": 690,
+          "up": 300
+        },
+        {
+          "kind": "panel",
+          "order": 6,
+          "total": 6,
+          "down": 820,
+          "up": 170
+        }
+      ],
+      "services": [
+        {
+          "kind": "panel",
+          "order": 1,
+          "total": 2,
+          "down": 150,
+          "up": 300
+        },
+        {
+          "kind": "panel",
+          "order": 2,
+          "total": 2,
+          "down": 300,
+          "up": 150
+        }
+      ],
+      "packages": [
+        {
+          "kind": "panel",
+          "order": 1,
+          "total": 3,
+          "down": 170,
+          "up": 450
+        },
+        {
+          "kind": "panel",
+          "order": 2,
+          "total": 3,
+          "down": 310,
+          "up": 310
+        },
+        {
+          "kind": "panel",
+          "order": 3,
+          "total": 3,
+          "down": 450,
+          "up": 170
+        }
+      ],
+      "people": [
+        {
+          "kind": "panel",
+          "order": 1,
+          "total": 3,
+          "down": 150,
+          "up": 430
+        },
+        {
+          "kind": "panel",
+          "order": 2,
+          "total": 3,
+          "down": 290,
+          "up": 290
+        },
+        {
+          "kind": "panel",
+          "order": 3,
+          "total": 3,
+          "down": 430,
+          "up": 150
+        }
+      ],
+      "heroHeadingKinds": [
+        "display",
+        "display"
+      ],
+      "portfolioMediaKind": "media",
+      "blogHeadingKind": "heading",
+      "blogHeadingLines": 2,
+      "timings": {
+        "block": "400ms",
+        "heading": "900ms"
+      },
+      "highlightDelays": [
+        "1.46s",
+        "1.46s",
+        "1.46s",
+        "1.46s",
+        "1.46s"
+      ],
+      "approachPanelMotion": {
+        "opacity": 0,
+        "translateX": 0,
+        "translateY": 8,
+        "filter": "blur(1.5px)",
+        "clipPath": "none"
+      }
+    },
+    "mobileIsolation": {
+      "mountedRoots": 0,
+      "sharedTargets": 0,
+      "totalCases": 20,
+      "sharedCaseTargets": 0
+    },
+    "reduced": {
+      "targetVisible": true,
+      "footerLogoExcluded": true
+    }
+  }
+}

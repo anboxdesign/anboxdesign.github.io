@@ -1,0 +1,2378 @@
+<!--
+ANBOX STUDIO · 04 · Услуги
+Статус: branch/current
+Назначение: один VibeBlock, desktop + mobile
+Вставляйте целиком в порядке файлов из README.md.
+-->
+<style data-anbox-full-page>
+  .anbox-part-04{ scroll-behavior: smooth; background: #f5f3ef; }
+  .anbox-part-04{ margin: 0; overflow-x: hidden; background: #f5f3ef; color: #171717; }
+  .anbox-part-04 .anbox-full-page{ width: 100%; overflow: clip; }
+  .anbox-part-04 .anbox-full-page > section{ display: block; position: relative; }
+  .anbox-part-04 :focus-visible{ outline: 2px solid #8f71e6; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce){ .anbox-part-04{ scroll-behavior: auto; } }
+
+.anbox-part-04{
+  --anbox-shell:1200px;
+  --anbox-page-gutter:20px;
+  --anbox-content-inset:6.6667vw;
+  --anbox-mobile-section-space:clamp(56px,16vw,72px);
+}
+@media(max-width:640px){
+  .anbox-part-04{--anbox-content-inset:clamp(16px,4.6vw,24px)}
+}
+</style>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap");
+
+#anxs-services {
+  --anxs-paper: var(--anbox-paper, #f5f3ef);
+  --anxs-surface: rgba(255, 255, 255, .2);
+  --anxs-ink: var(--anbox-ink, #161616);
+  --anxs-muted: var(--anbox-muted, #6a6762);
+  --anxs-line: var(--anbox-line-light, rgba(22, 22, 22, .12));
+  --anxs-purple: var(--anbox-purple, #ad95ee);
+  --anxs-purple-soft: rgba(173, 149, 238, .14);
+  --anxs-lime: var(--anbox-lime, #dde63f);
+  --anxs-lime-soft: rgba(221, 230, 63, .15);
+  --anxs-shell: var(--anbox-shell, 1200px);
+  --anxs-page-gutter: var(--anbox-page-gutter, 20px);
+  --anxs-grid-gap: var(--anbox-grid-gap, 20px);
+  --anxs-radius: clamp(20px, 1.5vw, 28px);
+  --anxs-text: var(--anbox-font-text, "Onest", Arial, sans-serif);
+  --anxs-head: var(--anbox-ds-font-heading, var(--anxs-text));
+  --anxs-ease: var(--anbox-ease, cubic-bezier(.22, 1, .36, 1));
+
+  width: 100%;
+  overflow-x: clip;
+  background: var(--anxs-paper);
+  color: var(--anxs-ink);
+  font-family: var(--anxs-text);
+  line-height: 1.35;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.anbox-part-04 #anxs-services,.anbox-part-04 #anxs-services *{
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.anbox-part-04 #anxs-services h2,.anbox-part-04 #anxs-services h3,.anbox-part-04 #anxs-services p,.anbox-part-04 #anxs-services ol{
+  margin: 0;
+}
+
+.anbox-part-04 #anxs-services ol{
+  padding: 0;
+  list-style: none;
+}
+
+.anbox-part-04 #anxs-services button{
+  margin: 0;
+  border: 0;
+  color: inherit;
+  background: transparent;
+  font: inherit;
+}
+
+.anbox-part-04 #anxs-services a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.anbox-part-04 #anxs-services button:focus-visible,.anbox-part-04 #anxs-services a:focus-visible{
+  outline: 3px solid var(--anxs-purple);
+  outline-offset: 3px;
+}
+
+.anbox-part-04 .anxs__stage{
+  width: min(
+    var(--anxs-shell),
+    calc(100% - (var(--anxs-page-gutter) * 2))
+  );
+  margin: 0 auto;
+  padding: clamp(56px, 4.5vw, 76px) 0 clamp(68px, 5.5vw, 92px);
+  position: relative;
+  container-type: inline-size;
+}
+
+.anbox-part-04 .anxs__grid-guide{
+  position: absolute;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--anxs-grid-gap);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.anbox-part-04 .anxs__grid-guide i{
+  background: rgba(255, 0, 0, .055);
+}
+
+.anbox-part-04 #anxs-services[data-anxs-debug-grid="true"] .anxs__grid-guide{
+  visibility: visible;
+  opacity: 1;
+}
+
+.anbox-part-04 .anxs__header{
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto auto;
+  column-gap: var(--anxs-grid-gap);
+}
+
+.anbox-part-04 .anxs__kicker{
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: clamp(11px, .72cqw, 13px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+
+.anbox-part-04 .anxs__kicker > span:first-child{
+  color: #826cff;
+  font-size: clamp(14px, .92cqw, 17px);
+}
+
+.anbox-part-04 .anxs__kicker i{
+  color: rgba(22, 22, 22, .35);
+  font-style: normal;
+}
+
+.anbox-part-04 .anxs__title-wrap{
+  grid-column: 1 / span 3;
+  grid-row: 2;
+  align-self: start;
+  margin-top: clamp(42px, 3.5cqw, 58px);
+}
+
+.anbox-part-04 .anxs__title-wrap h2{
+  font-family: var(--anxs-head);
+  font-size: clamp(76px, 7.2cqw, 120px);
+  font-weight: var(--anbox-font-display-weight, 700);
+  line-height: .9;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.anbox-part-04 .anxs__statement{
+  grid-column: 4 / span 5;
+  grid-row: 2;
+  align-self: stretch;
+  margin-top: clamp(42px, 3.5cqw, 58px);
+  padding: .4cqw 0 .4cqw clamp(32px, 3.2cqw, 54px);
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--anxs-line);
+}
+
+.anbox-part-04 .anxs__statement p{
+  max-width: 31ch;
+  font-size: clamp(17px, 1.2cqw, 20px);
+  font-weight: 500;
+  line-height: 1.55;
+  letter-spacing: -.02em;
+  text-wrap: pretty;
+}
+
+.anbox-part-04 .anxs__cards{
+  margin-top: clamp(54px, 4.5cqw, 76px);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: var(--anxs-grid-gap);
+}
+
+.anbox-part-04 .anxs__card{
+  min-height: clamp(520px, 36cqw, 620px);
+  padding: clamp(28px, 2.6cqw, 44px) clamp(24px, 2.55cqw, 42px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--anxs-line);
+  border-radius: var(--anxs-radius);
+  background: var(--anxs-surface);
+  isolation: isolate;
+  transition:
+    border-color .3s ease,
+    box-shadow .45s ease,
+    transform .55s var(--anxs-ease);
+}
+
+.anbox-part-04 .anxs__card--product{
+  grid-column: 1 / span 6;
+  background:
+    radial-gradient(circle at 100% 0%, var(--anxs-purple-soft), transparent 42%),
+    rgba(255, 255, 255, .2);
+}
+
+.anbox-part-04 .anxs__card--corporate{
+  grid-column: 7 / span 6;
+  background:
+    radial-gradient(circle at 100% 0%, var(--anxs-lime-soft), transparent 42%),
+    rgba(255, 255, 255, .2);
+}
+
+.anbox-part-04 .anxs__card-number{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--anxs-accent);
+  font-size: clamp(16px, 1.2cqw, 20px);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.anbox-part-04 .anxs__card-number i{
+  width: clamp(30px, 2.2cqw, 38px);
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform-origin: left center;
+}
+
+.anbox-part-04 .anxs__card--product{
+  --anxs-accent: #826cff;
+  --anxs-row-hover: rgba(173, 149, 238, .11);
+}
+
+.anbox-part-04 .anxs__card--corporate{
+  --anxs-accent: #bec72f;
+  --anxs-row-hover: rgba(221, 230, 63, .14);
+}
+
+.anbox-part-04 .anxs__card h3{
+  margin-top: clamp(22px, 2cqw, 34px) !important;
+  font-family: var(--anxs-head);
+  font-size: clamp(34px, 3.1cqw, 52px);
+  font-weight: var(--anbox-font-display-weight, 700);
+  line-height: .98;
+  letter-spacing: -.02em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
+.anbox-part-04 .anxs__card-description{
+  max-width: 42ch;
+  margin-top: clamp(14px, 1.25cqw, 21px) !important;
+  color: var(--anxs-muted);
+  font-size: clamp(14px, 1cqw, 17px);
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.anbox-part-04 .anxs__list{
+  margin-top: auto !important;
+  padding-top: clamp(28px, 2.8cqw, 46px) !important;
+}
+
+.anbox-part-04 .anxs__list li{
+  border-bottom: 1px solid var(--anxs-line);
+}
+
+.anbox-part-04 .anxs__item-toggle{
+  width: 100%;
+  min-height: clamp(56px, 4.25cqw, 70px);
+  padding: 0 clamp(4px, .45cqw, 8px);
+  display: grid;
+  grid-template-columns: clamp(32px, 3cqw, 48px) minmax(0, 1fr) 44px;
+  align-items: center;
+  gap: 12px;
+  border-radius: 10px;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color .28s ease,
+    padding .35s var(--anxs-ease);
+}
+
+.anbox-part-04 .anxs__item-number{
+  color: var(--anxs-accent);
+  font-size: clamp(13px, .95cqw, 16px);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.anbox-part-04 .anxs__item-title{
+  font-size: clamp(14px, 1.05cqw, 18px);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.anbox-part-04 .anxs__item-arrow{
+  width: clamp(34px, 2.8cqw, 46px);
+  height: clamp(34px, 2.8cqw, 46px);
+  display: grid;
+  place-items: center;
+  justify-self: end;
+  border-radius: 50%;
+  background: var(--anxs-row-hover);
+  font-size: clamp(18px, 1.35cqw, 23px);
+  line-height: 1;
+  transition:
+    background-color .28s ease,
+    color .28s ease,
+    transform .42s var(--anxs-ease);
+}
+
+.anbox-part-04 .anxs__item-panel{
+  display: grid;
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.anbox-part-04 .anxs__item-panel-inner{
+  min-height: 0;
+  overflow: hidden;
+}
+
+.anbox-part-04 .anxs__item-copy{
+  padding:
+    0
+    clamp(50px, 4.2cqw, 70px)
+    clamp(18px, 1.6cqw, 26px)
+    clamp(48px, 4cqw, 66px);
+  color: var(--anxs-muted);
+  font-size: clamp(12px, .88cqw, 15px);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.anbox-part-04 .anxs__root.is-js .anxs__item-panel{
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows .5s var(--anxs-ease),
+    opacity .28s ease;
+}
+
+.anbox-part-04 .anxs__root.is-js .anxs__list li.is-open .anxs__item-panel{
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.anbox-part-04 .anxs__root.is-js .anxs__list li.is-open .anxs__item-toggle{
+  padding-right: 2px;
+  padding-left: 12px;
+  background: var(--anxs-row-hover);
+}
+
+.anbox-part-04 .anxs__root.is-js .anxs__list li.is-open .anxs__item-arrow{
+  color: #161616;
+  background: var(--anxs-accent);
+  transform: rotate(90deg);
+}
+
+@media (hover: hover) and (pointer: fine){
+  .anbox-part-04 .anxs__card:hover{
+    border-color: color-mix(in srgb, var(--anxs-accent) 38%, transparent);
+    box-shadow: 0 22px 54px rgba(22, 22, 22, .055);
+    transform: translateY(-4px);
+  }
+
+  .anbox-part-04 .anxs__item-toggle:hover{
+    padding-right: 2px;
+    padding-left: 12px;
+    background: var(--anxs-row-hover);
+  }
+
+  .anbox-part-04 .anxs__item-toggle:hover .anxs__item-arrow{
+    color: #161616;
+    background: var(--anxs-accent);
+    transform: rotate(6deg) scale(1.04);
+  }
+
+  .anbox-part-04 .anxs__list li.is-open .anxs__item-toggle:hover .anxs__item-arrow{
+    transform: rotate(90deg) scale(1.04);
+  }
+}
+
+.anbox-part-04 .anxs__root.is-js [data-anxs-reveal],.anbox-part-04 .anxs__root.is-js [data-anxs-card]{
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.anbox-part-04 .anxs__root.is-js.is-in [data-anxs-reveal],.anbox-part-04 .anxs__root.is-js.is-in [data-anxs-card]{
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity .7s ease,
+    transform .85s var(--anxs-ease);
+}
+
+.anbox-part-04 .anxs__root.is-js.is-in .anxs__kicker{
+  transition-delay: .04s;
+}
+
+.anbox-part-04 .anxs__root.is-js.is-in .anxs__title-wrap{
+  transition-delay: .1s;
+}
+
+.anbox-part-04 .anxs__root.is-js.is-in .anxs__statement{
+  transition-delay: .16s;
+}
+
+.anbox-part-04 .anxs__root.is-js.is-in [data-anxs-card]{
+  transition-delay: calc(.2s + var(--anxs-order) * .1s);
+}
+
+@media (max-width: 1024px){
+  .anbox-part-04 .anxs__stage{
+    width: min(900px, calc(100% - 48px));
+    padding: 56px 0 76px;
+    container-type: normal;
+  }
+
+  .anbox-part-04 .anxs__grid-guide{
+    display: none;
+  }
+
+  .anbox-part-04 .anxs__header{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+  }
+
+  .anbox-part-04 .anxs__title-wrap{
+    grid-column: 1;
+    margin-top: 36px;
+  }
+
+  .anbox-part-04 .anxs__title-wrap h2{
+    font-size: clamp(68px, 10vw, 92px);
+  }
+
+  .anbox-part-04 .anxs__statement{
+    grid-column: 2;
+    margin-top: 36px;
+    padding-left: 28px;
+  }
+
+  .anbox-part-04 .anxs__statement p{
+    font-size: 17px;
+  }
+
+  .anbox-part-04 .anxs__cards{
+    margin-top: 48px;
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .anbox-part-04 .anxs__card--product,.anbox-part-04 .anxs__card--corporate{
+    grid-column: 1;
+  }
+
+  .anbox-part-04 .anxs__card{
+    min-height: 540px;
+    padding: 28px;
+  }
+}
+
+@media (max-width: 640px){
+  .anbox-part-04 .anxs__stage{
+    width: calc(100% - 32px);
+    padding: 38px 0 58px;
+  }
+
+  .anbox-part-04 .anxs__header{
+    grid-template-columns: 1fr;
+  }
+
+  .anbox-part-04 .anxs__kicker,.anbox-part-04 .anxs__title-wrap,.anbox-part-04 .anxs__statement{
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .anbox-part-04 .anxs__kicker{
+    gap: 10px;
+    font-size: 10px;
+  }
+
+  .anbox-part-04 .anxs__kicker > span:first-child{
+    font-size: 13px;
+  }
+
+  .anbox-part-04 .anxs__title-wrap{
+    margin-top: 28px;
+  }
+
+  .anbox-part-04 .anxs__title-wrap h2{
+    font-size: clamp(58px, 18vw, 78px);
+  }
+
+  .anbox-part-04 .anxs__statement{
+    margin-top: 28px;
+    padding: 2px 0 2px 18px;
+    border-left-color: var(--anxs-purple);
+  }
+
+  .anbox-part-04 .anxs__statement p{
+    max-width: 34ch;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .anbox-part-04 .anxs__cards{
+    margin-top: 38px;
+    gap: 14px;
+  }
+
+  .anbox-part-04 .anxs__card{
+    min-width: 0;
+    min-height: 0;
+    padding: 22px 18px 18px;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .anbox-part-04 .anxs__card-number{
+    font-size: 14px;
+  }
+
+  .anbox-part-04 .anxs__card h3{
+    max-width: 100%;
+    margin-top: 20px !important;
+    font-size: clamp(28px, 8.2vw, 32px);
+    line-height: .96;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    transform: scaleX(.76);
+    transform-origin: left top;
+    width: 100%;
+  }
+
+  .anbox-part-04 .anxs__card-description{
+    margin-top: 12px !important;
+    font-size: 13px;
+    line-height: 1.48;
+  }
+
+  .anbox-part-04 .anxs__list{
+    padding-top: 26px !important;
+  }
+
+  .anbox-part-04 .anxs__item-toggle{
+    min-height: 58px;
+    padding: 0 2px;
+    grid-template-columns: 26px minmax(0, 1fr) 40px;
+    gap: 8px;
+  }
+
+  .anbox-part-04 .anxs__item-number{
+    font-size: 12px;
+  }
+
+  .anbox-part-04 .anxs__item-title{
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .anbox-part-04 .anxs__item-arrow{
+    width: 38px;
+    height: 38px;
+    font-size: 19px;
+  }
+
+  .anbox-part-04 .anxs__item-copy{
+    padding-right: 46px;
+    padding-bottom: 18px;
+    padding-left: 34px;
+    font-size: 12px;
+    line-height: 1.48;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 370px){
+  .anbox-part-04 .anxs__stage{
+    width: calc(100% - 24px);
+  }
+
+  .anbox-part-04 .anxs__title-wrap h2{
+    font-size: 54px;
+  }
+
+  .anbox-part-04 .anxs__statement p{
+    font-size: 14px;
+  }
+
+  .anbox-part-04 .anxs__card{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .anbox-part-04 .anxs__card h3{
+    font-size: 29px;
+  }
+
+  .anbox-part-04 .anxs__item-title{
+    font-size: 12.5px;
+  }
+
+  .anbox-part-04 .anxs__item-copy{
+    padding-right: 42px;
+    padding-left: 30px;
+    font-size: 11.5px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .anbox-part-04 #anxs-services *,.anbox-part-04 #anxs-services *::before,.anbox-part-04 #anxs-services *::after{
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .anbox-part-04 .anxs__root.is-js [data-anxs-reveal],.anbox-part-04 .anxs__root.is-js [data-anxs-card]{
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
+<style data-anbox-services-rebuild-priority="editorial-matrix-v1-final">
+.anbox-part-04 #anxs-services{background:var(--anbox-paper,#f5f3ef)}
+.anbox-part-04 #anxs-services .anxs__title-wrap{
+  grid-column:1/span 7;
+  margin-top:18px!important;
+  padding:1px 0 1px 18px;
+}
+.anbox-part-04 #anxs-services .anxs__title-wrap h2{
+  font-family:var(--anxs-text)!important;
+  font-size:18px!important;
+  font-weight:500!important;
+  line-height:1.1!important;
+  letter-spacing:-.02em!important;
+  text-transform:none!important;
+}
+.anbox-part-04 #anxs-services .anxs__cards{
+  margin-top:32px!important;
+  gap:0!important;
+  border-radius:var(--anbox-radius-md,8px);
+}
+.anbox-part-04 #anxs-services .anxs__card{
+  min-height:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.anbox-part-04 #anxs-services .anxs__card--product{
+  border-right:1px solid var(--anxs-line)!important;
+}
+.anbox-part-04 #anxs-services .anxs__card h3{
+  margin-top:30px!important;
+  font-size:27px!important;
+  font-weight:600!important;
+  line-height:1.04!important;
+}
+.anbox-part-04 #anxs-services .anxs__card-description{
+  margin-top:12px!important;
+  font-size:14px!important;
+  line-height:1.35!important;
+}
+.anbox-part-04 #anxs-services .anxs__list{
+  margin-top:0!important;
+  padding:8px 28px 18px!important;
+}
+.anbox-part-04 #anxs-services .anxs__item-toggle{
+  min-height:56px!important;
+  padding:0!important;
+  grid-template-columns:36px minmax(0,1fr) 36px!important;
+}
+.anbox-part-04 #anxs-services .anxs__item-arrow{
+  width:32px;
+  height:32px;
+}
+.anbox-part-04 #anxs-services .anxs__card-number i{
+  transition:width .58s var(--anxs-ease);
+}
+.anbox-part-04 #anxs-services .anxs__card:hover .anxs__card-number i,.anbox-part-04 #anxs-services .anxs__card:focus-within .anxs__card-number i{
+  width:48px;
+}
+.anbox-part-04 #anxs-services .anxs__item-toggle{
+  isolation:isolate;
+}
+.anbox-part-04 #anxs-services .anxs__item-toggle::before{
+  display:none!important;
+}
+.anbox-part-04 #anxs-services .anxs__item-toggle::after{
+  content:"";
+  display:none;
+  position:absolute;
+  z-index:-1;
+  inset:5px -10px;
+  border-radius:5px;
+  background:linear-gradient(90deg,var(--anxs-row-hover),transparent 88%);
+  opacity:0;
+  transform:scaleX(.94);
+  transform-origin:left center;
+  transition:
+    opacity .38s ease,
+    transform .58s var(--anxs-ease);
+}
+.anbox-part-04 #anxs-services .anxs__item-toggle:hover::after,.anbox-part-04 #anxs-services .anxs__list li.is-open .anxs__item-toggle::after{
+  opacity:1;
+  transform:scaleX(1);
+}
+.anbox-part-04 #anxs-services.anxs__root.is-js .anxs__list li{
+  opacity:0;
+  transform:translateY(8px);
+}
+.anbox-part-04 #anxs-services.anxs__root.is-js.is-in .anxs__list li{
+  opacity:1;
+  transform:translateY(0);
+  transition:
+    opacity .55s ease,
+    transform .68s var(--anxs-ease);
+}
+.anbox-part-04 #anxs-services.anxs__root.is-js.is-in .anxs__list li:nth-child(1){transition-delay:.30s}
+.anbox-part-04 #anxs-services.anxs__root.is-js.is-in .anxs__list li:nth-child(2){transition-delay:.35s}
+.anbox-part-04 #anxs-services.anxs__root.is-js.is-in .anxs__list li:nth-child(3){transition-delay:.40s}
+.anbox-part-04 #anxs-services.anxs__root.is-js.is-in .anxs__list li:nth-child(4){transition-delay:.45s}
+.anbox-part-04 #anxs-services.anxs__root.is-js.is-in .anxs__list li:nth-child(5){transition-delay:.50s}
+.anbox-part-04 #anxs-services.anxs__root.is-js.is-in .anxs__list li:nth-child(6){transition-delay:.55s}
+@media(min-width:1025px){
+  .anbox-part-04 #anxs-services .anxs__stage{padding:72px 20px 88px}
+  .anbox-part-04 #anxs-services .anxs__cards{
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:0!important;
+    overflow:hidden;
+    border:1px solid var(--anxs-line);
+    border-radius:var(--anbox-radius-md,8px);
+    background:rgba(255,255,255,.54);
+    transition:none;
+  }
+  .anbox-part-04 #anxs-services .anxs__card--product,.anbox-part-04 #anxs-services .anxs__card--corporate{
+    display:flex!important;
+    grid-template-columns:none;
+    min-width:0;
+    overflow:hidden!important;
+    border:0!important;
+    border-radius:0!important;
+  }
+  .anbox-part-04 #anxs-services .anxs__card--product{
+    grid-column:1!important;
+    border-right:1px solid var(--anxs-line)!important;
+  }
+  .anbox-part-04 #anxs-services .anxs__card--corporate{
+    grid-column:2!important;
+  }
+  .anbox-part-04 #anxs-services .anxs__card-head{
+    min-height:170px;
+    padding:26px 28px 24px;
+    border-right:0;
+    border-bottom:1px solid var(--anxs-line);
+  }
+  .anbox-part-04 #anxs-services .anxs__card h3{
+    max-width:none;
+    margin-top:30px!important;
+    font-size:27px!important;
+  }
+  .anbox-part-04 #anxs-services .anxs__card-description{
+    max-width:45ch;
+  }
+  .anbox-part-04 #anxs-services .anxs__list{
+    display:block;
+    margin-top:0!important;
+    padding:8px 28px 18px!important;
+  }
+  .anbox-part-04 #anxs-services .anxs__list li{
+    overflow:visible;
+    border-right:0;
+    border-bottom:1px solid var(--anxs-line);
+  }
+  .anbox-part-04 #anxs-services .anxs__list li:nth-child(n){
+    grid-column:auto;
+    grid-row:auto;
+  }
+  .anbox-part-04 #anxs-services .anxs__item-toggle{
+    min-height:56px!important;
+    padding:0!important;
+    grid-template-columns:36px minmax(0,1fr) 36px!important;
+    transition:background-color .38s ease;
+  }
+  .anbox-part-04 #anxs-services .anxs__item-toggle::before{
+    display:block!important;
+    top:10px;
+    bottom:10px;
+    left:-28px!important;
+    width:2px;
+    transform:scaleY(0);
+    transform-origin:center;
+    transition:transform .52s cubic-bezier(.65,0,.35,1);
+  }
+  .anbox-part-04 #anxs-services .anxs__item-toggle:hover,.anbox-part-04 #anxs-services.anxs__root.is-js .anxs__list li.is-open .anxs__item-toggle{
+    padding:0!important;
+    background:var(--anxs-row-hover)!important;
+  }
+  .anbox-part-04 #anxs-services .anxs__item-toggle:hover::before,.anbox-part-04 #anxs-services.anxs__root.is-js .anxs__list li.is-open .anxs__item-toggle::before{
+    transform:scaleY(1);
+  }
+  .anbox-part-04 #anxs-services .anxs__item-copy{
+    max-width:48ch;
+    padding:0 36px 18px 48px;
+    line-height:1.4;
+  }
+}
+@media(max-width:1024px){
+  .anbox-part-04 #anxs-services .anxs__title-wrap{grid-column:1/-1}
+  .anbox-part-04 #anxs-services .anxs__cards{grid-template-columns:1fr}
+  .anbox-part-04 #anxs-services .anxs__card--product,.anbox-part-04 #anxs-services .anxs__card--corporate{grid-column:1}
+  .anbox-part-04 #anxs-services .anxs__card--product{
+    border-right:0!important;
+    border-bottom:1px solid var(--anxs-line)!important;
+  }
+}
+@media(max-width:640px){
+  .anbox-part-04 #anxs-services .anxs__stage{
+    width:100%;
+    padding:48px var(--anbox-content-inset,16px) 64px;
+  }
+  .anbox-part-04 #anxs-services .anxs__title-wrap{
+    margin-top:16px!important;
+    padding-left:16px;
+  }
+  .anbox-part-04 #anxs-services .anxs__title-wrap h2{
+    font-size:17px!important;
+    line-height:1.15!important;
+  }
+  .anbox-part-04 #anxs-services .anxs__cards{margin-top:28px!important}
+  .anbox-part-04 #anxs-services .anxs__card h3{
+    margin-top:26px!important;
+    font-size:23px!important;
+    line-height:1.05!important;
+  }
+  .anbox-part-04 #anxs-services .anxs__card-description{
+    font-size:13px!important;
+    line-height:1.35!important;
+  }
+  .anbox-part-04 #anxs-services .anxs__list{padding:6px 18px 14px!important}
+  .anbox-part-04 #anxs-services .anxs__item-toggle{
+    min-height:56px!important;
+    grid-template-columns:28px minmax(0,1fr) 34px!important;
+  }
+  .anbox-part-04 #anxs-services .anxs__item-arrow{width:32px;height:32px}
+}
+</style>
+<style data-anbox-final-audit="services-v2">
+.anbox-part-04 #anxs-services .anxs__title-wrap h2,.anbox-part-04 #anxs-services .anxs__card h3{
+  font-family:var(--anbox-ds-font-heading,var(--anbox-font-text,"Onest",Arial,sans-serif));
+  letter-spacing:0;
+}
+@media(min-width:1025px){
+  .anbox-part-04 #anxs-services .anxs__stage{
+    padding:64px 20px 80px;
+  }
+  .anbox-part-04 #anxs-services .anxs__title-wrap{margin-top:32px}
+  .anbox-part-04 #anxs-services .anxs__title-wrap h2{
+    font-size:var(--anbox-ds-h1,48px);
+    font-weight:800;
+    line-height:var(--anbox-ds-h1-leading,1.0833);
+  }
+  .anbox-part-04 #anxs-services .anxs__statement{
+    margin-top:32px;
+    padding-left:20px;
+  }
+  .anbox-part-04 #anxs-services .anxs__statement p{
+    font-size:var(--anbox-ds-lead,18px);
+    line-height:22px;
+  }
+  .anbox-part-04 #anxs-services .anxs__cards{margin-top:40px;gap:20px}
+  .anbox-part-04 #anxs-services .anxs__card{
+    min-height:0;
+    padding:20px;
+    border-radius:var(--anbox-radius-md,8px);
+    box-shadow:none;
+  }
+  .anbox-part-04 #anxs-services .anxs__card h3{
+    margin-top:20px!important;
+    font-size:var(--anbox-ds-h2,24px);
+    font-weight:600;
+    line-height:var(--anbox-ds-h2-leading,1.1667);
+  }
+  .anbox-part-04 #anxs-services .anxs__card-description{
+    margin-top:12px!important;
+    font-size:var(--anbox-ds-t2,14px);
+    line-height:19px;
+  }
+  .anbox-part-04 #anxs-services .anxs__list{padding-top:20px!important}
+  .anbox-part-04 #anxs-services .anxs__item-toggle{min-height:50px}
+}
+@media(min-width:641px) and (max-width:1024px){
+  .anbox-part-04 #anxs-services .anxs__stage{padding:56px 0 64px}
+  .anbox-part-04 #anxs-services .anxs__title-wrap{margin-top:28px}
+  .anbox-part-04 #anxs-services .anxs__title-wrap h2{
+    font-size:48px;
+    font-weight:800;
+    line-height:52px;
+  }
+  .anbox-part-04 #anxs-services .anxs__statement{
+    margin-top:28px;
+    padding-left:20px;
+  }
+  .anbox-part-04 #anxs-services .anxs__statement p{font-size:16px;line-height:21px}
+  .anbox-part-04 #anxs-services .anxs__cards{margin-top:40px;gap:20px}
+  .anbox-part-04 #anxs-services .anxs__card{
+    min-height:0;
+    padding:20px;
+    border-radius:var(--anbox-radius-md,8px);
+  }
+  .anbox-part-04 #anxs-services .anxs__card h3{
+    margin-top:20px!important;
+    font-size:24px;
+    font-weight:600;
+    line-height:28px;
+  }
+  .anbox-part-04 #anxs-services .anxs__card-description{font-size:14px;line-height:19px}
+  .anbox-part-04 #anxs-services .anxs__list{padding-top:20px!important}
+  .anbox-part-04 #anxs-services .anxs__item-toggle{min-height:50px}
+}
+@media(max-width:640px){
+  .anbox-part-04 #anxs-services .anxs__stage{
+    width:100%;
+    padding:40px var(--anbox-content-inset,16px) 56px;
+  }
+  .anbox-part-04 #anxs-services .anxs__title-wrap{margin-top:24px}
+  .anbox-part-04 #anxs-services .anxs__title-wrap h2{
+    font-size:40px;
+    font-weight:800;
+    line-height:42px;
+  }
+  .anbox-part-04 #anxs-services .anxs__statement{
+    margin-top:24px;
+    padding:0 0 0 16px;
+  }
+  .anbox-part-04 #anxs-services .anxs__statement p{font-size:16px;line-height:21px}
+  .anbox-part-04 #anxs-services .anxs__cards{margin-top:32px;gap:12px}
+  .anbox-part-04 #anxs-services .anxs__card{
+    min-height:0;
+    padding:20px;
+    border-radius:var(--anbox-radius-md,8px);
+  }
+  .anbox-part-04 #anxs-services .anxs__card h3{
+    width:auto;
+    margin-top:20px!important;
+    font-size:22px;
+    font-weight:600;
+    line-height:26px;
+    overflow-wrap:normal;
+    transform:none;
+  }
+  .anbox-part-04 #anxs-services .anxs__card-description{
+    margin-top:12px!important;
+    font-size:14px;
+    line-height:19px;
+  }
+  .anbox-part-04 #anxs-services .anxs__list{padding-top:20px!important}
+  .anbox-part-04 #anxs-services .anxs__item-toggle{
+    min-height:52px;
+    grid-template-columns:26px minmax(0,1fr) 36px;
+  }
+  .anbox-part-04 #anxs-services .anxs__item-arrow{width:36px;height:36px}
+  .anbox-part-04 #anxs-services .anxs__item-copy{
+    padding-right:8px;
+    padding-bottom:16px;
+    padding-left:34px;
+    font-size:12px;
+    line-height:16px;
+  }
+}
+</style>
+<style data-anbox-design-system="final-unified-v1">
+/*
+  Final shared rhythm for the assembled page.
+  The Hero keeps its display face and bespoke geometry; sections 02–09 share
+  one text family, one semantic type scale and one responsive spacing scale.
+*/
+.anbox-part-04 .anbox-composite{
+  --anbox-system-font:var(--anbox-font-text,"Onest",Arial,sans-serif);
+  --anbox-system-purple:#9b7cff;
+  --anbox-system-radius:8px;
+  --anbox-system-ease:cubic-bezier(.22,1,.36,1);
+}
+
+.anbox-part-04 .anbox-composite > section:not(#abx8),.anbox-part-04 .anbox-composite > section:not(#abx8) button,.anbox-part-04 .anbox-composite > section:not(#abx8) input,.anbox-part-04 .anbox-composite > section:not(#abx8) textarea,.anbox-part-04 .anbox-composite > section:not(#abx8) select{
+  font-family:var(--anbox-system-font);
+}
+
+/* Section labels: number / name. */
+.anbox-part-04 #abx-approach-v8 .abxa8__kicker,.anbox-part-04 #anxg-gallery .anxg__kicker,.anbox-part-04 #anxs-services .anxs__kicker,.anbox-part-04 #anxp-packages .anxp__kicker,.anbox-part-04 #anxt-team-training .anxt__label,.anbox-part-04 #ablog .ablog__kicker,.anbox-part-04 #abct-contacts .abct__kicker{
+  font-size:clamp(12px,.625vw,24px);
+  line-height:1.25;
+  font-weight:500;
+  letter-spacing:.02em;
+}
+
+.anbox-part-04 #abx-approach-v8 .abxa8__kicker > *,.anbox-part-04 #anxg-gallery .anxg__kicker > *,.anbox-part-04 #anxs-services .anxs__kicker > *,.anbox-part-04 #anxp-packages .anxp__kicker > *,.anbox-part-04 #anxt-team-training .anxt__label > *,.anbox-part-04 #ablog .ablog__kicker > *,.anbox-part-04 #abct-contacts .abct__kicker > *{
+  font-size:inherit;
+  line-height:inherit;
+  font-weight:inherit;
+  letter-spacing:inherit;
+}
+
+/* Repeated section statements use one editorial role. */
+.anbox-part-04 #abx-approach-v8 .abxa8__title,.anbox-part-04 #anxs-services .anxs__title-wrap h2,.anbox-part-04 #anxp-packages .anxp__header h2,.anbox-part-04 #ablog .ablog__intro h2,.anbox-part-04 #abct-contacts .abct__heading h2{
+  font-family:var(--anbox-system-font)!important;
+  font-size:clamp(18px,.938vw,36px)!important;
+  line-height:1.22!important;
+  font-weight:500!important;
+  letter-spacing:-.025em!important;
+  transform:none!important;
+}
+
+/* Same-level card titles. The two-tier approach grid stays intentionally hierarchical. */
+.anbox-part-04 #anxs-services .anxs__card h3,.anbox-part-04 #anxp-packages .anxp__card h3{
+  font-family:var(--anbox-system-font)!important;
+  font-size:clamp(26px,1.354vw,52px)!important;
+  line-height:1.08!important;
+  font-weight:600!important;
+  letter-spacing:-.025em!important;
+  transform:none!important;
+}
+
+/* Shared prose roles. */
+.anbox-part-04 #anxs-services .anxs__card-description,.anbox-part-04 #anxp-packages .anxp__card-lead,.anbox-part-04 #ablog .ablog__feature-copy p,.anbox-part-04 #ablog .ablog__feed-lead,.anbox-part-04 #abct-contacts .abct__lead{
+  font-size:clamp(14px,.729vw,28px);
+  line-height:1.42;
+  font-weight:400;
+}
+
+.anbox-part-04 #anxs-services .anxs__item-copy,.anbox-part-04 #anxp-packages .anxp__package li,.anbox-part-04 #anxt-team-training .anxt__program-list li{
+  font-size:clamp(12px,.625vw,24px);
+  line-height:1.4;
+  font-weight:400;
+}
+
+.anbox-part-04 #ablog .ablog__feature-copy h3{
+  font-size:clamp(28px,1.458vw,56px);
+  line-height:1.1;
+  letter-spacing:-.03em;
+}
+
+.anbox-part-04 #ablog .ablog__feed > h3{
+  font-size:clamp(40px,2.083vw,80px);
+  line-height:1;
+  letter-spacing:-.04em;
+}
+
+.anbox-part-04 #ablog .ablog__intro h2{
+  max-width:clamp(420px,21.875vw,840px);
+}
+
+.anbox-part-04 #abct-contacts .abct__heading h2{
+  max-width:clamp(470px,24.48vw,940px);
+}
+
+/* One radius for UI surfaces; large image frames keep their authored silhouette. */
+.anbox-part-04 #abx-approach-v8 .abxa8__card,.anbox-part-04 #anxg-gallery .anxg__rail,.anbox-part-04 #anxg-gallery .anxg__details,.anbox-part-04 #anxs-services .anxs__cards,.anbox-part-04 #anxp-packages .anxp__card,.anbox-part-04 #anxt-team-training .anxt__shell,.anbox-part-04 #ablog .ablog__feature,.anbox-part-04 #ablog .ablog__feed,.anbox-part-04 #abct-contacts .abct__form-card,.anbox-part-04 #abct-contacts .abct__footer{
+  border-radius:var(--anbox-system-radius);
+}
+
+@media (min-width:1025px){
+  .anbox-part-04 #anxs-services .anxs__stage,.anbox-part-04 #anxp-packages .anxp__stage,.anbox-part-04 #anxt-team-training .anxt__stage,.anbox-part-04 #ablog .ablog__shell{
+    padding-top:clamp(64px,3.333vw,128px);
+    padding-bottom:clamp(80px,4.167vw,160px);
+  }
+
+  .anbox-part-04 #abct-contacts .abct__stage{
+    padding-top:clamp(64px,3.333vw,128px);
+    padding-bottom:clamp(32px,1.667vw,64px);
+  }
+
+  /* Controls and supporting copy continue the same proportional scale on 4K. */
+  .anbox-part-04 #anxs-services .anxs__item-toggle{
+    min-height:clamp(56px,2.917vw,112px);
+    font-size:clamp(16px,.833vw,32px);
+    line-height:1.35;
+  }
+
+  .anbox-part-04 #anxs-services .anxs__item-number{
+    font-size:clamp(12px,.625vw,24px);
+  }
+
+  .anbox-part-04 #anxs-services .anxs__item-title{
+    font-size:inherit!important;
+    line-height:inherit!important;
+  }
+
+  .anbox-part-04 #anxs-services .anxs__item-arrow{
+    width:clamp(32px,1.667vw,64px);
+    height:clamp(32px,1.667vw,64px);
+  }
+
+  .anbox-part-04 #anxp-packages .anxp__package-label,.anbox-part-04 #anxt-team-training .anxt__program-label,.anbox-part-04 #ablog .ablog__meta,.anbox-part-04 #ablog .ablog__read,.anbox-part-04 #ablog .ablog__eyebrow,.anbox-part-04 #ablog .ablog__live,.anbox-part-04 #abct-contacts .abct__field label,.anbox-part-04 #abct-contacts .abct__choice legend{
+    font-size:clamp(10px,.521vw,20px);
+    line-height:1.25;
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__team-copy > p,.anbox-part-04 #anxt-team-training .anxt__training-copy > p:not(.anxt__program-label){
+    font-size:clamp(13px,.677vw,26px)!important;
+    line-height:1.4!important;
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__person h3{
+    font-size:clamp(14px,.729vw,28px);
+    line-height:1.15;
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__person > div > p,.anbox-part-04 #abct-contacts .abct__footer-line,.anbox-part-04 #abct-contacts .abct__contact small,.anbox-part-04 #abct-contacts .abct__social-row > p,.anbox-part-04 #abct-contacts .abct__footer-legal,.anbox-part-04 #abct-contacts .abct__footer-end{
+    font-size:clamp(11px,.573vw,22px);
+    line-height:1.35;
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__training-copy > .anxt__program-label{
+    font-size:clamp(10px,.521vw,20px)!important;
+    line-height:1.25!important;
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__training-copy > .anxt__program-label + ul > li{
+    font-size:clamp(12px,.625vw,24px)!important;
+    line-height:1.4!important;
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__proof-label,.anbox-part-04 #anxt-team-training .anxt__proof-row > span{
+    font-size:clamp(10px,.521vw,20px)!important;
+    line-height:1.25!important;
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__proof-row > strong{
+    font-size:clamp(30px,1.563vw,60px)!important;
+    line-height:1!important;
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__course-link,.anbox-part-04 #anxt-team-training .anxt__primary,.anbox-part-04 #anxp-packages .anxp__custom-button,.anbox-part-04 #ablog .ablog__feed-cta,.anbox-part-04 #abct-contacts .abct__submit,.anbox-part-04 #abct-contacts .abct__direct-note strong{
+    font-size:clamp(11px,.625vw,24px);
+  }
+
+  /* The training panel uses absolute copy/actions. Scale its usable geometry
+     together with type so the approved 1440 layout remains intact on 4K. */
+  .anbox-part-04 #anxt-team-training .anxt__half{
+    padding:clamp(28px,1.458vw,56px);
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__people{
+    margin-top:clamp(24px,1.25vw,48px)!important;
+    gap:clamp(12px,.625vw,24px);
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__person{
+    grid-template-rows:auto clamp(52px,2.708vw,104px);
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__training-copy{
+    top:clamp(80px,4.167vw,160px);
+    bottom:clamp(28px,1.458vw,56px);
+    left:clamp(28px,1.458vw,56px);
+    width:58%;
+    max-width:clamp(310px,16.146vw,620px);
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__training-copy > .anxt__program-label{
+    margin-top:clamp(20px,1.042vw,40px)!important;
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__training-copy > .anxt__program-label + ul{
+    margin-top:clamp(10px,.521vw,20px)!important;
+    gap:clamp(10px,.521vw,20px);
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__training-proof{
+    max-width:clamp(290px,15.104vw,580px);
+    margin-top:clamp(20px,1.042vw,40px);
+    padding-top:clamp(14px,.729vw,28px);
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__proof-row{
+    margin-top:clamp(10px,.521vw,20px);
+    gap:clamp(12px,.625vw,24px);
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__course-link{
+    width:clamp(210px,10.938vw,420px);
+    min-height:clamp(48px,2.5vw,96px)!important;
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__primary{
+    right:clamp(28px,1.458vw,56px);
+    bottom:clamp(28px,1.458vw,56px)!important;
+    width:clamp(160px,8.333vw,320px);
+    min-height:clamp(48px,2.5vw,96px)!important;
+  }
+
+  .anbox-part-04 #abct-contacts .abct__input,.anbox-part-04 #abct-contacts .abct__select,.anbox-part-04 #abct-contacts .abct__textarea,.anbox-part-04 #abct-contacts .abct__chips span{
+    font-size:clamp(13px,.677vw,26px);
+    line-height:1.4;
+  }
+
+  .anbox-part-04 #abct-contacts .abct__input,.anbox-part-04 #abct-contacts .abct__select,.anbox-part-04 #abct-contacts .abct__chips span{
+    min-height:clamp(48px,2.5vw,96px);
+  }
+
+  .anbox-part-04 #abct-contacts .abct__textarea{
+    min-height:clamp(108px,5.625vw,216px);
+  }
+
+  .anbox-part-04 #abct-contacts .abct__contact strong{
+    font-size:clamp(13px,.677vw,26px);
+    line-height:1.35;
+  }
+
+  .anbox-part-04 #abct-contacts .abct__direct-note small,.anbox-part-04 #abct-contacts .abct__consent small,.anbox-part-04 #abct-contacts .abct__footer-legal a,.anbox-part-04 #abct-contacts .abct__footer-end > span{
+    font-size:clamp(10px,.521vw,20px)!important;
+    line-height:1.4!important;
+  }
+}
+
+@media (min-width:1921px){
+  .anbox-part-04 #anxt-team-training .anxt__training-copy{
+    display:flex;
+    flex-direction:column;
+    max-width:760px;
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__program-list,.anbox-part-04 #anxt-team-training .anxt__training-copy li{
+    width:100%;
+    max-width:none;
+  }
+
+  .anbox-part-04 #anxt-team-training .anxt__actions{
+    position:static;
+    margin-top:auto!important;
+    padding-top:clamp(20px,1.042vw,40px);
+  }
+}
+
+@media (min-width:641px) and (max-width:1024px){
+  .anbox-part-04 #ablog .ablog__shell{
+    width:calc(100% - 40px);
+    max-width:none;
+    margin-inline:20px;
+    padding:56px 0 64px;
+  }
+
+  .anbox-part-04 #anxs-services .anxs__stage,.anbox-part-04 #anxp-packages .anxp__stage,.anbox-part-04 #anxt-team-training .anxt__stage{
+    padding-top:56px!important;
+    padding-bottom:64px!important;
+  }
+
+  .anbox-part-04 #abct-contacts .abct__stage{
+    padding-top:56px!important;
+    padding-bottom:20px!important;
+  }
+
+  .anbox-part-04 #abx-approach-v8 .abxa8__kicker,.anbox-part-04 #anxg-gallery .anxg__kicker,.anbox-part-04 #anxs-services .anxs__kicker,.anbox-part-04 #anxp-packages .anxp__kicker,.anbox-part-04 #anxt-team-training .anxt__label,.anbox-part-04 #ablog .ablog__kicker,.anbox-part-04 #abct-contacts .abct__kicker{
+    font-size:11px;
+    line-height:14px;
+  }
+
+  .anbox-part-04 #abx-approach-v8 .abxa8__title,.anbox-part-04 #anxs-services .anxs__title-wrap h2,.anbox-part-04 #anxp-packages .anxp__header h2,.anbox-part-04 #ablog .ablog__intro h2,.anbox-part-04 #abct-contacts .abct__heading h2{
+    font-size:17px!important;
+    line-height:21px!important;
+  }
+
+  .anbox-part-04 #anxs-services .anxs__card h3,.anbox-part-04 #anxp-packages .anxp__card h3{
+    font-size:24px!important;
+    line-height:28px!important;
+  }
+}
+
+@media (max-width:640px){
+  .anbox-part-04 #anxg-gallery .anxg__stage{
+    width:calc(100% - 32px);
+    margin-inline:16px;
+  }
+
+  .anbox-part-04 #ablog .ablog__shell{
+    width:calc(100% - 32px);
+    max-width:none;
+    margin-inline:16px;
+    padding:40px 0 56px;
+  }
+
+  .anbox-part-04 #abx-approach-v8 .abxa8__kicker,.anbox-part-04 #anxg-gallery .anxg__kicker,.anbox-part-04 #anxs-services .anxs__kicker,.anbox-part-04 #anxp-packages .anxp__kicker,.anbox-part-04 #anxt-team-training .anxt__label,.anbox-part-04 #ablog .ablog__kicker,.anbox-part-04 #abct-contacts .abct__kicker{
+    font-size:10px;
+    line-height:12px;
+  }
+
+  .anbox-part-04 #abx-approach-v8 .abxa8__title,.anbox-part-04 #anxs-services .anxs__title-wrap h2,.anbox-part-04 #anxp-packages .anxp__header h2,.anbox-part-04 #ablog .ablog__intro h2,.anbox-part-04 #abct-contacts .abct__heading h2{
+    font-size:16px!important;
+    line-height:21px!important;
+  }
+
+  .anbox-part-04 #anxs-services .anxs__card h3,.anbox-part-04 #anxp-packages .anxp__card h3{
+    font-size:22px!important;
+    line-height:26px!important;
+  }
+
+  .anbox-part-04 #anxs-services .anxs__card-description,.anbox-part-04 #anxp-packages .anxp__card-lead,.anbox-part-04 #ablog .ablog__feature-copy p,.anbox-part-04 #ablog .ablog__feed-lead,.anbox-part-04 #abct-contacts .abct__lead{
+    font-size:14px;
+    line-height:20px;
+  }
+}
+</style>
+<style data-anbox-section-intros="unified-v1">
+/* One geometry for section number, descriptor and statement (02/04/05/08/09). */
+.anbox-part-04 .anbox-composite{
+  --anbox-intro-gap:clamp(16px,.833vw,32px);
+  --anbox-intro-indent:clamp(16px,.938vw,36px);
+  --anbox-intro-label-gap:clamp(10px,.625vw,24px);
+  --anbox-intro-rule:2px;
+}
+
+.anbox-part-04 #abx-approach-v8 .abxa8__kicker,.anbox-part-04 #anxs-services .anxs__kicker,.anbox-part-04 #anxp-packages .anxp__kicker,.anbox-part-04 #ablog .ablog__kicker,.anbox-part-04 #abct-contacts .abct__kicker{
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+  display:flex;
+  align-items:center;
+  gap:var(--anbox-intro-label-gap)!important;
+}
+
+.anbox-part-04 #abx-approach-v8 .abxa8__kicker > *,.anbox-part-04 #anxs-services .anxs__kicker > *,.anbox-part-04 #anxp-packages .anxp__kicker > *,.anbox-part-04 #ablog .ablog__kicker > *,.anbox-part-04 #abct-contacts .abct__kicker > *{
+  font-size:inherit!important;
+  font-weight:inherit!important;
+  line-height:inherit!important;
+}
+
+.anbox-part-04 #abx-approach-v8 .abxa8__title-wrap,.anbox-part-04 #anxs-services .anxs__title-wrap,.anbox-part-04 #anxp-packages .anxp__header h2,.anbox-part-04 #ablog .ablog__intro,.anbox-part-04 #abct-contacts .abct__heading h2{
+  box-sizing:border-box;
+  margin-top:var(--anbox-intro-gap)!important;
+  padding-top:0!important;
+  padding-right:0!important;
+  padding-bottom:0!important;
+  padding-left:var(--anbox-intro-indent)!important;
+}
+
+.anbox-part-04 #abx-approach-v8 .abxa8__title,.anbox-part-04 #anxs-services .anxs__title-wrap h2,.anbox-part-04 #ablog .ablog__intro h2{
+  margin:0!important;
+}
+
+.anbox-part-04 #anxp-packages .anxp__header h2,.anbox-part-04 #abct-contacts .abct__heading h2{
+  margin-right:0!important;
+  margin-bottom:0!important;
+  margin-left:0!important;
+}
+
+.anbox-part-04 #abx-approach-v8 .abxa8__title::before{
+  top:0!important;
+  bottom:0!important;
+  left:calc(-1 * var(--anbox-intro-indent))!important;
+  width:var(--anbox-intro-rule)!important;
+}
+
+.anbox-part-04 #anxs-services .anxs__title-wrap::before,.anbox-part-04 #anxp-packages .anxp__header h2::before{
+  inset:0 auto 0 0!important;
+  width:var(--anbox-intro-rule)!important;
+}
+
+.anbox-part-04 #ablog .ablog__intro{
+  position:relative;
+  display:block!important;
+}
+
+.anbox-part-04 #ablog .ablog__intro > i{
+  position:absolute;
+  inset:0 auto 0 0;
+  width:var(--anbox-intro-rule);
+  height:auto;
+  border-radius:99px;
+  background:var(--ab-purple);
+}
+
+.anbox-part-04 #abct-contacts .abct__heading h2{
+  border-left:var(--anbox-intro-rule) solid var(--abct-purple)!important;
+}
+
+@media (min-width:1025px){
+  .anbox-part-04 #abx-approach-v8 .abxa8__kicker,.anbox-part-04 #anxs-services .anxs__kicker,.anbox-part-04 #anxp-packages .anxp__kicker,.anbox-part-04 #ablog .ablog__kicker,.anbox-part-04 #abct-contacts .abct__kicker{
+    height:clamp(15px,.781vw,30px)!important;
+  }
+
+  .anbox-part-04 #abx-approach-v8 .abxa8__layout{
+    grid-template-rows:clamp(15px,.781vw,30px) auto 32px minmax(440px,auto);
+  }
+
+  .anbox-part-04 #anxs-services .anxs__title-wrap{
+    width:100%;
+    margin-left:0!important;
+  }
+
+}
+
+@media (min-width:641px) and (max-width:1024px){
+  .anbox-part-04 #abx-approach-v8 .abxa8__kicker,.anbox-part-04 #anxs-services .anxs__kicker,.anbox-part-04 #anxp-packages .anxp__kicker,.anbox-part-04 #ablog .ablog__kicker,.anbox-part-04 #abct-contacts .abct__kicker{
+    height:14px!important;
+  }
+}
+
+@media (min-width:961px) and (max-width:1024px){
+  .anbox-part-04 #abx-approach-v8 .abxa8__layout{
+    grid-template-rows:14px auto 32px minmax(440px,auto);
+  }
+
+  .anbox-part-04 #abx-approach-v8 .abxa8__kicker,.anbox-part-04 #abx-approach-v8 .abxa8__title-wrap,.anbox-part-04 #anxp-packages .anxp__kicker,.anbox-part-04 #anxp-packages .anxp__header h2{
+    margin-left:-20px!important;
+  }
+}
+
+@media (max-width:640px){
+  .anbox-part-04 #abx-approach-v8 .abxa8__kicker,.anbox-part-04 #anxs-services .anxs__kicker,.anbox-part-04 #anxp-packages .anxp__kicker,.anbox-part-04 #ablog .ablog__kicker,.anbox-part-04 #abct-contacts .abct__kicker{
+    height:12px!important;
+  }
+}
+
+.anbox-part-04 #abct-contacts .abct__heading{
+  width:calc(100% + (2 * clamp(21px,2.778vw,40px)));
+  margin-left:calc(-1 * clamp(21px,2.778vw,40px));
+}
+
+@media (min-width:961px){
+  .anbox-part-04 #abct-contacts .abct__heading{
+    width:calc(100% + 80px);
+    margin-left:-40px;
+  }
+
+  .anbox-part-04 #abct-contacts.abct .abct__form-card{
+    width:100%!important;
+    margin-inline:0!important;
+  }
+}
+
+@media (min-width:641px) and (max-width:960px){
+  .anbox-part-04 #abct-contacts .abct__heading{
+    width:calc(100% + 64px);
+    margin-left:-32px;
+  }
+}
+</style>
+<style data-anbox-services-editorial-clean>
+/* Services: two clear directions, less tint and less repeated UI chrome. */
+.anbox-part-04 #anxs-services .anxs__card{
+  overflow: hidden;
+  border: 1px solid rgba(23, 23, 23, .14);
+  border-radius: 12px;
+  background: #faf9f6;
+  box-shadow: none;
+}
+
+.anbox-part-04 #anxs-services .anxs__card--product{
+  border-top: 4px solid var(--anbox-purple, #ad95ee);
+  background: #faf9f6;
+}
+
+.anbox-part-04 #anxs-services .anxs__card--corporate{
+  border-color: rgba(23, 23, 23, .14);
+  border-top: 4px solid var(--anbox-lime, #dde63f);
+  background: #faf9f6;
+}
+
+.anbox-part-04 #anxs-services .anxs__card-head,.anbox-part-04 #anxs-services .anxs__card--product .anxs__card-head,.anbox-part-04 #anxs-services .anxs__card--corporate .anxs__card-head{
+  min-height: 168px;
+  padding: 25px 28px 26px;
+  border-bottom: 1px solid rgba(23, 23, 23, .13);
+  background: transparent !important;
+}
+
+.anbox-part-04 #anxs-services .anxs__card-head::after{
+  display: none;
+}
+
+.anbox-part-04 #anxs-services .anxs__card h3{
+  margin-top: 22px;
+  font-size: clamp(27px, 2.1vw, 34px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -.035em;
+}
+
+.anbox-part-04 #anxs-services .anxs__card-description{
+  max-width: 48ch;
+  margin-top: 12px;
+  color: #706d68;
+  font-size: 14px;
+  line-height: 1.42;
+}
+
+.anbox-part-04 #anxs-services .anxs__list{
+  padding: 4px 28px 18px;
+}
+
+.anbox-part-04 #anxs-services .anxs__item-toggle{
+  min-height: 57px;
+}
+
+.anbox-part-04 #anxs-services .anxs__item-arrow{
+  width: 30px;
+  height: 30px;
+  border-color: rgba(23, 23, 23, .18);
+  color: #171717;
+  background: transparent;
+  font-size: 12px;
+}
+
+.anbox-part-04 #anxs-services .anxs__card--product .anxs__card-number span,.anbox-part-04 #anxs-services .anxs__card--product .anxs__item-number{
+  color: #826cff;
+}
+
+.anbox-part-04 #anxs-services .anxs__card--corporate .anxs__card-number span,.anbox-part-04 #anxs-services .anxs__card--corporate .anxs__item-number{
+  color: #9aa314;
+}
+
+@media (hover: hover) and (pointer: fine){
+  .anbox-part-04 #anxs-services .anxs__card:hover{
+    border-right-color: rgba(23, 23, 23, .22);
+    border-bottom-color: rgba(23, 23, 23, .22);
+    border-left-color: rgba(23, 23, 23, .22);
+    box-shadow: 0 18px 46px rgba(23, 23, 23, .06);
+  }
+}
+
+@media (max-width: 640px){
+  .anbox-part-04 #anxs-services .anxs__card-head,.anbox-part-04 #anxs-services .anxs__card--product .anxs__card-head,.anbox-part-04 #anxs-services .anxs__card--corporate .anxs__card-head{
+    min-height: 0;
+    padding: 22px 20px 24px;
+  }
+  .anbox-part-04 #anxs-services .anxs__list{ padding: 4px 20px 14px; }
+}
+</style>
+<style data-anbox-highlight-height-system>
+.anbox-part-04 .anbox-composite{
+  --anbox-highlight-height: 93%;
+}
+
+.anbox-part-04 #anxs-services .anxs__highlight{
+  background-position: left center !important;
+  background-size: 0 var(--anbox-highlight-height) !important;
+}
+
+.anbox-part-04 #anxs-services.is-in .anxs__highlight{
+  background-size: 100% var(--anbox-highlight-height) !important;
+}
+
+.anbox-part-04 #anxp-packages .anxp__highlight{
+  background-position: left center !important;
+  background-size: 0 var(--anbox-highlight-height) !important;
+}
+
+.anbox-part-04 #anxp-packages.anxp-is-in .anxp__highlight{
+  background-size: 100% var(--anbox-highlight-height) !important;
+}
+
+.anbox-part-04 #ablog .ablog__intro h2 span{
+  background-position: left center !important;
+  background-size: 0 var(--anbox-highlight-height) !important;
+}
+
+.anbox-part-04 #ablog .ablog__head.is-visible .ablog__intro h2 span{
+  background-size: 100% var(--anbox-highlight-height) !important;
+}
+
+.anbox-part-04 #abct-contacts .abct__heading h2 span{
+  background-position: left center !important;
+  background-size: 0 var(--anbox-highlight-height) !important;
+  animation: none !important;
+  transition: background-size .72s cubic-bezier(.65,0,.35,1) .36s !important;
+}
+
+.anbox-part-04 #abct-contacts.abct-is-in .abct__heading h2 span{
+  animation: none !important;
+  background-size: 100% var(--anbox-highlight-height) !important;
+}
+
+@keyframes abct-highlight-height-in {
+  to { background-size: 100% 93%; }
+}
+</style>
+<style data-anbox-services-matrix="v1">
+.anbox-part-04 #anxs-services{background:var(--anbox-paper,#f3f4f0)}
+.anbox-part-04 #anxs-services .anxs-matrix__stage{box-sizing:border-box;width:100%;max-width:none;margin:0;padding:64px var(--anbox-content-inset,40px) 80px;font-family:var(--anbox-system-font,var(--anbox-font-text,"Onest",Arial,sans-serif));color:#151716}
+.anbox-part-04 #anxs-services .anxs-matrix__intro{margin:0}
+.anbox-part-04 #anxs-services .anxs-matrix__kicker{display:flex;gap:12px;margin:0;font-size:clamp(12px,.625vw,24px);line-height:1.25;font-weight:500;letter-spacing:.02em;text-transform:uppercase}
+.anbox-part-04 #anxs-services .anxs-matrix__kicker b{color:var(--anbox-system-purple,#9b7cff);font-weight:500}
+.anbox-part-04 #anxs-services .anxs-matrix__statement{max-width:520px;margin:18px 0 0;padding-left:14px;border-left:2px solid var(--anbox-system-purple,#9b7cff);font-family:var(--anbox-system-font,var(--anbox-font-text,"Onest",Arial,sans-serif));font-size:clamp(18px,.938vw,36px);line-height:1.22;font-weight:500;letter-spacing:-.025em}
+.anbox-part-04 #anxs-services .anxs-matrix__statement mark{padding:0 .14em;background:var(--anbox-purple-soft,#ded4f7);color:inherit;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.anbox-part-04 #anxs-services .anxs-matrix__grid{overflow:hidden;margin-top:32px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid rgba(21,23,22,.14);border-radius:14px;background:#fff}
+.anbox-part-04 #anxs-services .anxs-matrix__column{--anxs-matrix-accent:var(--anbox-purple,#ad95ee);min-width:0}
+.anbox-part-04 #anxs-services .anxs-matrix__column--corporate{--anxs-matrix-accent:var(--anbox-lime,#dde63f)}
+.anbox-part-04 #anxs-services .anxs-matrix__column+ .anxs-matrix__column{border-left:1px solid rgba(21,23,22,.14)}
+.anbox-part-04 #anxs-services .anxs-matrix__head{box-sizing:border-box;min-height:188px;padding:28px;border-bottom:0}
+.anbox-part-04 #anxs-services .anxs-matrix__marker{display:flex;align-items:center;gap:10px;margin:0;color:var(--anxs-matrix-accent);font-size:11px;font-weight:600;line-height:1;text-transform:uppercase}
+.anbox-part-04 #anxs-services .anxs-matrix__marker::after{content:"";width:44px;height:1px;background:currentColor}
+.anbox-part-04 #anxs-services .anxs-matrix__head h3{margin:26px 0 0;font-family:var(--anbox-system-font,var(--anbox-font-text,"Onest",Arial,sans-serif));font-size:29px;font-weight:650;line-height:1.04;letter-spacing:-.04em;text-transform:uppercase}
+.anbox-part-04 #anxs-services .anxs-matrix__head p:last-child{max-width:500px;margin:12px 0 0;color:#706d68;font-size:14px;line-height:1.45}
+.anbox-part-04 #anxs-services .anxs-matrix__list{list-style:none;margin:0;padding:8px 28px 8px}
+.anbox-part-04 #anxs-services .anxs-matrix__item{position:relative;border-bottom:1px solid rgba(21,23,22,.14)}
+.anbox-part-04 #anxs-services .anxs-matrix__item:last-child{border-bottom:0}
+.anbox-part-04 #anxs-services .anxs-matrix__button{box-sizing:border-box;width:100%;min-height:56px;padding:0;display:grid;grid-template-columns:36px minmax(0,1fr) 34px;gap:0;align-items:center;border:0;background:transparent;color:#151716;text-align:left;cursor:pointer}
+.anbox-part-04 #anxs-services .anxs-matrix__number{color:var(--anxs-matrix-accent);font-size:11px;line-height:1}
+.anbox-part-04 #anxs-services .anxs-matrix__label{min-width:0;font-size:15px;font-weight:400;line-height:1.3}
+.anbox-part-04 #anxs-services .anxs-matrix__arrow{position:relative;box-sizing:border-box;width:32px;height:32px;display:grid;place-items:center;justify-self:end;border:1px solid var(--anxs-matrix-accent);border-radius:50%;color:var(--anxs-matrix-accent);font-size:13px;line-height:1;transition:background-color .2s ease,color .2s ease,transform .28s cubic-bezier(.22,1,.36,1)}
+.anbox-part-04 #anxs-services .anxs-matrix__panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .28s cubic-bezier(.22,1,.36,1)}
+.anbox-part-04 #anxs-services .anxs-matrix__panel p{min-height:0;overflow:hidden;margin:0;padding:0 50px 0 36px;color:#706d68;font-size:12px;line-height:1.45}
+.anbox-part-04 #anxs-services .anxs-matrix__item.is-open .anxs-matrix__panel{grid-template-rows:1fr}
+.anbox-part-04 #anxs-services .anxs-matrix__item.is-open .anxs-matrix__panel p{padding-bottom:15px}
+.anbox-part-04 #anxs-services .anxs-matrix__item.is-open .anxs-matrix__arrow{transform:rotate(90deg)}
+.anbox-part-04 #anxs-services .anxs-matrix__button:focus-visible{outline:2px solid var(--anbox-purple,#ad95ee);outline-offset:3px}
+@media(hover:hover) and (pointer:fine){
+.anbox-part-04 #anxs-services .anxs-matrix__button:hover .anxs-matrix__label{color:var(--anxs-matrix-accent)}
+.anbox-part-04 #anxs-services .anxs-matrix__button:hover .anxs-matrix__arrow{background:var(--anxs-matrix-accent);color:#fff;transform:translate(2px,-2px)}
+.anbox-part-04 #anxs-services .anxs-matrix__column--corporate .anxs-matrix__button:hover .anxs-matrix__arrow{color:#151716}
+.anbox-part-04 #anxs-services .anxs-matrix__item.is-open .anxs-matrix__button:hover .anxs-matrix__arrow{transform:translate(2px,-2px) rotate(90deg)}
+}
+@media(max-width:760px){
+.anbox-part-04 #anxs-services .anxs-matrix__stage{width:100%;padding:40px var(--anbox-content-inset,16px) 56px}
+.anbox-part-04 #anxs-services .anxs-matrix__grid{grid-template-columns:1fr}
+.anbox-part-04 #anxs-services .anxs-matrix__column+ .anxs-matrix__column{border-top:1px solid rgba(21,23,22,.14);border-left:0}
+.anbox-part-04 #anxs-services .anxs-matrix__head{min-height:0;padding:24px 20px}
+.anbox-part-04 #anxs-services .anxs-matrix__statement{max-width:100%}
+.anbox-part-04 #anxs-services .anxs-matrix__head h3{margin-top:20px;font-size:24px}
+.anbox-part-04 #anxs-services .anxs-matrix__list{padding:4px 20px}
+.anbox-part-04 #anxs-services .anxs-matrix__button{grid-template-columns:34px minmax(0,1fr) 34px}
+.anbox-part-04 #anxs-services .anxs-matrix__label{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){.anbox-part-04 #anxs-services .anxs-matrix__arrow,.anbox-part-04 #anxs-services .anxs-matrix__panel{transition:none}}
+</style>
+<style data-anbox-button-system>
+.anbox-part-04{--anbox-action:#dde63f;--anbox-action-soft:rgba(221,230,63,.14);--anbox-action-ink:#171717;--anbox-action-radius:8px;--anbox-action-height:42px}
+.anbox-part-04 :is(.abx8__primary,.anxg__next-project,.anxp__custom-button,#anxt-team-training .anxt__primary,.abct__submit,.anxs-v4__cta){box-sizing:border-box!important;height:var(--anbox-action-height)!important;min-height:var(--anbox-action-height)!important;padding:0 16px!important;border-radius:var(--anbox-action-radius)!important;background:var(--anbox-action)!important;color:var(--anbox-action-ink)!important;font-size:10px!important;font-weight:700!important;line-height:1!important;text-transform:uppercase;transition:filter .2s ease,transform .2s ease}
+.anbox-part-04 .abx8__header-cta{box-sizing:border-box!important;height:34px!important;min-height:34px!important;border-radius:var(--anbox-action-radius)!important;background:var(--anbox-action)!important;color:var(--anbox-action-ink)!important}
+.anbox-part-04 #abct-contacts .abct__direct-note{box-sizing:border-box!important;height:var(--anbox-action-height)!important;min-height:var(--anbox-action-height)!important;padding:5px 16px 5px 14px!important;border:1px solid #9b7cff!important;border-radius:var(--anbox-action-radius)!important;background:#9b7cff!important;color:#fff!important;font-size:10px!important;font-weight:600!important;line-height:1.2!important;text-transform:none}
+.anbox-part-04 #abct-contacts .abct__direct-note small{color:rgba(255,255,255,.68)!important;font-size:9px!important;font-weight:400!important;line-height:1.15!important}
+.anbox-part-04 #abct-contacts .abct__direct-note strong{margin-top:3px!important;color:#fff!important;font-size:11px!important;font-weight:600!important;line-height:1.15!important}
+.anbox-part-04 #abct-contacts .abct__direct-note i{background:transparent!important;color:#fff!important}
+.anbox-part-04 #abct-contacts :is(.abct__submit,.abct__direct-note){display:flex!important;align-items:center!important}
+.anbox-part-04 #abct-contacts :is(.abct__submit,.abct__direct-note) i{box-sizing:border-box!important;width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;flex:0 0 auto!important;margin:0!important;padding:0!important;display:block!important;border-radius:0!important;background:transparent!important;font-family:Arial,sans-serif!important;font-size:13px!important;font-style:normal!important;font-weight:400!important;line-height:1!important;transform:none!important}
+.anbox-part-04 #abct-contacts .abct__submit i{color:#171717!important}
+.anbox-part-04 #abct-contacts .abct__direct-note i{color:#fff!important}
+.anbox-part-04 #anxt-team-training .anxt__primary{display:flex!important;align-items:center!important;justify-content:space-between!important}
+.anbox-part-04 #ablog .ablog__feed-cta>i{width:auto!important;height:auto!important;min-width:0!important;min-height:0!important;display:block!important;border:0!important;border-radius:0!important;background:transparent!important;color:#171717!important;font-size:13px!important;font-style:normal!important;line-height:1!important;transform:none!important}
+@media(hover:hover) and (pointer:fine){.anbox-part-04 #ablog .ablog__feed-cta:hover>i{transform:none!important}}
+.anbox-part-04 #abct-contacts .abct__textarea{height:92px!important;min-height:92px!important}
+@media(hover:hover) and (pointer:fine){.anbox-part-04 #abct-contacts .abct__direct-note:hover{border-color:#9b7cff!important;background:#9b7cff!important;filter:brightness(.94)}}
+@media(hover:hover) and (pointer:fine){.anbox-part-04 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__primary,.abct__submit,.anxs-v4__cta):hover{filter:brightness(.96)}}
+.anbox-part-04 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__course-link,.anxt__primary,.ablog__feed-cta,.abct__submit,.abct__direct-note,.anxs-v4__cta)>:is(svg,i,span:last-child){transition:transform 220ms cubic-bezier(.22,1,.36,1)!important;transform:translate(0,0)!important;will-change:transform}
+@media(hover:hover) and (pointer:fine){.anbox-part-04 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__course-link,.anxt__primary,.ablog__feed-cta,.abct__submit,.abct__direct-note,.anxs-v4__cta):is(:hover,:focus-visible)>:is(svg,i,span:last-child){transform:translate(3px,-3px) rotate(-45deg)!important}}
+.anbox-part-04 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__course-link,.anxt__primary,.ablog__feed-cta,.abct__submit,.abct__direct-note,.anxs-v4__cta):active>:is(svg,i,span:last-child){transform:translate(3px,-3px) rotate(-45deg)!important}
+@media(prefers-reduced-motion:reduce){.anbox-part-04 :is(.abx8__header-cta,.abx8__primary,.anxg__next-project,.anxp__custom-button,.anxt__course-link,.anxt__primary,.ablog__feed-cta,.abct__submit,.abct__direct-note,.anxs-v4__cta)>:is(svg,i,span:last-child){transition:none!important;transform:none!important}}
+</style>
+<style data-anbox-services-column-alignment="directions-grid-v1">
+@media (min-width: 761px){
+  .anbox-part-04 #anxs-services .anxs-v4__group{
+    grid-template-columns: 28px minmax(0, 1fr) 12px 28px minmax(0, 1fr) !important;
+    column-gap: 0 !important;
+  }
+  .anbox-part-04 #anxs-services .anxs-v4__group-number{
+    grid-column: 1 !important;
+  }
+  .anbox-part-04 #anxs-services .anxs-v4__group h3{
+    grid-column: 2 !important;
+  }
+  .anbox-part-04 #anxs-services .anxs-v4__list{
+    grid-column: 5 !important;
+  }
+}
+</style>
+<style data-anbox-screen-spacing="desktop-mobile-v1">
+@media(max-width:640px){
+  .anbox-part-04 #anxs-services .anxs-matrix__stage{box-sizing:border-box;width:100%;max-width:none;margin:0;padding:24px var(--anbox-content-inset) 20px}
+}
+</style>
+<div class="anbox-part-04"><div class="anbox-full-page anbox-composite"><section
+  id="anxs-services"
+  class="anxs__root"
+  lang="ru"
+  data-anxs-debug-grid="false"
+  aria-labelledby="anxs-title"
+>
+  <div class="anxs__stage">
+    <div class="anxs__grid-guide" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i>
+      <i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <header class="anxs__header">
+      <p class="anxs__kicker" data-anxs-reveal>
+        <span>04</span>
+        <i aria-hidden="true">/</i>
+        <span>УСЛУГИ</span>
+      </p>
+
+      <div class="anxs__title-wrap" data-anxs-reveal>
+        <h2 id="anxs-title">
+          <span class="anxs__highlight">Всё, что нужно бренду</span> — от&nbsp;стратегии<br>
+          до&nbsp;запуска в&nbsp;производство.
+        </h2>
+      </div>
+    </header>
+
+    <div class="anxs__cards">
+      <article
+        class="anxs__card anxs__card--product"
+        style="--anxs-order: 0"
+        data-anxs-card
+      >
+        <header class="anxs__card-head">
+          <p class="anxs__card-number">
+            <span>01</span>
+            <i aria-hidden="true"></i>
+          </p>
+          <h3>Товарный брендинг</h3>
+          <p class="anxs__card-description">
+            Для запуска, обновления и&nbsp;развития продукта на&nbsp;рынке
+          </p>
+        </header>
+
+        <ol class="anxs__list">
+          <li>
+            <button
+              id="anxs-product-analytics-trigger"
+              class="anxs__item-toggle"
+              type="button"
+              aria-controls="anxs-product-analytics-panel"
+              data-anxs-toggle
+            >
+              <span class="anxs__item-number">01</span>
+              <span class="anxs__item-title">Аналитика</span>
+              <span class="anxs__item-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div
+              id="anxs-product-analytics-panel"
+              class="anxs__item-panel"
+              role="region"
+              aria-labelledby="anxs-product-analytics-trigger"
+            >
+              <div class="anxs__item-panel-inner">
+                <p class="anxs__item-copy">
+                  Утвержденная стратегия визуальной дифференциации на&nbsp;основе конкурентного анализа
+                  и&nbsp;мирового опыта, которая станет основой дальнейших визуальных решений.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              id="anxs-product-naming-trigger"
+              class="anxs__item-toggle"
+              type="button"
+              aria-controls="anxs-product-naming-panel"
+              data-anxs-toggle
+            >
+              <span class="anxs__item-number">02</span>
+              <span class="anxs__item-title">Нейминг</span>
+              <span class="anxs__item-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div
+              id="anxs-product-naming-panel"
+              class="anxs__item-panel"
+              role="region"
+              aria-labelledby="anxs-product-naming-trigger"
+            >
+              <div class="anxs__item-panel-inner">
+                <p class="anxs__item-copy">
+                  Исследуем языковое поле, создаём варианты названия и&nbsp;проверяем их&nbsp;семантику,
+                  звучание, домены и&nbsp;товарные знаки.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              id="anxs-product-logo-trigger"
+              class="anxs__item-toggle"
+              type="button"
+              aria-controls="anxs-product-logo-panel"
+              data-anxs-toggle
+            >
+              <span class="anxs__item-number">03</span>
+              <span class="anxs__item-title">Разработка логотипа</span>
+              <span class="anxs__item-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div
+              id="anxs-product-logo-panel"
+              class="anxs__item-panel"
+              role="region"
+              aria-labelledby="anxs-product-logo-trigger"
+            >
+              <div class="anxs__item-panel-inner">
+                <p class="anxs__item-copy">
+                  Разрабатываем метафору и&nbsp;варианты знака с&nbsp;учётом аналитики, проверяем уникальность
+                  и&nbsp;готовим версии для&nbsp;печати и&nbsp;digital.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              id="anxs-product-packaging-trigger"
+              class="anxs__item-toggle"
+              type="button"
+              aria-controls="anxs-product-packaging-panel"
+              data-anxs-toggle
+            >
+              <span class="anxs__item-number">04</span>
+              <span class="anxs__item-title">Дизайн упаковки</span>
+              <span class="anxs__item-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div
+              id="anxs-product-packaging-panel"
+              class="anxs__item-panel"
+              role="region"
+              aria-labelledby="anxs-product-packaging-trigger"
+            >
+              <div class="anxs__item-panel-inner">
+                <p class="anxs__item-copy">
+                  Создаём концепцию упаковки, проверяем её&nbsp;на&nbsp;фоне конкурентов и&nbsp;продумываем
+                  дифференциацию SKU, материалы и&nbsp;технологии печати.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              id="anxs-product-production-trigger"
+              class="anxs__item-toggle"
+              type="button"
+              aria-controls="anxs-product-production-panel"
+              data-anxs-toggle
+            >
+              <span class="anxs__item-number">05</span>
+              <span class="anxs__item-title">Сопровождение производства</span>
+              <span class="anxs__item-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div
+              id="anxs-product-production-panel"
+              class="anxs__item-panel"
+              role="region"
+              aria-labelledby="anxs-product-production-trigger"
+            >
+              <div class="anxs__item-panel-inner">
+                <p class="anxs__item-copy">
+                  Помогаем выбрать типографию, подбираем материалы и&nbsp;отделку, готовим макеты
+                  к&nbsp;печати и&nbsp;сопровождаем производство.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              id="anxs-product-marketplaces-trigger"
+              class="anxs__item-toggle"
+              type="button"
+              aria-controls="anxs-product-marketplaces-panel"
+              data-anxs-toggle
+            >
+              <span class="anxs__item-number">06</span>
+              <span class="anxs__item-title">Инфографика для маркетплейсов</span>
+              <span class="anxs__item-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div
+              id="anxs-product-marketplaces-panel"
+              class="anxs__item-panel"
+              role="region"
+              aria-labelledby="anxs-product-marketplaces-trigger"
+            >
+              <div class="anxs__item-panel-inner">
+                <p class="anxs__item-copy">
+                  Создаём визуальную систему карточки товара: изображения, инфографику и&nbsp;адаптацию
+                  контента под&nbsp;требования маркетплейсов.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </article>
+
+      <article
+        class="anxs__card anxs__card--corporate"
+        style="--anxs-order: 1"
+        data-anxs-card
+      >
+        <header class="anxs__card-head">
+          <p class="anxs__card-number">
+            <span>02</span>
+            <i aria-hidden="true"></i>
+          </p>
+          <h3>Корпоративный брендинг</h3>
+          <p class="anxs__card-description">
+            Для компаний, которым нужна цельная визуальная система
+            и&nbsp;единый образ бренда
+          </p>
+        </header>
+
+        <ol class="anxs__list">
+          <li>
+            <button
+              id="anxs-corporate-analytics-trigger"
+              class="anxs__item-toggle"
+              type="button"
+              aria-controls="anxs-corporate-analytics-panel"
+              data-anxs-toggle
+            >
+              <span class="anxs__item-number">01</span>
+              <span class="anxs__item-title">Аналитика</span>
+              <span class="anxs__item-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div
+              id="anxs-corporate-analytics-panel"
+              class="anxs__item-panel"
+              role="region"
+              aria-labelledby="anxs-corporate-analytics-trigger"
+            >
+              <div class="anxs__item-panel-inner">
+                <p class="anxs__item-copy">
+                  Утвержденная стратегия визуальной дифференциации на&nbsp;основе конкурентного анализа
+                  и&nbsp;мирового опыта, которая станет основой дальнейших визуальных решений.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              id="anxs-corporate-naming-trigger"
+              class="anxs__item-toggle"
+              type="button"
+              aria-controls="anxs-corporate-naming-panel"
+              data-anxs-toggle
+            >
+              <span class="anxs__item-number">02</span>
+              <span class="anxs__item-title">Нейминг</span>
+              <span class="anxs__item-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div
+              id="anxs-corporate-naming-panel"
+              class="anxs__item-panel"
+              role="region"
+              aria-labelledby="anxs-corporate-naming-trigger"
+            >
+              <div class="anxs__item-panel-inner">
+                <p class="anxs__item-copy">
+                  Разрабатываем название бренда с&nbsp;логикой позиционирования, проверяем ассоциации,
+                  звучание и&nbsp;возможность регистрации.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              id="anxs-corporate-logo-trigger"
+              class="anxs__item-toggle"
+              type="button"
+              aria-controls="anxs-corporate-logo-panel"
+              data-anxs-toggle
+            >
+              <span class="anxs__item-number">03</span>
+              <span class="anxs__item-title">Разработка логотипа</span>
+              <span class="anxs__item-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div
+              id="anxs-corporate-logo-panel"
+              class="anxs__item-panel"
+              role="region"
+              aria-labelledby="anxs-corporate-logo-trigger"
+            >
+              <div class="anxs__item-panel-inner">
+                <p class="anxs__item-copy">
+                  Создаём уникальный логотип и&nbsp;фирменный знак, прорабатываем варианты блока
+                  и&nbsp;готовим форматы для&nbsp;печатных и&nbsp;digital-носителей.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              id="anxs-corporate-identity-trigger"
+              class="anxs__item-toggle"
+              type="button"
+              aria-controls="anxs-corporate-identity-panel"
+              data-anxs-toggle
+            >
+              <span class="anxs__item-number">04</span>
+              <span class="anxs__item-title">Разработка айдентики</span>
+              <span class="anxs__item-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div
+              id="anxs-corporate-identity-panel"
+              class="anxs__item-panel"
+              role="region"
+              aria-labelledby="anxs-corporate-identity-trigger"
+            >
+              <div class="anxs__item-panel-inner">
+                <p class="anxs__item-copy">
+                  Создаём цветовую и&nbsp;типографическую систему, графические приёмы, паттерны
+                  и&nbsp;базовые бренд-материалы.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              id="anxs-corporate-site-trigger"
+              class="anxs__item-toggle"
+              type="button"
+              aria-controls="anxs-corporate-site-panel"
+              data-anxs-toggle
+            >
+              <span class="anxs__item-number">05</span>
+              <span class="anxs__item-title">Разработка сайта</span>
+              <span class="anxs__item-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div
+              id="anxs-corporate-site-panel"
+              class="anxs__item-panel"
+              role="region"
+              aria-labelledby="anxs-corporate-site-trigger"
+            >
+              <div class="anxs__item-panel-inner">
+                <p class="anxs__item-copy">
+                  Проектируем структуру и&nbsp;пользовательские сценарии, создаём дизайн и&nbsp;адаптивный
+                  сайт, продолжающий фирменный стиль бренда.
+                </p>
+              </div>
+            </div>
+          </li>
+          <li>
+            <button
+              id="anxs-corporate-brandbook-trigger"
+              class="anxs__item-toggle"
+              type="button"
+              aria-controls="anxs-corporate-brandbook-panel"
+              data-anxs-toggle
+            >
+              <span class="anxs__item-number">06</span>
+              <span class="anxs__item-title">Брендбук</span>
+              <span class="anxs__item-arrow" aria-hidden="true">↗</span>
+            </button>
+            <div
+              id="anxs-corporate-brandbook-panel"
+              class="anxs__item-panel"
+              role="region"
+              aria-labelledby="anxs-corporate-brandbook-trigger"
+            >
+              <div class="anxs__item-panel-inner">
+                <p class="anxs__item-copy">
+                  Собираем правила работы с&nbsp;логотипом, цветами, типографикой, графикой и&nbsp;носителями
+                  в&nbsp;единое руководство для&nbsp;команды и&nbsp;подрядчиков.
+                </p>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </article>
+    </div>
+  </div>
+</section></div></div>
+<script>
+(function () {
+  "use strict";
+
+  function anxsApplyRussianTypography(container) {
+    if (!container || !document.createTreeWalker) {
+      return;
+    }
+
+    var rejected =
+      "script, style, code, pre, textarea, input, select, option, noscript, " +
+      "[contenteditable=\"true\"], [data-anxs-typography=\"off\"]";
+
+    var walker = document.createTreeWalker(
+      container,
+      NodeFilter.SHOW_TEXT
+    );
+
+    var nodes = [];
+    var current;
+
+    while ((current = walker.nextNode())) {
+      if (!current.nodeValue || !current.nodeValue.trim()) {
+        continue;
+      }
+
+      if (
+        current.parentElement &&
+        current.parentElement.closest(rejected)
+      ) {
+        continue;
+      }
+
+      nodes.push(current);
+    }
+
+    nodes.forEach(function (textNode) {
+      var value = textNode.nodeValue;
+      var shortWord =
+        /(^|[\s\u00a0(\[«„])((?:а|и|но|в|во|на|с|со|к|ко|у|о|об|от|до|по|под|над|за|из|без|для|при))[ \t]+(?=[А-Яа-яЁёA-Za-z0-9«„])/gi;
+
+      value = value.replace(shortWord, "$1$2\u00a0");
+      value = value.replace(shortWord, "$1$2\u00a0");
+      textNode.nodeValue = value;
+    });
+  }
+
+  function initANXS() {
+    var root = document.getElementById("anxs-services");
+
+    if (!root || root.dataset.anxsReady === "true") {
+      return;
+    }
+
+    root.dataset.anxsReady = "true";
+    root.classList.add("is-js");
+    anxsApplyRussianTypography(root);
+
+    var toggles = Array.prototype.slice.call(
+      root.querySelectorAll("[data-anxs-toggle]")
+    );
+
+    function setAccordionState(button, shouldOpen) {
+      var item = button.closest("li");
+      var panelId = button.getAttribute("aria-controls");
+      var panel = panelId
+        ? root.querySelector("#" + panelId)
+        : null;
+
+      if (!item || !panel) {
+        return;
+      }
+
+      item.classList.toggle("is-open", shouldOpen);
+      button.setAttribute(
+        "aria-expanded",
+        shouldOpen ? "true" : "false"
+      );
+      panel.setAttribute(
+        "aria-hidden",
+        shouldOpen ? "false" : "true"
+      );
+    }
+
+    toggles.forEach(function (button) {
+      setAccordionState(button, false);
+
+      button.addEventListener("click", function () {
+        var item = button.closest("li");
+        var card = button.closest("[data-anxs-card]");
+        var shouldOpen =
+          !item ||
+          !item.classList.contains("is-open");
+
+        if (card) {
+          Array.prototype.slice.call(
+            card.querySelectorAll("[data-anxs-toggle]")
+          ).forEach(function (cardButton) {
+            if (cardButton !== button) {
+              setAccordionState(cardButton, false);
+            }
+          });
+        }
+
+        setAccordionState(button, shouldOpen);
+      });
+    });
+
+    var compactAccordionQuery = window.matchMedia(
+      "(max-width: 640px)"
+    );
+
+    function setInitialCompactAccordion() {
+      if (!compactAccordionQuery.matches || !toggles.length) {
+        return;
+      }
+
+      var firstCard = toggles[0].closest("[data-anxs-card]");
+      var firstToggle = firstCard
+        ? firstCard.querySelector("[data-anxs-toggle]")
+        : toggles[0];
+
+      setAccordionState(firstToggle, true);
+    }
+
+    setInitialCompactAccordion();
+
+    if (typeof compactAccordionQuery.addEventListener === "function") {
+      compactAccordionQuery.addEventListener(
+        "change",
+        setInitialCompactAccordion
+      );
+    } else if (typeof compactAccordionQuery.addListener === "function") {
+      compactAccordionQuery.addListener(setInitialCompactAccordion);
+    }
+
+    var reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (
+      reducedMotion ||
+      !("IntersectionObserver" in window)
+    ) {
+      root.classList.add("is-in");
+      return;
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+          root.classList.add("is-in");
+          observer.disconnect();
+        });
+      },
+      {
+        threshold: .14,
+        rootMargin: "0px 0px -7% 0px"
+      }
+    );
+
+    observer.observe(root);
+    root.anxsObserver = observer;
+  }
+
+  if (typeof window.t_onReady === "function") {
+    window.t_onReady(initANXS);
+  } else if (document.readyState === "loading") {
+    document.addEventListener(
+      "DOMContentLoaded",
+      initANXS,
+      { once: true }
+    );
+  } else {
+    initANXS();
+  }
+})();
+</script>
+<script data-anbox-scroll-replay>
+(function () {
+  "use strict";
+
+  function initANBOXScrollReplay() {
+    if (!window.IntersectionObserver || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+
+    var sections = [
+      ["abx8", "abx8-entry-in"],
+      ["abx-approach-v8", "is-in"],
+      ["anxg-gallery", "anxg-entry-in"],
+      ["anxs-services", "is-in"],
+      ["anxp-packages", "anxp-is-in"],
+      ["anxt-team-training", "anxt-is-in"],
+      ["abct-contacts", "abct-is-in"]
+    ];
+
+    sections.forEach(function (pair) {
+      var root = document.getElementById(pair[0]);
+      var activeClass = pair[1];
+      if (!root || root.dataset.anboxReplayReady === "true") return;
+      root.dataset.anboxReplayReady = "true";
+
+      var visible = false;
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.intersectionRatio >= 0.12) {
+            visible = true;
+            root.classList.add(activeClass);
+          } else if (!entry.isIntersecting) {
+            visible = false;
+            root.classList.remove(activeClass);
+          }
+        });
+      }, { threshold: [0, 0.12], rootMargin: "0px 0px -6% 0px" });
+
+      observer.observe(root);
+      window.setTimeout(function () {
+        if (!visible) root.classList.remove(activeClass);
+      }, 750);
+    });
+
+    var blogItems = document.querySelectorAll("#ablog [data-ablog-reveal]");
+    var blogObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.intersectionRatio >= 0.12) entry.target.classList.add("is-visible");
+        else if (!entry.isIntersecting) entry.target.classList.remove("is-visible");
+      });
+    }, { threshold: [0, 0.12], rootMargin: "0px 0px -6% 0px" });
+
+    blogItems.forEach(function (item) { blogObserver.observe(item); });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initANBOXScrollReplay, { once: true });
+  } else {
+    initANBOXScrollReplay();
+  }
+})();
+</script>
+<script data-anbox-services-matrix="v1">
+(function(){
+"use strict";
+var root=document.getElementById("anxs-services");
+if(!root||root.dataset.anxsMatrix==="true")return;
+root.dataset.anxsMatrix="true";
+var services={
+product:[
+["01","Аналитика","Утверждённая стратегия визуальной дифференциации на основе конкурентного анализа и мирового опыта."],
+["02","Нейминг","Исследуем языковое поле, создаём варианты названия и проверяем семантику, звучание, домены и товарные знаки."],
+["03","Разработка логотипа","Разрабатываем метафору и варианты знака, проверяем уникальность и готовим версии для печати и digital."],
+["04","Дизайн упаковки","Создаём концепцию упаковки, систему линейки SKU, подбираем материалы и технологии печати."],
+["05","Сопровождение производства","Готовим макеты к печати, взаимодействуем с типографией и сопровождаем производство."],
+["06","Инфографика для маркетплейсов","Создаём изображения и инфографику с учётом требований площадок и логики карточки товара."]
+],
+corporate:[
+["01","Аналитика","Изучаем рынок, аудиторию и конкурентов, чтобы определить основу будущей визуальной системы."],
+["02","Нейминг","Разрабатываем название бренда с логикой позиционирования и проверяем возможность регистрации."],
+["03","Разработка логотипа","Создаём логотип и фирменный знак, готовим версии для печатных и digital-носителей."],
+["04","Разработка айдентики","Создаём цветовую, типографическую и графическую систему бренда."],
+["05","Разработка сайта","Проектируем структуру, пользовательские сценарии и адаптивный сайт в фирменной системе."],
+["06","Брендбук","Собираем правила работы с логотипом, цветами, типографикой, графикой и носителями."]
+]};
+function rows(items,prefix){return items.map(function(item,index){var id="anxs-matrix-"+prefix+"-"+(index+1);return '<li class="anxs-matrix__item"><button class="anxs-matrix__button" type="button" aria-expanded="false" aria-controls="'+id+'"><span class="anxs-matrix__number">'+item[0]+'</span><span class="anxs-matrix__label">'+item[1]+'</span><span class="anxs-matrix__arrow" aria-hidden="true">↗</span></button><div class="anxs-matrix__panel" id="'+id+'"><p>'+item[2]+'</p></div></li>'}).join("")}
+root.innerHTML='<div class="anxs-matrix__stage"><header class="anxs-matrix__intro"><p class="anxs-matrix__kicker"><b>04</b><span>/</span><span>Услуги</span></p><h2 class="anxs-matrix__statement" id="anxs-title">Берём <mark>отдельные задачи</mark> или собираем проект <mark>под ключ</mark>: исследуем, создаём визуальную систему и сопровождаем реализацию.</h2></header><div class="anxs-matrix__grid">'+
+'<article class="anxs-matrix__column anxs-matrix__column--product"><header class="anxs-matrix__head"><p class="anxs-matrix__marker">01</p><h3>Товарный брендинг</h3><p>Для запуска, обновления и развития продукта на рынке.</p></header><ol class="anxs-matrix__list">'+rows(services.product,"product")+'</ol></article>'+
+'<article class="anxs-matrix__column anxs-matrix__column--corporate"><header class="anxs-matrix__head"><p class="anxs-matrix__marker">02</p><h3>Корпоративный брендинг</h3><p>Для компаний, которым нужна цельная визуальная система и единый образ бренда.</p></header><ol class="anxs-matrix__list">'+rows(services.corporate,"corporate")+'</ol></article>'+
+'</div></div>';
+root.querySelectorAll(".anxs-matrix__button").forEach(function(button){
+button.addEventListener("click",function(){
+var item=button.closest(".anxs-matrix__item");
+var isOpen=item.classList.toggle("is-open");
+button.setAttribute("aria-expanded",String(isOpen));
+});
+});
+})();
+</script>
+<style data-anbox-4k="v1">
+@media (min-width:1921px){
+  .anbox-part-04{--anbox-action-height:clamp(42px,2.188vw,84px)}
+  .anbox-part-04 :is(.abx8__primary,.anxg__next-project,.anxp__custom-button,#anxt-team-training .anxt__primary,.abct__submit,.anxs-v4__cta){
+    height:var(--anbox-action-height)!important;min-height:var(--anbox-action-height)!important;
+    padding-inline:clamp(16px,.833vw,32px)!important;font-size:clamp(10px,.521vw,20px)!important
+  }
+  .anbox-part-04 :is(.abx8__primary,.anxg__next-project,.anxp__custom-button,#anxt-team-training .anxt__primary,.abct__submit,.anxs-v4__cta)>:is(svg,i,span:last-child){font-size:clamp(13px,.677vw,26px)!important}
+}
+@media (min-width:1921px){
+  .anbox-part-04 #anxs-services .anxs-matrix__stage{padding-top:clamp(64px,3.333vw,128px);padding-bottom:clamp(80px,4.167vw,160px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__statement{max-width:clamp(520px,27.083vw,1040px);margin-top:clamp(18px,.938vw,36px);padding-left:clamp(14px,.729vw,28px);border-left-width:clamp(2px,.104vw,4px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__grid{margin-top:clamp(32px,1.667vw,64px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__head{min-height:clamp(188px,9.792vw,376px);padding:clamp(28px,1.458vw,56px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__marker{gap:clamp(10px,.521vw,20px);font-size:clamp(11px,.573vw,22px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__marker::after{width:clamp(44px,2.292vw,88px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__head h3{margin-top:clamp(26px,1.354vw,52px);font-size:clamp(29px,1.51vw,58px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__head p:last-child{max-width:clamp(500px,26.042vw,1000px);margin-top:clamp(12px,.625vw,24px);font-size:clamp(14px,.729vw,28px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__list{padding:clamp(8px,.417vw,16px) clamp(28px,1.458vw,56px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__button{min-height:clamp(56px,2.917vw,112px);grid-template-columns:clamp(36px,1.875vw,72px) minmax(0,1fr) clamp(34px,1.771vw,68px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__number{font-size:clamp(11px,.573vw,22px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__label{font-size:clamp(15px,.781vw,30px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__arrow{width:clamp(32px,1.667vw,64px);height:clamp(32px,1.667vw,64px);font-size:clamp(13px,.677vw,26px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__panel p{padding-inline:clamp(36px,1.875vw,72px) clamp(50px,2.604vw,100px);font-size:clamp(12px,.625vw,24px)}
+  .anbox-part-04 #anxs-services .anxs-matrix__item.is-open .anxs-matrix__panel p{padding-bottom:clamp(15px,.781vw,30px)}
+}
+</style>
