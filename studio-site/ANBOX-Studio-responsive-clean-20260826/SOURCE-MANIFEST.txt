@@ -1,5 +1,5 @@
 ANBOX Studio responsive clean — source manifest
-mobile SHA-256  b890a81ca0c0f337ffc50aaf96ae1eb099c91d761868f550d88d5f41732618f2  ANBOX-Studio-mobile.html
+mobile SHA-256  f174e9d0491c1bcf943526315d279a6c6d10ba4c3909836f505b08072462050e  ANBOX-Studio-mobile.html
 desktop SHA-256 566deddfcd749fba643f2beeddc10ba8aa28fcccf5de2d91de6f43bb94f760de  ANBOX-Studio-desktop-final-20260826.zip
 spec SHA-256    5861c5444ad5610eb7d685e93d8c2c1e90f625fd6843365741ad7e21696a1891  ANBOX-Studio-responsive-merge-spec-20260826.md
 design SHA-256  c1f8a23af7cb4f98b62b4017fc44a84f2ebcdd86b0923d17520a9407bd12e6e0  design-system.md

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T13:31:31.780Z",
+  "generatedAt": "2026-09-03T13:37:09.257Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -2468,7 +2468,7 @@
       "copy": [
         "Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack",
         "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas",
-        "Дарья Дарев Маркетинг-партнёр, fouraces.agency Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+        "Дарья Дарев Маркетинг-партнёр, fouraces.agency 10+ лет опыта Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
       ],
       "portraitUrls": [
         "https://static.tildacdn.com/tild3637-3830-4331-b734-656566663032/20260831143212443_1.png",
@@ -2497,7 +2497,7 @@
       "copy": [
         "Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack",
         "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas",
-        "Дарья Дарев Маркетинг-партнёр, fouraces.agency Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+        "Дарья Дарев Маркетинг-партнёр, fouraces.agency 10+ лет опыта Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
       ],
       "portraitUrls": [
         "https://static.tildacdn.com/tild3637-3830-4331-b734-656566663032/20260831143212443_1.png",
@@ -2505,14 +2505,14 @@
         "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
       ],
       "roleTops": [
-        281,
-        636.7,
-        636.7
+        269,
+        624.7,
+        624.7
       ],
       "proofTops": [
-        304.5,
-        679.9,
-        706.3
+        292.5,
+        667.9,
+        694.3
       ],
       "captionOverflow": [
         0,
@@ -2527,14 +2527,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.532604,
+        "currentTime": 3.598548,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.236401,
+        "currentTime": 4.315538,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -2799,8 +2799,8 @@
     "loaded": 8
   },
   "cleanupAudit": {
-    "sourceBytes": 822359,
-    "blockBytes": 630742,
+    "sourceBytes": 822497,
+    "blockBytes": 630880,
     "reductionPercent": 23.3,
     "styleTagsByFile": {
       "00-header.html": 6,
@@ -2873,8 +2873,8 @@
       "before": {
         "in": false,
         "edge": "bottom",
-        "top": 1007,
-        "bottom": 1050.9,
+        "top": 1006.7,
+        "bottom": 1050.6,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2902,8 +2902,8 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 953.6,
-        "bottom": 997.5,
+        "top": 952.9,
+        "bottom": 996.8,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2913,15 +2913,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-176.991px 0px, -281.666px 21px, -176.991px 0px",
+        "maskPosition": "-176.642px 0px, -281.503px 21px, -176.642px 0px",
         "maskXs": [
-          -176.991,
-          -281.666,
-          -176.991
+          -176.642,
+          -281.503,
+          -176.642
         ],
         "maskProgress": [
-          0.4563633802816901,
-          0.030403908794788284
+          0.4573464788732394,
+          0.030934853420195484
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2931,8 +2931,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -151.9,
-        "bottom": -108,
+        "top": -152,
+        "bottom": -108.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2960,26 +2960,26 @@
       "returnedTop": {
         "in": true,
         "edge": "top",
-        "top": 52.2,
-        "bottom": 96.1,
+        "top": 53.2,
+        "bottom": 97.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
         "clipPath": "none",
         "clipValues": [],
-        "maskSize": "355px 23px, 307px 23px, 3px 100%",
+        "maskSize": "355px 23px, 307px 24px, 3px 100%",
         "maskWidths": [
           100
         ],
-        "maskPosition": "-196.477px 0px, -290.77px 21px, -196.477px 0px",
+        "maskPosition": "-196.514px 0px, -290.787px 21px, -196.514px 0px",
         "maskXs": [
-          -196.477,
-          -290.77,
-          -196.477
+          -196.514,
+          -290.787,
+          -196.514
         ],
         "maskProgress": [
-          0.4014732394366197,
-          0.0007491856677525022
+          0.40136901408450704,
+          0.0006938110749186393
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2991,8 +2991,8 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -5.70125, 0)",
-      "after": "matrix(1, 0, 0, 1, -19.9306, 0)",
+      "before": "matrix(1, 0, 0, 1, -5.69741, 0)",
+      "after": "matrix(1, 0, 0, 1, -20.6435, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3048,10 +3048,10 @@
       ],
       [
         {
-          "opacity": 0.576546,
+          "opacity": 0.491563,
           "translateX": 0,
-          "translateY": 3.38763,
-          "filter": "blur(0.635181px)",
+          "translateY": 4.06749,
+          "filter": "blur(0.762655px)",
           "clipPath": "none"
         },
         {
@@ -3092,17 +3092,17 @@
       ],
       [
         {
-          "opacity": 0.933284,
+          "opacity": 0.933359,
           "translateX": 0,
-          "translateY": 0.533732,
-          "filter": "blur(0.100075px)",
+          "translateY": 0.533129,
+          "filter": "blur(0.0999617px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.720057,
+          "opacity": 0.720367,
           "translateX": 0,
-          "translateY": 2.23954,
-          "filter": "blur(0.419914px)",
+          "translateY": 2.23706,
+          "filter": "blur(0.419449px)",
           "clipPath": "none"
         },
         {
