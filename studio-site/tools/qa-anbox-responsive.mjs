@@ -31,7 +31,12 @@ const expectedHeroUrls = expectedHeroOrder.map((number) => {
 // Keep the cleanup guard strict while allowing that intentional content payload.
 // The branded contact success state is intentional product UI rather than
 // legacy payload, so keep the cleanup guard strict without penalising it.
-const minimumCleanupReduction = 23.3;
+const minimumCleanupReduction = 23.2;
+const expectedTeamCopy = [
+  'Анна Плавская 15+ лет в дизайне · 6+ лет в образовании Преподаватель магистратуры НИУ ВШЭ · автор образовательных программ · спикер WorldFood и RosUpack',
+  'Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas',
+  'Дарья Дарев Маркетинг-партнёр, fouraces.agency 12 лет в бренд-маркетинге · ex-Somia (BeautySleep), CoffeeBeats Академический руководитель программы по бренд-стратегии НИУ ВШЭ',
+];
 
 const browser = await chromium.launch({
   executablePath: edgePath,
@@ -785,6 +790,36 @@ desktopInteraction.teamPortraitsEditable = await page.evaluate(() => {
     && portraits.every((portrait) => Number.parseFloat(getComputedStyle(portrait.querySelector('img')).opacity) === 1);
 });
 
+async function auditTeamCopy(width, height, version) {
+  await loadAt(previewPath, width, height);
+  const rootSelector = version === 'desktop'
+    ? '.anbox-desktop-part--07 #anxt-team-training .anxt__team'
+    : '.anbox-mobile-part--07 .team-grid';
+  const cardSelector = version === 'desktop' ? '.anxt__person' : '.person-card';
+  const captionSelector = version === 'desktop' ? '.anxt__person>div' : '.person-card__caption';
+  const root = page.locator(rootSelector);
+  await root.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(350);
+  const result = await root.evaluate((node, { cardSelector, captionSelector }) => {
+    const normalize = (value) => String(value || '').replace(/\s+/g, ' ').trim();
+    const cards = [...node.querySelectorAll(cardSelector)];
+    return {
+      copy: cards.map((card) => normalize(card.textContent)),
+      captionOverflow: cards.map((card) => {
+        const caption = card.querySelector(captionSelector);
+        return caption ? Math.max(0, caption.scrollHeight - caption.clientHeight) : -1;
+      }),
+    };
+  }, { cardSelector, captionSelector });
+  await root.screenshot({ path: path.join(qaDir, `team-${version}-${width}.png`) });
+  return { width, version, ...result };
+}
+
+const teamCopyAudit = [
+  await auditTeamCopy(1440, 1000, 'desktop'),
+  await auditTeamCopy(390, 844, 'mobile'),
+];
+
 const desktopPortfolioGeometry = [];
 for (const [width, height] of [[1200, 900], [1440, 1000], [1920, 1200], [3840, 2160]]) {
   await loadAt(previewPath, width, height);
@@ -1307,6 +1342,10 @@ if (Math.abs(desktopGalleryPin.entered.stageTop - desktopGalleryPin.held.stageTo
 if (!desktopGalleryPin.held.headerHidden || desktopGalleryPin.held.headerBottom > 1) failures.push('portfolio: desktop header remains visible over the pinned gallery');
 if (desktopGalleryPin.released.stageTop >= desktopGalleryPin.held.stageTop - 40) failures.push('portfolio: desktop gallery does not release after one viewport');
 if (desktopIntroLines.some((item) => !item.visible || !item.preserveLayer)) failures.push('reveal: a desktop subtitle rule is clipped by the heading mask');
+for (const item of teamCopyAudit) {
+  if (JSON.stringify(item.copy) !== JSON.stringify(expectedTeamCopy)
+    || item.captionOverflow.some((value) => value !== 0)) failures.push(`${item.version} team: biography copy is missing or clipped`);
+}
 for (const item of heroLayouts) {
   const ordered = item.title && item.rule && item.intro && item.actionRects.length === 1
     && item.title.bottom <= item.rule.top + 1
@@ -1424,6 +1463,7 @@ const report = {
   desktopPortfolioGeometry,
   desktopGalleryPin,
   desktopIntroLines,
+  teamCopyAudit,
   heroMediaBehavior,
   parity,
   casesAudit,

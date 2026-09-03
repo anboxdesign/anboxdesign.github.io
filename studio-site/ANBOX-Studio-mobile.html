@@ -2541,7 +2541,7 @@
     }
 
     .person-card__caption {
-      min-height: 104px;
+      min-height: 0;
       padding: 10px 14px 12px;
       display: flex;
       flex: 1;
@@ -2595,6 +2595,20 @@
       flex-direction: column;
       align-items: flex-start;
     }
+
+    .person-card__detail {
+      margin-top: 7px !important;
+      color: #5d5961;
+      font-size: 12px !important;
+      line-height: 1.38 !important;
+    }
+
+    .person-card__caption strong {
+      color: var(--ink);
+      font-weight: 650;
+    }
+
+    .person-card__caption em { font-style: italic; }
 
     .training-card {
       position: relative;
@@ -3378,19 +3392,32 @@
             <div class="person-photo">
               <img src="https://static.tildacdn.com/tild6437-3965-4565-a234-393630613862/61c0866d-795d-40c7-8.png" alt="Анна Плавская" width="1122" height="1402" loading="lazy" decoding="async">
             </div>
-            <div class="person-card__caption"><h3>Анна Плавская</h3><p>Основатель, арт-директор</p></div>
+            <div class="person-card__caption">
+              <h3>Анна Плавская</h3>
+              <p><strong>15+ лет в дизайне · 6+ лет в образовании</strong></p>
+              <p class="person-card__detail"><strong>Преподаватель магистратуры НИУ ВШЭ</strong> · автор образовательных программ · спикер WorldFood и RosUpack</p>
+            </div>
           </article>
           <article class="person-card">
             <div class="person-photo">
-              <img src="https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png" alt="Артем Капустин" width="1122" height="1402" loading="lazy" decoding="async">
+              <img src="https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png" alt="Артём Капустин" width="1122" height="1402" loading="lazy" decoding="async">
             </div>
-            <div class="person-card__caption"><h3>Артем Капустин</h3><p>Директор по&nbsp;развитию</p></div>
+            <div class="person-card__caption">
+              <h3>Артём Капустин</h3>
+              <p>Директор по развитию</p>
+              <p class="person-card__detail"><em>12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas</em></p>
+            </div>
           </article>
           <article class="person-card">
             <div class="person-photo">
               <img src="https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png" alt="Дарья Дарев" width="1122" height="1402" loading="lazy" decoding="async">
             </div>
-            <div class="person-card__caption"><h3>Дарья Дарев</h3><p class="person-card__role"><span>Маркетинг-партнер</span><a class="person-card__agency" href="https://fouraces.agency" target="_blank" rel="noopener noreferrer">fouraces.agency</a></p></div>
+            <div class="person-card__caption">
+              <h3>Дарья Дарев</h3>
+              <p class="person-card__role"><span>Маркетинг-партнёр,</span> <a class="person-card__agency" href="https://fouraces.agency" target="_blank" rel="noopener noreferrer">fouraces.agency</a></p>
+              <p class="person-card__detail"><strong>12 лет в бренд-маркетинге · ex-Somia (BeautySleep), CoffeeBeats</strong></p>
+              <p class="person-card__detail"><strong>Академический руководитель программы по бренд-стратегии НИУ ВШЭ</strong></p>
+            </div>
           </article>
         </div>
 

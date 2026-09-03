@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-29T12:07:00.712Z",
+  "generatedAt": "2026-09-03T12:52:55.086Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -683,25 +683,25 @@
       "contactCtas": {
         "textarea": {
           "left": 53,
-          "top": 8151.95,
+          "top": 8248.02,
           "right": 588,
-          "bottom": 8243.95,
+          "bottom": 8340.02,
           "width": 535,
           "height": 92
         },
         "submit": {
           "left": 53,
-          "top": 8315.95,
+          "top": 8412.02,
           "right": 588,
-          "bottom": 8371.95,
+          "bottom": 8468.02,
           "width": 535,
           "height": 56
         },
         "direct": {
           "left": 53,
-          "top": 8383.95,
+          "top": 8480.02,
           "right": 588,
-          "bottom": 8439.95,
+          "bottom": 8536.02,
           "width": 535,
           "height": 56
         },
@@ -926,25 +926,25 @@
       "contactCtas": {
         "textarea": {
           "left": 53,
-          "top": 8045.58,
+          "top": 8126.8,
           "right": 715,
-          "bottom": 8137.58,
+          "bottom": 8218.8,
           "width": 662,
           "height": 92
         },
         "submit": {
           "left": 53,
-          "top": 8199.58,
+          "top": 8280.8,
           "right": 715,
-          "bottom": 8255.58,
+          "bottom": 8336.8,
           "width": 662,
           "height": 56
         },
         "direct": {
           "left": 53,
-          "top": 8267.58,
+          "top": 8348.8,
           "right": 715,
-          "bottom": 8323.58,
+          "bottom": 8404.8,
           "width": 662,
           "height": 56
         },
@@ -1169,25 +1169,25 @@
       "contactCtas": {
         "textarea": {
           "left": 61,
-          "top": 6463.77,
+          "top": 6540.8,
           "right": 655.66,
-          "bottom": 6555.77,
+          "bottom": 6632.8,
           "width": 594.66,
           "height": 92
         },
         "submit": {
           "left": 675.66,
-          "top": 6463.58,
+          "top": 6540.61,
           "right": 963,
-          "bottom": 6505.58,
+          "bottom": 6582.61,
           "width": 287.34,
           "height": 42
         },
         "direct": {
           "left": 675.66,
-          "top": 6513.58,
+          "top": 6590.61,
           "right": 963,
-          "bottom": 6555.58,
+          "bottom": 6632.61,
           "width": 287.34,
           "height": 42
         },
@@ -1412,25 +1412,25 @@
       "contactCtas": {
         "textarea": {
           "left": 137,
-          "top": 7212.14,
+          "top": 7336.14,
           "right": 907.66,
-          "bottom": 7304.14,
+          "bottom": 7428.14,
           "width": 770.66,
           "height": 92
         },
         "submit": {
           "left": 927.66,
-          "top": 7212.64,
+          "top": 7336.64,
           "right": 1303,
-          "bottom": 7254.64,
+          "bottom": 7378.64,
           "width": 375.34,
           "height": 42
         },
         "direct": {
           "left": 927.66,
-          "top": 7262.64,
+          "top": 7386.64,
           "right": 1303,
-          "bottom": 7304.64,
+          "bottom": 7428.64,
           "width": 375.34,
           "height": 42
         },
@@ -1655,25 +1655,25 @@
       "contactCtas": {
         "textarea": {
           "left": 169,
-          "top": 7868.03,
+          "top": 7992.03,
           "right": 1217,
-          "bottom": 7960.03,
+          "bottom": 8084.03,
           "width": 1048,
           "height": 92
         },
         "submit": {
           "left": 1237,
-          "top": 7868.53,
+          "top": 7992.53,
           "right": 1751,
-          "bottom": 7910.53,
+          "bottom": 8034.53,
           "width": 514,
           "height": 42
         },
         "direct": {
           "left": 1237,
-          "top": 7918.53,
+          "top": 8042.53,
           "right": 1751,
-          "bottom": 7960.53,
+          "bottom": 8084.53,
           "width": 514,
           "height": 42
         },
@@ -1898,25 +1898,25 @@
       "contactCtas": {
         "textarea": {
           "left": 297,
-          "top": 11136.55,
+          "top": 11384.56,
           "right": 2454.33,
-          "bottom": 11228.55,
+          "bottom": 11476.56,
           "width": 2157.33,
           "height": 92
         },
         "submit": {
           "left": 2474.33,
-          "top": 11136.55,
+          "top": 11384.56,
           "right": 3543,
-          "bottom": 11178.55,
+          "bottom": 11426.56,
           "width": 1068.67,
           "height": 42
         },
         "direct": {
           "left": 2474.33,
-          "top": 11186.55,
+          "top": 11434.56,
           "right": 3543,
-          "bottom": 11228.55,
+          "bottom": 11476.56,
           "width": 1068.67,
           "height": 42
         },
@@ -2461,20 +2461,50 @@
       "visible": true
     }
   ],
+  "teamCopyAudit": [
+    {
+      "width": 1440,
+      "version": "desktop",
+      "copy": [
+        "Анна Плавская 15+ лет в дизайне · 6+ лет в образовании Преподаватель магистратуры НИУ ВШЭ · автор образовательных программ · спикер WorldFood и RosUpack",
+        "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas",
+        "Дарья Дарев Маркетинг-партнёр, fouraces.agency 12 лет в бренд-маркетинге · ex-Somia (BeautySleep), CoffeeBeats Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+      ],
+      "captionOverflow": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "width": 390,
+      "version": "mobile",
+      "copy": [
+        "Анна Плавская 15+ лет в дизайне · 6+ лет в образовании Преподаватель магистратуры НИУ ВШЭ · автор образовательных программ · спикер WorldFood и RosUpack",
+        "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas",
+        "Дарья Дарев Маркетинг-партнёр, fouraces.agency 12 лет в бренд-маркетинге · ex-Somia (BeautySleep), CoffeeBeats Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+      ],
+      "captionOverflow": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
   "heroMediaBehavior": {
     "videoKeepsPlaying": true,
     "marqueeStartsAtBeginning": true,
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.590583,
+        "currentTime": 3.870694,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.301038,
+        "currentTime": 4.580314,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -2739,9 +2769,9 @@
     "loaded": 8
   },
   "cleanupAudit": {
-    "sourceBytes": 816357,
-    "blockBytes": 626462,
-    "reductionPercent": 23.3,
+    "sourceBytes": 818925,
+    "blockBytes": 628964,
+    "reductionPercent": 23.2,
     "styleTagsByFile": {
       "00-header.html": 6,
       "01-hero.html": 3,
@@ -2813,8 +2843,8 @@
       "before": {
         "in": false,
         "edge": "bottom",
-        "top": 1006.9,
-        "bottom": 1050.8,
+        "top": 1006.5,
+        "bottom": 1050.4,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2842,8 +2872,8 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 953,
-        "bottom": 996.9,
+        "top": 952.2,
+        "bottom": 996.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2853,15 +2883,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-177.107px 0px, -281.721px 21px, -177.107px 0px",
+        "maskPosition": "-176.991px 0px, -281.666px 21px, -176.991px 0px",
         "maskXs": [
-          -177.107,
-          -281.721,
-          -177.107
+          -176.991,
+          -281.666,
+          -176.991
         ],
         "maskProgress": [
-          0.4560366197183099,
-          0.03022475570032572
+          0.4563633802816901,
+          0.030403908794788284
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2871,8 +2901,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -152.2,
-        "bottom": -108.3,
+        "top": -151.8,
+        "bottom": -107.9,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2907,19 +2937,19 @@
         "translateY": 0,
         "clipPath": "none",
         "clipValues": [],
-        "maskSize": "355px 23px, 307px 24px, 3px 100%",
+        "maskSize": "355px 23px, 307px 23px, 3px 100%",
         "maskWidths": [
           100
         ],
-        "maskPosition": "-177.022px 0px, -281.681px 21px, -177.022px 0px",
+        "maskPosition": "-196.554px 0px, -290.806px 21px, -196.554px 0px",
         "maskXs": [
-          -177.022,
-          -281.681,
-          -177.022
+          -196.554,
+          -290.806,
+          -196.554
         ],
         "maskProgress": [
-          0.4562760563380282,
-          0.030355048859934907
+          0.401256338028169,
+          0.0006319218241042893
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2931,8 +2961,8 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -6.41374, 0)",
-      "after": "matrix(1, 0, 0, 1, -20.6431, 0)",
+      "before": "matrix(1, 0, 0, 1, -5.69728, 0)",
+      "after": "matrix(1, 0, 0, 1, -20.6434, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3032,17 +3062,17 @@
       ],
       [
         {
-          "opacity": 0.919716,
+          "opacity": 0.919806,
           "translateX": 0,
-          "translateY": 0.64227,
-          "filter": "blur(0.120426px)",
+          "translateY": 0.641554,
+          "filter": "blur(0.120291px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.663715,
+          "opacity": 0.664089,
           "translateX": 0,
-          "translateY": 2.69028,
-          "filter": "blur(0.504428px)",
+          "translateY": 2.68729,
+          "filter": "blur(0.503866px)",
           "clipPath": "none"
         },
         {

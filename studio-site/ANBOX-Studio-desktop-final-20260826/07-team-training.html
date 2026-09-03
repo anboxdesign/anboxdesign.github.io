@@ -1513,7 +1513,7 @@ ANBOX STUDIO · 07 · Команда и обучение
 
   .anbox-part-07 #anxt-team-training .anxt__person{
     display:grid;
-    grid-template-rows:auto 52px;
+    grid-template-rows:auto minmax(176px,auto);
   }
 
   .anbox-part-07 #anxt-team-training .anxt__portrait{
@@ -1777,6 +1777,33 @@ ANBOX STUDIO · 07 · Команда и обучение
   font-size:11px;
   font-weight:400;
   line-height:1.35;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person>div{
+  min-width:0;
+  padding-top:7px;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person h3{
+  margin-top:0!important;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person>div>p{
+  margin-top:4px!important;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person>div>.anxt__person-detail{
+  margin-top:7px!important;
+  color:var(--anxt-muted);
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person strong{
+  color:var(--anxt-ink);
+  font-weight:650;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person em{
+  font-style:italic;
 }
 
 .anbox-part-07 #anxt-team-training .anxt__training-copy li{
@@ -2067,7 +2094,7 @@ ANBOX STUDIO · 07 · Команда и обучение
   }
 
   .anbox-part-07 #anxt-team-training .anxt__person{
-    grid-template-rows:auto clamp(52px,2.708vw,104px);
+    grid-template-rows:auto minmax(clamp(176px,9.167vw,352px),auto);
   }
 
   .anbox-part-07 #anxt-team-training .anxt__training-copy{
@@ -2325,7 +2352,8 @@ ANBOX STUDIO · 07 · Команда и обучение
             </figure>
             <div>
               <h3>Анна Плавская</h3>
-              <p>Основатель, арт-директор</p>
+              <p><strong>15+ лет в дизайне · 6+ лет в образовании</strong></p>
+              <p class="anxt__person-detail"><strong>Преподаватель магистратуры НИУ ВШЭ</strong> · автор образовательных программ · спикер WorldFood и RosUpack</p>
             </div>
           </article>
 
@@ -2333,15 +2361,16 @@ ANBOX STUDIO · 07 · Команда и обучение
             <figure class="anxt__portrait">
               <img
                 src="https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png"
-                alt="Артем Капустин"
+                alt="Артём Капустин"
                 width="1122"
                 height="1402"
                 loading="lazy"
               >
             </figure>
             <div>
-              <h3>Артем Капустин</h3>
+              <h3>Артём Капустин</h3>
               <p>Директор по развитию</p>
+              <p class="anxt__person-detail"><em>12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas</em></p>
             </div>
           </article>
 
@@ -2357,7 +2386,9 @@ ANBOX STUDIO · 07 · Команда и обучение
             </figure>
             <div>
               <h3>Дарья Дарев</h3>
-              <p>Маркетинг-партнер, <a href="https://fouraces.agency" target="_blank" rel="noopener noreferrer">fouraces.agency</a></p>
+              <p>Маркетинг-партнёр, <a href="https://fouraces.agency" target="_blank" rel="noopener noreferrer">fouraces.agency</a></p>
+              <p class="anxt__person-detail"><strong>12 лет в бренд-маркетинге · ex-Somia (BeautySleep), CoffeeBeats</strong></p>
+              <p class="anxt__person-detail"><strong>Академический руководитель программы по бренд-стратегии НИУ ВШЭ</strong></p>
             </div>
           </article>
         </div>
