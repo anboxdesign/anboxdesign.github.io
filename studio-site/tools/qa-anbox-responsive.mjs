@@ -35,7 +35,12 @@ const minimumCleanupReduction = 23.2;
 const expectedTeamCopy = [
   'Анна Плавская 15+ лет в дизайне · 6+ лет в образовании Преподаватель магистратуры НИУ ВШЭ · автор образовательных программ · спикер WorldFood и RosUpack',
   'Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas',
-  'Дарья Дарев Академический руководитель программы по бренд-стратегии НИУ ВШЭ',
+  'Дарья Дарев Маркетинг-партнёр, fouraces.agency Академический руководитель программы по бренд-стратегии НИУ ВШЭ',
+];
+const expectedTeamPortraitUrls = [
+  'https://static.tildacdn.com/tild3637-3830-4331-b734-656566663032/20260831143212443_1.png',
+  'https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png',
+  'https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png',
 ];
 
 const browser = await chromium.launch({
@@ -805,6 +810,7 @@ async function auditTeamCopy(width, height, version) {
     const cards = [...node.querySelectorAll(cardSelector)];
     return {
       copy: cards.map((card) => normalize(card.textContent)),
+      portraitUrls: cards.map((card) => card.querySelector('img')?.getAttribute('src') || ''),
       captionOverflow: cards.map((card) => {
         const caption = card.querySelector(captionSelector);
         return caption ? Math.max(0, caption.scrollHeight - caption.clientHeight) : -1;
@@ -1344,7 +1350,8 @@ if (desktopGalleryPin.released.stageTop >= desktopGalleryPin.held.stageTop - 40)
 if (desktopIntroLines.some((item) => !item.visible || !item.preserveLayer)) failures.push('reveal: a desktop subtitle rule is clipped by the heading mask');
 for (const item of teamCopyAudit) {
   if (JSON.stringify(item.copy) !== JSON.stringify(expectedTeamCopy)
-    || item.captionOverflow.some((value) => value !== 0)) failures.push(`${item.version} team: biography copy is missing or clipped`);
+    || JSON.stringify(item.portraitUrls) !== JSON.stringify(expectedTeamPortraitUrls)
+    || item.captionOverflow.some((value) => value !== 0)) failures.push(`${item.version} team: biography copy or portrait URLs are missing or clipped`);
 }
 for (const item of heroLayouts) {
   const ordered = item.title && item.rule && item.intro && item.actionRects.length === 1

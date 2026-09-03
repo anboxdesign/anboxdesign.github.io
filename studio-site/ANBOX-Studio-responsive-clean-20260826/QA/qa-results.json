@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T13:00:32.381Z",
+  "generatedAt": "2026-09-03T13:08:07.038Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -2468,7 +2468,12 @@
       "copy": [
         "Анна Плавская 15+ лет в дизайне · 6+ лет в образовании Преподаватель магистратуры НИУ ВШЭ · автор образовательных программ · спикер WorldFood и RosUpack",
         "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas",
-        "Дарья Дарев Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+        "Дарья Дарев Маркетинг-партнёр, fouraces.agency Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+      ],
+      "portraitUrls": [
+        "https://static.tildacdn.com/tild3637-3830-4331-b734-656566663032/20260831143212443_1.png",
+        "https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png",
+        "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
       ],
       "captionOverflow": [
         0,
@@ -2482,7 +2487,12 @@
       "copy": [
         "Анна Плавская 15+ лет в дизайне · 6+ лет в образовании Преподаватель магистратуры НИУ ВШЭ · автор образовательных программ · спикер WorldFood и RosUpack",
         "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas",
-        "Дарья Дарев Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+        "Дарья Дарев Маркетинг-партнёр, fouraces.agency Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+      ],
+      "portraitUrls": [
+        "https://static.tildacdn.com/tild3637-3830-4331-b734-656566663032/20260831143212443_1.png",
+        "https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png",
+        "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
       ],
       "captionOverflow": [
         0,
@@ -2497,14 +2507,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.580106,
+        "currentTime": 3.474691,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.290906,
+        "currentTime": 4.178459,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -2769,8 +2779,8 @@
     "loaded": 8
   },
   "cleanupAudit": {
-    "sourceBytes": 817719,
-    "blockBytes": 627844,
+    "sourceBytes": 818508,
+    "blockBytes": 628541,
     "reductionPercent": 23.2,
     "styleTagsByFile": {
       "00-header.html": 6,
@@ -2843,8 +2853,8 @@
       "before": {
         "in": false,
         "edge": "bottom",
-        "top": 1006.9,
-        "bottom": 1050.8,
+        "top": 1007.3,
+        "bottom": 1051.2,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2872,8 +2882,8 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 952.2,
-        "bottom": 996.1,
+        "top": 953.8,
+        "bottom": 997.7,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2901,8 +2911,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -151.3,
-        "bottom": -107.4,
+        "top": -152.6,
+        "bottom": -108.7,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2930,26 +2940,26 @@
       "returnedTop": {
         "in": true,
         "edge": "top",
-        "top": 53.4,
-        "bottom": 97.3,
+        "top": 52.4,
+        "bottom": 96.3,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
         "clipPath": "none",
         "clipValues": [],
-        "maskSize": "355px 23px, 307px 23px, 3px 100%",
+        "maskSize": "355px 23px, 307px 24px, 3px 100%",
         "maskWidths": [
           100
         ],
-        "maskPosition": "-196.385px 0px, -290.727px 21px, -196.385px 0px",
+        "maskPosition": "-196.526px 0px, -290.793px 21px, -196.526px 0px",
         "maskXs": [
-          -196.385,
-          -290.727,
-          -196.385
+          -196.526,
+          -290.793,
+          -196.526
         ],
         "maskProgress": [
-          0.40173239436619723,
-          0.0008892508143323275
+          0.40133521126760563,
+          0.000674267100977178
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2961,8 +2971,8 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -5.70138, 0)",
-      "after": "matrix(1, 0, 0, 1, -19.9264, 0)",
+      "before": "matrix(1, 0, 0, 1, -6.40329, 0)",
+      "after": "matrix(1, 0, 0, 1, -20.6412, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3018,10 +3028,10 @@
       ],
       [
         {
-          "opacity": 0.494391,
+          "opacity": 0.491371,
           "translateX": 0,
-          "translateY": 4.04487,
-          "filter": "blur(0.758414px)",
+          "translateY": 4.06904,
+          "filter": "blur(0.762944px)",
           "clipPath": "none"
         },
         {
