@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T13:19:41.482Z",
+  "generatedAt": "2026-09-03T13:31:31.780Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -1655,25 +1655,25 @@
       "contactCtas": {
         "textarea": {
           "left": 169,
-          "top": 7854.92,
+          "top": 7869.78,
           "right": 1217,
-          "bottom": 7946.92,
+          "bottom": 7961.78,
           "width": 1048,
           "height": 92
         },
         "submit": {
           "left": 1237,
-          "top": 7855.42,
+          "top": 7870.28,
           "right": 1751,
-          "bottom": 7897.42,
+          "bottom": 7912.28,
           "width": 514,
           "height": 42
         },
         "direct": {
           "left": 1237,
-          "top": 7905.42,
+          "top": 7920.28,
           "right": 1751,
-          "bottom": 7947.42,
+          "bottom": 7962.28,
           "width": 514,
           "height": 42
         },
@@ -1898,25 +1898,25 @@
       "contactCtas": {
         "textarea": {
           "left": 297,
-          "top": 11103.19,
+          "top": 11132.89,
           "right": 2454.33,
-          "bottom": 11195.19,
+          "bottom": 11224.89,
           "width": 2157.33,
           "height": 92
         },
         "submit": {
           "left": 2474.33,
-          "top": 11103.19,
+          "top": 11132.89,
           "right": 3543,
-          "bottom": 11145.19,
+          "bottom": 11174.89,
           "width": 1068.67,
           "height": 42
         },
         "direct": {
           "left": 2474.33,
-          "top": 11153.19,
+          "top": 11182.89,
           "right": 3543,
-          "bottom": 11195.19,
+          "bottom": 11224.89,
           "width": 1068.67,
           "height": 42
         },
@@ -2475,6 +2475,16 @@
         "https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png",
         "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
       ],
+      "roleTops": [
+        631.3,
+        631.3,
+        631.3
+      ],
+      "proofTops": [
+        670.9,
+        670.9,
+        670.9
+      ],
       "captionOverflow": [
         0,
         0,
@@ -2494,6 +2504,16 @@
         "https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png",
         "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
       ],
+      "roleTops": [
+        281,
+        636.7,
+        636.7
+      ],
+      "proofTops": [
+        304.5,
+        679.9,
+        706.3
+      ],
       "captionOverflow": [
         0,
         0,
@@ -2507,14 +2527,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.520783,
+        "currentTime": 3.532604,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.225448,
+        "currentTime": 4.236401,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -2779,8 +2799,8 @@
     "loaded": 8
   },
   "cleanupAudit": {
-    "sourceBytes": 822244,
-    "blockBytes": 630642,
+    "sourceBytes": 822359,
+    "blockBytes": 630742,
     "reductionPercent": 23.3,
     "styleTagsByFile": {
       "00-header.html": 6,
@@ -2853,8 +2873,8 @@
       "before": {
         "in": false,
         "edge": "bottom",
-        "top": 1006.3,
-        "bottom": 1050.2,
+        "top": 1007,
+        "bottom": 1050.9,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2882,8 +2902,8 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 952.9,
-        "bottom": 996.9,
+        "top": 953.6,
+        "bottom": 997.5,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2893,15 +2913,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-176.758px 0px, -281.558px 21px, -176.758px 0px",
+        "maskPosition": "-176.991px 0px, -281.666px 21px, -176.991px 0px",
         "maskXs": [
-          -176.758,
-          -281.558,
-          -176.758
+          -176.991,
+          -281.666,
+          -176.991
         ],
         "maskProgress": [
-          0.4570197183098591,
-          0.030755700325732924
+          0.4563633802816901,
+          0.030403908794788284
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2911,8 +2931,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -152,
-        "bottom": -108.1,
+        "top": -151.9,
+        "bottom": -108,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2940,8 +2960,8 @@
       "returnedTop": {
         "in": true,
         "edge": "top",
-        "top": 53.2,
-        "bottom": 97.1,
+        "top": 52.2,
+        "bottom": 96.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2951,15 +2971,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-197.083px 0px, -291px 21px, -197.083px 0px",
+        "maskPosition": "-196.477px 0px, -290.77px 21px, -196.477px 0px",
         "maskXs": [
-          -197.083,
-          -291,
-          -197.083
+          -196.477,
+          -290.77,
+          -196.477
         ],
         "maskProgress": [
-          0.3997661971830986,
-          0
+          0.4014732394366197,
+          0.0007491856677525022
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2971,8 +2991,8 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -5.68905, 0)",
-      "after": "matrix(1, 0, 0, 1, -19.9354, 0)",
+      "before": "matrix(1, 0, 0, 1, -5.70125, 0)",
+      "after": "matrix(1, 0, 0, 1, -19.9306, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3028,10 +3048,10 @@
       ],
       [
         {
-          "opacity": 0.388783,
+          "opacity": 0.576546,
           "translateX": 0,
-          "translateY": 4.88974,
-          "filter": "blur(0.916826px)",
+          "translateY": 3.38763,
+          "filter": "blur(0.635181px)",
           "clipPath": "none"
         },
         {
@@ -3072,17 +3092,17 @@
       ],
       [
         {
-          "opacity": 0.919716,
+          "opacity": 0.933284,
           "translateX": 0,
-          "translateY": 0.64227,
-          "filter": "blur(0.120426px)",
+          "translateY": 0.533732,
+          "filter": "blur(0.100075px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.663715,
+          "opacity": 0.720057,
           "translateX": 0,
-          "translateY": 2.69028,
-          "filter": "blur(0.504428px)",
+          "translateY": 2.23954,
+          "filter": "blur(0.419914px)",
           "clipPath": "none"
         },
         {

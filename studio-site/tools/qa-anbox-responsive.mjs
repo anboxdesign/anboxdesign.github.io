@@ -805,18 +805,24 @@ async function auditTeamCopy(width, height, version) {
   const root = page.locator(rootSelector);
   await root.scrollIntoViewIfNeeded();
   await page.waitForTimeout(350);
-  const result = await root.evaluate((node, { cardSelector, captionSelector }) => {
+  const result = await root.evaluate((node, { cardSelector, captionSelector, version }) => {
     const normalize = (value) => String(value || '').replace(/\s+/g, ' ').trim();
     const cards = [...node.querySelectorAll(cardSelector)];
+    const topPositions = (selector) => cards.map((card) => {
+      const target = card.querySelector(selector);
+      return target ? Math.round(target.getBoundingClientRect().top * 10) / 10 : null;
+    });
     return {
       copy: cards.map((card) => normalize(card.textContent)),
       portraitUrls: cards.map((card) => card.querySelector('img')?.getAttribute('src') || ''),
+      roleTops: topPositions(version === 'desktop' ? '.anxt__person-role' : '.person-card__role'),
+      proofTops: topPositions(version === 'desktop' ? '.anxt__person-proof' : '.person-card__proof'),
       captionOverflow: cards.map((card) => {
         const caption = card.querySelector(captionSelector);
         return caption ? Math.max(0, caption.scrollHeight - caption.clientHeight) : -1;
       }),
     };
-  }, { cardSelector, captionSelector });
+  }, { cardSelector, captionSelector, version });
   await root.screenshot({ path: path.join(qaDir, `team-${version}-${width}.png`) });
   return { width, version, ...result };
 }
@@ -1352,6 +1358,9 @@ for (const item of teamCopyAudit) {
   if (JSON.stringify(item.copy) !== JSON.stringify(expectedTeamCopy)
     || JSON.stringify(item.portraitUrls) !== JSON.stringify(expectedTeamPortraitUrls)
     || item.captionOverflow.some((value) => value !== 0)) failures.push(`${item.version} team: biography copy or portrait URLs are missing or clipped`);
+  if (item.version === 'desktop'
+    && (Math.max(...item.roleTops) - Math.min(...item.roleTops) > 1
+      || Math.max(...item.proofTops) - Math.min(...item.proofTops) > 1)) failures.push('desktop team: biography levels are not horizontally aligned');
 }
 for (const item of heroLayouts) {
   const ordered = item.title && item.rule && item.intro && item.actionRects.length === 1
