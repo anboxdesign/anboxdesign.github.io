@@ -2314,6 +2314,94 @@ ANBOX STUDIO · 07 · Команда и обучение
   .anbox-part-07 #anxt-team-training .anxt__stage{box-sizing:border-box;width:100%;max-width:none;margin:0;padding:var(--anbox-mobile-section-space) var(--anbox-content-inset)}
 }
 </style>
+<style data-anbox-team-profile-system="v1">
+/* One biography grammar for every team member: name, role, proof, context. */
+.anbox-part-07 #anxt-team-training .anxt__person-copy{
+  min-width:0;
+  padding-top:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person-copy h3{
+  margin:0!important;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person-copy > p{
+  min-height:0!important;
+  margin:0!important;
+  padding:0!important;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person-copy > .anxt__person-role{
+  margin-top:5px!important;
+  color:#555159;
+  font-weight:450;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person-copy > .anxt__person-proof{
+  margin-top:10px!important;
+  color:var(--anxt-ink);
+  font-weight:650;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person-copy > .anxt__person-meta{
+  margin-top:4px!important;
+  color:var(--anxt-muted);
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person-copy a{
+  color:inherit;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+
+.anbox-part-07 #anxt-team-training .anxt__person-nowrap{
+  white-space:nowrap;
+}
+
+@media(min-width:961px){
+  .anbox-part-07 #anxt-team-training .anxt__people{
+    align-items:stretch;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person{
+    height:auto;
+    display:grid;
+    grid-template-rows:auto 1fr;
+    align-content:start;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__portrait{
+    height:auto;
+    min-height:0;
+    aspect-ratio:4 / 5!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person-copy{
+    height:100%;
+  }
+}
+
+@media(min-width:1921px){
+  .anbox-part-07 #anxt-team-training .anxt__person-copy{
+    padding-top:clamp(10px,.521vw,20px);
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person-copy > .anxt__person-role{
+    margin-top:clamp(5px,.26vw,10px)!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person-copy > .anxt__person-proof{
+    margin-top:clamp(10px,.521vw,20px)!important;
+  }
+
+  .anbox-part-07 #anxt-team-training .anxt__person-copy > .anxt__person-meta{
+    margin-top:clamp(4px,.208vw,8px)!important;
+  }
+}
+</style>
 <div class="anbox-part-07"><div class="anbox-full-page anbox-composite"><section
   id="anxt-team-training"
   class="anxt__root"
@@ -2350,10 +2438,11 @@ ANBOX STUDIO · 07 · Команда и обучение
                 loading="lazy"
               >
             </figure>
-            <div>
+            <div class="anxt__person-copy">
               <h3>Анна Плавская</h3>
-              <p><strong>15+ лет в дизайне · 6+ лет в образовании</strong></p>
-              <p class="anxt__person-detail"><strong>Преподаватель магистратуры НИУ ВШЭ</strong> · автор образовательных программ · спикер WorldFood и RosUpack</p>
+              <p class="anxt__person-role">Преподаватель магистратуры НИУ ВШЭ</p>
+              <p class="anxt__person-proof">15+ лет в дизайне · 6+ лет в образовании</p>
+              <p class="anxt__person-meta">Автор образовательных программ · спикер WorldFood и RosUpack</p>
             </div>
           </article>
 
@@ -2367,10 +2456,11 @@ ANBOX STUDIO · 07 · Команда и обучение
                 loading="lazy"
               >
             </figure>
-            <div>
+            <div class="anxt__person-copy">
               <h3>Артём Капустин</h3>
-              <p>Директор по развитию</p>
-              <p class="anxt__person-detail"><em>12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas</em></p>
+              <p class="anxt__person-role">Директор по развитию</p>
+              <p class="anxt__person-proof">12+ лет в маркетинге и продажах</p>
+              <p class="anxt__person-meta"><span class="anxt__person-nowrap">Экс-«Фармстандарт»,</span> STADA, Astellas</p>
             </div>
           </article>
 
@@ -2384,10 +2474,10 @@ ANBOX STUDIO · 07 · Команда и обучение
                 loading="lazy"
               >
             </figure>
-            <div>
+            <div class="anxt__person-copy">
               <h3>Дарья Дарев</h3>
-              <p>Маркетинг-партнёр, <a href="https://fouraces.agency" target="_blank" rel="noopener noreferrer">fouraces.agency</a></p>
-              <p class="anxt__person-detail"><strong>Академический руководитель программы по бренд-стратегии НИУ ВШЭ</strong></p>
+              <p class="anxt__person-role">Маркетинг-партнёр, <a href="https://fouraces.agency" target="_blank" rel="noopener noreferrer">fouraces.agency</a></p>
+              <p class="anxt__person-proof">Академический руководитель программы по бренд-стратегии НИУ ВШЭ</p>
             </div>
           </article>
         </div>

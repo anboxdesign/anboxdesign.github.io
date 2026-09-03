@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T13:08:07.038Z",
+  "generatedAt": "2026-09-03T13:19:41.482Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -683,25 +683,25 @@
       "contactCtas": {
         "textarea": {
           "left": 53,
-          "top": 8211.33,
+          "top": 8234.17,
           "right": 588,
-          "bottom": 8303.33,
+          "bottom": 8326.17,
           "width": 535,
           "height": 92
         },
         "submit": {
           "left": 53,
-          "top": 8375.33,
+          "top": 8398.17,
           "right": 588,
-          "bottom": 8431.33,
+          "bottom": 8454.17,
           "width": 535,
           "height": 56
         },
         "direct": {
           "left": 53,
-          "top": 8443.33,
+          "top": 8466.17,
           "right": 588,
-          "bottom": 8499.33,
+          "bottom": 8522.17,
           "width": 535,
           "height": 56
         },
@@ -926,25 +926,25 @@
       "contactCtas": {
         "textarea": {
           "left": 53,
-          "top": 8119.78,
+          "top": 8127.78,
           "right": 715,
-          "bottom": 8211.78,
+          "bottom": 8219.78,
           "width": 662,
           "height": 92
         },
         "submit": {
           "left": 53,
-          "top": 8273.78,
+          "top": 8281.78,
           "right": 715,
-          "bottom": 8329.78,
+          "bottom": 8337.78,
           "width": 662,
           "height": 56
         },
         "direct": {
           "left": 53,
-          "top": 8341.78,
+          "top": 8349.78,
           "right": 715,
-          "bottom": 8397.78,
+          "bottom": 8405.78,
           "width": 662,
           "height": 56
         },
@@ -1169,25 +1169,25 @@
       "contactCtas": {
         "textarea": {
           "left": 61,
-          "top": 6527.27,
+          "top": 6463.77,
           "right": 655.66,
-          "bottom": 6619.27,
+          "bottom": 6555.77,
           "width": 594.66,
           "height": 92
         },
         "submit": {
           "left": 675.66,
-          "top": 6527.08,
+          "top": 6463.58,
           "right": 963,
-          "bottom": 6569.08,
+          "bottom": 6505.58,
           "width": 287.34,
           "height": 42
         },
         "direct": {
           "left": 675.66,
-          "top": 6577.08,
+          "top": 6513.58,
           "right": 963,
-          "bottom": 6619.08,
+          "bottom": 6555.58,
           "width": 287.34,
           "height": 42
         },
@@ -1412,25 +1412,25 @@
       "contactCtas": {
         "textarea": {
           "left": 137,
-          "top": 7336.14,
+          "top": 7260.89,
           "right": 907.66,
-          "bottom": 7428.14,
+          "bottom": 7352.89,
           "width": 770.66,
           "height": 92
         },
         "submit": {
           "left": 927.66,
-          "top": 7336.64,
+          "top": 7261.39,
           "right": 1303,
-          "bottom": 7378.64,
+          "bottom": 7303.39,
           "width": 375.34,
           "height": 42
         },
         "direct": {
           "left": 927.66,
-          "top": 7386.64,
+          "top": 7311.39,
           "right": 1303,
-          "bottom": 7428.64,
+          "bottom": 7353.39,
           "width": 375.34,
           "height": 42
         },
@@ -1655,25 +1655,25 @@
       "contactCtas": {
         "textarea": {
           "left": 169,
-          "top": 7992.03,
+          "top": 7854.92,
           "right": 1217,
-          "bottom": 8084.03,
+          "bottom": 7946.92,
           "width": 1048,
           "height": 92
         },
         "submit": {
           "left": 1237,
-          "top": 7992.53,
+          "top": 7855.42,
           "right": 1751,
-          "bottom": 8034.53,
+          "bottom": 7897.42,
           "width": 514,
           "height": 42
         },
         "direct": {
           "left": 1237,
-          "top": 8042.53,
+          "top": 7905.42,
           "right": 1751,
-          "bottom": 8084.53,
+          "bottom": 7947.42,
           "width": 514,
           "height": 42
         },
@@ -1898,25 +1898,25 @@
       "contactCtas": {
         "textarea": {
           "left": 297,
-          "top": 11384.56,
+          "top": 11103.19,
           "right": 2454.33,
-          "bottom": 11476.56,
+          "bottom": 11195.19,
           "width": 2157.33,
           "height": 92
         },
         "submit": {
           "left": 2474.33,
-          "top": 11384.56,
+          "top": 11103.19,
           "right": 3543,
-          "bottom": 11426.56,
+          "bottom": 11145.19,
           "width": 1068.67,
           "height": 42
         },
         "direct": {
           "left": 2474.33,
-          "top": 11434.56,
+          "top": 11153.19,
           "right": 3543,
-          "bottom": 11476.56,
+          "bottom": 11195.19,
           "width": 1068.67,
           "height": 42
         },
@@ -2466,8 +2466,8 @@
       "width": 1440,
       "version": "desktop",
       "copy": [
-        "Анна Плавская 15+ лет в дизайне · 6+ лет в образовании Преподаватель магистратуры НИУ ВШЭ · автор образовательных программ · спикер WorldFood и RosUpack",
-        "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas",
+        "Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack",
+        "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas",
         "Дарья Дарев Маркетинг-партнёр, fouraces.agency Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
       ],
       "portraitUrls": [
@@ -2485,8 +2485,8 @@
       "width": 390,
       "version": "mobile",
       "copy": [
-        "Анна Плавская 15+ лет в дизайне · 6+ лет в образовании Преподаватель магистратуры НИУ ВШЭ · автор образовательных программ · спикер WorldFood и RosUpack",
-        "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas",
+        "Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack",
+        "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas",
         "Дарья Дарев Маркетинг-партнёр, fouraces.agency Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
       ],
       "portraitUrls": [
@@ -2507,14 +2507,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.474691,
+        "currentTime": 3.520783,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.178459,
+        "currentTime": 4.225448,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -2779,9 +2779,9 @@
     "loaded": 8
   },
   "cleanupAudit": {
-    "sourceBytes": 818508,
-    "blockBytes": 628541,
-    "reductionPercent": 23.2,
+    "sourceBytes": 822244,
+    "blockBytes": 630642,
+    "reductionPercent": 23.3,
     "styleTagsByFile": {
       "00-header.html": 6,
       "01-hero.html": 3,
@@ -2853,8 +2853,8 @@
       "before": {
         "in": false,
         "edge": "bottom",
-        "top": 1007.3,
-        "bottom": 1051.2,
+        "top": 1006.3,
+        "bottom": 1050.2,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2882,8 +2882,8 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 953.8,
-        "bottom": 997.7,
+        "top": 952.9,
+        "bottom": 996.9,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2893,15 +2893,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-177.107px 0px, -281.721px 21px, -177.107px 0px",
+        "maskPosition": "-176.758px 0px, -281.558px 21px, -176.758px 0px",
         "maskXs": [
-          -177.107,
-          -281.721,
-          -177.107
+          -176.758,
+          -281.558,
+          -176.758
         ],
         "maskProgress": [
-          0.4560366197183099,
-          0.03022475570032572
+          0.4570197183098591,
+          0.030755700325732924
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2911,8 +2911,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -152.6,
-        "bottom": -108.7,
+        "top": -152,
+        "bottom": -108.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2940,26 +2940,26 @@
       "returnedTop": {
         "in": true,
         "edge": "top",
-        "top": 52.4,
-        "bottom": 96.3,
+        "top": 53.2,
+        "bottom": 97.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
         "clipPath": "none",
         "clipValues": [],
-        "maskSize": "355px 23px, 307px 24px, 3px 100%",
+        "maskSize": "355px 23px, 307px 23px, 3px 100%",
         "maskWidths": [
           100
         ],
-        "maskPosition": "-196.526px 0px, -290.793px 21px, -196.526px 0px",
+        "maskPosition": "-197.083px 0px, -291px 21px, -197.083px 0px",
         "maskXs": [
-          -196.526,
-          -290.793,
-          -196.526
+          -197.083,
+          -291,
+          -197.083
         ],
         "maskProgress": [
-          0.40133521126760563,
-          0.000674267100977178
+          0.3997661971830986,
+          0
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2971,8 +2971,8 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -6.40329, 0)",
-      "after": "matrix(1, 0, 0, 1, -20.6412, 0)",
+      "before": "matrix(1, 0, 0, 1, -5.68905, 0)",
+      "after": "matrix(1, 0, 0, 1, -19.9354, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3028,10 +3028,10 @@
       ],
       [
         {
-          "opacity": 0.491371,
+          "opacity": 0.388783,
           "translateX": 0,
-          "translateY": 4.06904,
-          "filter": "blur(0.762944px)",
+          "translateY": 4.88974,
+          "filter": "blur(0.916826px)",
           "clipPath": "none"
         },
         {
@@ -3072,17 +3072,17 @@
       ],
       [
         {
-          "opacity": 0.919627,
+          "opacity": 0.919716,
           "translateX": 0,
-          "translateY": 0.642986,
-          "filter": "blur(0.12056px)",
+          "translateY": 0.64227,
+          "filter": "blur(0.120426px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.66334,
+          "opacity": 0.663715,
           "translateX": 0,
-          "translateY": 2.69328,
-          "filter": "blur(0.504991px)",
+          "translateY": 2.69028,
+          "filter": "blur(0.504428px)",
           "clipPath": "none"
         },
         {

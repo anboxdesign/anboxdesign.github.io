@@ -3043,6 +3043,59 @@
       }
     }
   </style>
+  <style data-anbox-team-profile-system="v1">
+    .person-card__caption {
+      align-items: flex-start;
+    }
+
+    .person-card__caption > p {
+      min-height: 0;
+      margin: 0;
+    }
+
+    .person-card__caption > .person-card__role {
+      margin-top: 4px;
+      display: block;
+      color: #5d5961;
+      font-size: 13px;
+      font-weight: 450;
+      line-height: 1.38;
+    }
+
+    .person-card__caption > .person-card__proof {
+      margin-top: 9px;
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 650;
+      line-height: 1.38;
+    }
+
+    .person-card__caption > .person-card__meta {
+      margin-top: 4px;
+      color: #5d5961;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 1.38;
+    }
+
+    .person-card__agency {
+      width: auto;
+      min-height: 0;
+      margin: 0;
+      display: inline;
+      font-size: inherit;
+      font-weight: inherit;
+      line-height: inherit;
+    }
+
+    .person-card__nowrap { white-space: nowrap; }
+
+    @media (max-width: 21.25rem) {
+      .person-card:not(:first-child) h3 { min-block-size: 0; }
+      .person-card__caption > .person-card__role { font-size: 12px; }
+      .person-card__caption > :is(.person-card__proof, .person-card__meta) { font-size: 11px; }
+    }
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#main">К содержанию</a>
@@ -3388,8 +3441,9 @@
             </div>
             <div class="person-card__caption">
               <h3>Анна Плавская</h3>
-              <p><strong>15+ лет в дизайне · 6+ лет в образовании</strong></p>
-              <p class="person-card__detail"><strong>Преподаватель магистратуры НИУ ВШЭ</strong> · автор образовательных программ · спикер WorldFood и RosUpack</p>
+              <p class="person-card__role">Преподаватель магистратуры НИУ ВШЭ</p>
+              <p class="person-card__proof">15+ лет в дизайне · 6+ лет в образовании</p>
+              <p class="person-card__meta">Автор образовательных программ · спикер WorldFood и RosUpack</p>
             </div>
           </article>
           <article class="person-card">
@@ -3398,8 +3452,9 @@
             </div>
             <div class="person-card__caption">
               <h3>Артём Капустин</h3>
-              <p>Директор по развитию</p>
-              <p class="person-card__detail"><em>12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas</em></p>
+              <p class="person-card__role">Директор по развитию</p>
+              <p class="person-card__proof">12+ лет в маркетинге и продажах</p>
+              <p class="person-card__meta"><span class="person-card__nowrap">Экс-«Фармстандарт»,</span> STADA, Astellas</p>
             </div>
           </article>
           <article class="person-card">
@@ -3408,8 +3463,8 @@
             </div>
             <div class="person-card__caption">
               <h3>Дарья Дарев</h3>
-              <p class="person-card__role"><span>Маркетинг-партнёр,</span> <a class="person-card__agency" href="https://fouraces.agency" target="_blank" rel="noopener noreferrer">fouraces.agency</a></p>
-              <p class="person-card__detail"><strong>Академический руководитель программы по бренд-стратегии НИУ ВШЭ</strong></p>
+              <p class="person-card__role">Маркетинг-партнёр, <a class="person-card__agency" href="https://fouraces.agency" target="_blank" rel="noopener noreferrer">fouraces.agency</a></p>
+              <p class="person-card__proof">Академический руководитель программы по бренд-стратегии НИУ ВШЭ</p>
             </div>
           </article>
         </div>

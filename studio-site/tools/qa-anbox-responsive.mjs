@@ -33,8 +33,8 @@ const expectedHeroUrls = expectedHeroOrder.map((number) => {
 // legacy payload, so keep the cleanup guard strict without penalising it.
 const minimumCleanupReduction = 23.2;
 const expectedTeamCopy = [
-  'Анна Плавская 15+ лет в дизайне · 6+ лет в образовании Преподаватель магистратуры НИУ ВШЭ · автор образовательных программ · спикер WorldFood и RosUpack',
-  'Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas',
+  'Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack',
+  'Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas',
   'Дарья Дарев Маркетинг-партнёр, fouraces.agency Академический руководитель программы по бренд-стратегии НИУ ВШЭ',
 ];
 const expectedTeamPortraitUrls = [
