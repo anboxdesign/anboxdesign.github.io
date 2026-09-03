@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T13:37:09.257Z",
+  "generatedAt": "2026-09-03T13:48:42.983Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -683,25 +683,25 @@
       "contactCtas": {
         "textarea": {
           "left": 53,
-          "top": 8234.17,
+          "top": 8295.36,
           "right": 588,
-          "bottom": 8326.17,
+          "bottom": 8387.36,
           "width": 535,
           "height": 92
         },
         "submit": {
           "left": 53,
-          "top": 8398.17,
+          "top": 8459.36,
           "right": 588,
-          "bottom": 8454.17,
+          "bottom": 8515.36,
           "width": 535,
           "height": 56
         },
         "direct": {
           "left": 53,
-          "top": 8466.17,
+          "top": 8527.36,
           "right": 588,
-          "bottom": 8522.17,
+          "bottom": 8583.36,
           "width": 535,
           "height": 56
         },
@@ -926,25 +926,25 @@
       "contactCtas": {
         "textarea": {
           "left": 53,
-          "top": 8127.78,
+          "top": 8188.97,
           "right": 715,
-          "bottom": 8219.78,
+          "bottom": 8280.97,
           "width": 662,
           "height": 92
         },
         "submit": {
           "left": 53,
-          "top": 8281.78,
+          "top": 8342.97,
           "right": 715,
-          "bottom": 8337.78,
+          "bottom": 8398.97,
           "width": 662,
           "height": 56
         },
         "direct": {
           "left": 53,
-          "top": 8349.78,
+          "top": 8410.97,
           "right": 715,
-          "bottom": 8405.78,
+          "bottom": 8466.97,
           "width": 662,
           "height": 56
         },
@@ -1169,25 +1169,25 @@
       "contactCtas": {
         "textarea": {
           "left": 61,
-          "top": 6463.77,
+          "top": 6509.36,
           "right": 655.66,
-          "bottom": 6555.77,
+          "bottom": 6601.36,
           "width": 594.66,
           "height": 92
         },
         "submit": {
           "left": 675.66,
-          "top": 6463.58,
+          "top": 6509.17,
           "right": 963,
-          "bottom": 6505.58,
+          "bottom": 6551.17,
           "width": 287.34,
           "height": 42
         },
         "direct": {
           "left": 675.66,
-          "top": 6513.58,
+          "top": 6559.17,
           "right": 963,
-          "bottom": 6555.58,
+          "bottom": 6601.17,
           "width": 287.34,
           "height": 42
         },
@@ -1412,25 +1412,25 @@
       "contactCtas": {
         "textarea": {
           "left": 137,
-          "top": 7260.89,
+          "top": 7290.89,
           "right": 907.66,
-          "bottom": 7352.89,
+          "bottom": 7382.89,
           "width": 770.66,
           "height": 92
         },
         "submit": {
           "left": 927.66,
-          "top": 7261.39,
+          "top": 7291.39,
           "right": 1303,
-          "bottom": 7303.39,
+          "bottom": 7333.39,
           "width": 375.34,
           "height": 42
         },
         "direct": {
           "left": 927.66,
-          "top": 7311.39,
+          "top": 7341.39,
           "right": 1303,
-          "bottom": 7353.39,
+          "bottom": 7383.39,
           "width": 375.34,
           "height": 42
         },
@@ -1655,25 +1655,25 @@
       "contactCtas": {
         "textarea": {
           "left": 169,
-          "top": 7869.78,
+          "top": 7930.97,
           "right": 1217,
-          "bottom": 7961.78,
+          "bottom": 8022.97,
           "width": 1048,
           "height": 92
         },
         "submit": {
           "left": 1237,
-          "top": 7870.28,
+          "top": 7931.47,
           "right": 1751,
-          "bottom": 7912.28,
+          "bottom": 7973.47,
           "width": 514,
           "height": 42
         },
         "direct": {
           "left": 1237,
-          "top": 7920.28,
+          "top": 7981.47,
           "right": 1751,
-          "bottom": 7962.28,
+          "bottom": 8023.47,
           "width": 514,
           "height": 42
         },
@@ -1898,25 +1898,25 @@
       "contactCtas": {
         "textarea": {
           "left": 297,
-          "top": 11132.89,
+          "top": 11186.88,
           "right": 2454.33,
-          "bottom": 11224.89,
+          "bottom": 11278.88,
           "width": 2157.33,
           "height": 92
         },
         "submit": {
           "left": 2474.33,
-          "top": 11132.89,
+          "top": 11186.88,
           "right": 3543,
-          "bottom": 11174.89,
+          "bottom": 11228.88,
           "width": 1068.67,
           "height": 42
         },
         "direct": {
           "left": 2474.33,
-          "top": 11182.89,
+          "top": 11236.88,
           "right": 3543,
-          "bottom": 11224.89,
+          "bottom": 11278.88,
           "width": 1068.67,
           "height": 42
         },
@@ -2505,14 +2505,14 @@
         "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
       ],
       "roleTops": [
-        269,
-        624.7,
-        624.7
+        269.8,
+        625.5,
+        625.5
       ],
       "proofTops": [
-        292.5,
-        667.9,
-        694.3
+        293.4,
+        668.7,
+        695.1
       ],
       "captionOverflow": [
         0,
@@ -2527,14 +2527,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.598548,
+        "currentTime": 3.555473,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.315538,
+        "currentTime": 4.266348,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -2799,8 +2799,8 @@
     "loaded": 8
   },
   "cleanupAudit": {
-    "sourceBytes": 822497,
-    "blockBytes": 630880,
+    "sourceBytes": 822633,
+    "blockBytes": 631016,
     "reductionPercent": 23.3,
     "styleTagsByFile": {
       "00-header.html": 6,
@@ -2902,8 +2902,8 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 952.9,
-        "bottom": 996.8,
+        "top": 952.8,
+        "bottom": 996.7,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2913,15 +2913,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-176.642px 0px, -281.503px 21px, -176.642px 0px",
+        "maskPosition": "-176.991px 0px, -281.666px 21px, -176.991px 0px",
         "maskXs": [
-          -176.642,
-          -281.503,
-          -176.642
+          -176.991,
+          -281.666,
+          -176.991
         ],
         "maskProgress": [
-          0.4573464788732394,
-          0.030934853420195484
+          0.4563633802816901,
+          0.030403908794788284
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2931,8 +2931,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -152,
-        "bottom": -108.1,
+        "top": -152.5,
+        "bottom": -108.6,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2971,15 +2971,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-196.514px 0px, -290.787px 21px, -196.514px 0px",
+        "maskPosition": "-196.555px 0px, -290.806px 21px, -196.555px 0px",
         "maskXs": [
-          -196.514,
-          -290.787,
-          -196.514
+          -196.555,
+          -290.806,
+          -196.555
         ],
         "maskProgress": [
-          0.40136901408450704,
-          0.0006938110749186393
+          0.40125352112676055,
+          0.0006319218241042893
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2991,14 +2991,14 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -5.69741, 0)",
-      "after": "matrix(1, 0, 0, 1, -20.6435, 0)",
+      "before": "matrix(1, 0, 0, 1, -5.68734, 0)",
+      "after": "matrix(1, 0, 0, 1, -20.6207, 0)",
       "moved": true
     },
     "clientsMobile": {
       "width": 390,
-      "before": "matrix(1, 0, 0, 1, -95.15, 0)",
-      "after": "matrix(1, 0, 0, 1, -77.74, 0)",
+      "before": "matrix(1, 0, 0, 1, -95.13, 0)",
+      "after": "matrix(1, 0, 0, 1, -77.73, 0)",
       "moved": true
     },
     "cardSequence": [
@@ -3048,10 +3048,10 @@
       ],
       [
         {
-          "opacity": 0.491563,
+          "opacity": 0.49213,
           "translateX": 0,
-          "translateY": 4.06749,
-          "filter": "blur(0.762655px)",
+          "translateY": 4.06296,
+          "filter": "blur(0.761805px)",
           "clipPath": "none"
         },
         {
@@ -3092,17 +3092,17 @@
       ],
       [
         {
-          "opacity": 0.933359,
+          "opacity": 0.933434,
           "translateX": 0,
-          "translateY": 0.533129,
-          "filter": "blur(0.0999617px)",
+          "translateY": 0.532528,
+          "filter": "blur(0.0998489px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.720367,
+          "opacity": 0.720677,
           "translateX": 0,
-          "translateY": 2.23706,
-          "filter": "blur(0.419449px)",
+          "translateY": 2.23459,
+          "filter": "blur(0.418985px)",
           "clipPath": "none"
         },
         {
