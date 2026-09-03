@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T12:52:55.086Z",
+  "generatedAt": "2026-09-03T13:00:32.381Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -683,25 +683,25 @@
       "contactCtas": {
         "textarea": {
           "left": 53,
-          "top": 8248.02,
+          "top": 8211.33,
           "right": 588,
-          "bottom": 8340.02,
+          "bottom": 8303.33,
           "width": 535,
           "height": 92
         },
         "submit": {
           "left": 53,
-          "top": 8412.02,
+          "top": 8375.33,
           "right": 588,
-          "bottom": 8468.02,
+          "bottom": 8431.33,
           "width": 535,
           "height": 56
         },
         "direct": {
           "left": 53,
-          "top": 8480.02,
+          "top": 8443.33,
           "right": 588,
-          "bottom": 8536.02,
+          "bottom": 8499.33,
           "width": 535,
           "height": 56
         },
@@ -926,25 +926,25 @@
       "contactCtas": {
         "textarea": {
           "left": 53,
-          "top": 8126.8,
+          "top": 8119.78,
           "right": 715,
-          "bottom": 8218.8,
+          "bottom": 8211.78,
           "width": 662,
           "height": 92
         },
         "submit": {
           "left": 53,
-          "top": 8280.8,
+          "top": 8273.78,
           "right": 715,
-          "bottom": 8336.8,
+          "bottom": 8329.78,
           "width": 662,
           "height": 56
         },
         "direct": {
           "left": 53,
-          "top": 8348.8,
+          "top": 8341.78,
           "right": 715,
-          "bottom": 8404.8,
+          "bottom": 8397.78,
           "width": 662,
           "height": 56
         },
@@ -1169,25 +1169,25 @@
       "contactCtas": {
         "textarea": {
           "left": 61,
-          "top": 6540.8,
+          "top": 6527.27,
           "right": 655.66,
-          "bottom": 6632.8,
+          "bottom": 6619.27,
           "width": 594.66,
           "height": 92
         },
         "submit": {
           "left": 675.66,
-          "top": 6540.61,
+          "top": 6527.08,
           "right": 963,
-          "bottom": 6582.61,
+          "bottom": 6569.08,
           "width": 287.34,
           "height": 42
         },
         "direct": {
           "left": 675.66,
-          "top": 6590.61,
+          "top": 6577.08,
           "right": 963,
-          "bottom": 6632.61,
+          "bottom": 6619.08,
           "width": 287.34,
           "height": 42
         },
@@ -2468,7 +2468,7 @@
       "copy": [
         "Анна Плавская 15+ лет в дизайне · 6+ лет в образовании Преподаватель магистратуры НИУ ВШЭ · автор образовательных программ · спикер WorldFood и RosUpack",
         "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas",
-        "Дарья Дарев Маркетинг-партнёр, fouraces.agency 12 лет в бренд-маркетинге · ex-Somia (BeautySleep), CoffeeBeats Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+        "Дарья Дарев Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
       ],
       "captionOverflow": [
         0,
@@ -2482,7 +2482,7 @@
       "copy": [
         "Анна Плавская 15+ лет в дизайне · 6+ лет в образовании Преподаватель магистратуры НИУ ВШЭ · автор образовательных программ · спикер WorldFood и RosUpack",
         "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах · экс-«Фармстандарт», STADA, Astellas",
-        "Дарья Дарев Маркетинг-партнёр, fouraces.agency 12 лет в бренд-маркетинге · ex-Somia (BeautySleep), CoffeeBeats Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+        "Дарья Дарев Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
       ],
       "captionOverflow": [
         0,
@@ -2497,14 +2497,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.870694,
+        "currentTime": 3.580106,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.580314,
+        "currentTime": 4.290906,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -2769,8 +2769,8 @@
     "loaded": 8
   },
   "cleanupAudit": {
-    "sourceBytes": 818925,
-    "blockBytes": 628964,
+    "sourceBytes": 817719,
+    "blockBytes": 627844,
     "reductionPercent": 23.2,
     "styleTagsByFile": {
       "00-header.html": 6,
@@ -2843,8 +2843,8 @@
       "before": {
         "in": false,
         "edge": "bottom",
-        "top": 1006.5,
-        "bottom": 1050.4,
+        "top": 1006.9,
+        "bottom": 1050.8,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2883,15 +2883,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-176.991px 0px, -281.666px 21px, -176.991px 0px",
+        "maskPosition": "-177.107px 0px, -281.721px 21px, -177.107px 0px",
         "maskXs": [
-          -176.991,
-          -281.666,
-          -176.991
+          -177.107,
+          -281.721,
+          -177.107
         ],
         "maskProgress": [
-          0.4563633802816901,
-          0.030403908794788284
+          0.4560366197183099,
+          0.03022475570032572
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2901,8 +2901,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -151.8,
-        "bottom": -107.9,
+        "top": -151.3,
+        "bottom": -107.4,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2941,15 +2941,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-196.554px 0px, -290.806px 21px, -196.554px 0px",
+        "maskPosition": "-196.385px 0px, -290.727px 21px, -196.385px 0px",
         "maskXs": [
-          -196.554,
-          -290.806,
-          -196.554
+          -196.385,
+          -290.727,
+          -196.385
         ],
         "maskProgress": [
-          0.401256338028169,
-          0.0006319218241042893
+          0.40173239436619723,
+          0.0008892508143323275
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2961,8 +2961,8 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -5.69728, 0)",
-      "after": "matrix(1, 0, 0, 1, -20.6434, 0)",
+      "before": "matrix(1, 0, 0, 1, -5.70138, 0)",
+      "after": "matrix(1, 0, 0, 1, -19.9264, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3018,10 +3018,10 @@
       ],
       [
         {
-          "opacity": 0.492696,
+          "opacity": 0.494391,
           "translateX": 0,
-          "translateY": 4.05843,
-          "filter": "blur(0.760956px)",
+          "translateY": 4.04487,
+          "filter": "blur(0.758414px)",
           "clipPath": "none"
         },
         {
@@ -3062,17 +3062,17 @@
       ],
       [
         {
-          "opacity": 0.919806,
+          "opacity": 0.919627,
           "translateX": 0,
-          "translateY": 0.641554,
-          "filter": "blur(0.120291px)",
+          "translateY": 0.642986,
+          "filter": "blur(0.12056px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.664089,
+          "opacity": 0.66334,
           "translateX": 0,
-          "translateY": 2.68729,
-          "filter": "blur(0.503866px)",
+          "translateY": 2.69328,
+          "filter": "blur(0.504991px)",
           "clipPath": "none"
         },
         {
