@@ -601,14 +601,65 @@ mobileInteraction.portfolioReverseStable = Boolean(portfolioReverseFlow
   && portfolioReverseFlow.pastSlides === 9);
 const mobileForm = page.locator('.anbox-mobile-part--09 #abm-project-form');
 if (await mobileForm.count()) {
-  await mobileForm.locator('[name="name"]').fill('QA');
-  await mobileForm.locator('[name="email"]').fill('qa@example.com');
-  await mobileForm.locator('[name="phone"]').fill('+7 999 000-00-00');
-  await mobileForm.locator('[name="message"]').fill('Проверка состояния формы');
+  await page.evaluate(() => {
+    window.__abmTildaSubmit = { calls: 0, formId: '' };
+    window.t_forms__initBtnClick = (event) => {
+      window.__abmTildaSubmit.calls += 1;
+      window.__abmTildaSubmit.formId = event?.target?.closest('form')?.id || '';
+    };
+  });
+  await mobileForm.locator('#abm-name').fill('QA');
+  await mobileForm.locator('#abm-email').fill('qa@example.com');
+  await mobileForm.locator('#abm-phone').fill('+7 999 000-00-00');
+  await mobileForm.locator('#abm-message').fill('Проверка состояния формы');
   await mobileForm.locator('.consent input[type="checkbox"]').check();
   await mobileForm.locator('[type="submit"]').click();
   await page.waitForTimeout(100);
-  mobileInteraction.formSuccess = await page.locator('.anbox-mobile-part--09 #abm-form-success').isVisible();
+  const beforeServerSuccess = await page.evaluate(() => {
+    const form = document.querySelector('.anbox-mobile-part--09 #abm-project-form');
+    const submit = form?.querySelector('[type="submit"]');
+    const success = document.querySelector('.anbox-mobile-part--09 #abm-form-success');
+    return {
+      calls: window.__abmTildaSubmit?.calls || 0,
+      formId: window.__abmTildaSubmit?.formId || '',
+      connected: form?.classList.contains('t-form') && form?.classList.contains('js-form-proccess')
+        && form?.dataset.formactiontype === '2',
+      services: form ? [...form.querySelectorAll('input[name="formservices[]"]')].map((input) => input.value) : [],
+      busy: Boolean(submit?.disabled && submit.getAttribute('aria-busy') === 'true'),
+      label: submit?.querySelector('[data-submit-label]')?.textContent.trim() || '',
+      successHidden: Boolean(success?.hidden),
+    };
+  });
+  await mobileForm.evaluate((form) => form.dispatchEvent(new CustomEvent('tildaform:aftersuccess')));
+  await page.waitForTimeout(100);
+  const afterServerSuccess = await page.evaluate(() => {
+    const form = document.querySelector('.anbox-mobile-part--09 #abm-project-form');
+    const success = document.querySelector('.anbox-mobile-part--09 #abm-form-success');
+    return {
+      formHidden: Boolean(form?.hidden),
+      successVisible: Boolean(success && !success.hidden && getComputedStyle(success).display === 'grid'),
+      focused: document.activeElement === success,
+      copy: success?.textContent.replace(/\s+/g, ' ').trim() || '',
+    };
+  });
+  mobileInteraction.formSuccess = Boolean(
+    beforeServerSuccess.connected
+    && JSON.stringify(beforeServerSuccess.services) === JSON.stringify([
+      '421e09f55e9c23abad66f94e2c5eb13e',
+      '8d5d9132e29f926e4dd1ecbe5cdc968a',
+      'abba9c7e75273c6d0e484f57057f8e55',
+      'e956533b990d351354995054c91e3e4b',
+    ])
+    && beforeServerSuccess.calls === 1
+    && beforeServerSuccess.formId === 'abm-project-form'
+    && beforeServerSuccess.busy
+    && beforeServerSuccess.label === 'Отправляем…'
+    && beforeServerSuccess.successHidden
+    && afterServerSuccess.formHidden
+    && afterServerSuccess.successVisible
+    && afterServerSuccess.focused
+    && afterServerSuccess.copy === 'Спасибо! Мы получили вашу заявку и свяжемся с вами в ближайшее время.'
+  );
 }
 
 await page.emulateMedia({ reducedMotion: 'no-preference' });

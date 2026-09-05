@@ -218,25 +218,35 @@ html:has(#abct-form[data-abct-success="1"]) .t-form-success-popup{display:none!i
 
         <a class="button telegram-card" href="https://t.me/anbox_design" target="_blank" rel="noopener">Написать в Telegram <span class="button__arrow" aria-hidden="true">→</span></a>
         <div class="contact-card">
-          <form id="abm-project-form">
+          <form id="abm-project-form" name="project-form" class="t-form js-form-proccess" role="form" action="#" method="POST" data-vibeblock-form="true" data-inputbox=".field" data-formactiontype="2" novalidate>
+            <input type="hidden" name="formservices[]" value="421e09f55e9c23abad66f94e2c5eb13e" class="js-formaction-services">
+            <input type="hidden" name="formservices[]" value="8d5d9132e29f926e4dd1ecbe5cdc968a" class="js-formaction-services">
+            <input type="hidden" name="formservices[]" value="abba9c7e75273c6d0e484f57057f8e55" class="js-formaction-services">
+            <input type="hidden" name="formservices[]" value="e956533b990d351354995054c91e3e4b" class="js-formaction-services">
             <div class="form-grid">
               <div class="form-grid form-grid--two">
-                <div class="field"><label for="abm-name">Ваше имя<span class="required-mark" aria-hidden="true">*</span></label><input id="abm-name" name="name" autocomplete="name" placeholder="Как к вам обращаться" required></div>
-                <div class="field"><label for="abm-company">Компания</label><input id="abm-company" name="company" autocomplete="organization" placeholder="Название компании"></div>
+                <div class="field"><label for="abm-name">Ваше имя<span class="required-mark" aria-hidden="true">*</span></label><input id="abm-name" name="Имя" class="js-tilda-rule" data-tilda-req="1" data-tilda-rule="name" autocomplete="name" placeholder="Как к вам обращаться" required></div>
+                <div class="field"><label for="abm-company">Компания</label><input id="abm-company" name="Компания" autocomplete="organization" placeholder="Название компании"></div>
               </div>
               <div class="form-grid form-grid--two">
-                <div class="field"><label for="abm-email">E-mail<span class="required-mark" aria-hidden="true">*</span></label><input id="abm-email" type="email" name="email" autocomplete="email" inputmode="email" placeholder="name@company.ru" required></div>
-                <div class="field"><label for="abm-phone">Телефон<span class="required-mark" aria-hidden="true">*</span></label><input id="abm-phone" type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="+7 999 000-00-00" required></div>
+                <div class="field"><label for="abm-email">E-mail<span class="required-mark" aria-hidden="true">*</span></label><input id="abm-email" type="email" name="Email" class="js-tilda-rule" data-tilda-req="1" data-tilda-rule="email" autocomplete="email" inputmode="email" placeholder="name@company.ru" required></div>
+                <div class="field"><label for="abm-phone">Телефон<span class="required-mark" aria-hidden="true">*</span></label><input id="abm-phone" type="tel" name="Телефон" class="js-tilda-rule" data-tilda-req="1" data-tilda-rule="phone" autocomplete="tel" inputmode="tel" placeholder="+7 999 000-00-00" required></div>
               </div>
-              <div class="field"><label for="abm-budget">Бюджет проекта</label><select id="abm-budget" name="budget"><option value="">Выберите вариант</option><option>50–150 тыс. ₽</option><option>150–300 тыс. ₽</option><option>300–500 тыс. ₽</option><option>от 500 тыс. ₽</option></select></div>
-              <fieldset class="fieldset"><legend>Удобный способ связи</legend><div class="choice-grid"><label class="choice"><input type="radio" name="contact-method" value="Звонок">Звонок</label><label class="choice"><input type="radio" name="contact-method" value="WhatsApp">WhatsApp</label><label class="choice"><input type="radio" name="contact-method" value="Telegram" checked>Telegram</label><label class="choice"><input type="radio" name="contact-method" value="E-mail">E-mail</label></div></fieldset>
-              <fieldset class="fieldset"><legend>Подходящий пакет</legend><div class="choice-grid"><label class="choice"><input type="radio" name="package" value="MVP">MVP</label><label class="choice"><input type="radio" name="package" value="BASE">BASE</label><label class="choice"><input type="radio" name="package" value="LAUNCH">LAUNCH</label><label class="choice"><input type="radio" name="package" value="Не знаю" checked>Не знаю</label></div></fieldset>
-              <div class="field"><label for="abm-message">О проекте<span class="required-mark" aria-hidden="true">*</span></label><textarea id="abm-message" name="message" placeholder="Задача, сроки и пожелания" required></textarea></div>
-              <label class="consent"><input type="checkbox" required><span>Соглашаюсь на&nbsp;обработку персональных данных и&nbsp;с <a href="#abm-privacy">политикой конфиденциальности</a>.</span></label>
-              <button class="button button--lime" type="submit">Отправить заявку <span class="button__arrow" aria-hidden="true">→</span></button>
+              <div class="field"><label for="abm-budget">Бюджет проекта</label><select id="abm-budget" name="Бюджет"><option value="">Выберите вариант</option><option>50–150 тыс. ₽</option><option>150–300 тыс. ₽</option><option>300–500 тыс. ₽</option><option>от 500 тыс. ₽</option></select></div>
+              <fieldset class="fieldset"><legend>Удобный способ связи</legend><div class="choice-grid"><label class="choice"><input type="radio" name="Способ связи" value="Звонок">Звонок</label><label class="choice"><input type="radio" name="Способ связи" value="WhatsApp">WhatsApp</label><label class="choice"><input type="radio" name="Способ связи" value="Telegram" checked>Telegram</label><label class="choice"><input type="radio" name="Способ связи" value="E-mail">E-mail</label></div></fieldset>
+              <fieldset class="fieldset"><legend>Подходящий пакет</legend><div class="choice-grid"><label class="choice"><input type="radio" name="Пакет" value="MVP">MVP</label><label class="choice"><input type="radio" name="Пакет" value="BASE">BASE</label><label class="choice"><input type="radio" name="Пакет" value="LAUNCH">LAUNCH</label><label class="choice"><input type="radio" name="Пакет" value="Не знаю" checked>Не знаю</label></div></fieldset>
+              <div class="field"><label for="abm-message">О проекте<span class="required-mark" aria-hidden="true">*</span></label><textarea id="abm-message" name="Задача" class="js-tilda-rule" data-tilda-req="1" placeholder="Задача, сроки и пожелания" required></textarea></div>
+              <label class="consent"><input type="checkbox" name="Согласие" value="Да" class="js-tilda-rule" data-tilda-req="1" data-tilda-rule="required" required><span>Соглашаюсь на&nbsp;обработку персональных данных и&nbsp;с <a href="#abm-privacy">политикой конфиденциальности</a>.</span></label>
+              <button class="button button--lime t-submit" type="submit"><span data-submit-label>Отправить заявку</span> <span class="button__arrow" aria-hidden="true">→</span></button>
+              <p class="form-submit-status" data-form-submit-status role="status" aria-live="polite" hidden></p>
             </div>
           </form>
-          <div class="form-success" id="abm-form-success" role="status" tabindex="-1" hidden><div><strong>Спасибо!</strong><p>Форма заполнена. Для реальной отправки нужно подключить ваш обработчик заявок.</p></div></div>
+          <div class="form-success" id="abm-form-success" role="status" tabindex="-1" hidden>
+            <div>
+              <strong>Спасибо!</strong>
+              <p>Мы получили вашу заявку и свяжемся с вами в ближайшее время.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -443,12 +453,55 @@ html:has(#abct-form[data-abct-success="1"]) .t-form-success-popup{display:none!i
     started=true;
     const form = root.querySelector('#abm-project-form');
       const success = root.querySelector('#abm-form-success');
+      const submit = form && form.querySelector('[type="submit"]');
+      const submitLabel = submit && submit.querySelector('[data-submit-label]');
+      const submitStatus = form && form.querySelector('[data-form-submit-status]');
+      let awaitingResponse = false;
+
+      const setSubmitState = (busy, message = '') => {
+        awaitingResponse = busy;
+        if (submit) {
+          submit.disabled = busy;
+          submit.setAttribute('aria-busy', busy ? 'true' : 'false');
+        }
+        if (submitLabel) submitLabel.textContent = busy ? 'Отправляем…' : 'Отправить заявку';
+        if (submitStatus) {
+          submitStatus.textContent = message;
+          submitStatus.hidden = !message;
+        }
+      };
+
       form.addEventListener('submit', (event) => {
         event.preventDefault();
+        if (awaitingResponse) return;
+        setSubmitState(false);
         if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        if (typeof window.t_forms__initBtnClick !== 'function') {
+          setSubmitState(false, 'Не удалось отправить заявку. Обновите страницу или напишите нам в Telegram.');
+          return;
+        }
+
+        setSubmitState(true);
+        try {
+          window.t_forms__initBtnClick({
+            target: submit,
+            srcElement: submit,
+            preventDefault: () => {}
+          });
+        } catch (error) {
+          setSubmitState(false, 'Не удалось отправить заявку. Обновите страницу или напишите нам в Telegram.');
+        }
+      });
+
+      form.addEventListener('tildaform:aftersuccess', () => {
         form.hidden = true;
         success.hidden = false;
-        success.focus();
+        success.focus({ preventScroll: true });
+      });
+
+      form.addEventListener('tildaform:aftererror', () => {
+        setSubmitState(false, 'Не удалось отправить заявку. Попробуйте ещё раз или напишите нам в Telegram.');
       });
   }
   start();
