@@ -165,7 +165,11 @@ const portfolio = root.querySelector('#abm-work');
             && rect.top <= gateTop + 1
             && rect.bottom > gateTop;
           const button = slot.querySelector('[data-portfolio-more]');
+          const hostSlide = slot.previousElementSibling?.classList.contains('case-slide')
+            ? slot.previousElementSibling
+            : null;
           slot.classList.toggle('is-gate-active', isActive);
+          hostSlide?.classList.toggle('has-active-gate', isActive);
           if (button) {
             button.style.transition = 'opacity 180ms cubic-bezier(.22, 1, .36, 1)';
             button.style.visibility = isActive ? 'visible' : 'hidden';
@@ -244,6 +248,7 @@ const portfolio = root.querySelector('#abm-work');
           document.documentElement.style.overflowAnchor = 'none';
           slidesToReveal.forEach((slide) => { slide.hidden = false; });
           slot.hidden = true;
+          syncPortfolioGates();
           syncPortfolioStack();
 
           const nextBatch = batch + 1;

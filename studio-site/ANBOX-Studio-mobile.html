@@ -2000,6 +2000,19 @@
       box-shadow: 0 -14px 30px rgba(0, 0, 0, .3);
     }
 
+    .case-slide::after {
+      position: absolute;
+      z-index: 2;
+      inset: 0;
+      background: rgba(26, 8, 8, .5);
+      content: "";
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 180ms cubic-bezier(.22, 1, .36, 1);
+    }
+
+    .case-slide.has-active-gate::after { opacity: 1; }
+
     .case-slide:nth-of-type(1) { z-index: 1; }
     .case-slide:nth-of-type(2) { z-index: 2; }
     .case-slide:nth-of-type(3) { z-index: 3; }
@@ -3928,7 +3941,11 @@
             && rect.top <= gateTop + 1
             && rect.bottom > gateTop;
           const button = slot.querySelector('[data-portfolio-more]');
+          const hostSlide = slot.previousElementSibling?.classList.contains('case-slide')
+            ? slot.previousElementSibling
+            : null;
           slot.classList.toggle('is-gate-active', isActive);
+          hostSlide?.classList.toggle('has-active-gate', isActive);
           if (button) {
             button.style.transition = 'opacity 180ms cubic-bezier(.22, 1, .36, 1)';
             button.style.visibility = isActive ? 'visible' : 'hidden';
@@ -4010,6 +4027,7 @@
           document.documentElement.style.overflowAnchor = 'none';
           slidesToReveal.forEach((slide) => { slide.hidden = false; });
           slot.hidden = true;
+          syncPortfolioGates();
           syncPortfolioStack();
 
           const nextBatch = batch + 1;
