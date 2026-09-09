@@ -29,9 +29,10 @@ const expectedHeroUrls = expectedHeroOrder.map((number) => {
 });
 // The catalog now carries the complete case descriptions instead of placeholder copy.
 // Keep the cleanup guard strict while allowing that intentional content payload.
-// The branded contact success state is intentional product UI rather than
-// legacy payload, so keep the cleanup guard strict without penalising it.
-const minimumCleanupReduction = 23.2;
+// The branded contact success state and the gallery's deliberate batch-transition
+// states are intentional product UI rather than legacy payload. Keep the cleanup
+// guard strict without penalising those small additions.
+const minimumCleanupReduction = 23.1;
 const expectedTeamCopy = [
   'Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack',
   'Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas',
@@ -457,6 +458,7 @@ if (await packageTabs.count() > 1) {
   await packageTabs.nth(1).click();
   mobileInteraction.packageTabSelected = await packageTabs.nth(1).getAttribute('aria-selected') === 'true';
 }
+await page.emulateMedia({ reducedMotion: 'no-preference' });
 const portfolioRevealFlow = [];
 for (const batch of [2, 3, 4]) {
   const revealButton = page.locator(`.anbox-mobile-part--03 [data-portfolio-reveal="${batch}"]`);
@@ -536,7 +538,56 @@ for (const batch of [2, 3, 4]) {
 
   const hiddenBefore = await page.locator('.anbox-mobile-part--03 [data-portfolio-batch][hidden]').count();
   await revealButton.click();
-  await page.waitForTimeout(900);
+  await page.waitForTimeout(70);
+  const transitionFeedback = await page.evaluate((currentBatch) => {
+    const root = document.querySelector('.anbox-mobile-part--03');
+    const button = root.querySelector(`[data-portfolio-reveal="${currentBatch}"]`);
+    return root.querySelector('.portfolio')?.dataset.revealState === 'transitioning'
+      && button?.classList.contains('is-confirming')
+      && button?.getAttribute('aria-busy') === 'true';
+  }, batch);
+  await page.waitForTimeout(150);
+  const transitionContinuity = await page.evaluate((currentBatch) => {
+    const root = document.querySelector('.anbox-mobile-part--03');
+    const firstNewSlide = root.querySelector(`[data-portfolio-batch="${currentBatch}"]`);
+    const previousSlide = root.querySelector(`[data-portfolio-gate="${currentBatch}"]`)?.previousElementSibling;
+    const dock = root.querySelector('[data-portfolio-dock]');
+    return root.querySelector('.portfolio')?.dataset.revealState === 'transitioning'
+      && firstNewSlide?.classList.contains('is-batch-entering')
+      && firstNewSlide?.classList.contains('is-batch-entering-active')
+      && previousSlide?.classList.contains('has-active-gate')
+      && dock?.classList.contains('is-batch-entering')
+      && dock?.classList.contains('is-batch-entering-active')
+      && !dock.hidden
+      && dock.querySelector('[data-portfolio-dock-title]')?.textContent.trim() === firstNewSlide.querySelector('h3')?.textContent.trim();
+  }, batch);
+  if (batch === 2) {
+    await page.screenshot({ path: path.join(qaDir, 'portfolio-batch-transition-mobile-390.png'), fullPage: false });
+  }
+  await page.waitForTimeout(300);
+  const transitionCaptionProgress = await page.evaluate(() => {
+    const dock = document.querySelector('.anbox-mobile-part--03 [data-portfolio-dock]');
+    const opacity = Number.parseFloat(dock ? getComputedStyle(dock).opacity : '0');
+    return Boolean(dock && !dock.hidden && opacity > .05 && opacity < .995);
+  });
+  if (batch === 2) {
+    await page.screenshot({ path: path.join(qaDir, 'portfolio-batch-caption-mobile-390.png'), fullPage: false });
+  }
+  await page.waitForTimeout(380);
+  const transitionFinished = await page.evaluate((currentBatch) => {
+    const root = document.querySelector('.anbox-mobile-part--03');
+    const firstNewSlide = root.querySelector(`[data-portfolio-batch="${currentBatch}"]`);
+    const button = root.querySelector(`[data-portfolio-reveal="${currentBatch}"]`);
+    const dock = root.querySelector('[data-portfolio-dock]');
+    return !root.querySelector('.portfolio')?.dataset.revealState
+      && !firstNewSlide?.classList.contains('is-batch-entering')
+      && !firstNewSlide?.classList.contains('is-batch-entering-active')
+      && !dock?.classList.contains('is-batch-entering')
+      && !dock?.classList.contains('is-batch-entering-active')
+      && !dock?.hidden
+      && !button?.disabled
+      && !button?.hasAttribute('aria-busy');
+  }, batch);
   const hiddenAfter = await page.locator('.anbox-mobile-part--03 [data-portfolio-batch][hidden]').count();
   const edgePair = ({ 2: ['06', '07'], 3: ['10', '11'], 4: ['15', '16'] })[batch];
   const state = await page.evaluate(({ currentBatch, edgePair }) => {
@@ -611,8 +662,12 @@ for (const batch of [2, 3, 4]) {
     && state.flowStable
     && gateOnLastCase
     && gatePinStable
+    && transitionFeedback
+    && transitionContinuity
+    && transitionCaptionProgress
+    && transitionFinished
     && state.nextButtonVisible === expectedNextButton;
-  portfolioRevealFlow.push({ batch, revealedCount, gateOnLastCase, gatePinStable, ...state, ok });
+  portfolioRevealFlow.push({ batch, revealedCount, gateOnLastCase, gatePinStable, transitionFeedback, transitionContinuity, transitionCaptionProgress, transitionFinished, ...state, ok });
 }
 mobileInteraction.portfolioRevealed = portfolioRevealFlow.every((step) => step.ok);
 let portfolioReverseFlow = null;
@@ -734,6 +789,42 @@ if (await mobileForm.count()) {
     && afterServerSuccess.copy === 'Спасибо! Мы получили вашу заявку и свяжемся с вами в ближайшее время.'
   );
 }
+
+await page.emulateMedia({ reducedMotion: 'reduce' });
+await loadAt(previewPath, 390, 844);
+const reducedGateTop = await page.evaluate(() => {
+  const slot = document.querySelector('.anbox-mobile-part--03 [data-portfolio-gate="2"]');
+  return slot ? slot.getBoundingClientRect().top + window.scrollY - 68 : 0;
+});
+await page.evaluate((top) => window.scrollTo({ top, behavior: 'auto' }), reducedGateTop);
+await page.waitForTimeout(180);
+const reducedRevealButton = page.locator('.anbox-mobile-part--03 [data-portfolio-reveal="2"]');
+if (await reducedRevealButton.isVisible()) {
+  await reducedRevealButton.click();
+  await page.waitForTimeout(120);
+}
+mobileInteraction.portfolioReducedMotionSafe = await page.evaluate(() => {
+  const root = document.querySelector('.anbox-mobile-part--03');
+  const portfolio = root?.querySelector('.portfolio');
+  const firstNewSlide = root?.querySelector('[data-portfolio-batch="2"]');
+  const firstNewStyle = firstNewSlide ? getComputedStyle(firstNewSlide) : null;
+  const gateSlot = root?.querySelector('[data-portfolio-gate="2"]');
+  const gateHost = gateSlot?.previousElementSibling;
+  const dock = root?.querySelector('[data-portfolio-dock]');
+  return Boolean(root
+    && firstNewSlide
+    && !firstNewSlide.hidden
+    && firstNewStyle?.visibility !== 'hidden'
+    && Number.parseFloat(firstNewStyle?.opacity || '0') > .99
+    && !firstNewSlide.classList.contains('is-batch-entering')
+    && !firstNewSlide.classList.contains('is-batch-entering-active')
+    && !portfolio?.dataset.revealState
+    && gateSlot?.hidden
+    && !gateHost?.classList.contains('has-active-gate')
+    && !dock?.hidden
+    && !dock?.classList.contains('is-batch-entering')
+    && dock?.querySelector('[data-portfolio-dock-title]')?.textContent.trim() === firstNewSlide.querySelector('h3')?.textContent.trim());
+});
 
 await page.emulateMedia({ reducedMotion: 'no-preference' });
 await loadAt(previewPath, 390, 844);

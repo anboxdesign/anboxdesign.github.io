@@ -158,6 +158,7 @@ const portfolio = root.querySelector('#abm-work');
       };
 
       const syncPortfolioGates = () => {
+        if (portfolio.dataset.revealState === 'transitioning') return;
         const gateTop = document.querySelector('.site-header')?.getBoundingClientRect().height || 68;
         portfolioMoreSlots.forEach((slot) => {
           const rect = slot.getBoundingClientRect();
@@ -171,7 +172,6 @@ const portfolio = root.querySelector('#abm-work');
           slot.classList.toggle('is-gate-active', isActive);
           hostSlide?.classList.toggle('has-active-gate', isActive);
           if (button) {
-            button.style.transition = 'opacity 180ms cubic-bezier(.22, 1, .36, 1)';
             button.style.visibility = isActive ? 'visible' : 'hidden';
             button.style.opacity = isActive ? '1' : '0';
             button.style.pointerEvents = isActive ? 'auto' : 'none';
@@ -181,14 +181,16 @@ const portfolio = root.querySelector('#abm-work');
 
       const syncPortfolioDock = () => {
         portfolioDockFrame = 0;
-        syncPortfolioStack();
-        syncPortfolioGates();
-        if (portfolio.dataset.revealState === 'scrolling') {
-          portfolio.classList.remove('is-caption-docked');
-          portfolioDock.hidden = true;
-          dockedSlide = null;
+        if (portfolio.dataset.revealState === 'transitioning') {
+          if (!portfolioDock.classList.contains('is-batch-entering')) {
+            portfolio.classList.remove('is-caption-docked');
+            portfolioDock.hidden = true;
+            dockedSlide = null;
+          }
           return;
         }
+        syncPortfolioStack();
+        syncPortfolioGates();
         const headerHeight = 68;
         const sampleY = headerHeight + (window.innerHeight - headerHeight) * .5;
         const visibleSlides = portfolioSlides.filter((slide) => !slide.hidden);
@@ -241,25 +243,34 @@ const portfolio = root.querySelector('#abm-work');
           button.disabled = true;
           button.setAttribute('aria-busy', 'true');
           window.clearTimeout(portfolioRevealTimer);
-          portfolio.dataset.revealState = 'scrolling';
+          portfolio.dataset.revealState = 'transitioning';
           portfolio.classList.remove('is-caption-docked');
           portfolioDock.hidden = true;
           dockedSlide = null;
           document.documentElement.style.overflowAnchor = 'none';
-          slidesToReveal.forEach((slide) => { slide.hidden = false; });
-          slot.hidden = true;
-          syncPortfolioGates();
-          syncPortfolioStack();
+          button.classList.add('is-confirming');
 
-          const nextBatch = batch + 1;
-          const nextSlot = portfolio.querySelector(`[data-portfolio-gate="${nextBatch}"]`);
-          const nextBatchHasCases = portfolioSlides.some((slide) => Number(slide.dataset.portfolioBatch) === nextBatch && !slide.hasAttribute('data-portfolio-draft'));
-          if (nextSlot && nextBatchHasCases) nextSlot.hidden = false;
+          const revealBatch = () => {
+            slidesToReveal.forEach((slide) => { slide.hidden = false; });
+            slot.hidden = true;
 
-          const names = slidesToReveal.map((slide) => slide.querySelector('h3').textContent.trim());
-          portfolioLoadStatus.textContent = `Открыты следующие проекты: ${names.join(', ')}.`;
-          requestAnimationFrame(() => {
+            const nextBatch = batch + 1;
+            const nextSlot = portfolio.querySelector(`[data-portfolio-gate="${nextBatch}"]`);
+            const nextBatchHasCases = portfolioSlides.some((slide) => Number(slide.dataset.portfolioBatch) === nextBatch && !slide.hasAttribute('data-portfolio-draft'));
+            if (nextSlot && nextBatchHasCases) nextSlot.hidden = false;
+
+            const names = slidesToReveal.map((slide) => slide.querySelector('h3').textContent.trim());
+            portfolioLoadStatus.textContent = `Открыты следующие проекты: ${names.join(', ')}.`;
             const firstSlide = slidesToReveal[0];
+            const title = firstSlide.querySelector('.case-slide__caption h3');
+            const works = firstSlide.querySelector('.case-slide__works');
+            portfolioDockTitle.textContent = title.textContent;
+            portfolioDockWorks.textContent = works.textContent;
+            dockedSlide = firstSlide;
+            portfolioDock.classList.add('is-batch-entering');
+            portfolioDock.hidden = false;
+            portfolio.classList.add('is-caption-docked');
+            firstSlide.classList.add('is-batch-entering');
             const track = firstSlide.parentElement;
             let flowTop = track.getBoundingClientRect().top + window.scrollY;
             for (const child of track.children) {
@@ -272,21 +283,37 @@ const portfolio = root.querySelector('#abm-work');
             }
             const targetTop = Math.max(0, flowTop - 68);
             firstSlide.focus({ preventScroll: true });
-            document.documentElement.style.overflowAnchor = '';
-            window.scrollTo({
-              top: targetTop,
-              behavior: reducedMotion.matches ? 'auto' : 'smooth',
-            });
+            window.scrollTo({ top: targetTop, behavior: 'auto' });
+            firstSlide.getBoundingClientRect();
 
             const finishReveal = () => {
+              firstSlide.classList.remove('is-batch-entering', 'is-batch-entering-active');
+              portfolioDock.classList.remove('is-batch-entering', 'is-batch-entering-active');
+              button.classList.remove('is-confirming');
+              button.disabled = false;
+              button.removeAttribute('aria-busy');
               delete portfolio.dataset.revealState;
               portfolioRevealTimer = 0;
+              document.documentElement.style.overflowAnchor = '';
+              syncPortfolioGates();
               syncPortfolioStack();
               schedulePortfolioDock();
             };
-            if (reducedMotion.matches) finishReveal();
-            else portfolioRevealTimer = window.setTimeout(finishReveal, 700);
-          });
+
+            if (reducedMotion.matches) {
+              finishReveal();
+              return;
+            }
+
+            requestAnimationFrame(() => {
+              firstSlide.classList.add('is-batch-entering-active');
+              portfolioDock.classList.add('is-batch-entering-active');
+              portfolioRevealTimer = window.setTimeout(finishReveal, 650);
+            });
+          };
+
+          if (reducedMotion.matches) revealBatch();
+          else portfolioRevealTimer = window.setTimeout(revealBatch, 130);
         });
       });
       schedulePortfolioDock();
