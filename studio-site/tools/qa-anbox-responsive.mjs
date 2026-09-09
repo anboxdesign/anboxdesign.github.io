@@ -460,19 +460,59 @@ if (await packageTabs.count() > 1) {
 const portfolioRevealFlow = [];
 for (const batch of [2, 3, 4]) {
   const revealButton = page.locator(`.anbox-mobile-part--03 [data-portfolio-reveal="${batch}"]`);
-  if (!(await revealButton.count()) || !(await revealButton.isVisible())) {
-    portfolioRevealFlow.push({ batch, ok: false, reason: 'button-not-visible' });
+  if (!(await revealButton.count())) {
+    portfolioRevealFlow.push({ batch, ok: false, reason: 'button-missing' });
+    continue;
+  }
+
+  const gateStart = await page.evaluate((currentBatch) => {
+    const slot = document.querySelector(`.anbox-mobile-part--03 [data-portfolio-gate="${currentBatch}"]`);
+    return slot.getBoundingClientRect().top + window.scrollY - 68;
+  }, batch);
+  let gateSeparate = true;
+  if (batch === 2) {
+    await page.evaluate((top) => window.scrollTo({ top: top - (window.innerHeight - 68) / 2, behavior: 'auto' }), gateStart);
+    await page.waitForTimeout(100);
+    const partialGate = await page.evaluate(() => {
+      const root = document.querySelector('.anbox-mobile-part--03');
+      const slot = root.querySelector('[data-portfolio-gate="2"]');
+      const button = slot.querySelector('[data-portfolio-more]');
+      const fifth = root.querySelectorAll('.case-slide:not([hidden])')[4];
+      return {
+        slotTop: slot.getBoundingClientRect().top,
+        buttonHidden: getComputedStyle(button).visibility === 'hidden' && Number.parseFloat(getComputedStyle(button).opacity) === 0,
+        fifthVisible: getComputedStyle(fifth).visibility !== 'hidden',
+      };
+    });
+    gateSeparate = partialGate.slotTop > 68 && partialGate.buttonHidden && partialGate.fifthVisible;
+  }
+
+  await page.evaluate((top) => window.scrollTo({ top, behavior: 'auto' }), gateStart);
+  await page.waitForTimeout(100);
+  const activeGate = await page.evaluate((currentBatch) => {
+    const root = document.querySelector('.anbox-mobile-part--03');
+    const slot = root.querySelector(`[data-portfolio-gate="${currentBatch}"]`);
+    const button = slot.querySelector('[data-portfolio-more]');
+    const lastVisibleSlide = [...root.querySelectorAll('.case-slide:not([hidden])')].at(-1);
+    return {
+      slotTop: slot.getBoundingClientRect().top,
+      active: slot.classList.contains('is-gate-active') && root.querySelector('.portfolio').classList.contains('is-gate-screen'),
+      buttonVisible: getComputedStyle(button).visibility !== 'hidden' && Number.parseFloat(getComputedStyle(button).opacity) > .99,
+      lastSlideHidden: getComputedStyle(lastVisibleSlide).visibility === 'hidden',
+    };
+  }, batch);
+  gateSeparate = gateSeparate
+    && Math.abs(activeGate.slotTop - 68) <= 2
+    && activeGate.active
+    && activeGate.buttonVisible
+    && activeGate.lastSlideHidden;
+  if (!(await revealButton.isVisible())) {
+    portfolioRevealFlow.push({ batch, gateSeparate, ok: false, reason: 'button-not-visible-on-gate-screen' });
     continue;
   }
 
   let gatePinStable = true;
   if (batch === 2) {
-    const gateStart = await page.evaluate(() => {
-      const slot = document.querySelector('.anbox-mobile-part--03 [data-portfolio-gate="2"]');
-      return slot.getBoundingClientRect().top + window.scrollY - 68;
-    });
-    await page.evaluate((top) => window.scrollTo({ top, behavior: 'auto' }), gateStart);
-    await page.waitForTimeout(100);
     const gateTopBefore = await revealButton.evaluate((node) => node.getBoundingClientRect().top);
     await page.evaluate(() => window.scrollBy({ top: (window.innerHeight - 68) * .75, behavior: 'auto' }));
     await page.waitForTimeout(100);
@@ -555,9 +595,10 @@ for (const batch of [2, 3, 4]) {
     && state.edgePairStable
     && state.stackPaintStable
     && state.flowStable
+    && gateSeparate
     && gatePinStable
     && state.nextButtonVisible === expectedNextButton;
-  portfolioRevealFlow.push({ batch, revealedCount, gatePinStable, ...state, ok });
+  portfolioRevealFlow.push({ batch, revealedCount, gateSeparate, gatePinStable, ...state, ok });
 }
 mobileInteraction.portfolioRevealed = portfolioRevealFlow.every((step) => step.ok);
 let portfolioReverseFlow = null;
@@ -599,6 +640,24 @@ mobileInteraction.portfolioReverseStable = Boolean(portfolioReverseFlow
   && portfolioReverseFlow.topCase === '10'
   && portfolioReverseFlow.paintedStacked === 1
   && portfolioReverseFlow.pastSlides === 9);
+const mobileTeamLeadPhoto = page.locator('.anbox-mobile-part--07 .person-card:first-child .person-photo');
+if (await mobileTeamLeadPhoto.count()) {
+  await mobileTeamLeadPhoto.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(180);
+  mobileInteraction.teamLeadPhotoTopPreserved = await mobileTeamLeadPhoto.evaluate((frame) => {
+    const image = frame.querySelector('img');
+    const frameRect = frame.getBoundingClientRect();
+    const imageRect = image?.getBoundingClientRect();
+    const style = image ? getComputedStyle(image) : null;
+    return Boolean(image
+      && style?.objectFit === 'cover'
+      && style?.objectPosition === '50% 0%'
+      && imageRect
+      && Math.abs(imageRect.top - frameRect.top) <= 1
+      && Math.abs(imageRect.width - frameRect.width) <= 1);
+  });
+  await mobileTeamLeadPhoto.screenshot({ path: path.join(qaDir, 'team-lead-photo-mobile-390.png') });
+}
 const mobileForm = page.locator('.anbox-mobile-part--09 #abm-project-form');
 if (await mobileForm.count()) {
   await page.evaluate(() => {
