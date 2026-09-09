@@ -1,7 +1,10 @@
 {
-  "generatedAt": "2026-09-03T13:56:47.433Z",
-  "status": "PASS",
-  "failures": [],
+  "generatedAt": "2026-09-09T19:33:51.000Z",
+  "status": "FAIL",
+  "failures": [
+    "desktop HERO shelf: loaded 1/8 retailer logos",
+    "mobile HERO shelf: loaded 1/8 retailer logos"
+  ],
   "structure": [
     {
       "name": "00-header.html",
@@ -2185,13 +2188,20 @@
     "packageTabSelected": true,
     "portfolioRevealed": true,
     "portfolioReverseStable": true,
-    "formSuccess": true
+    "teamLeadPhotoTopPreserved": true,
+    "formSuccess": true,
+    "portfolioReducedMotionSafe": true
   },
   "portfolioRevealFlow": [
     {
       "batch": 2,
       "revealedCount": 5,
+      "gateOnLastCase": true,
       "gatePinStable": true,
+      "transitionFeedback": true,
+      "transitionContinuity": true,
+      "transitionCaptionProgress": true,
+      "transitionFinished": true,
       "visibleSlides": 10,
       "firstTop": 68,
       "captionsKeepLayout": true,
@@ -2214,7 +2224,12 @@
     {
       "batch": 3,
       "revealedCount": 5,
+      "gateOnLastCase": true,
       "gatePinStable": true,
+      "transitionFeedback": true,
+      "transitionContinuity": true,
+      "transitionCaptionProgress": true,
+      "transitionFinished": true,
       "visibleSlides": 15,
       "firstTop": 68,
       "captionsKeepLayout": true,
@@ -2237,7 +2252,12 @@
     {
       "batch": 4,
       "revealedCount": 5,
+      "gateOnLastCase": true,
       "gatePinStable": true,
+      "transitionFeedback": true,
+      "transitionContinuity": true,
+      "transitionCaptionProgress": true,
+      "transitionFinished": true,
       "visibleSlides": 20,
       "firstTop": 68,
       "captionsKeepLayout": true,
@@ -2527,14 +2547,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.505894,
+        "currentTime": 3.851192,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.211199,
+        "currentTime": 4.560283,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -2792,21 +2812,21 @@
   },
   "desktopHeroShelfAudit": {
     "total": 8,
-    "loaded": 8
+    "loaded": 1
   },
   "mobileHeroShelfAudit": {
     "total": 8,
-    "loaded": 8
+    "loaded": 1
   },
   "cleanupAudit": {
-    "sourceBytes": 822852,
-    "blockBytes": 631235,
-    "reductionPercent": 23.3,
+    "sourceBytes": 830565,
+    "blockBytes": 639049,
+    "reductionPercent": 23.1,
     "styleTagsByFile": {
       "00-header.html": 6,
       "01-hero.html": 3,
       "02-approach.html": 2,
-      "03B-portfolio.html": 3,
+      "03B-portfolio.html": 4,
       "04-services.html": 2,
       "05-packages.html": 2,
       "06-clients.html": 3,
@@ -2873,8 +2893,8 @@
       "before": {
         "in": false,
         "edge": "bottom",
-        "top": 1006.3,
-        "bottom": 1050.2,
+        "top": 1005.8,
+        "bottom": 1049.7,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2902,8 +2922,8 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 953,
-        "bottom": 996.9,
+        "top": 951.7,
+        "bottom": 995.6,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2913,15 +2933,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-176.875px 0px, -281.612px 21px, -176.875px 0px",
+        "maskPosition": "-159.056px 0px, -263.913px 21px, -159.056px 0px",
         "maskXs": [
-          -176.875,
-          -281.612,
-          -176.875
+          -159.056,
+          -263.913,
+          -159.056
         ],
         "maskProgress": [
-          0.4566901408450704,
-          0.03057980456026051
+          0.5068845070422535,
+          0.08823127035830615
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2931,8 +2951,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -152,
-        "bottom": -108.1,
+        "top": -151.7,
+        "bottom": -107.8,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2960,8 +2980,8 @@
       "returnedTop": {
         "in": true,
         "edge": "top",
-        "top": 53.2,
-        "bottom": 97.1,
+        "top": 54.2,
+        "bottom": 98.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -2971,15 +2991,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-196.389px 0px, -290.729px 21px, -196.389px 0px",
+        "maskPosition": "-186.934px 0px, -286.312px 21px, -186.934px 0px",
         "maskXs": [
-          -196.389,
-          -290.729,
-          -196.389
+          -186.934,
+          -286.312,
+          -186.934
         ],
         "maskProgress": [
-          0.4017211267605634,
-          0.0008827361563518404
+          0.4283549295774648,
+          0.015270358306188886
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -2991,8 +3011,8 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -6.41826, 0)",
-      "after": "matrix(1, 0, 0, 1, -19.9308, 0)",
+      "before": "matrix(1, 0, 0, 1, -6.75994, 0)",
+      "after": "matrix(1, 0, 0, 1, -20.9807, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3048,10 +3068,10 @@
       ],
       [
         {
-          "opacity": 0.49213,
+          "opacity": 0.534494,
           "translateX": 0,
-          "translateY": 4.06296,
-          "filter": "blur(0.761805px)",
+          "translateY": 3.72405,
+          "filter": "blur(0.698259px)",
           "clipPath": "none"
         },
         {
@@ -3092,17 +3112,17 @@
       ],
       [
         {
-          "opacity": 0.933408,
+          "opacity": 0.932906,
           "translateX": 0,
-          "translateY": 0.532732,
-          "filter": "blur(0.0998873px)",
+          "translateY": 0.536753,
+          "filter": "blur(0.100641px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.720572,
+          "opacity": 0.718502,
           "translateX": 0,
-          "translateY": 2.23543,
-          "filter": "blur(0.419143px)",
+          "translateY": 2.25199,
+          "filter": "blur(0.422248px)",
           "clipPath": "none"
         },
         {

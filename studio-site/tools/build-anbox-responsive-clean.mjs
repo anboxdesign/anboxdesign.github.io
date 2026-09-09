@@ -766,6 +766,9 @@ function gateDesktopScript(code, part, index) {
 
     abctTypography(root);`);
   }
+  if (part === '03') {
+    runtime = `if(document.documentElement.classList.contains('anbox-gallery-editor'))return;\n${runtime}`;
+  }
   return `<script data-anbox-desktop-runtime="${part}-${index}">\n(function(){\n  var query=window.matchMedia('(min-width:641px)');\n  var started=false;\n  function start(){\n    if(started||!query.matches)return;\n    started=true;\n    ${runtime}\n  }\n  start();\n  if(query.addEventListener)query.addEventListener('change',start);\n  else if(query.addListener)query.addListener(start);\n})();\n</script>`;
 }
 
@@ -1070,6 +1073,7 @@ function mobileRuntimeFor(part) {
       .replace("document.querySelector('#form-success')", "root.querySelector('#form-success')");
   }
   if (part === '00') code = `${code}\n${headerVisibilityRuntime("root.querySelector('.site-header')")}`;
+  if (part === '03') code = `if(document.documentElement.classList.contains('anbox-gallery-editor'))return;\n${code}`;
   if (!code) return '';
   return `<script data-anbox-mobile-runtime="${part}">\n(function(){\n  var root=document.querySelector('.anbox-mobile-part--${part}');\n  var query=window.matchMedia('(max-width:640px)');\n  var started=false;\n  function start(){\n    if(started||!query.matches||!root)return;\n    started=true;\n    ${code}\n  }\n  start();\n  if(query.addEventListener)query.addEventListener('change',start);\n  else if(query.addListener)query.addListener(start);\n})();\n</script>`;
 }
@@ -1226,6 +1230,123 @@ const switchCss = `<style data-anbox-responsive-switch>
 .anbox-mobile-part{display:none!important}
 @media(max-width:640px){.anbox-desktop-part{display:none!important}.anbox-mobile-part{display:block!important}}
 </style>`;
+
+const portfolioEditorCss = `<style data-anbox-gallery-editor>
+/* Tilda editor: keep the production gallery intact, but replace its long
+   sticky narrative with one content-sized representative case. */
+html.anbox-gallery-editor .anbox-part-03{height:auto!important;min-height:0!important;max-height:none!important;padding-bottom:0!important;overflow:visible!important}
+html.anbox-gallery-editor .anbox-part-03 :is([data-anbox-reveal],[data-anbox-reveal-item],.anxg__rail,.anxg__viewport,.anxg__media,.anxg__details){opacity:1!important;visibility:visible!important;clip-path:none!important;transform:none!important;animation:none!important;transition:none!important}
+html.anbox-gallery-editor .anbox-part-03 :is(.anbox-full-page,.anbox-composite,#anxg-gallery,.anxg__stage){height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important}
+html.anbox-gallery-editor .anbox-desktop-part--03 #anxg-gallery{padding:20px 0!important;background:var(--anbox-graphite,#202123)!important}
+html.anbox-gallery-editor .anbox-desktop-part--03 #anxg-gallery .anxg__stage{position:relative!important;inset:auto!important;top:auto!important;height:clamp(560px,52vw,720px)!important;min-height:560px!important;max-height:720px!important;padding:0!important;transform:none!important}
+html.anbox-gallery-editor .anbox-desktop-part--03 #anxg-gallery .anxg__case{display:none!important;animation:none!important}
+html.anbox-gallery-editor .anbox-desktop-part--03 #anxg-gallery .anxg__case:first-child{height:100%!important;display:grid!important;grid-template-rows:minmax(0,1fr) 140px!important;row-gap:20px!important;opacity:1!important;visibility:visible!important;transform:none!important}
+html.anbox-gallery-editor .anbox-desktop-part--03 #anxg-gallery .anxg__case:first-child :is(.anxg__media,.anxg__imagebox){height:100%!important;min-height:0!important;max-height:none!important}
+html.anbox-gallery-editor .anbox-desktop-part--03 #anxg-gallery .anxg__case:first-child .anxg__details{height:140px!important;min-height:0!important;max-height:140px!important}
+html.anbox-gallery-editor .anbox-desktop-part--03 #anxg-gallery .anxg__cover{opacity:1!important;visibility:visible!important;transform:none!important}
+html.anbox-gallery-editor .anbox-desktop-part--03 #anxg-gallery .anxg__nav-track{transform:none!important;transition:none!important}
+html.anbox-gallery-editor .anbox-desktop-part--03 #anxg-gallery .anxg__nav-item:nth-child(n+6){display:none!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .portfolio{height:auto!important;min-height:0!important;padding:24px 0!important;overflow:visible!important}
+html.anbox-gallery-editor .anbox-mobile-part--03{--pad:20px;--white:#fff;--purple:var(--abx-purple,#ad95ee);--ink:#1d1d21;--ink-soft:#29292e;box-sizing:border-box;background:#1d1d21!important;color:#fff!important;font-family:var(--anbox-font-text,"Onest",Arial,sans-serif)!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 *,html.anbox-gallery-editor .anbox-mobile-part--03 *::before,html.anbox-gallery-editor .anbox-mobile-part--03 *::after{box-sizing:border-box}
+html.anbox-gallery-editor .anbox-mobile-part--03 .shell{width:min(100%,48rem)!important;height:auto!important;min-height:0!important;margin-inline:auto!important;padding-inline:var(--pad)!important;overflow:visible!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .section-kicker{margin:0 0 14px!important;display:flex!important;align-items:center!important;gap:9px!important;color:#fff!important;font-size:12px!important;font-weight:600!important;line-height:1!important;letter-spacing:.08em!important;text-transform:uppercase!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .section-kicker b{color:var(--purple)!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .section-kicker i{width:28px!important;height:1px!important;display:block!important;background:currentColor!important;opacity:.35!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .section-title{max-width:18ch!important;margin:0!important;color:#fff!important;font-size:clamp(32px,8.7vw,48px)!important;font-weight:600!important;line-height:1.02!important;letter-spacing:-.05em!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .case-carousel{margin:28px calc(-1 * var(--pad)) 0!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .case-slide__caption{min-height:92px!important;padding:12px 18px!important;background:#29292e!important;color:#fff!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .case-slide__caption h3{margin:0!important;color:#fff!important;font-size:17px!important;font-weight:650!important;line-height:1.15!important;letter-spacing:-.025em!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .case-slide__works{margin:4px 0 0!important;color:#aaa7ae!important;font-size:12px!important;line-height:1.35!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .case-viewport,
+html.anbox-gallery-editor .anbox-mobile-part--03 .case-track{height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .case-track>.case-slide{display:none!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .case-track>.case-slide:first-child{position:relative!important;inset:auto!important;top:auto!important;z-index:1!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;margin:0!important;display:flex!important;opacity:1!important;visibility:visible!important;transform:none!important;box-shadow:none!important;overflow:hidden!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .case-track>.case-slide:first-child .case-slide__image{height:auto!important;min-height:0!important;aspect-ratio:4/5!important;flex:none!important;opacity:1!important;visibility:visible!important;transform:none!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .case-track>.case-slide:first-child .case-slide__image img{width:100%!important;height:100%!important;display:block!important;opacity:1!important;visibility:visible!important;object-fit:cover!important;transform:none!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .case-track>.case-slide:first-child .case-slide__caption{position:relative!important;inset:auto!important;width:100%!important;display:grid!important;opacity:1!important;visibility:visible!important;transform:none!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 :is(.portfolio-more-slot,.portfolio-caption-dock){display:none!important}
+html.anbox-gallery-editor .anbox-mobile-part--03 .case-viewport::after{content:"\u0420\u0435\u0434\u0430\u043a\u0442\u043e\u0440 Tilda \u00b7 \u043f\u043e\u043a\u0430\u0437\u0430\u043d 1 \u0438\u0437 20 \u043a\u0435\u0439\u0441\u043e\u0432";box-sizing:border-box;width:100%;margin-top:12px;padding:9px 12px;display:block;border:1px solid rgba(173,149,238,.42);border-radius:8px;color:rgba(243,244,240,.66);font:500 10px/1.25 var(--anbox-font-text,"Onest",Arial,sans-serif);letter-spacing:.035em;text-align:center;text-transform:uppercase}
+html[data-anbox-gallery-editor-document],html[data-anbox-gallery-editor-document] body{height:var(--anbox-gallery-editor-height)!important;block-size:var(--anbox-gallery-editor-height)!important;min-height:0!important;min-block-size:0!important;max-height:var(--anbox-gallery-editor-height)!important;max-block-size:var(--anbox-gallery-editor-height)!important;margin:0!important;padding:0!important;overflow:hidden!important}
+@media(min-width:641px) and (max-width:1024px){html.anbox-gallery-editor .anbox-desktop-part--03 #anxg-gallery .anxg__stage{width:min(720px,calc(100% - 40px))!important;height:auto!important;min-height:0!important;max-height:none!important;padding:24px 0!important}html.anbox-gallery-editor .anbox-desktop-part--03 #anxg-gallery .anxg__media{aspect-ratio:16/9!important}}
+</style>`;
+
+const portfolioEditorRuntime = `<script data-anbox-gallery-editor-runtime>
+(function(){
+  var html=document.documentElement;
+  var docs=[document];
+  try{if(parent!==window&&parent.document)docs.push(parent.document);}catch(error){}
+  var srcdoc=parent!==window&&location.href==='about:srcdoc';
+  var editor=false;
+  var queued=false;
+  var savedFrame=null;
+  var resizeObserver=null;
+  function isEditorDocument(doc){
+    return !!((doc.body&&doc.body.matches('.t-body_edit,.tilda-mode-edit'))||doc.documentElement.matches('.tilda-mode-edit')||doc.querySelector('[data-tilda-mode="edit"],#allrecords.t-records_edit,#allrecords.t-records-edit,.t-records_edit,.t-records-edit'));
+  }
+  function isStandalone(){
+    return parent!==window&&!document.querySelector('.anbox-part-00,.anbox-part-01,.anbox-part-02,.anbox-part-04,.anbox-part-05,.anbox-part-06,.anbox-part-07,.anbox-part-08,.anbox-part-09,.anbox-part-10');
+  }
+  function visibleRoot(){
+    var roots=[].slice.call(document.querySelectorAll('.anbox-desktop-part--03,.anbox-mobile-part--03'));
+    return roots.find(function(root){return getComputedStyle(root).display!=='none';})||roots[0]||null;
+  }
+  function restoreFrame(){
+    html.removeAttribute('data-anbox-gallery-editor-document');
+    html.style.removeProperty('--anbox-gallery-editor-height');
+    if(!savedFrame)return;
+    if(savedFrame.style===null)savedFrame.element.removeAttribute('style');
+    else savedFrame.element.setAttribute('style',savedFrame.style);
+    savedFrame=null;
+  }
+  function fit(){
+    if(!editor)return;
+    var root=visibleRoot();
+    if(!root)return;
+    var height=Math.ceil(root.offsetHeight||root.getBoundingClientRect().height);
+    if(!height)return;
+    root.dataset.anboxEditorHeight=String(height);
+    if(!isStandalone())return;
+    html.style.setProperty('--anbox-gallery-editor-height',height+'px');
+    html.setAttribute('data-anbox-gallery-editor-document','');
+    try{
+      var frame=window.frameElement;
+      if(frame){
+        if(!savedFrame)savedFrame={element:frame,style:frame.getAttribute('style')};
+        ['height','block-size','max-height','max-block-size'].forEach(function(key){frame.style.setProperty(key,height+'px','important');});
+        ['min-height','min-block-size'].forEach(function(key){frame.style.setProperty(key,'0','important');});
+      }
+    }catch(error){}
+  }
+  function watchSize(){
+    if(resizeObserver){resizeObserver.disconnect();resizeObserver=null;}
+    var root=visibleRoot();
+    if(editor&&root&&'ResizeObserver' in window){resizeObserver=new ResizeObserver(function(){fit();});resizeObserver.observe(root);}
+  }
+  function update(){
+    queued=false;
+    var next=srcdoc||docs.some(isEditorDocument);
+    if(next!==editor){
+      editor=next;
+      html.classList.toggle('anbox-gallery-editor',editor);
+      document.querySelectorAll('.anbox-desktop-part--03,.anbox-mobile-part--03').forEach(function(root){root.dataset.anboxGalleryEditor=String(editor);});
+      if(editor){watchSize();requestAnimationFrame(function(){fit();requestAnimationFrame(fit);});}
+      else{watchSize();restoreFrame();dispatchEvent(new Event('resize'));}
+    }else if(editor){if(!resizeObserver)watchSize();fit();}
+  }
+  function schedule(){if(!queued){queued=true;requestAnimationFrame(update);}}
+  docs.forEach(function(doc){
+    var observer=new MutationObserver(schedule);
+    observer.observe(doc.documentElement,{attributes:true,childList:true,subtree:true,attributeFilter:['class','data-tilda-mode']});
+  });
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){watchSize();schedule();},{once:true});
+  addEventListener('resize',schedule,{passive:true});
+  addEventListener('load',schedule,{once:true});
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(schedule);
+  update();
+  [0,60,240,800].forEach(function(delay){setTimeout(function(){watchSize();schedule();},delay);});
+})();
+</script>`;
 
 const coreTokenCss = `<style data-anbox-core-tokens>
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap");
@@ -1456,6 +1577,7 @@ for (const def of blockDefs) {
     `<!-- ANBOX Studio · ${def.part} · responsive clean · desktop + mobile -->`,
     switchCss,
   ];
+  if (def.part === '03') parts.push(portfolioEditorCss, portfolioEditorRuntime);
   if (def.part !== '03') parts.push(`<style data-anbox-desktop-style="${def.part}">\n${desktop.css}\n</style>`);
   if (def.part === '00') parts.push(coreTokenCss, mobileCoreCss, revealCoreCss, bootstrap, revealCoreRuntime);
   if (mobile.css) parts.push(`<style media="(max-width:640px)" data-anbox-mobile-patch="${def.part}">\n${mobile.css}\n</style>`);

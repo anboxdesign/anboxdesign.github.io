@@ -1,0 +1,331 @@
+{
+  "status": "PASS",
+  "failures": [],
+  "results": [
+    {
+      "label": "assembled-390",
+      "editor": true,
+      "editorDocument": false,
+      "mobile": true,
+      "rootHeight": 808,
+      "rootWidth": 390,
+      "editorHeightData": "807",
+      "allRootStates": [
+        {
+          "className": "anbox-part-03 anbox-desktop-part anbox-desktop-part--03",
+          "display": "none",
+          "height": ""
+        },
+        {
+          "className": "anbox-mobile-part anbox-mobile-part--03",
+          "display": "block",
+          "height": "807"
+        }
+      ],
+      "stagePosition": "static",
+      "stageHeight": 592,
+      "visibleCases": 1,
+      "firstVisible": true,
+      "imageVisible": true,
+      "captionVisible": true,
+      "gatesVisible": 0,
+      "blockerClasses": [
+        "abh-hero anbox-part-01 anbox-desktop-part anbox-desktop-part--01",
+        "anbox-part-02 anbox-desktop-part anbox-desktop-part--02",
+        "anbox-part-04 anbox-desktop-part anbox-desktop-part--04",
+        "anbox-part-05 anbox-desktop-part anbox-desktop-part--05",
+        "anbox-part-06 anbox-desktop-part anbox-desktop-part--06",
+        "anbox-part-07 anbox-desktop-part anbox-desktop-part--07",
+        "anbox-part-08 anbox-desktop-part anbox-desktop-part--08",
+        "anbox-part-09 anbox-desktop-part anbox-desktop-part--09",
+        "anbox-part-10 anbox-desktop-part anbox-desktop-part--10"
+      ],
+      "overflowX": 0,
+      "documentHeightForced": false,
+      "previousGap": 0,
+      "nextGap": 0
+    },
+    {
+      "label": "assembled-768",
+      "editor": true,
+      "editorDocument": false,
+      "mobile": false,
+      "rootHeight": 930,
+      "rootWidth": 768,
+      "editorHeightData": "930",
+      "allRootStates": [
+        {
+          "className": "anbox-part-03 anbox-desktop-part anbox-desktop-part--03",
+          "display": "block",
+          "height": "930"
+        },
+        {
+          "className": "anbox-mobile-part anbox-mobile-part--03",
+          "display": "none",
+          "height": ""
+        }
+      ],
+      "stagePosition": "relative",
+      "stageHeight": 890,
+      "visibleCases": 1,
+      "firstVisible": true,
+      "imageVisible": true,
+      "captionVisible": true,
+      "gatesVisible": 0,
+      "blockerClasses": [
+        "abh-hero anbox-part-01 anbox-desktop-part anbox-desktop-part--01",
+        "anbox-part-02 anbox-desktop-part anbox-desktop-part--02",
+        "anbox-part-04 anbox-desktop-part anbox-desktop-part--04",
+        "anbox-part-05 anbox-desktop-part anbox-desktop-part--05",
+        "anbox-part-06 anbox-desktop-part anbox-desktop-part--06",
+        "anbox-part-07 anbox-desktop-part anbox-desktop-part--07",
+        "anbox-part-08 anbox-desktop-part anbox-desktop-part--08",
+        "anbox-part-09 anbox-desktop-part anbox-desktop-part--09",
+        "anbox-part-10 anbox-desktop-part anbox-desktop-part--10"
+      ],
+      "overflowX": 0,
+      "documentHeightForced": false,
+      "previousGap": 0,
+      "nextGap": 0
+    },
+    {
+      "label": "assembled-1024",
+      "editor": true,
+      "editorDocument": false,
+      "mobile": false,
+      "rootHeight": 930,
+      "rootWidth": 1024,
+      "editorHeightData": "930",
+      "allRootStates": [
+        {
+          "className": "anbox-part-03 anbox-desktop-part anbox-desktop-part--03",
+          "display": "block",
+          "height": "930"
+        },
+        {
+          "className": "anbox-mobile-part anbox-mobile-part--03",
+          "display": "none",
+          "height": ""
+        }
+      ],
+      "stagePosition": "relative",
+      "stageHeight": 890,
+      "visibleCases": 1,
+      "firstVisible": true,
+      "imageVisible": true,
+      "captionVisible": true,
+      "gatesVisible": 0,
+      "blockerClasses": [
+        "abh-hero anbox-part-01 anbox-desktop-part anbox-desktop-part--01",
+        "anbox-part-02 anbox-desktop-part anbox-desktop-part--02",
+        "anbox-part-04 anbox-desktop-part anbox-desktop-part--04",
+        "anbox-part-05 anbox-desktop-part anbox-desktop-part--05",
+        "anbox-part-06 anbox-desktop-part anbox-desktop-part--06",
+        "anbox-part-07 anbox-desktop-part anbox-desktop-part--07",
+        "anbox-part-08 anbox-desktop-part anbox-desktop-part--08",
+        "anbox-part-09 anbox-desktop-part anbox-desktop-part--09",
+        "anbox-part-10 anbox-desktop-part anbox-desktop-part--10"
+      ],
+      "overflowX": 0,
+      "documentHeightForced": false,
+      "previousGap": 0,
+      "nextGap": 0
+    },
+    {
+      "label": "assembled-1440",
+      "editor": true,
+      "editorDocument": false,
+      "mobile": false,
+      "rootHeight": 760,
+      "rootWidth": 1440,
+      "editorHeightData": "760",
+      "allRootStates": [
+        {
+          "className": "anbox-part-03 anbox-desktop-part anbox-desktop-part--03",
+          "display": "block",
+          "height": "760"
+        },
+        {
+          "className": "anbox-mobile-part anbox-mobile-part--03",
+          "display": "none",
+          "height": ""
+        }
+      ],
+      "stagePosition": "relative",
+      "stageHeight": 720,
+      "visibleCases": 1,
+      "firstVisible": true,
+      "imageVisible": true,
+      "captionVisible": true,
+      "gatesVisible": 0,
+      "blockerClasses": [
+        "abh-hero anbox-part-01 anbox-desktop-part anbox-desktop-part--01",
+        "anbox-part-02 anbox-desktop-part anbox-desktop-part--02",
+        "anbox-part-04 anbox-desktop-part anbox-desktop-part--04",
+        "anbox-part-05 anbox-desktop-part anbox-desktop-part--05",
+        "anbox-part-06 anbox-desktop-part anbox-desktop-part--06",
+        "anbox-part-07 anbox-desktop-part anbox-desktop-part--07",
+        "anbox-part-08 anbox-desktop-part anbox-desktop-part--08",
+        "anbox-part-09 anbox-desktop-part anbox-desktop-part--09",
+        "anbox-part-10 anbox-desktop-part anbox-desktop-part--10"
+      ],
+      "overflowX": 0,
+      "documentHeightForced": false,
+      "previousGap": 0,
+      "nextGap": 0
+    },
+    {
+      "label": "assembled-2560",
+      "editor": true,
+      "editorDocument": false,
+      "mobile": false,
+      "rootHeight": 760,
+      "rootWidth": 2560,
+      "editorHeightData": "760",
+      "allRootStates": [
+        {
+          "className": "anbox-part-03 anbox-desktop-part anbox-desktop-part--03",
+          "display": "block",
+          "height": "760"
+        },
+        {
+          "className": "anbox-mobile-part anbox-mobile-part--03",
+          "display": "none",
+          "height": ""
+        }
+      ],
+      "stagePosition": "relative",
+      "stageHeight": 720,
+      "visibleCases": 1,
+      "firstVisible": true,
+      "imageVisible": true,
+      "captionVisible": true,
+      "gatesVisible": 0,
+      "blockerClasses": [
+        "abh-hero anbox-part-01 anbox-desktop-part anbox-desktop-part--01",
+        "anbox-part-02 anbox-desktop-part anbox-desktop-part--02",
+        "anbox-part-04 anbox-desktop-part anbox-desktop-part--04",
+        "anbox-part-05 anbox-desktop-part anbox-desktop-part--05",
+        "anbox-part-06 anbox-desktop-part anbox-desktop-part--06",
+        "anbox-part-07 anbox-desktop-part anbox-desktop-part--07",
+        "anbox-part-08 anbox-desktop-part anbox-desktop-part--08",
+        "anbox-part-09 anbox-desktop-part anbox-desktop-part--09",
+        "anbox-part-10 anbox-desktop-part anbox-desktop-part--10"
+      ],
+      "overflowX": 0,
+      "documentHeightForced": false,
+      "previousGap": 0,
+      "nextGap": 0
+    },
+    {
+      "label": "assembled-3840",
+      "editor": true,
+      "editorDocument": false,
+      "mobile": false,
+      "rootHeight": 760,
+      "rootWidth": 3840,
+      "editorHeightData": "760",
+      "allRootStates": [
+        {
+          "className": "anbox-part-03 anbox-desktop-part anbox-desktop-part--03",
+          "display": "block",
+          "height": "760"
+        },
+        {
+          "className": "anbox-mobile-part anbox-mobile-part--03",
+          "display": "none",
+          "height": ""
+        }
+      ],
+      "stagePosition": "relative",
+      "stageHeight": 720,
+      "visibleCases": 1,
+      "firstVisible": true,
+      "imageVisible": true,
+      "captionVisible": true,
+      "gatesVisible": 0,
+      "blockerClasses": [
+        "abh-hero anbox-part-01 anbox-desktop-part anbox-desktop-part--01",
+        "anbox-part-02 anbox-desktop-part anbox-desktop-part--02",
+        "anbox-part-04 anbox-desktop-part anbox-desktop-part--04",
+        "anbox-part-05 anbox-desktop-part anbox-desktop-part--05",
+        "anbox-part-06 anbox-desktop-part anbox-desktop-part--06",
+        "anbox-part-07 anbox-desktop-part anbox-desktop-part--07",
+        "anbox-part-08 anbox-desktop-part anbox-desktop-part--08",
+        "anbox-part-09 anbox-desktop-part anbox-desktop-part--09",
+        "anbox-part-10 anbox-desktop-part anbox-desktop-part--10"
+      ],
+      "overflowX": 0,
+      "documentHeightForced": false,
+      "previousGap": 0,
+      "nextGap": 0
+    },
+    {
+      "label": "iframe-390",
+      "editor": true,
+      "editorDocument": true,
+      "mobile": true,
+      "rootHeight": 844,
+      "rootWidth": 390,
+      "editorHeightData": "843",
+      "allRootStates": [
+        {
+          "className": "anbox-part-03 anbox-desktop-part anbox-desktop-part--03",
+          "display": "none",
+          "height": ""
+        },
+        {
+          "className": "anbox-mobile-part anbox-mobile-part--03",
+          "display": "block",
+          "height": "843"
+        }
+      ],
+      "stagePosition": "static",
+      "stageHeight": 612,
+      "visibleCases": 1,
+      "firstVisible": true,
+      "imageVisible": true,
+      "captionVisible": true,
+      "gatesVisible": 0,
+      "blockerClasses": [],
+      "overflowX": 0,
+      "frameHeight": 843,
+      "inlineHeight": "843px",
+      "maxHeight": "843px"
+    },
+    {
+      "label": "iframe-1200",
+      "editor": true,
+      "editorDocument": true,
+      "mobile": false,
+      "rootHeight": 664,
+      "rootWidth": 1200,
+      "editorHeightData": "664",
+      "allRootStates": [
+        {
+          "className": "anbox-part-03 anbox-desktop-part anbox-desktop-part--03",
+          "display": "block",
+          "height": "664"
+        },
+        {
+          "className": "anbox-mobile-part anbox-mobile-part--03",
+          "display": "none",
+          "height": ""
+        }
+      ],
+      "stagePosition": "relative",
+      "stageHeight": 624,
+      "visibleCases": 1,
+      "firstVisible": true,
+      "imageVisible": true,
+      "captionVisible": true,
+      "gatesVisible": 0,
+      "blockerClasses": [],
+      "overflowX": 0,
+      "frameHeight": 664,
+      "inlineHeight": "664px",
+      "maxHeight": "664px"
+    }
+  ],
+  "qaDir": "C:\\Users\\Артём\\Documents\\ANBOX-Studio-GitHub\\studio-site\\ANBOX-Studio-responsive-clean-20260826\\QA\\gallery-editor"
+}

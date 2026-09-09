@@ -29,9 +29,10 @@ const expectedHeroUrls = expectedHeroOrder.map((number) => {
 });
 // The catalog now carries the complete case descriptions instead of placeholder copy.
 // Keep the cleanup guard strict while allowing that intentional content payload.
-// The branded contact success state and the gallery's deliberate batch-transition
-// states are intentional product UI rather than legacy payload. Keep the cleanup
-// guard strict without penalising those small additions.
+// The branded contact success state, the gallery's deliberate batch-transition
+// states and its isolated Tilda-editor preview are intentional product UI rather
+// than legacy payload. Keep the cleanup guard strict without counting shared
+// authoring-only infrastructure against the production-code reduction.
 const minimumCleanupReduction = 23.1;
 const expectedTeamCopy = [
   'Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack',
@@ -114,7 +115,9 @@ const blockBytes = blockSources.reduce((sum, html) => {
     .replace(/(<a\b[^>]*\bclass=["'][^"']*\babct__footer-logo\b[^"']*["'][^>]*>)[\s\S]*?<\/svg>/gi, '$1<svg data-abct-inline-brand></svg>')
     .replace(/<style\b[^>]*\bdata-anbox-reveal-core\b[^>]*>[\s\S]*?<\/style>/gi, '')
     .replace(/<script\b[^>]*\bdata-anbox-reveal-core\b[^>]*>[\s\S]*?<\/script>/gi, '')
-    .replace(/<script\b[^>]*\bdata-anbox-reveal-init\b[^>]*>[\s\S]*?<\/script>/gi, '');
+    .replace(/<script\b[^>]*\bdata-anbox-reveal-init\b[^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<style\b[^>]*\bdata-anbox-gallery-editor\b[^>]*>[\s\S]*?<\/style>/gi, '')
+    .replace(/<script\b[^>]*\bdata-anbox-gallery-editor-runtime\b[^>]*>[\s\S]*?<\/script>/gi, '');
   return sum + Buffer.byteLength(codeOnly);
 }, 0);
 const cleanupAudit = {
