@@ -469,7 +469,7 @@ for (const batch of [2, 3, 4]) {
     const slot = document.querySelector(`.anbox-mobile-part--03 [data-portfolio-gate="${currentBatch}"]`);
     return slot.getBoundingClientRect().top + window.scrollY - 68;
   }, batch);
-  let gateSeparate = true;
+  let gateOnLastCase = true;
   if (batch === 2) {
     await page.evaluate((top) => window.scrollTo({ top: top - (window.innerHeight - 68) / 2, behavior: 'auto' }), gateStart);
     await page.waitForTimeout(100);
@@ -484,7 +484,7 @@ for (const batch of [2, 3, 4]) {
         fifthVisible: getComputedStyle(fifth).visibility !== 'hidden',
       };
     });
-    gateSeparate = partialGate.slotTop > 68 && partialGate.buttonHidden && partialGate.fifthVisible;
+    gateOnLastCase = partialGate.slotTop > 68 && partialGate.buttonHidden && partialGate.fifthVisible;
   }
 
   await page.evaluate((top) => window.scrollTo({ top, behavior: 'auto' }), gateStart);
@@ -494,20 +494,30 @@ for (const batch of [2, 3, 4]) {
     const slot = root.querySelector(`[data-portfolio-gate="${currentBatch}"]`);
     const button = slot.querySelector('[data-portfolio-more]');
     const lastVisibleSlide = [...root.querySelectorAll('.case-slide:not([hidden])')].at(-1);
+    const buttonRect = button.getBoundingClientRect();
+    const lastSlideRect = lastVisibleSlide.getBoundingClientRect();
     return {
       slotTop: slot.getBoundingClientRect().top,
-      active: slot.classList.contains('is-gate-active') && root.querySelector('.portfolio').classList.contains('is-gate-screen'),
+      active: slot.classList.contains('is-gate-active'),
       buttonVisible: getComputedStyle(button).visibility !== 'hidden' && Number.parseFloat(getComputedStyle(button).opacity) > .99,
-      lastSlideHidden: getComputedStyle(lastVisibleSlide).visibility === 'hidden',
+      lastSlideVisible: getComputedStyle(lastVisibleSlide).visibility !== 'hidden',
+      buttonOverLastSlide: buttonRect.top >= lastSlideRect.top
+        && buttonRect.bottom <= lastSlideRect.bottom,
+      slotTransparent: getComputedStyle(slot).backgroundColor === 'rgba(0, 0, 0, 0)',
     };
   }, batch);
-  gateSeparate = gateSeparate
+  gateOnLastCase = gateOnLastCase
     && Math.abs(activeGate.slotTop - 68) <= 2
     && activeGate.active
     && activeGate.buttonVisible
-    && activeGate.lastSlideHidden;
+    && activeGate.lastSlideVisible
+    && activeGate.buttonOverLastSlide
+    && activeGate.slotTransparent;
+  if (batch === 2) {
+    await page.screenshot({ path: path.join(qaDir, 'portfolio-gate-on-last-case-mobile-390.png'), fullPage: false });
+  }
   if (!(await revealButton.isVisible())) {
-    portfolioRevealFlow.push({ batch, gateSeparate, ok: false, reason: 'button-not-visible-on-gate-screen' });
+    portfolioRevealFlow.push({ batch, gateOnLastCase, ok: false, reason: 'button-not-visible-on-last-case' });
     continue;
   }
 
@@ -595,10 +605,10 @@ for (const batch of [2, 3, 4]) {
     && state.edgePairStable
     && state.stackPaintStable
     && state.flowStable
-    && gateSeparate
+    && gateOnLastCase
     && gatePinStable
     && state.nextButtonVisible === expectedNextButton;
-  portfolioRevealFlow.push({ batch, revealedCount, gateSeparate, gatePinStable, ...state, ok });
+  portfolioRevealFlow.push({ batch, revealedCount, gateOnLastCase, gatePinStable, ...state, ok });
 }
 mobileInteraction.portfolioRevealed = portfolioRevealFlow.every((step) => step.ok);
 let portfolioReverseFlow = null;

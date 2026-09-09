@@ -2203,7 +2203,8 @@
       min-height: calc(200vh - 8.5rem);
       min-height: calc(200svh - 8.5rem);
       padding: calc((100svh - 4.25rem - var(--abx-mob-height-action)) / 2) var(--pad);
-      background: var(--abx-mob-dark);
+      background: transparent;
+      pointer-events: none;
     }
 
     .portfolio-more-slot[hidden] { display: none; }
@@ -3921,7 +3922,6 @@
 
       const syncPortfolioGates = () => {
         const gateTop = document.querySelector('.site-header')?.getBoundingClientRect().height || 68;
-        let activeGate = null;
         portfolioMoreSlots.forEach((slot) => {
           const rect = slot.getBoundingClientRect();
           const isActive = !slot.hidden
@@ -3934,17 +3934,6 @@
             button.style.visibility = isActive ? 'visible' : 'hidden';
             button.style.opacity = isActive ? '1' : '0';
             button.style.pointerEvents = isActive ? 'auto' : 'none';
-          }
-          if (isActive) activeGate = slot;
-        });
-        portfolio.classList.toggle('is-gate-screen', Boolean(activeGate));
-        portfolioSlides.forEach((slide) => {
-          if (activeGate && !slide.hidden) {
-            slide.style.visibility = 'hidden';
-            slide.style.pointerEvents = 'none';
-          } else {
-            slide.style.removeProperty('visibility');
-            slide.style.removeProperty('pointer-events');
           }
         });
       };

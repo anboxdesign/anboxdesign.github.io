@@ -159,7 +159,6 @@ const portfolio = root.querySelector('#abm-work');
 
       const syncPortfolioGates = () => {
         const gateTop = document.querySelector('.site-header')?.getBoundingClientRect().height || 68;
-        let activeGate = null;
         portfolioMoreSlots.forEach((slot) => {
           const rect = slot.getBoundingClientRect();
           const isActive = !slot.hidden
@@ -172,17 +171,6 @@ const portfolio = root.querySelector('#abm-work');
             button.style.visibility = isActive ? 'visible' : 'hidden';
             button.style.opacity = isActive ? '1' : '0';
             button.style.pointerEvents = isActive ? 'auto' : 'none';
-          }
-          if (isActive) activeGate = slot;
-        });
-        portfolio.classList.toggle('is-gate-screen', Boolean(activeGate));
-        portfolioSlides.forEach((slide) => {
-          if (activeGate && !slide.hidden) {
-            slide.style.visibility = 'hidden';
-            slide.style.pointerEvents = 'none';
-          } else {
-            slide.style.removeProperty('visibility');
-            slide.style.removeProperty('pointer-events');
           }
         });
       };
