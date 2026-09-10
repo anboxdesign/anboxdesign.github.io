@@ -510,7 +510,7 @@ for (const batch of [2, 3, 4]) {
     const lastVisibleSlide = [...root.querySelectorAll('.case-slide:not([hidden])')].at(-1);
     const buttonRect = button.getBoundingClientRect();
     const lastSlideRect = lastVisibleSlide.getBoundingClientRect();
-    const scrimStyle = getComputedStyle(lastVisibleSlide, '::after');
+    const slotStyle = getComputedStyle(slot);
     const gateSpacer = lastVisibleSlide.nextElementSibling;
     return {
       slotTop: slot.getBoundingClientRect().top,
@@ -522,9 +522,7 @@ for (const batch of [2, 3, 4]) {
         && getComputedStyle(gateSpacer).backgroundColor === 'rgba(0, 0, 0, 0)',
       buttonOverLastSlide: buttonRect.top >= lastSlideRect.top
         && buttonRect.bottom <= lastSlideRect.bottom,
-      slotTransparent: getComputedStyle(slot).backgroundColor === 'rgba(0, 0, 0, 0)',
-      heroScrimVisible: scrimStyle.backgroundColor === 'rgba(26, 8, 8, 0.5)'
-        && Number.parseFloat(scrimStyle.opacity) > .99,
+      gateScrimVisible: slotStyle.backgroundColor === 'rgba(12, 9, 18, 0.56)',
     };
   }, batch);
   gateOnLastCase = gateOnLastCase
@@ -535,8 +533,7 @@ for (const batch of [2, 3, 4]) {
     && activeGate.nestedInLastSlide
     && activeGate.spacerAfterLastSlide
     && activeGate.buttonOverLastSlide
-    && activeGate.slotTransparent
-    && activeGate.heroScrimVisible;
+    && activeGate.gateScrimVisible;
   if (batch === 2) {
     await page.screenshot({ path: path.join(qaDir, 'portfolio-gate-on-last-case-mobile-390.png'), fullPage: false });
   }

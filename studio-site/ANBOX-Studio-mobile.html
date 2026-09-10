@@ -2000,19 +2000,6 @@
       box-shadow: 0 -14px 30px rgba(0, 0, 0, .3);
     }
 
-    .case-slide::after {
-      position: absolute;
-      z-index: 2;
-      inset: 0;
-      background: rgba(26, 8, 8, .5);
-      content: "";
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 180ms cubic-bezier(.22, 1, .36, 1);
-    }
-
-    .case-slide.has-active-gate::after { opacity: 1; }
-
     .case-slide.is-batch-entering {
       z-index: 30 !important;
       translate: 0 min(10svh, 76px) !important;
@@ -2265,12 +2252,21 @@
       padding: 0 max(var(--pad), env(safe-area-inset-right)) 0 max(var(--pad), env(safe-area-inset-left));
       display: grid;
       place-items: center;
-      background: transparent;
+      background: rgba(12, 9, 18, 0);
       pointer-events: none;
       overflow-anchor: none;
+      transition: background-color 220ms cubic-bezier(.22, 1, .36, 1);
     }
 
     .portfolio-more-slot[hidden] { display: none; }
+
+    .portfolio-more-slot.is-gate-active {
+      background: rgba(12, 9, 18, .56);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .portfolio-more-slot { transition: none; }
+    }
 
     .portfolio-gate-spacer {
       position: relative;
