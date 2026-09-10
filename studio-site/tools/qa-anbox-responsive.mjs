@@ -32,8 +32,10 @@ const expectedHeroUrls = expectedHeroOrder.map((number) => {
 // The branded contact success state, the gallery's deliberate batch-transition
 // states and its isolated Tilda-editor preview are intentional product UI rather
 // than legacy payload. Keep the cleanup guard strict without counting shared
-// authoring-only infrastructure against the production-code reduction.
-const minimumCleanupReduction = 23.1;
+// authoring-only infrastructure against the production-code reduction. The
+// in-card mobile gate and stable self-hosted HERO asset URLs add a small,
+// intentional production payload.
+const minimumCleanupReduction = 22.5;
 const expectedTeamCopy = [
   'Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack',
   'Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas',
@@ -408,7 +410,11 @@ if (await mobileHeroShelf.count()) {
   }, null, { timeout: 10000 }).catch(() => {});
   mobileHeroShelfAudit = await page.evaluate(() => {
     const images = [...document.querySelectorAll('.anbox-mobile-part--01 .shelf-marquee__sequence:first-child .shelf-marquee__logo')];
-    return { total: images.length, loaded: images.filter((image) => image.complete && image.naturalWidth > 0).length };
+    return {
+      total: images.length,
+      loaded: images.filter((image) => image.complete && image.naturalWidth > 0).length,
+      items: images.map((image) => ({ alt: image.alt, src: image.src, loaded: image.complete && image.naturalWidth > 0 })),
+    };
   });
   await mobileHeroShelf.screenshot({ path: path.join(qaDir, 'hero-shelf-mobile-390.png') });
 }
@@ -472,13 +478,16 @@ for (const batch of [2, 3, 4]) {
 
   const gateStart = await page.evaluate((currentBatch) => {
     const slot = document.querySelector(`.anbox-mobile-part--03 [data-portfolio-gate="${currentBatch}"]`);
-    return slot.getBoundingClientRect().top + window.scrollY - 68;
+    window.scrollTo({ top: 0, behavior: 'auto' });
+    const hostSlide = slot.closest('.case-slide');
+    return hostSlide.getBoundingClientRect().top + window.scrollY - 68;
   }, batch);
   let gateOnLastCase = true;
+  let partialGate = null;
   if (batch === 2) {
     await page.evaluate((top) => window.scrollTo({ top: top - (window.innerHeight - 68) / 2, behavior: 'auto' }), gateStart);
-    await page.waitForTimeout(100);
-    const partialGate = await page.evaluate(() => {
+    await page.waitForTimeout(240);
+    partialGate = await page.evaluate(() => {
       const root = document.querySelector('.anbox-mobile-part--03');
       const slot = root.querySelector('[data-portfolio-gate="2"]');
       const button = slot.querySelector('[data-portfolio-more]');
@@ -502,11 +511,15 @@ for (const batch of [2, 3, 4]) {
     const buttonRect = button.getBoundingClientRect();
     const lastSlideRect = lastVisibleSlide.getBoundingClientRect();
     const scrimStyle = getComputedStyle(lastVisibleSlide, '::after');
+    const gateSpacer = lastVisibleSlide.nextElementSibling;
     return {
       slotTop: slot.getBoundingClientRect().top,
       active: slot.classList.contains('is-gate-active'),
       buttonVisible: getComputedStyle(button).visibility !== 'hidden' && Number.parseFloat(getComputedStyle(button).opacity) > .99,
       lastSlideVisible: getComputedStyle(lastVisibleSlide).visibility !== 'hidden',
+      nestedInLastSlide: slot.parentElement === lastVisibleSlide,
+      spacerAfterLastSlide: gateSpacer?.matches('[data-portfolio-gate-spacer]')
+        && getComputedStyle(gateSpacer).backgroundColor === 'rgba(0, 0, 0, 0)',
       buttonOverLastSlide: buttonRect.top >= lastSlideRect.top
         && buttonRect.bottom <= lastSlideRect.bottom,
       slotTransparent: getComputedStyle(slot).backgroundColor === 'rgba(0, 0, 0, 0)',
@@ -519,6 +532,8 @@ for (const batch of [2, 3, 4]) {
     && activeGate.active
     && activeGate.buttonVisible
     && activeGate.lastSlideVisible
+    && activeGate.nestedInLastSlide
+    && activeGate.spacerAfterLastSlide
     && activeGate.buttonOverLastSlide
     && activeGate.slotTransparent
     && activeGate.heroScrimVisible;
@@ -553,7 +568,7 @@ for (const batch of [2, 3, 4]) {
   const transitionContinuity = await page.evaluate((currentBatch) => {
     const root = document.querySelector('.anbox-mobile-part--03');
     const firstNewSlide = root.querySelector(`[data-portfolio-batch="${currentBatch}"]`);
-    const previousSlide = root.querySelector(`[data-portfolio-gate="${currentBatch}"]`)?.previousElementSibling;
+    const previousSlide = root.querySelector(`[data-portfolio-gate="${currentBatch}"]`)?.closest('.case-slide');
     const dock = root.querySelector('[data-portfolio-dock]');
     return root.querySelector('.portfolio')?.dataset.revealState === 'transitioning'
       && firstNewSlide?.classList.contains('is-batch-entering')
@@ -670,7 +685,7 @@ for (const batch of [2, 3, 4]) {
     && transitionCaptionProgress
     && transitionFinished
     && state.nextButtonVisible === expectedNextButton;
-  portfolioRevealFlow.push({ batch, revealedCount, gateOnLastCase, gatePinStable, transitionFeedback, transitionContinuity, transitionCaptionProgress, transitionFinished, ...state, ok });
+  portfolioRevealFlow.push({ batch, revealedCount, gateOnLastCase, gatePinStable, gateDiagnostics: { partialGate, activeGate }, transitionFeedback, transitionContinuity, transitionCaptionProgress, transitionFinished, ...state, ok });
 }
 mobileInteraction.portfolioRevealed = portfolioRevealFlow.every((step) => step.ok);
 let portfolioReverseFlow = null;
@@ -812,7 +827,7 @@ mobileInteraction.portfolioReducedMotionSafe = await page.evaluate(() => {
   const firstNewSlide = root?.querySelector('[data-portfolio-batch="2"]');
   const firstNewStyle = firstNewSlide ? getComputedStyle(firstNewSlide) : null;
   const gateSlot = root?.querySelector('[data-portfolio-gate="2"]');
-  const gateHost = gateSlot?.previousElementSibling;
+  const gateHost = gateSlot?.closest('.case-slide');
   const dock = root?.querySelector('[data-portfolio-dock]');
   return Boolean(root
     && firstNewSlide
@@ -1204,7 +1219,11 @@ const parity = {
 await loadAt(previewPath, 1440, 1000);
 const desktopHeroShelfAudit = await page.evaluate(() => {
   const images = [...document.querySelectorAll('.anbox-desktop-part--01 .abh-hero__shelf-group:first-child img')];
-  return { total: images.length, loaded: images.filter((image) => image.complete && image.naturalWidth > 0).length };
+  return {
+    total: images.length,
+    loaded: images.filter((image) => image.complete && image.naturalWidth > 0).length,
+    items: images.map((image) => ({ alt: image.alt, src: image.src, loaded: image.complete && image.naturalWidth > 0 })),
+  };
 });
 const casesAudit = await page.evaluate(() => {
   const normalizeText = (node) => node.textContent.replace(/\s+/g, ' ').trim();

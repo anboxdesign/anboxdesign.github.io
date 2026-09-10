@@ -2216,8 +2216,8 @@
     }
 
     .portfolio-more {
-      position: sticky;
-      top: calc(4.25rem + (100svh - 4.25rem - var(--abx-mob-height-action)) / 2);
+      position: relative;
+      top: auto;
       z-index: 1;
       width: 100%;
       min-height: var(--abx-mob-height-action);
@@ -2257,17 +2257,31 @@
     .portfolio-more[hidden] { display: none; }
 
     .portfolio-more-slot {
-      position: relative;
-      z-index: 21;
+      position: absolute;
+      z-index: 3;
+      inset: 0;
       box-sizing: border-box;
-      min-height: calc(200vh - 8.5rem);
-      min-height: calc(200svh - 8.5rem);
-      padding: calc((100svh - 4.25rem - var(--abx-mob-height-action)) / 2) var(--pad);
+      min-height: 0;
+      padding: 0 max(var(--pad), env(safe-area-inset-right)) 0 max(var(--pad), env(safe-area-inset-left));
+      display: grid;
+      place-items: center;
       background: transparent;
       pointer-events: none;
+      overflow-anchor: none;
     }
 
     .portfolio-more-slot[hidden] { display: none; }
+
+    .portfolio-gate-spacer {
+      position: relative;
+      z-index: 0;
+      min-height: calc(100vh - 4.25rem);
+      min-height: calc(100svh - 4.25rem);
+      pointer-events: none;
+      overflow-anchor: none;
+    }
+
+    .portfolio-gate-spacer[hidden] { display: none; }
 
     .portfolio-load-status {
       position: absolute;
@@ -3328,10 +3342,11 @@
               <article class="case-slide">
                 <figure class="case-slide__image"><img src="https://static.tildacdn.com/tild6434-3930-4566-a563-636232383764/01_cherry_wet_botani.png" width="1080" height="1350" alt="Дизайн бренда Purera" loading="lazy" decoding="async"></figure>
                 <footer class="case-slide__caption"><div class="case-slide__copy"><h3>Purera</h3><p class="case-slide__works">Логотип · упаковка · POSM</p></div><a class="case-slide__link" href="https://anboxdesign.ru/more" target="_blank" rel="noopener noreferrer">Смотреть кейс</a></footer>
+                <div class="portfolio-more-slot" data-portfolio-more-slot data-portfolio-gate="2">
+                  <button class="portfolio-more" id="portfolio-more-button-02" type="button" data-portfolio-more data-portfolio-reveal="2" aria-controls="portfolio-case-06 portfolio-case-07 portfolio-case-08 portfolio-case-09 portfolio-case-10">Смотреть ещё кейсы</button>
+                </div>
               </article>
-              <div class="portfolio-more-slot" data-portfolio-more-slot data-portfolio-gate="2">
-                <button class="portfolio-more" id="portfolio-more-button-02" type="button" data-portfolio-more data-portfolio-reveal="2" aria-controls="portfolio-case-06 portfolio-case-07 portfolio-case-08 portfolio-case-09 portfolio-case-10">Смотреть ещё кейсы</button>
-              </div>
+              <div class="portfolio-gate-spacer" data-portfolio-gate-spacer="2" aria-hidden="true"></div>
               <article class="case-slide" id="portfolio-case-06" data-portfolio-batch="2" hidden tabindex="-1">
                 <figure class="case-slide__image"><img src="https://static.tildacdn.com/tild3763-6532-4830-b138-316237356534/8a9c40dc-2b81-4862-a.png" width="1080" height="1350" alt="Фирменный стиль KRUNO" loading="lazy" decoding="async"></figure>
                 <footer class="case-slide__caption"><div class="case-slide__copy"><h3>KRUNO</h3><p class="case-slide__works">Нейминг · разработка логотипа · дизайн упаковки · брендбук · сайт · POSM</p></div><a class="case-slide__link" href="https://anboxdesign.ru/more" target="_blank" rel="noopener noreferrer">Смотреть кейс</a></footer>
@@ -3351,10 +3366,11 @@
               <article class="case-slide" id="portfolio-case-10" data-portfolio-batch="2" hidden>
                 <figure class="case-slide__image"><img src="https://static.tildacdn.com/tild6337-6435-4336-a333-663561653663/13.png" width="1080" height="1350" alt="Дизайн бренда Beauty Bite" loading="lazy" decoding="async"></figure>
                 <footer class="case-slide__caption"><div class="case-slide__copy"><h3>Beauty Bite</h3><p class="case-slide__works">Разработка логотипа · дизайн упаковки · брендбук · сайт · POSM</p></div><a class="case-slide__link" href="https://anboxdesign.ru/more" target="_blank" rel="noopener noreferrer">Смотреть кейс</a></footer>
+                <div class="portfolio-more-slot" data-portfolio-more-slot data-portfolio-gate="3" hidden>
+                  <button class="portfolio-more" id="portfolio-more-button-03" type="button" data-portfolio-more data-portfolio-reveal="3" aria-controls="portfolio-case-11 portfolio-case-12 portfolio-case-13 portfolio-case-14 portfolio-case-15">Смотреть ещё кейсы</button>
+                </div>
               </article>
-              <div class="portfolio-more-slot" data-portfolio-more-slot data-portfolio-gate="3" hidden>
-                <button class="portfolio-more" id="portfolio-more-button-03" type="button" data-portfolio-more data-portfolio-reveal="3" aria-controls="portfolio-case-11 portfolio-case-12 portfolio-case-13 portfolio-case-14 portfolio-case-15">Смотреть ещё кейсы</button>
-              </div>
+              <div class="portfolio-gate-spacer" data-portfolio-gate-spacer="3" hidden aria-hidden="true"></div>
               <article class="case-slide" id="portfolio-case-11" data-portfolio-batch="3" hidden tabindex="-1">
                 <figure class="case-slide__image"><img src="https://static.tildacdn.com/tild6365-6565-4166-b263-656366313437/02.png" width="1080" height="1350" alt="Дизайн упаковки IRON MAN" loading="lazy" decoding="async"></figure>
                 <footer class="case-slide__caption"><div class="case-slide__copy"><h3>IRON MAN</h3><p class="case-slide__works">Дизайн упаковки</p></div><a class="case-slide__link" href="https://anboxdesign.ru/more" target="_blank" rel="noopener noreferrer">Смотреть кейс</a></footer>
@@ -3374,10 +3390,11 @@
               <article class="case-slide" id="portfolio-case-15" data-portfolio-batch="3" hidden>
                 <figure class="case-slide__image"><img src="https://static.tildacdn.com/tild6362-3064-4132-b366-313137333763/noroot.png" width="1080" height="1350" alt="Дизайн упаковки COSMOBYR" loading="lazy" decoding="async"></figure>
                 <footer class="case-slide__caption"><div class="case-slide__copy"><h3>COSMOBYR</h3><p class="case-slide__works">Дизайн упаковки</p></div><a class="case-slide__link" href="https://anboxdesign.ru/more" target="_blank" rel="noopener noreferrer">Смотреть кейс</a></footer>
+                <div class="portfolio-more-slot" data-portfolio-more-slot data-portfolio-gate="4" hidden>
+                  <button class="portfolio-more" id="portfolio-more-button-04" type="button" data-portfolio-more data-portfolio-reveal="4" aria-controls="portfolio-case-16 portfolio-case-17 portfolio-case-18 portfolio-case-19 portfolio-case-20">Смотреть ещё кейсы</button>
+                </div>
               </article>
-              <div class="portfolio-more-slot" data-portfolio-more-slot data-portfolio-gate="4" hidden>
-                <button class="portfolio-more" id="portfolio-more-button-04" type="button" data-portfolio-more data-portfolio-reveal="4" aria-controls="portfolio-case-16 portfolio-case-17 portfolio-case-18 portfolio-case-19 portfolio-case-20">Смотреть ещё кейсы</button>
-              </div>
+              <div class="portfolio-gate-spacer" data-portfolio-gate-spacer="4" hidden aria-hidden="true"></div>
               <article class="case-slide" id="portfolio-case-16" data-portfolio-batch="4" hidden tabindex="-1">
                 <figure class="case-slide__image"><img src="https://static.tildacdn.com/tild3737-3537-4063-a432-376333396663/noroot.png" width="1080" height="1350" alt="Дизайн упаковки Vitaminum" loading="lazy" decoding="async"></figure>
                 <footer class="case-slide__caption"><div class="case-slide__copy"><h3>Vitaminum</h3><p class="case-slide__works">Дизайн упаковки</p></div><a class="case-slide__link" href="https://anboxdesign.ru/more" target="_blank" rel="noopener noreferrer">Смотреть кейс</a></footer>
@@ -3949,7 +3966,7 @@
       let portfolioRevealTimer = 0;
 
       const syncPortfolioStack = () => {
-        const stickyTop = 68;
+        const stickyTop = document.querySelector('.site-header')?.getBoundingClientRect().height || 68;
         const viewportThreshold = window.scrollY + stickyTop + 1;
         const trackTop = portfolioTrack.getBoundingClientRect().top + window.scrollY;
         const naturalTops = new Map();
@@ -3980,18 +3997,23 @@
         return activeSlide;
       };
 
-      const syncPortfolioGates = () => {
+      const syncPortfolioGates = (stackedSlide = null) => {
         if (portfolio.dataset.revealState === 'transitioning') return;
         const gateTop = document.querySelector('.site-header')?.getBoundingClientRect().height || 68;
+        const activeSlide = stackedSlide || portfolioSlides.filter((slide) => {
+          if (slide.hidden) return false;
+          const rect = slide.getBoundingClientRect();
+          return rect.top <= gateTop + 1 && rect.bottom > gateTop;
+        }).at(-1);
         portfolioMoreSlots.forEach((slot) => {
-          const rect = slot.getBoundingClientRect();
+          const hostSlide = slot.closest('.case-slide');
+          const hostRect = hostSlide?.getBoundingClientRect();
           const isActive = !slot.hidden
-            && rect.top <= gateTop + 1
-            && rect.bottom > gateTop;
+            && hostSlide === activeSlide
+            && hostRect
+            && hostRect.top <= gateTop + 1
+            && hostRect.bottom > gateTop;
           const button = slot.querySelector('[data-portfolio-more]');
-          const hostSlide = slot.previousElementSibling?.classList.contains('case-slide')
-            ? slot.previousElementSibling
-            : null;
           slot.classList.toggle('is-gate-active', isActive);
           hostSlide?.classList.toggle('has-active-gate', isActive);
           if (button) {
@@ -4012,8 +4034,8 @@
           }
           return;
         }
-        syncPortfolioStack();
-        syncPortfolioGates();
+        const stackedSlide = syncPortfolioStack();
+        syncPortfolioGates(stackedSlide);
         const headerHeight = document.querySelector('.site-header').getBoundingClientRect().height;
         const sampleY = headerHeight + (window.innerHeight - headerHeight) * .5;
         const visibleSlides = portfolioSlides.filter((slide) => !slide.hidden);
@@ -4021,11 +4043,7 @@
           const rect = slide.getBoundingClientRect();
           return rect.top <= sampleY && rect.bottom >= sampleY;
         }).at(-1);
-        const moreBlocksDock = portfolioMoreSlots.some((slot) => {
-          if (slot.hidden) return false;
-          const rect = slot.getBoundingClientRect();
-          return rect.bottom > 0 && rect.top <= window.innerHeight - 104;
-        });
+        const moreBlocksDock = portfolioMoreSlots.some((slot) => !slot.hidden && slot.classList.contains('is-gate-active'));
         const nextSectionBlocksDock = servicesSection.getBoundingClientRect().top <= window.innerHeight - 104;
 
         if (!activeSlide || moreBlocksDock || nextSectionBlocksDock) {
@@ -4061,8 +4079,10 @@
           const batch = Number(button.dataset.portfolioReveal);
           const slidesToReveal = portfolioSlides.filter((slide) => Number(slide.dataset.portfolioBatch) === batch && !slide.hasAttribute('data-portfolio-draft'));
           const slot = button.closest('[data-portfolio-more-slot]');
+          const gateSpacer = portfolio.querySelector(`[data-portfolio-gate-spacer="${batch}"]`);
           if (!slidesToReveal.length) {
             slot.hidden = true;
+            if (gateSpacer) gateSpacer.hidden = true;
             return;
           }
 
@@ -4079,11 +4099,16 @@
           const revealBatch = () => {
             slidesToReveal.forEach((slide) => { slide.hidden = false; });
             slot.hidden = true;
+            if (gateSpacer) gateSpacer.hidden = true;
 
             const nextBatch = batch + 1;
             const nextSlot = portfolio.querySelector(`[data-portfolio-gate="${nextBatch}"]`);
+            const nextGateSpacer = portfolio.querySelector(`[data-portfolio-gate-spacer="${nextBatch}"]`);
             const nextBatchHasCases = portfolioSlides.some((slide) => Number(slide.dataset.portfolioBatch) === nextBatch && !slide.hasAttribute('data-portfolio-draft'));
-            if (nextSlot && nextBatchHasCases) nextSlot.hidden = false;
+            if (nextSlot && nextBatchHasCases) {
+              nextSlot.hidden = false;
+              if (nextGateSpacer) nextGateSpacer.hidden = false;
+            }
 
             const names = slidesToReveal.map((slide) => slide.querySelector('h3').textContent.trim());
             portfolioLoadStatus.textContent = `Открыты следующие проекты: ${names.join(', ')}.`;
@@ -4107,7 +4132,8 @@
                 + (Number.parseFloat(style.marginTop) || 0)
                 + (Number.parseFloat(style.marginBottom) || 0);
             }
-            const targetTop = Math.max(0, flowTop - 68);
+            const headerHeight = document.querySelector('.site-header')?.getBoundingClientRect().height || 68;
+            const targetTop = Math.max(0, flowTop - headerHeight);
             firstSlide.focus({ preventScroll: true });
             window.scrollTo({ top: targetTop, behavior: 'auto' });
             firstSlide.getBoundingClientRect();
