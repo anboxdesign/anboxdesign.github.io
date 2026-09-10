@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T12:14:57.233Z",
+  "generatedAt": "2026-09-10T12:30:29.852Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -2535,6 +2535,29 @@
         "https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png",
         "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
       ],
+      "rootWidth": 623,
+      "cardRects": [
+        {
+          "top": 376.9,
+          "bottom": 749.2,
+          "width": 181
+        },
+        {
+          "top": 376.9,
+          "bottom": 749.2,
+          "width": 181
+        },
+        {
+          "top": 376.9,
+          "bottom": 749.2,
+          "width": 181
+        }
+      ],
+      "photoHeights": [
+        226.3,
+        226.3,
+        226.3
+      ],
       "roleTops": [
         631.3,
         631.3,
@@ -2544,6 +2567,162 @@
         670.9,
         670.9,
         670.9
+      ],
+      "captionOverflow": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "width": 320,
+      "version": "mobile",
+      "copy": [
+        "Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack",
+        "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas",
+        "Дарья Дарев Маркетинг-партнёр, fouraces.agency 10+ лет опыта Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+      ],
+      "portraitUrls": [
+        "https://static.tildacdn.com/tild3637-3830-4331-b734-656566663032/20260831143212443_1.png",
+        "https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png",
+        "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
+      ],
+      "rootWidth": 288,
+      "cardRects": [
+        {
+          "top": -225.8,
+          "bottom": 154.1,
+          "width": 288
+        },
+        {
+          "top": 166.1,
+          "bottom": 508.5,
+          "width": 288
+        },
+        {
+          "top": 520.5,
+          "bottom": 926,
+          "width": 288
+        }
+      ],
+      "photoHeights": [
+        220,
+        200,
+        200
+      ],
+      "roleTops": [
+        38.1,
+        430,
+        784.5
+      ],
+      "proofTops": [
+        79,
+        452.5,
+        852.9
+      ],
+      "captionOverflow": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "width": 360,
+      "version": "mobile",
+      "copy": [
+        "Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack",
+        "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas",
+        "Дарья Дарев Маркетинг-партнёр, fouraces.agency 10+ лет опыта Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+      ],
+      "portraitUrls": [
+        "https://static.tildacdn.com/tild3637-3830-4331-b734-656566663032/20260831143212443_1.png",
+        "https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png",
+        "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
+      ],
+      "rootWidth": 326.9,
+      "cardRects": [
+        {
+          "top": -182.8,
+          "bottom": 200.6,
+          "width": 326.9
+        },
+        {
+          "top": 212.6,
+          "bottom": 559.4,
+          "width": 326.9
+        },
+        {
+          "top": 571.4,
+          "bottom": 982.4,
+          "width": 326.9
+        }
+      ],
+      "photoHeights": [
+        237.6,
+        223.2,
+        223.2
+      ],
+      "roleTops": [
+        98.8,
+        477.7,
+        836.6
+      ],
+      "proofTops": [
+        122.2,
+        501.2,
+        906
+      ],
+      "captionOverflow": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "width": 375,
+      "version": "mobile",
+      "copy": [
+        "Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack",
+        "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas",
+        "Дарья Дарев Маркетинг-партнёр, fouraces.agency 10+ лет опыта Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+      ],
+      "portraitUrls": [
+        "https://static.tildacdn.com/tild3637-3830-4331-b734-656566663032/20260831143212443_1.png",
+        "https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png",
+        "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
+      ],
+      "rootWidth": 340.5,
+      "cardRects": [
+        {
+          "top": -193.1,
+          "bottom": 201.6,
+          "width": 340.5
+        },
+        {
+          "top": 213.6,
+          "bottom": 570.8,
+          "width": 340.5
+        },
+        {
+          "top": 582.8,
+          "bottom": 1004.5,
+          "width": 340.5
+        }
+      ],
+      "photoHeights": [
+        247.5,
+        232.5,
+        232.5
+      ],
+      "roleTops": [
+        98.3,
+        488,
+        857.3
+      ],
+      "proofTops": [
+        122.2,
+        511.9,
+        927.1
       ],
       "captionOverflow": [
         0,
@@ -2564,15 +2743,142 @@
         "https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png",
         "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
       ],
+      "rootWidth": 354.1,
+      "cardRects": [
+        {
+          "top": -190.8,
+          "bottom": 213.8,
+          "width": 354.1
+        },
+        {
+          "top": 225.8,
+          "bottom": 592.3,
+          "width": 354.1
+        },
+        {
+          "top": 604.3,
+          "bottom": 1035.3,
+          "width": 354.1
+        }
+      ],
+      "photoHeights": [
+        257.4,
+        241.8,
+        241.8
+      ],
       "roleTops": [
-        269.8,
-        625.5,
-        625.5
+        110.6,
+        509.5,
+        888.1
       ],
       "proofTops": [
-        293.4,
-        668.7,
-        695.1
+        134.4,
+        533.4,
+        958
+      ],
+      "captionOverflow": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "width": 412,
+      "version": "mobile",
+      "copy": [
+        "Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack",
+        "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas",
+        "Дарья Дарев Маркетинг-партнёр, fouraces.agency 10+ лет опыта Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+      ],
+      "portraitUrls": [
+        "https://static.tildacdn.com/tild3637-3830-4331-b734-656566663032/20260831143212443_1.png",
+        "https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png",
+        "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
+      ],
+      "rootWidth": 374.1,
+      "cardRects": [
+        {
+          "top": -176,
+          "bottom": 243.1,
+          "width": 374.1
+        },
+        {
+          "top": 255.1,
+          "bottom": 635.2,
+          "width": 374.1
+        },
+        {
+          "top": 647.2,
+          "bottom": 1091.9,
+          "width": 374.1
+        }
+      ],
+      "photoHeights": [
+        271.9,
+        255.4,
+        255.4
+      ],
+      "roleTops": [
+        139.8,
+        552.5,
+        944.6
+      ],
+      "proofTops": [
+        163.7,
+        576.3,
+        1014.5
+      ],
+      "captionOverflow": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "width": 640,
+      "version": "mobile",
+      "copy": [
+        "Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack",
+        "Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas",
+        "Дарья Дарев Маркетинг-партнёр, fouraces.agency 10+ лет опыта Академический руководитель программы по бренд-стратегии НИУ ВШЭ"
+      ],
+      "portraitUrls": [
+        "https://static.tildacdn.com/tild3637-3830-4331-b734-656566663032/20260831143212443_1.png",
+        "https://static.tildacdn.com/tild3965-3132-4364-a166-316631666439/1dcce6ac-c6da-4efb-9.png",
+        "https://static.tildacdn.com/tild6331-6261-4232-a131-303137383866/6a09138b-bc43-42e6-b.png"
+      ],
+      "rootWidth": 592,
+      "cardRects": [
+        {
+          "top": -264,
+          "bottom": 204.7,
+          "width": 592
+        },
+        {
+          "top": 216.7,
+          "bottom": 661.4,
+          "width": 592
+        },
+        {
+          "top": 673.4,
+          "bottom": 1164.2,
+          "width": 592
+        }
+      ],
+      "photoHeights": [
+        340,
+        320,
+        320
+      ],
+      "roleTops": [
+        119.9,
+        578.7,
+        1035.4
+      ],
+      "proofTops": [
+        143.8,
+        602.5,
+        1105.3
       ],
       "captionOverflow": [
         0,
@@ -2587,14 +2893,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.851672,
+        "currentTime": 3.849565,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.564488,
+        "currentTime": 4.554453,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -2943,9 +3249,9 @@
     ]
   },
   "cleanupAudit": {
-    "sourceBytes": 831917,
-    "blockBytes": 643020,
-    "reductionPercent": 22.7,
+    "sourceBytes": 832218,
+    "blockBytes": 644687,
+    "reductionPercent": 22.5,
     "styleTagsByFile": {
       "00-header.html": 6,
       "01-hero.html": 3,
@@ -2954,7 +3260,7 @@
       "04-services.html": 2,
       "05-packages.html": 2,
       "06-clients.html": 3,
-      "07-team-training.html": 2,
+      "07-team-training.html": 3,
       "08-blog.html": 2,
       "09-contacts.html": 2,
       "10-footer.html": 3,
@@ -3017,8 +3323,8 @@
       "before": {
         "in": false,
         "edge": "bottom",
-        "top": 1006.3,
-        "bottom": 1050.2,
+        "top": 1006.7,
+        "bottom": 1050.6,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3046,26 +3352,26 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 951.7,
-        "bottom": 995.6,
+        "top": 952,
+        "bottom": 995.9,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
         "clipPath": "none",
         "clipValues": [],
-        "maskSize": "355px 23px, 307px 23px, 3px 100%",
+        "maskSize": "355px 24px, 307px 23px, 3px 100%",
         "maskWidths": [
           100
         ],
-        "maskPosition": "-150.26px 0px, -251.833px 21px, -150.26px 0px",
+        "maskPosition": "-158.951px 0px, -263.769px 21px, -158.951px 0px",
         "maskXs": [
-          -150.26,
-          -251.833,
-          -150.26
+          -158.951,
+          -263.769,
+          -158.951
         ],
         "maskProgress": [
-          0.531661971830986,
-          0.12757980456026058
+          0.5071802816901408,
+          0.088700325732899
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -3075,14 +3381,14 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -151.7,
-        "bottom": -107.8,
+        "top": -152,
+        "bottom": -108.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
         "clipPath": "none",
         "clipValues": [],
-        "maskSize": "355px 23px, 307px 23px, 3px 100%",
+        "maskSize": "355px 24px, 307px 23px, 3px 100%",
         "maskWidths": [
           100
         ],
@@ -3104,8 +3410,8 @@
       "returnedTop": {
         "in": true,
         "edge": "top",
-        "top": 54.2,
-        "bottom": 98.1,
+        "top": 53.2,
+        "bottom": 97.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3115,15 +3421,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-186.874px 0px, -286.283px 21px, -186.874px 0px",
+        "maskPosition": "-177.554px 0px, -281.93px 21px, -177.554px 0px",
         "maskXs": [
-          -186.874,
-          -286.283,
-          -186.874
+          -177.554,
+          -281.93,
+          -177.554
         ],
         "maskProgress": [
-          0.42852394366197183,
-          0.015364820846905486
+          0.4547774647887324,
+          0.029543973941368058
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -3135,8 +3441,8 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -7.11168, 0)",
-      "after": "matrix(1, 0, 0, 1, -21.6866, 0)",
+      "before": "matrix(1, 0, 0, 1, -5.69199, 0)",
+      "after": "matrix(1, 0, 0, 1, -19.9369, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3192,10 +3498,10 @@
       ],
       [
         {
-          "opacity": 0.57718,
+          "opacity": 0.492696,
           "translateX": 0,
-          "translateY": 3.38256,
-          "filter": "blur(0.63423px)",
+          "translateY": 4.05843,
+          "filter": "blur(0.760956px)",
           "clipPath": "none"
         },
         {
@@ -3236,17 +3542,17 @@
       ],
       [
         {
-          "opacity": 0.939066,
+          "opacity": 0.919984,
           "translateX": 0,
-          "translateY": 0.487471,
-          "filter": "blur(0.0914008px)",
+          "translateY": 0.640124,
+          "filter": "blur(0.120023px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.743775,
+          "opacity": 0.664837,
           "translateX": 0,
-          "translateY": 2.0498,
-          "filter": "blur(0.384337px)",
+          "translateY": 2.6813,
+          "filter": "blur(0.502745px)",
           "clipPath": "none"
         },
         {

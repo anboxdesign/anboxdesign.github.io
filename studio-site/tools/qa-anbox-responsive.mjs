@@ -1045,6 +1045,12 @@ async function auditTeamCopy(width, height, version) {
     return {
       copy: cards.map((card) => normalize(card.textContent)),
       portraitUrls: cards.map((card) => card.querySelector('img')?.getAttribute('src') || ''),
+      rootWidth: Math.round(node.getBoundingClientRect().width * 10) / 10,
+      cardRects: cards.map((card) => {
+        const rect = card.getBoundingClientRect();
+        return { top: Math.round(rect.top * 10) / 10, bottom: Math.round(rect.bottom * 10) / 10, width: Math.round(rect.width * 10) / 10 };
+      }),
+      photoHeights: cards.map((card) => Math.round((card.querySelector('img')?.getBoundingClientRect().height || 0) * 10) / 10),
       roleTops: topPositions(version === 'desktop' ? '.anxt__person-role' : '.person-card__role'),
       proofTops: topPositions(version === 'desktop' ? '.anxt__person-proof' : '.person-card__proof'),
       captionOverflow: cards.map((card) => {
@@ -1053,13 +1059,20 @@ async function auditTeamCopy(width, height, version) {
       }),
     };
   }, { cardSelector, captionSelector, version });
-  await root.screenshot({ path: path.join(qaDir, `team-${version}-${width}.png`) });
+  if (version === 'desktop' || width === 390) {
+    await root.screenshot({ path: path.join(qaDir, `team-${version}-${width}.png`) });
+  }
   return { width, version, ...result };
 }
 
 const teamCopyAudit = [
   await auditTeamCopy(1440, 1000, 'desktop'),
+  await auditTeamCopy(320, 700, 'mobile'),
+  await auditTeamCopy(360, 800, 'mobile'),
+  await auditTeamCopy(375, 812, 'mobile'),
   await auditTeamCopy(390, 844, 'mobile'),
+  await auditTeamCopy(412, 915, 'mobile'),
+  await auditTeamCopy(640, 900, 'mobile'),
 ];
 
 const desktopPortfolioGeometry = [];
@@ -1592,6 +1605,9 @@ for (const item of teamCopyAudit) {
   if (JSON.stringify(item.copy) !== JSON.stringify(expectedTeamCopy)
     || JSON.stringify(item.portraitUrls) !== JSON.stringify(expectedTeamPortraitUrls)
     || item.captionOverflow.some((value) => value !== 0)) failures.push(`${item.version} team: biography copy or portrait URLs are missing or clipped`);
+  if (item.version === 'mobile' && (item.cardRects.some((rect) => Math.abs(rect.width - item.rootWidth) > 1)
+    || item.cardRects.some((rect, index) => index > 0 && rect.top <= item.cardRects[index - 1].bottom)
+    || item.photoHeights.some((height) => height < 200 || height > 341))) failures.push('mobile team: cards are not a readable single-column portrait flow');
   if (item.version === 'desktop'
     && (Math.max(...item.roleTops) - Math.min(...item.roleTops) > 1
       || Math.max(...item.proofTops) - Math.min(...item.proofTops) > 1)) failures.push('desktop team: biography levels are not horizontally aligned');
