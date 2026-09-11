@@ -420,6 +420,8 @@ if (await mobileHeroShelf.count()) {
           alt: image.alt,
           src: image.src,
           loaded: image.complete && image.naturalWidth > 0,
+          filter: getComputedStyle(image).filter,
+          mixBlendMode: getComputedStyle(image).mixBlendMode,
           centerDelta: Math.round(((rect.top + rect.height / 2) - (row.top + row.height / 2)) * 100) / 100,
         };
       }),
@@ -1248,6 +1250,8 @@ const desktopHeroShelfAudit = await page.evaluate(() => {
         alt: image.alt,
         src: image.src,
         loaded: image.complete && image.naturalWidth > 0,
+        filter: getComputedStyle(image).filter,
+        mixBlendMode: getComputedStyle(image).mixBlendMode,
         centerDelta: Math.round(((rect.top + rect.height / 2) - (cell.top + cell.height / 2)) * 100) / 100,
       };
     }),
@@ -1677,8 +1681,10 @@ if (JSON.stringify(casesAudit.heroOrder) !== JSON.stringify(expectedHeroOrder)
 if (casesAudit.watchCaseButtons !== 0) failures.push(`portfolio catalog: ${casesAudit.watchCaseButtons} case CTA controls remain`);
 if (desktopHeroShelfAudit.total !== 8 || desktopHeroShelfAudit.loaded !== 8) failures.push(`desktop HERO shelf: loaded ${desktopHeroShelfAudit.loaded}/${desktopHeroShelfAudit.total} retailer logos`);
 else if (desktopHeroShelfAudit.items.some((item) => Math.abs(item.centerDelta) > 1.1)) failures.push('desktop HERO shelf: retailer logos are not vertically centered');
+else if (!desktopHeroShelfAudit.items[2]?.filter.includes('brightness') || desktopHeroShelfAudit.items[2]?.mixBlendMode !== 'multiply') failures.push('desktop HERO shelf: Perekrestok logo background cleanup is missing');
 if (!mobileHeroShelfAudit || mobileHeroShelfAudit.total !== 8 || mobileHeroShelfAudit.loaded !== 8) failures.push(`mobile HERO shelf: loaded ${mobileHeroShelfAudit?.loaded || 0}/${mobileHeroShelfAudit?.total || 0} retailer logos`);
 else if (mobileHeroShelfAudit.items.some((item) => Math.abs(item.centerDelta) > 1.1)) failures.push('mobile HERO shelf: retailer logos are not vertically centered');
+else if (!mobileHeroShelfAudit.items[2]?.filter.includes('brightness') || mobileHeroShelfAudit.items[2]?.mixBlendMode !== 'multiply') failures.push('mobile HERO shelf: Perekrestok logo background cleanup is missing');
 for (const [name, passed] of Object.entries(heroMediaBehavior).filter(([name]) => name !== 'samples')) if (passed !== true) failures.push(`mobile hero ${name}: ${String(passed)}`);
 if (cleanupAudit.importCount !== 1) failures.push(`cleanup: @import count ${cleanupAudit.importCount}, expected 1`);
 if (Object.values(headingAudit.h1ByFile).reduce((sum, count) => sum + count, 0) !== 1

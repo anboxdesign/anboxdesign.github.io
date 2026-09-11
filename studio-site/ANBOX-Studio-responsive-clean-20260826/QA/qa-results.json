@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T11:12:22.532Z",
+  "generatedAt": "2026-09-11T11:19:31.357Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -2893,14 +2893,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.856214,
+        "currentTime": 3.855374,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.569917,
+        "currentTime": 4.566855,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -3164,48 +3164,64 @@
         "alt": "Логотип Яндекс Лавка",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/yandex-lavka.svg",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 1
       },
       {
         "alt": "Логотип Globus",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/globus.svg",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 0
       },
       {
         "alt": "Логотип Перекрёсток",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/perekrestok.png",
         "loaded": true,
+        "filter": "brightness(1.06)",
+        "mixBlendMode": "multiply",
         "centerDelta": 0
       },
       {
         "alt": "Логотип Metro Cash & Carry",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/metro.svg",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 0
       },
       {
         "alt": "Логотип Золотое яблоко",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/golden-apple.png",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 0
       },
       {
         "alt": "Логотип Азбука вкуса",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/azbuka-vkusa.svg",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 0
       },
       {
         "alt": "Логотип Ozon",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/ozon.svg",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 0
       },
       {
         "alt": "Логотип Wildberries",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/wildberries.svg",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 0
       }
     ]
@@ -3218,55 +3234,71 @@
         "alt": "Логотип Яндекс Лавка",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/yandex-lavka.svg",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 1
       },
       {
         "alt": "Логотип Globus",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/globus.svg",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 0
       },
       {
         "alt": "Логотип Перекрёсток",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/perekrestok.png",
         "loaded": true,
+        "filter": "brightness(1.06)",
+        "mixBlendMode": "multiply",
         "centerDelta": 0
       },
       {
         "alt": "Логотип Metro Cash & Carry",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/metro.svg",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 0
       },
       {
         "alt": "Логотип Золотое яблоко",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/golden-apple.png",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 0
       },
       {
         "alt": "Логотип Азбука вкуса",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/azbuka-vkusa.svg",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 0
       },
       {
         "alt": "Логотип Ozon",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/ozon.svg",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 0
       },
       {
         "alt": "Логотип Wildberries",
         "src": "https://raw.githubusercontent.com/anboxdesign/anboxdesign.github.io/main/studio-site/assets/hero-retail-logos/wildberries.svg",
         "loaded": true,
+        "filter": "none",
+        "mixBlendMode": "normal",
         "centerDelta": 0
       }
     ]
   },
   "cleanupAudit": {
     "sourceBytes": 832293,
-    "blockBytes": 644760,
+    "blockBytes": 644973,
     "reductionPercent": 22.5,
     "styleTagsByFile": {
       "00-header.html": 6,
@@ -3368,8 +3400,8 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 952.8,
-        "bottom": 996.7,
+        "top": 953,
+        "bottom": 996.9,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3379,15 +3411,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-176.991px 0px, -281.666px 21px, -176.991px 0px",
+        "maskPosition": "-176.875px 0px, -281.612px 21px, -176.875px 0px",
         "maskXs": [
-          -176.991,
-          -281.666,
-          -176.991
+          -176.875,
+          -281.612,
+          -176.875
         ],
         "maskProgress": [
-          0.4563633802816901,
-          0.030403908794788284
+          0.4566901408450704,
+          0.03057980456026051
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -3397,8 +3429,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -152.5,
-        "bottom": -108.6,
+        "top": -151.5,
+        "bottom": -107.6,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3426,8 +3458,8 @@
       "returnedTop": {
         "in": true,
         "edge": "top",
-        "top": 53.2,
-        "bottom": 97.1,
+        "top": 54.2,
+        "bottom": 98.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3437,15 +3469,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-196.53px 0px, -290.794px 21px, -196.53px 0px",
+        "maskPosition": "-196.283px 0px, -290.679px 21px, -196.283px 0px",
         "maskXs": [
-          -196.53,
-          -290.794,
-          -196.53
+          -196.283,
+          -290.679,
+          -196.283
         ],
         "maskProgress": [
-          0.4013239436619718,
-          0.000671009771987027
+          0.40201971830985916,
+          0.001045602605863278
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -3457,8 +3489,8 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -7.85826, 0)",
-      "after": "matrix(1, 0, 0, 1, -22.0677, 0)",
+      "before": "matrix(1, 0, 0, 1, -5.69434, 0)",
+      "after": "matrix(1, 0, 0, 1, -19.9365, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3558,17 +3590,17 @@
       ],
       [
         {
-          "opacity": 0.919627,
+          "opacity": 0.919806,
           "translateX": 0,
-          "translateY": 0.642986,
-          "filter": "blur(0.12056px)",
+          "translateY": 0.641554,
+          "filter": "blur(0.120291px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.66334,
+          "opacity": 0.664089,
           "translateX": 0,
-          "translateY": 2.69328,
-          "filter": "blur(0.504991px)",
+          "translateY": 2.68729,
+          "filter": "blur(0.503866px)",
           "clipPath": "none"
         },
         {
