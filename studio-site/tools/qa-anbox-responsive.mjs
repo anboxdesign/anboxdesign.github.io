@@ -413,7 +413,16 @@ if (await mobileHeroShelf.count()) {
     return {
       total: images.length,
       loaded: images.filter((image) => image.complete && image.naturalWidth > 0).length,
-      items: images.map((image) => ({ alt: image.alt, src: image.src, loaded: image.complete && image.naturalWidth > 0 })),
+      items: images.map((image) => {
+        const rect = image.getBoundingClientRect();
+        const row = image.closest('.shelf-marquee__sequence').getBoundingClientRect();
+        return {
+          alt: image.alt,
+          src: image.src,
+          loaded: image.complete && image.naturalWidth > 0,
+          centerDelta: Math.round(((rect.top + rect.height / 2) - (row.top + row.height / 2)) * 100) / 100,
+        };
+      }),
     };
   });
   await mobileHeroShelf.screenshot({ path: path.join(qaDir, 'hero-shelf-mobile-390.png') });
@@ -1232,9 +1241,19 @@ const desktopHeroShelfAudit = await page.evaluate(() => {
   return {
     total: images.length,
     loaded: images.filter((image) => image.complete && image.naturalWidth > 0).length,
-    items: images.map((image) => ({ alt: image.alt, src: image.src, loaded: image.complete && image.naturalWidth > 0 })),
+    items: images.map((image) => {
+      const rect = image.getBoundingClientRect();
+      const cell = image.closest('.abh-hero__brand').getBoundingClientRect();
+      return {
+        alt: image.alt,
+        src: image.src,
+        loaded: image.complete && image.naturalWidth > 0,
+        centerDelta: Math.round(((rect.top + rect.height / 2) - (cell.top + cell.height / 2)) * 100) / 100,
+      };
+    }),
   };
 });
+await page.locator('.anbox-desktop-part--01 .abh-hero__shelf').screenshot({ path: path.join(qaDir, 'hero-shelf-desktop-1440.png') });
 const casesAudit = await page.evaluate(() => {
   const normalizeText = (node) => node.textContent.replace(/\s+/g, ' ').trim();
   return ({
@@ -1657,7 +1676,9 @@ if (JSON.stringify(casesAudit.heroOrder) !== JSON.stringify(expectedHeroOrder)
   || JSON.stringify(casesAudit.heroMarkedMobile) !== JSON.stringify(expectedHeroOrder)) failures.push('HERO catalog: selected cases do not match JSON checkmarks');
 if (casesAudit.watchCaseButtons !== 0) failures.push(`portfolio catalog: ${casesAudit.watchCaseButtons} case CTA controls remain`);
 if (desktopHeroShelfAudit.total !== 8 || desktopHeroShelfAudit.loaded !== 8) failures.push(`desktop HERO shelf: loaded ${desktopHeroShelfAudit.loaded}/${desktopHeroShelfAudit.total} retailer logos`);
+else if (desktopHeroShelfAudit.items.some((item) => Math.abs(item.centerDelta) > 1.1)) failures.push('desktop HERO shelf: retailer logos are not vertically centered');
 if (!mobileHeroShelfAudit || mobileHeroShelfAudit.total !== 8 || mobileHeroShelfAudit.loaded !== 8) failures.push(`mobile HERO shelf: loaded ${mobileHeroShelfAudit?.loaded || 0}/${mobileHeroShelfAudit?.total || 0} retailer logos`);
+else if (mobileHeroShelfAudit.items.some((item) => Math.abs(item.centerDelta) > 1.1)) failures.push('mobile HERO shelf: retailer logos are not vertically centered');
 for (const [name, passed] of Object.entries(heroMediaBehavior).filter(([name]) => name !== 'samples')) if (passed !== true) failures.push(`mobile hero ${name}: ${String(passed)}`);
 if (cleanupAudit.importCount !== 1) failures.push(`cleanup: @import count ${cleanupAudit.importCount}, expected 1`);
 if (Object.values(headingAudit.h1ByFile).reduce((sum, count) => sum + count, 0) !== 1
