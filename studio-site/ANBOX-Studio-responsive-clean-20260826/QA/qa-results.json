@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-11T11:19:31.357Z",
+  "generatedAt": "2026-09-14T11:42:22.713Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -103,7 +103,7 @@
         "display": "block",
         "left": 0,
         "width": 320,
-        "height": 328,
+        "height": 377,
         "socialTargets": [
           {
             "width": 44,
@@ -118,6 +118,12 @@
             "height": 44
           }
         ],
+        "email": {
+          "text": "anbox.design@gmail.com",
+          "width": 142,
+          "height": 44,
+          "visible": true
+        },
         "logo": {
           "tag": "svg",
           "width": 148,
@@ -171,7 +177,7 @@
         "display": "block",
         "left": 0,
         "width": 360,
-        "height": 272,
+        "height": 321,
         "socialTargets": [
           {
             "width": 44,
@@ -186,6 +192,12 @@
             "height": 44
           }
         ],
+        "email": {
+          "text": "anbox.design@gmail.com",
+          "width": 142,
+          "height": 44,
+          "visible": true
+        },
         "logo": {
           "tag": "svg",
           "width": 148,
@@ -239,7 +251,7 @@
         "display": "block",
         "left": 0,
         "width": 375,
-        "height": 272,
+        "height": 321,
         "socialTargets": [
           {
             "width": 44,
@@ -254,6 +266,12 @@
             "height": 44
           }
         ],
+        "email": {
+          "text": "anbox.design@gmail.com",
+          "width": 142,
+          "height": 44,
+          "visible": true
+        },
         "logo": {
           "tag": "svg",
           "width": 154,
@@ -307,7 +325,7 @@
         "display": "block",
         "left": 0,
         "width": 390,
-        "height": 274,
+        "height": 323,
         "socialTargets": [
           {
             "width": 44,
@@ -322,6 +340,12 @@
             "height": 44
           }
         ],
+        "email": {
+          "text": "anbox.design@gmail.com",
+          "width": 148,
+          "height": 44,
+          "visible": true
+        },
         "logo": {
           "tag": "svg",
           "width": 160,
@@ -375,7 +399,7 @@
         "display": "block",
         "left": 0,
         "width": 412,
-        "height": 275,
+        "height": 324,
         "socialTargets": [
           {
             "width": 44,
@@ -390,6 +414,12 @@
             "height": 44
           }
         ],
+        "email": {
+          "text": "anbox.design@gmail.com",
+          "width": 154,
+          "height": 44,
+          "visible": true
+        },
         "logo": {
           "tag": "svg",
           "width": 168,
@@ -443,7 +473,7 @@
         "display": "block",
         "left": 0,
         "width": 640,
-        "height": 226,
+        "height": 272,
         "socialTargets": [
           {
             "width": 44,
@@ -458,6 +488,12 @@
             "height": 44
           }
         ],
+        "email": {
+          "text": "anbox.design@gmail.com",
+          "width": 154,
+          "height": 44,
+          "visible": true
+        },
         "logo": {
           "tag": "svg",
           "width": 168,
@@ -511,7 +547,7 @@
         "display": "grid",
         "left": 0,
         "width": 641,
-        "height": 175,
+        "height": 213,
         "socialTargets": [
           {
             "width": 24,
@@ -526,6 +562,12 @@
             "height": 24
           }
         ],
+        "email": {
+          "text": "anbox.design@gmail.com",
+          "width": 120,
+          "height": 24,
+          "visible": true
+        },
         "logo": {
           "tag": "svg",
           "width": 150,
@@ -754,7 +796,7 @@
         "display": "grid",
         "left": 0,
         "width": 768,
-        "height": 147,
+        "height": 158,
         "socialTargets": [
           {
             "width": 24,
@@ -769,6 +811,12 @@
             "height": 24
           }
         ],
+        "email": {
+          "text": "anbox.design@gmail.com",
+          "width": 120,
+          "height": 24,
+          "visible": true
+        },
         "logo": {
           "tag": "svg",
           "width": 150,
@@ -997,7 +1045,7 @@
         "display": "grid",
         "left": 0,
         "width": 1024,
-        "height": 133,
+        "height": 140,
         "socialTargets": [
           {
             "width": 24,
@@ -1012,6 +1060,12 @@
             "height": 24
           }
         ],
+        "email": {
+          "text": "anbox.design@gmail.com",
+          "width": 120,
+          "height": 24,
+          "visible": true
+        },
         "logo": {
           "tag": "svg",
           "width": 150,
@@ -1240,7 +1294,7 @@
         "display": "grid",
         "left": 0,
         "width": 1440,
-        "height": 133,
+        "height": 140,
         "socialTargets": [
           {
             "width": 24,
@@ -1255,6 +1309,12 @@
             "height": 24
           }
         ],
+        "email": {
+          "text": "anbox.design@gmail.com",
+          "width": 120,
+          "height": 24,
+          "visible": true
+        },
         "logo": {
           "tag": "svg",
           "width": 150,
@@ -1483,7 +1543,7 @@
         "display": "grid",
         "left": 0,
         "width": 1920,
-        "height": 133,
+        "height": 140,
         "socialTargets": [
           {
             "width": 24,
@@ -1498,6 +1558,12 @@
             "height": 24
           }
         ],
+        "email": {
+          "text": "anbox.design@gmail.com",
+          "width": 120,
+          "height": 24,
+          "visible": true
+        },
         "logo": {
           "tag": "svg",
           "width": 150,
@@ -1741,6 +1807,12 @@
             "height": 48
           }
         ],
+        "email": {
+          "text": "anbox.design@gmail.com",
+          "width": 239,
+          "height": 27,
+          "visible": true
+        },
         "logo": {
           "tag": "svg",
           "width": 300,
@@ -2893,14 +2965,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.855374,
+        "currentTime": 3.855612,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.566855,
+        "currentTime": 4.559612,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -3297,9 +3369,9 @@
     ]
   },
   "cleanupAudit": {
-    "sourceBytes": 832293,
-    "blockBytes": 644973,
-    "reductionPercent": 22.5,
+    "sourceBytes": 837043,
+    "blockBytes": 645360,
+    "reductionPercent": 22.9,
     "styleTagsByFile": {
       "00-header.html": 6,
       "01-hero.html": 3,
@@ -3311,7 +3383,7 @@
       "07-team-training.html": 3,
       "08-blog.html": 2,
       "09-contacts.html": 2,
-      "10-footer.html": 3,
+      "10-footer.html": 4,
       "03A-portfolio-system.html": 1
     },
     "importCount": 1,
@@ -3371,8 +3443,8 @@
       "before": {
         "in": false,
         "edge": "bottom",
-        "top": 1006.7,
-        "bottom": 1050.6,
+        "top": 1006.3,
+        "bottom": 1050.2,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3400,8 +3472,8 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 953,
-        "bottom": 996.9,
+        "top": 952.6,
+        "bottom": 996.5,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3411,15 +3483,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-176.875px 0px, -281.612px 21px, -176.875px 0px",
+        "maskPosition": "-159.16px 0px, -264.057px 21px, -159.16px 0px",
         "maskXs": [
-          -176.875,
-          -281.612,
-          -176.875
+          -159.16,
+          -264.057,
+          -159.16
         ],
         "maskProgress": [
-          0.4566901408450704,
-          0.03057980456026051
+          0.5065915492957747,
+          0.0877622149837133
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -3429,8 +3501,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -151.5,
-        "bottom": -107.6,
+        "top": -151.3,
+        "bottom": -107.4,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3458,8 +3530,8 @@
       "returnedTop": {
         "in": true,
         "edge": "top",
-        "top": 54.2,
-        "bottom": 98.1,
+        "top": 53.2,
+        "bottom": 97.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3469,15 +3541,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-196.283px 0px, -290.679px 21px, -196.283px 0px",
+        "maskPosition": "-186.851px 0px, -286.272px 21px, -186.851px 0px",
         "maskXs": [
-          -196.283,
-          -290.679,
-          -196.283
+          -186.851,
+          -286.272,
+          -186.851
         ],
         "maskProgress": [
-          0.40201971830985916,
-          0.001045602605863278
+          0.4285887323943662,
+          0.015400651465798073
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -3489,8 +3561,8 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -5.69434, 0)",
-      "after": "matrix(1, 0, 0, 1, -19.9365, 0)",
+      "before": "matrix(1, 0, 0, 1, -7.11245, 0)",
+      "after": "matrix(1, 0, 0, 1, -21.6916, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3546,10 +3618,10 @@
       ],
       [
         {
-          "opacity": 0.491563,
+          "opacity": 0.577653,
           "translateX": 0,
-          "translateY": 4.06749,
-          "filter": "blur(0.762655px)",
+          "translateY": 3.37878,
+          "filter": "blur(0.633521px)",
           "clipPath": "none"
         },
         {
@@ -3590,17 +3662,17 @@
       ],
       [
         {
-          "opacity": 0.919806,
+          "opacity": 0.933133,
           "translateX": 0,
-          "translateY": 0.641554,
-          "filter": "blur(0.120291px)",
+          "translateY": 0.534938,
+          "filter": "blur(0.100301px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.664089,
+          "opacity": 0.719436,
           "translateX": 0,
-          "translateY": 2.68729,
-          "filter": "blur(0.503866px)",
+          "translateY": 2.24451,
+          "filter": "blur(0.420846px)",
           "clipPath": "none"
         },
         {
