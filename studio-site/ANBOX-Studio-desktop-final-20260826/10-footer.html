@@ -42,9 +42,20 @@ ANBOX STUDIO · 10 · Подвал
   grid-column:1 / 5;
   grid-row:2;
   margin:0;
+  display:grid;
+  justify-items:start;
+  gap:4px;
   color:var(--anbox-footer-muted);
   font-size:12px;
   line-height:1.4;
+}
+.anbox-part-10 .abct__footer-email{
+  min-height:24px;
+  display:inline-flex;
+  align-items:center;
+  color:var(--anbox-footer-ink);
+  font-weight:500;
+  transition:color .22s ease;
 }
 .anbox-part-10 .abct__footer-legal{
   grid-column:5 / 13;
@@ -83,7 +94,7 @@ ANBOX STUDIO · 10 · Подвал
 }
 .anbox-part-10 .abct__social-behance span{font-size:16px;font-weight:600;line-height:1}
 @media (hover:hover) and (pointer:fine){
-  .anbox-part-10 .abct__footer-legal a:hover{color:var(--anbox-footer-ink)}
+  .anbox-part-10 .abct__footer-legal a:hover,.anbox-part-10 .abct__footer-email:hover{color:var(--anbox-footer-purple)}
   .anbox-part-10 .abct__footer-socials a:hover{color:var(--anbox-footer-purple);transform:translateY(-2px)}
 }
 @media (max-width:960px){
@@ -139,7 +150,7 @@ ANBOX STUDIO · 10 · Подвал
   .anbox-part-10 .abct__social-behance span{font-size:clamp(16px,.833vw,32px)}
 }
 @media (prefers-reduced-motion:reduce){
-  .anbox-part-10 .abct__footer-legal a,.anbox-part-10 .abct__footer-socials a{transition:none}
+  .anbox-part-10 .abct__footer-email,.anbox-part-10 .abct__footer-legal a,.anbox-part-10 .abct__footer-socials a{transition:none}
 }
 </style>
 
@@ -165,7 +176,10 @@ ANBOX STUDIO · 10 · Подвал
       </svg>
     </a>
 
-    <p class="abct__footer-line">Дизайн, стратегия и запуск брендов.</p>
+    <div class="abct__footer-line">
+      <span>Дизайн, стратегия и запуск брендов.</span>
+      <a class="abct__footer-email" href="mailto:anbox.design@gmail.com">anbox.design@gmail.com</a>
+    </div>
 
     <nav class="abct__footer-legal" aria-label="Юридическая информация">
       <span>© 2026 ANBOX studio</span>
