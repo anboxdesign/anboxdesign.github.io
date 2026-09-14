@@ -189,8 +189,6 @@ for (const width of widths) {
     const footerRect = footer?.getBoundingClientRect();
     const footerLogo = footer?.querySelector(mobileViewport ? '.footer-brand__logo' : '.abct__footer-logo svg');
     const footerLogoRect = footerLogo?.getBoundingClientRect();
-    const footerEmail = footer?.querySelector('a[href="mailto:anbox.design@gmail.com"]');
-    const footerEmailRect = footerEmail?.getBoundingClientRect();
     const footerSocialTargets = footer ? [...footer.querySelectorAll('a[aria-label="Telegram"],a[aria-label="Instagram"],a[aria-label="Behance"]')].map((link) => {
       const rect = link.getBoundingClientRect();
       return { width: Math.round(rect.width), height: Math.round(rect.height) };
@@ -251,12 +249,6 @@ for (const width of widths) {
         width: Math.round(footerRect.width),
         height: Math.round(footerRect.height),
         socialTargets: footerSocialTargets,
-        email: footerEmail && footerEmailRect ? {
-          text: footerEmail.textContent.trim(),
-          width: Math.round(footerEmailRect.width),
-          height: Math.round(footerEmailRect.height),
-          visible: footerEmailRect.width > 0 && footerEmailRect.height > 0 && getComputedStyle(footerEmail).visibility !== 'hidden',
-        } : null,
         logo: footerLogo && footerLogoRect ? {
           tag: footerLogo.tagName.toLowerCase(),
           width: Math.round(footerLogoRect.width),
@@ -1583,13 +1575,11 @@ for (const item of viewportResults) {
   if (!item.footer) failures.push(`${item.width}px: footer is missing`);
   else if (mobile) {
     if (item.footer.display !== 'block' || Math.abs(item.footer.width - item.width) > 1 || item.footer.height < 160) failures.push(`${item.width}px: mobile footer geometry is invalid`);
-    if (!item.footer.email || item.footer.email.text !== 'anbox.design@gmail.com' || !item.footer.email.visible || item.footer.email.height < 44) failures.push(`${item.width}px: mobile footer email is missing or too small`);
     if (item.footer.socialTargets.length !== 3 || item.footer.socialTargets.some((target) => target.width < 44 || target.height < 44)) failures.push(`${item.width}px: mobile footer social targets are too small`);
     if (!item.footer.logo || item.footer.logo.tag !== 'svg' || !item.footer.logo.visible || item.footer.logo.pathCount < 10) failures.push(`${item.width}px: mobile footer logo is missing or depends on an external asset`);
   } else {
     const expectedFooterWidth = item.width > 1920 ? item.width - 2 * Math.min(256, Math.max(24, item.width * 0.06667)) : item.width;
     if (item.footer.display !== 'grid' || Math.abs(item.footer.width - expectedFooterWidth) > 2 || item.footer.height < 100) failures.push(`${item.width}px: desktop footer grid is invalid`);
-    if (!item.footer.email || item.footer.email.text !== 'anbox.design@gmail.com' || !item.footer.email.visible || item.footer.email.height < 24) failures.push(`${item.width}px: desktop footer email is missing or too small`);
     if (item.footer.socialTargets.length !== 3 || item.footer.socialTargets.some((target) => target.width < 24 || target.height < 24)) failures.push(`${item.width}px: desktop footer social targets are invalid`);
     if (!item.headerNav || item.headerNav.links.length !== 6 || !item.headerNav.logoVisible || !item.headerNav.ctaVisible || !item.headerNav.ctaArrowHidden || item.headerNav.ctaUnderline < 1) failures.push(`${item.width}px: desktop header structure is invalid`);
     else if (item.width >= 1025 && (!item.headerNav.navVisible || item.headerNav.menuVisible || item.headerNav.logo.right >= item.headerNav.links[0].left || item.headerNav.links.at(-1).right >= item.headerNav.cta.left || Math.max(...item.headerNav.itemGaps) - Math.min(...item.headerNav.itemGaps) > 1)) failures.push(`${item.width}px: desktop header grid spacing is invalid`);
