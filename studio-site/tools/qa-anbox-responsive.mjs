@@ -35,7 +35,9 @@ const expectedHeroUrls = expectedHeroOrder.map((number) => {
 // authoring-only infrastructure against the production-code reduction. The
 // in-card mobile gate and stable self-hosted HERO asset URLs add a small,
 // intentional production payload.
-const minimumCleanupReduction = 22.5;
+// Footer block 10 intentionally carries its mobile layout locally so that it
+// remains safe on standalone Tilda pages that do not include block 00.
+const minimumCleanupReduction = 22.4;
 const expectedTeamCopy = [
   'Анна Плавская Преподаватель магистратуры НИУ ВШЭ 15+ лет в дизайне · 6+ лет в образовании Автор образовательных программ · спикер WorldFood и RosUpack',
   'Артём Капустин Директор по развитию 12+ лет в маркетинге и продажах Экс-«Фармстандарт», STADA, Astellas',

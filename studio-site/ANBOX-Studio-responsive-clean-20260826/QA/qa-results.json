@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-14T11:42:22.713Z",
+  "generatedAt": "2026-09-15T07:36:04.879Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -103,7 +103,7 @@
         "display": "block",
         "left": 0,
         "width": 320,
-        "height": 377,
+        "height": 388,
         "socialTargets": [
           {
             "width": 44,
@@ -177,7 +177,7 @@
         "display": "block",
         "left": 0,
         "width": 360,
-        "height": 321,
+        "height": 332,
         "socialTargets": [
           {
             "width": 44,
@@ -251,7 +251,7 @@
         "display": "block",
         "left": 0,
         "width": 375,
-        "height": 321,
+        "height": 332,
         "socialTargets": [
           {
             "width": 44,
@@ -325,7 +325,7 @@
         "display": "block",
         "left": 0,
         "width": 390,
-        "height": 323,
+        "height": 332,
         "socialTargets": [
           {
             "width": 44,
@@ -342,7 +342,7 @@
         ],
         "email": {
           "text": "anbox.design@gmail.com",
-          "width": 148,
+          "width": 142,
           "height": 44,
           "visible": true
         },
@@ -399,7 +399,7 @@
         "display": "block",
         "left": 0,
         "width": 412,
-        "height": 324,
+        "height": 332,
         "socialTargets": [
           {
             "width": 44,
@@ -416,7 +416,7 @@
         ],
         "email": {
           "text": "anbox.design@gmail.com",
-          "width": 154,
+          "width": 142,
           "height": 44,
           "visible": true
         },
@@ -473,7 +473,7 @@
         "display": "block",
         "left": 0,
         "width": 640,
-        "height": 272,
+        "height": 280,
         "socialTargets": [
           {
             "width": 44,
@@ -490,7 +490,7 @@
         ],
         "email": {
           "text": "anbox.design@gmail.com",
-          "width": 154,
+          "width": 142,
           "height": 44,
           "visible": true
         },
@@ -2965,14 +2965,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.855612,
+        "currentTime": 3.850291,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.559612,
+        "currentTime": 4.565681,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -3370,8 +3370,8 @@
   },
   "cleanupAudit": {
     "sourceBytes": 837043,
-    "blockBytes": 645360,
-    "reductionPercent": 22.9,
+    "blockBytes": 649262,
+    "reductionPercent": 22.4,
     "styleTagsByFile": {
       "00-header.html": 6,
       "01-hero.html": 3,
@@ -3383,7 +3383,7 @@
       "07-team-training.html": 3,
       "08-blog.html": 2,
       "09-contacts.html": 2,
-      "10-footer.html": 4,
+      "10-footer.html": 3,
       "03A-portfolio-system.html": 1
     },
     "importCount": 1,
@@ -3443,8 +3443,8 @@
       "before": {
         "in": false,
         "edge": "bottom",
-        "top": 1006.3,
-        "bottom": 1050.2,
+        "top": 1006.1,
+        "bottom": 1050,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3472,8 +3472,8 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 952.6,
-        "bottom": 996.5,
+        "top": 951.7,
+        "bottom": 995.7,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3483,15 +3483,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-159.16px 0px, -264.057px 21px, -159.16px 0px",
+        "maskPosition": "-150.26px 0px, -251.833px 21px, -150.26px 0px",
         "maskXs": [
-          -159.16,
-          -264.057,
-          -159.16
+          -150.26,
+          -251.833,
+          -150.26
         ],
         "maskProgress": [
-          0.5065915492957747,
-          0.0877622149837133
+          0.531661971830986,
+          0.12757980456026058
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -3501,8 +3501,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -151.3,
-        "bottom": -107.4,
+        "top": -151.7,
+        "bottom": -107.8,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3530,8 +3530,8 @@
       "returnedTop": {
         "in": true,
         "edge": "top",
-        "top": 53.2,
-        "bottom": 97.1,
+        "top": 54.2,
+        "bottom": 98.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3541,15 +3541,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-186.851px 0px, -286.272px 21px, -186.851px 0px",
+        "maskPosition": "-177.117px 0px, -281.725px 21px, -177.117px 0px",
         "maskXs": [
-          -186.851,
-          -286.272,
-          -186.851
+          -177.117,
+          -281.725,
+          -177.117
         ],
         "maskProgress": [
-          0.4285887323943662,
-          0.015400651465798073
+          0.45600845070422535,
+          0.030211726384364746
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -3561,8 +3561,8 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -7.11245, 0)",
-      "after": "matrix(1, 0, 0, 1, -21.6916, 0)",
+      "before": "matrix(1, 0, 0, 1, -6.75285, 0)",
+      "after": "matrix(1, 0, 0, 1, -22.0531, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3618,10 +3618,10 @@
       ],
       [
         {
-          "opacity": 0.577653,
+          "opacity": 0.615518,
           "translateX": 0,
-          "translateY": 3.37878,
-          "filter": "blur(0.633521px)",
+          "translateY": 3.07586,
+          "filter": "blur(0.576724px)",
           "clipPath": "none"
         },
         {
@@ -3662,24 +3662,24 @@
       ],
       [
         {
-          "opacity": 0.933133,
+          "opacity": 0.944577,
           "translateX": 0,
-          "translateY": 0.534938,
-          "filter": "blur(0.100301px)",
+          "translateY": 0.443383,
+          "filter": "blur(0.0831342px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.719436,
+          "opacity": 0.766201,
           "translateX": 0,
-          "translateY": 2.24451,
-          "filter": "blur(0.420846px)",
+          "translateY": 1.87039,
+          "filter": "blur(0.350698px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0,
+          "opacity": 0.0319197,
           "translateX": 0,
-          "translateY": 8,
-          "filter": "blur(1.5px)",
+          "translateY": 7.74464,
+          "filter": "blur(1.45212px)",
           "clipPath": "none"
         },
         {
