@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T07:36:04.879Z",
+  "generatedAt": "2026-09-17T09:58:47.236Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -2556,40 +2556,45 @@
       "part": "04",
       "width": 2,
       "color": "rgb(173, 149, 238)",
-      "maskSize": "535px 23px, 538px 23px, 152px 23px, 3px 100%",
-      "preserveLayer": true,
+      "maskImage": "none",
+      "maskSize": "auto",
+      "preserveLayer": false,
       "visible": true
     },
     {
       "part": "05",
       "width": 2,
       "color": "rgb(173, 149, 238)",
-      "maskSize": "361px 23px, 401px 23px, 3px 100%",
-      "preserveLayer": true,
+      "maskImage": "none",
+      "maskSize": "auto",
+      "preserveLayer": false,
       "visible": true
     },
     {
       "part": "07",
       "width": 2,
       "color": "rgb(173, 149, 238)",
-      "maskSize": "321px 18px, 331px 18px, 3px 100%",
-      "preserveLayer": true,
+      "maskImage": "none",
+      "maskSize": "auto",
+      "preserveLayer": false,
       "visible": true
     },
     {
       "part": "08",
       "width": 2,
       "color": "rgb(173, 149, 238)",
-      "maskSize": "355px 23px, 307px 23px, 3px 100%",
-      "preserveLayer": true,
+      "maskImage": "none",
+      "maskSize": "auto",
+      "preserveLayer": false,
       "visible": true
     },
     {
       "part": "09",
       "width": 2,
       "color": "rgb(173, 149, 238)",
-      "maskSize": "300px 23px, 3px 100%",
-      "preserveLayer": true,
+      "maskImage": "none",
+      "maskSize": "auto",
+      "preserveLayer": false,
       "visible": true
     }
   ],
@@ -2965,14 +2970,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.850291,
+        "currentTime": 3.853661,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.565681,
+        "currentTime": 4.56088,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -3443,8 +3448,8 @@
       "before": {
         "in": false,
         "edge": "bottom",
-        "top": 1006.1,
-        "bottom": 1050,
+        "top": 1007,
+        "bottom": 1050.9,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3472,8 +3477,8 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 951.7,
-        "bottom": 995.7,
+        "top": 952.4,
+        "bottom": 996.3,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3483,15 +3488,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-150.26px 0px, -251.833px 21px, -150.26px 0px",
+        "maskPosition": "-150.155px 0px, -251.689px 21px, -150.155px 0px",
         "maskXs": [
-          -150.26,
-          -251.833,
-          -150.26
+          -150.155,
+          -251.689,
+          -150.155
         ],
         "maskProgress": [
-          0.531661971830986,
-          0.12757980456026058
+          0.5319577464788733,
+          0.12804885993485343
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -3501,8 +3506,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -151.7,
-        "bottom": -107.8,
+        "top": -152.3,
+        "bottom": -108.4,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3530,8 +3535,8 @@
       "returnedTop": {
         "in": true,
         "edge": "top",
-        "top": 54.2,
-        "bottom": 98.1,
+        "top": 53.2,
+        "bottom": 97.1,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3541,15 +3546,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-177.117px 0px, -281.725px 21px, -177.117px 0px",
+        "maskPosition": "-158.945px 0px, -263.761px 21px, -158.945px 0px",
         "maskXs": [
-          -177.117,
-          -281.725,
-          -177.117
+          -158.945,
+          -263.761,
+          -158.945
         ],
         "maskProgress": [
-          0.45600845070422535,
-          0.030211726384364746
+          0.5071971830985915,
+          0.08872638436482076
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -3561,8 +3566,8 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -6.75285, 0)",
-      "after": "matrix(1, 0, 0, 1, -22.0531, 0)",
+      "before": "matrix(1, 0, 0, 1, -7.46718, 0)",
+      "after": "matrix(1, 0, 0, 1, -21.6922, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3618,10 +3623,10 @@
       ],
       [
         {
-          "opacity": 0.615518,
+          "opacity": 0.535014,
           "translateX": 0,
-          "translateY": 3.07586,
-          "filter": "blur(0.576724px)",
+          "translateY": 3.71989,
+          "filter": "blur(0.697479px)",
           "clipPath": "none"
         },
         {
@@ -3662,24 +3667,24 @@
       ],
       [
         {
-          "opacity": 0.944577,
+          "opacity": 0.933057,
           "translateX": 0,
-          "translateY": 0.443383,
-          "filter": "blur(0.0831342px)",
+          "translateY": 0.535543,
+          "filter": "blur(0.100414px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.766201,
+          "opacity": 0.719125,
           "translateX": 0,
-          "translateY": 1.87039,
-          "filter": "blur(0.350698px)",
+          "translateY": 2.247,
+          "filter": "blur(0.421313px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.0319197,
+          "opacity": 0,
           "translateX": 0,
-          "translateY": 7.74464,
-          "filter": "blur(1.45212px)",
+          "translateY": 8,
+          "filter": "blur(1.5px)",
           "clipPath": "none"
         },
         {

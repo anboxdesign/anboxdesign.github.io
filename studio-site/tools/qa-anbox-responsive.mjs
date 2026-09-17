@@ -1211,10 +1211,12 @@ async function auditDesktopIntroLines() {
       const maskStyle = getComputedStyle(maskNode);
       const width = definition.mode === 'border' ? parseFloat(lineStyle.borderLeftWidth) : parseFloat(lineStyle.width);
       const color = definition.mode === 'border' ? lineStyle.borderLeftColor : lineStyle.backgroundColor;
+      const maskImage = maskStyle.webkitMaskImage || maskStyle.maskImage;
       const maskSize = maskStyle.webkitMaskSize || maskStyle.maskSize;
       return {
         width,
         color,
+        maskImage,
         maskSize,
         preserveLayer: maskSize.split(',').some((layer) => /3px\s+100%/.test(layer.trim())),
         visible: width >= 1.5 && color !== 'rgba(0, 0, 0, 0)' && color !== 'transparent',
@@ -1635,7 +1637,7 @@ if (desktopGalleryPin.exitGap < 63) failures.push('portfolio: desktop gallery ha
 if (Math.abs(desktopGalleryPin.entered.stageTop - desktopGalleryPin.held.stageTop) > 2 || desktopGalleryPin.held.rootTop >= 0 || desktopGalleryPin.held.rootBottom <= desktopGalleryPin.height) failures.push('portfolio: desktop gallery does not hold a full-screen scene while scrolling');
 if (!desktopGalleryPin.held.headerHidden || desktopGalleryPin.held.headerBottom > 1) failures.push('portfolio: desktop header remains visible over the pinned gallery');
 if (desktopGalleryPin.released.stageTop >= desktopGalleryPin.held.stageTop - 40) failures.push('portfolio: desktop gallery does not release after one viewport');
-if (desktopIntroLines.some((item) => !item.visible || !item.preserveLayer)) failures.push('reveal: a desktop subtitle rule is clipped by the heading mask');
+if (desktopIntroLines.some((item) => !item.visible || (item.maskImage !== 'none' && !item.preserveLayer))) failures.push('reveal: a desktop subtitle rule is clipped by the heading mask');
 for (const item of teamCopyAudit) {
   if (JSON.stringify(item.copy) !== JSON.stringify(expectedTeamCopy)
     || JSON.stringify(item.portraitUrls) !== JSON.stringify(expectedTeamPortraitUrls)
