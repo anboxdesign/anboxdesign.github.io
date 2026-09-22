@@ -1,41 +1,40 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE yml_catalog SYSTEM "shops.dtd">
-<yml_catalog date="2025-03-31 12:00">
+<yml_catalog date="2026-09-22 14:29">
   <shop>
-    <name>Anbox.Design</name>
-    <company>Anbox.Design</company>
+    <name>ANBOX Studio</name>
+    <company>ANBOX Studio</company>
     <url>https://anboxdesign.ru</url>
-    <email>info@anboxdesign.ru</email>
+    <email>anbox.design@gmail.com</email>
     <picture>https://anboxdesign.github.io/fav.png</picture>
-    <description>Онлайн-курс по дизайну упаковки от брендинговой студии Anbox.Design</description>
+    <description>Онлайн-обучение дизайну упаковки от ANBOX Studio с личной обратной связью автора курса.</description>
 
     <currencies>
       <currency id="RUR" rate="1"/>
     </currencies>
 
     <categories>
-      <category id="400">Онлайн-обучение</category>
+      <category id="400">Дизайн и UX</category>
       <category id="401" parentId="400">Графический дизайн</category>
     </categories>
 
     <sets>
       <set id="packaging">
-        <name>Курсы по упаковке</name>
+        <name>Курсы по упаковке</name>
         <url>https://anboxdesign.ru/study</url>
       </set>
     </sets>
 
     <offers>
-      <offer id="upm2" available="false">
-        <name>Упаковка на Миллион 2.0</name>
+      <offer id="upm2" available="true">
+        <name>Дизайн упаковки — «Упаковка на миллион 2.0»</name>
         <url>https://anboxdesign.ru/study</url>
         <categoryId>401</categoryId>
         <set-ids>packaging</set-ids>
         <price>64900</price>
         <currencyId>RUR</currencyId>
-
-        <param name="Ближайшая дата">2026-02-01</param>
-        <param name="Продолжительность" unit="месяц">3</param>
+        <param name="Ближайшая дата">2026-10-31</param>
+        <param name="Продолжительность" unit="месяц">4</param>
 
         <param name="План" order="1" unit="Введение в теорию дизайна упаковки" hours="8"> Стартовый блок: цели курса, роль упаковки, структура </param>
         <param name="План" order="2" unit="Маркетинг и аналитика" hours="8"> Аудит упаковки, анализ конкурентов, выявление преимуществ </param>
@@ -54,7 +53,7 @@
         <param name="Результат обучения">Сертификат</param>
 
         <picture>https://anboxdesign.github.io/fav.png</picture>
-        <description> Пройдите все этапы создания упаковки — от аналитики до готового проекта в портфолио. Курс подходит для дизайнеров с опытом от 1 года, которые хотят выйти на новый уровень и научиться мыслить как бренд-дизайнер. </description>
+        <description>Курс по дизайну упаковки для дизайнеров с базовыми навыками Adobe Illustrator и Photoshop и опытных специалистов. 12 модулей: потребительское поведение, материалы и производство, юридические вопросы, выбор проекта, брифование, нейросети, аналитика, визуальная стратегия, проектирование, композиция, практика создания упаковки, визуализация и презентация. Домашние задания проверяет автор курса Анна Плавская. Тариф «Основной»: 4 месяца обучения с обратной связью, доступ к материалам на 6 месяцев после окончания потока и бессрочный доступ к чату. После успешной сдачи всех домашних заданий выдаётся сертификат.</description>
       </offer>
     </offers>
   </shop>
