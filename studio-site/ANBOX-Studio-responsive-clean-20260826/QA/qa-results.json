@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T10:51:35.682Z",
+  "generatedAt": "2026-09-28T13:27:14.007Z",
   "status": "PASS",
   "failures": [],
   "structure": [
@@ -2668,35 +2668,35 @@
       "rootWidth": 288,
       "cardRects": [
         {
-          "top": -225.8,
-          "bottom": 154.1,
+          "top": -77.8,
+          "bottom": 329.7,
           "width": 288
         },
         {
-          "top": 166.1,
-          "bottom": 508.5,
+          "top": 341.7,
+          "bottom": 551.7,
           "width": 288
         },
         {
-          "top": 520.5,
-          "bottom": 926,
+          "top": 563.7,
+          "bottom": 777.8,
           "width": 288
         }
       ],
       "photoHeights": [
         220,
-        200,
-        200
+        208,
+        212.1
       ],
       "roleTops": [
-        38.1,
-        430,
-        784.5
+        185.1,
+        397.7,
+        619.7
       ],
       "proofTops": [
-        79,
-        452.5,
-        852.9
+        228.3,
+        417.6,
+        685.6
       ],
       "captionOverflow": [
         0,
@@ -2720,35 +2720,35 @@
       "rootWidth": 326.9,
       "cardRects": [
         {
-          "top": -182.8,
-          "bottom": 200.6,
+          "top": -14.8,
+          "bottom": 371.1,
           "width": 326.9
         },
         {
-          "top": 212.6,
-          "bottom": 559.4,
+          "top": 383.1,
+          "bottom": 593.1,
           "width": 326.9
         },
         {
-          "top": 571.4,
-          "bottom": 982.4,
+          "top": 605.1,
+          "bottom": 815.1,
           "width": 326.9
         }
       ],
       "photoHeights": [
         237.6,
-        223.2,
-        223.2
+        208,
+        208
       ],
       "roleTops": [
-        98.8,
-        477.7,
-        836.6
+        265.8,
+        419,
+        641
       ],
       "proofTops": [
-        122.2,
-        501.2,
-        906
+        289.3,
+        439.5,
+        707.5
       ],
       "captionOverflow": [
         0,
@@ -2772,35 +2772,35 @@
       "rootWidth": 340.5,
       "cardRects": [
         {
-          "top": -193.1,
-          "bottom": 201.6,
+          "top": -21.1,
+          "bottom": 374.7,
           "width": 340.5
         },
         {
-          "top": 213.6,
-          "bottom": 570.8,
+          "top": 386.7,
+          "bottom": 604.2,
           "width": 340.5
         },
         {
-          "top": 582.8,
-          "bottom": 1004.5,
+          "top": 616.2,
+          "bottom": 833.7,
           "width": 340.5
         }
       ],
       "photoHeights": [
         247.5,
-        232.5,
-        232.5
+        215.5,
+        215.5
       ],
       "roleTops": [
-        98.3,
-        488,
-        857.3
+        269.3,
+        423.4,
+        652.9
       ],
       "proofTops": [
-        122.2,
-        511.9,
-        927.1
+        292.9,
+        444.6,
+        720.1
       ],
       "captionOverflow": [
         0,
@@ -2824,35 +2824,35 @@
       "rootWidth": 354.1,
       "cardRects": [
         {
-          "top": -190.8,
-          "bottom": 213.8,
+          "top": -18.8,
+          "bottom": 386.9,
           "width": 354.1
         },
         {
-          "top": 225.8,
-          "bottom": 592.3,
+          "top": 398.9,
+          "bottom": 625.1,
           "width": 354.1
         },
         {
-          "top": 604.3,
-          "bottom": 1035.3,
+          "top": 637.1,
+          "bottom": 863.3,
           "width": 354.1
         }
       ],
       "photoHeights": [
         257.4,
-        241.8,
-        241.8
+        224.2,
+        224.2
       ],
       "roleTops": [
-        110.6,
-        509.5,
-        888.1
+        281.6,
+        436.4,
+        674.6
       ],
       "proofTops": [
-        134.4,
-        533.4,
-        958
+        305.2,
+        458.2,
+        742.4
       ],
       "captionOverflow": [
         0,
@@ -2876,35 +2876,35 @@
       "rootWidth": 374.1,
       "cardRects": [
         {
-          "top": -176,
-          "bottom": 243.1,
+          "top": -1,
+          "bottom": 419.2,
           "width": 374.1
         },
         {
-          "top": 255.1,
-          "bottom": 635.2,
+          "top": 431.2,
+          "bottom": 667.2,
           "width": 374.1
         },
         {
-          "top": 647.2,
-          "bottom": 1091.9,
+          "top": 679.2,
+          "bottom": 915.2,
           "width": 374.1
         }
       ],
       "photoHeights": [
         271.9,
-        255.4,
-        255.4
+        234,
+        234
       ],
       "roleTops": [
-        139.8,
-        552.5,
-        944.6
+        313.8,
+        468.7,
+        716.7
       ],
       "proofTops": [
-        163.7,
-        576.3,
-        1014.5
+        337.4,
+        490.6,
+        784.6
       ],
       "captionOverflow": [
         0,
@@ -2928,35 +2928,35 @@
       "rootWidth": 592,
       "cardRects": [
         {
-          "top": -264,
-          "bottom": 204.7,
+          "top": -78,
+          "bottom": 390.7,
           "width": 592
         },
         {
-          "top": 216.7,
-          "bottom": 661.4,
+          "top": 402.7,
+          "bottom": 684.8,
           "width": 592
         },
         {
-          "top": 673.4,
-          "bottom": 1164.2,
+          "top": 696.8,
+          "bottom": 979,
           "width": 592
         }
       ],
       "photoHeights": [
         340,
-        320,
-        320
+        280.1,
+        280.1
       ],
       "roleTops": [
-        119.9,
-        578.7,
-        1035.4
+        304.9,
+        440.2,
+        734.3
       ],
       "proofTops": [
-        143.8,
-        602.5,
-        1105.3
+        328.5,
+        462.1,
+        802.2
       ],
       "captionOverflow": [
         0,
@@ -2971,14 +2971,14 @@
     "marqueeMovesAfterHold": true,
     "samples": {
       "heroVideoBefore": {
-        "currentTime": 3.862792,
+        "currentTime": 3.901217,
         "paused": false,
         "loop": true,
         "opacity": "1",
         "introState": "ready"
       },
       "heroVideoAfter": {
-        "currentTime": 4.569876,
+        "currentTime": 4.619215,
         "paused": false
       },
       "marqueeAtFullReveal": 0,
@@ -3375,9 +3375,9 @@
     ]
   },
   "cleanupAudit": {
-    "sourceBytes": 836973,
-    "blockBytes": 649230,
-    "reductionPercent": 22.4,
+    "sourceBytes": 837127,
+    "blockBytes": 648910,
+    "reductionPercent": 22.5,
     "styleTagsByFile": {
       "00-header.html": 6,
       "01-hero.html": 3,
@@ -3449,8 +3449,8 @@
       "before": {
         "in": false,
         "edge": "bottom",
-        "top": 1006,
-        "bottom": 1049.9,
+        "top": 1005.8,
+        "bottom": 1049.7,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3478,8 +3478,8 @@
       "entered": {
         "in": true,
         "edge": "bottom",
-        "top": 952.1,
-        "bottom": 996,
+        "top": 951.3,
+        "bottom": 995.2,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3489,15 +3489,15 @@
         "maskWidths": [
           100
         ],
-        "maskPosition": "-167.642px 0px, -275.706px 21px, -167.642px 0px",
+        "maskPosition": "-159.056px 0px, -263.913px 21px, -159.056px 0px",
         "maskXs": [
-          -167.642,
-          -275.706,
-          -167.642
+          -159.056,
+          -263.913,
+          -159.056
         ],
         "maskProgress": [
-          0.4826985915492958,
-          0.049817589576547174
+          0.5068845070422535,
+          0.08823127035830615
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -3507,8 +3507,8 @@
       "exitedTop": {
         "in": false,
         "edge": "top",
-        "top": -151.8,
-        "bottom": -107.8,
+        "top": -151.2,
+        "bottom": -107.3,
         "opacity": 1,
         "translateX": 0,
         "translateY": 0,
@@ -3543,19 +3543,19 @@
         "translateY": 0,
         "clipPath": "none",
         "clipValues": [],
-        "maskSize": "355px 23px, 307px 24px, 3px 100%",
+        "maskSize": "355px 23px, 307px 23px, 3px 100%",
         "maskWidths": [
           100
         ],
-        "maskPosition": "-177.448px 0px, -281.88px 21px, -177.448px 0px",
+        "maskPosition": "-196.739px 0px, -290.892px 21px, -196.739px 0px",
         "maskXs": [
-          -177.448,
-          -281.88,
-          -177.448
+          -196.739,
+          -290.892,
+          -196.739
         ],
         "maskProgress": [
-          0.45507605633802817,
-          0.029706840390879494
+          0.40073521126760564,
+          0.00035179153094463874
         ],
         "wordCount": 0,
         "wordsIntact": true,
@@ -3567,14 +3567,14 @@
     },
     "clientsDesktop": {
       "width": 1440,
-      "before": "matrix(1, 0, 0, 1, -39.4683, 0)",
-      "after": "matrix(1, 0, 0, 1, -53.6934, 0)",
+      "before": "matrix(1, 0, 0, 1, -39.8186, 0)",
+      "after": "matrix(1, 0, 0, 1, -54.3936, 0)",
       "moved": true
     },
     "clientsDesktop4k": {
       "width": 3840,
-      "before": "matrix(1, 0, 0, 1, -40.8832, 0)",
-      "after": "matrix(1, 0, 0, 1, -54.7584, 0)",
+      "before": "matrix(1, 0, 0, 1, -40.1792, 0)",
+      "after": "matrix(1, 0, 0, 1, -55.4709, 0)",
       "moved": true
     },
     "clientsMobile": {
@@ -3630,10 +3630,10 @@
       ],
       [
         {
-          "opacity": 0.533452,
+          "opacity": 0.57718,
           "translateX": 0,
-          "translateY": 3.73238,
-          "filter": "blur(0.699822px)",
+          "translateY": 3.38256,
+          "filter": "blur(0.63423px)",
           "clipPath": "none"
         },
         {
@@ -3674,17 +3674,17 @@
       ],
       [
         {
-          "opacity": 0.932678,
+          "opacity": 0.932906,
           "translateX": 0,
-          "translateY": 0.538574,
-          "filter": "blur(0.100983px)",
+          "translateY": 0.536753,
+          "filter": "blur(0.100641px)",
           "clipPath": "none"
         },
         {
-          "opacity": 0.717564,
+          "opacity": 0.718502,
           "translateX": 0,
-          "translateY": 2.25949,
-          "filter": "blur(0.423654px)",
+          "translateY": 2.25199,
+          "filter": "blur(0.422248px)",
           "clipPath": "none"
         },
         {
