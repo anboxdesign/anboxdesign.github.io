@@ -815,7 +815,7 @@ function finalDesktopCss(part) {
   }
   if (part === '03') {
     return `@media(min-width:1025px){
-.anbox-part-03{box-sizing:border-box;overflow-x:clip!important;overflow-y:visible!important;padding-bottom:clamp(64px,4.167vw,160px);background:var(--anbox-graphite,#202123)!important}
+.anbox-part-03{box-sizing:border-box;overflow-x:clip!important;overflow-y:visible!important;padding-top:clamp(32px,3.333vw,128px);padding-bottom:clamp(64px,4.167vw,160px);background:var(--anbox-graphite,#202123)!important}
 .anbox-part-03 #anxg-gallery{--anxg-case-media-height:38.2vw;--anxg-details-height:clamp(124px,7vw,140px);--anxg-stage-height:calc(var(--anxg-case-media-height) + var(--anxg-details-height) + var(--anbox-grid-gap));--anxg-sticky-dwell:100svh;position:relative;z-index:901;min-height:calc(var(--anxg-stage-height) + var(--anxg-sticky-dwell))!important;padding-block:0!important;overflow:visible!important}
 .anbox-part-03 #anxg-gallery .anxg__stage{position:sticky!important;top:max(12px,calc((100svh - var(--anxg-stage-height))/2))!important;height:var(--anxg-stage-height)!important;min-height:0!important;max-height:none!important;padding-block:0!important}
 .anbox-part-03 #anxg-gallery .anxg__viewport,.anbox-part-03 #anxg-gallery .anxg__case{height:100%!important}
@@ -1241,7 +1241,7 @@ const switchCss = `<style data-anbox-responsive-switch>
 const portfolioEditorCss = `<style data-anbox-gallery-editor>
 /* Tilda editor: keep the production gallery intact, but replace its long
    sticky narrative with one content-sized representative case. */
-html.anbox-gallery-editor .anbox-part-03{height:auto!important;min-height:0!important;max-height:none!important;padding-bottom:0!important;overflow:visible!important}
+html.anbox-gallery-editor .anbox-part-03{height:auto!important;min-height:0!important;max-height:none!important;padding-block:0!important;overflow:visible!important}
 html.anbox-gallery-editor .anbox-part-03 :is([data-anbox-reveal],[data-anbox-reveal-item],.anxg__rail,.anxg__viewport,.anxg__media,.anxg__details){opacity:1!important;visibility:visible!important;clip-path:none!important;transform:none!important;animation:none!important;transition:none!important}
 html.anbox-gallery-editor .anbox-part-03 :is(.anbox-full-page,.anbox-composite,#anxg-gallery,.anxg__stage){height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important}
 html.anbox-gallery-editor .anbox-desktop-part--03 #anxg-gallery{padding:20px 0!important;background:var(--anbox-graphite,#202123)!important}

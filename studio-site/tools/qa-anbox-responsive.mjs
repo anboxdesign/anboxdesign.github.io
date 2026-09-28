@@ -1145,6 +1145,7 @@ async function auditDesktopGalleryPin() {
       stageHeight: stageRect.height,
       stageTopCss: parseFloat(getComputedStyle(stage).top),
       position: getComputedStyle(stage).position,
+      topGap: Number((rootRect.top - partRect.top).toFixed(2)),
       exitGap: Number((partRect.bottom - rootRect.bottom).toFixed(2)),
     };
   });
@@ -1181,6 +1182,7 @@ async function auditDesktopGalleryPin() {
     height,
     position: initial.position,
     dwell: Number((initial.rootHeight - initial.stageHeight).toFixed(2)),
+    topGap: initial.topGap,
     exitGap: initial.exitGap,
     entered,
     held,
@@ -1491,6 +1493,7 @@ async function auditOwnedRevealClassPersistence() {
 const revealAudit = {
   desktop: await auditRevealTrigger(1440, 1000, '.anbox-desktop-part--08 .ablog__intro'),
   clientsDesktop: await auditClientMarquee(1440, 1000, '.anbox-desktop-part--06', '.anbox-desktop-part--06 .anxl__track'),
+  clientsDesktop4k: await auditClientMarquee(3840, 2160, '.anbox-desktop-part--06', '.anbox-desktop-part--06 .anxl__track'),
   clientsMobile: await auditClientMarquee(390, 844, '.anbox-mobile-part--06', '.anbox-mobile-part--06 .logo-track'),
   cardSequence: await auditCardSequence(),
   approachHover: await auditApproachHover(),
@@ -1633,6 +1636,7 @@ for (const item of desktopPortfolioGeometry) {
   if (item.technicalCount !== expectedCaseOrder.length || JSON.stringify(item.technicalBottomValues) !== JSON.stringify(['15px']) || Math.abs(item.technicalButtonBottomDiff) > 1) failures.push(`${item.width}px: portfolio technical line is not aligned with the next-project button across all cases`);
 }
 if (desktopGalleryPin.position !== 'sticky' || Math.abs(desktopGalleryPin.dwell - desktopGalleryPin.height) > 2) failures.push('portfolio: desktop gallery is not pinned for exactly one viewport');
+if (desktopGalleryPin.topGap < 31) failures.push('portfolio: desktop gallery has no intentional entry spacing');
 if (desktopGalleryPin.exitGap < 63) failures.push('portfolio: desktop gallery has no intentional exit spacing');
 if (Math.abs(desktopGalleryPin.entered.stageTop - desktopGalleryPin.held.stageTop) > 2 || desktopGalleryPin.held.rootTop >= 0 || desktopGalleryPin.held.rootBottom <= desktopGalleryPin.height) failures.push('portfolio: desktop gallery does not hold a full-screen scene while scrolling');
 if (!desktopGalleryPin.held.headerHidden || desktopGalleryPin.held.headerBottom > 1) failures.push('portfolio: desktop header remains visible over the pinned gallery');
@@ -1747,7 +1751,7 @@ const approachDocumentPositionsStable = approachScroll.before.cards.length === a
   && approachScroll.before.cards.every((card, index) => Math.abs(card.documentTop - approachScroll.after.cards[index].documentTop) < 1);
 if (!approachScroll.before.isIn || !approachScroll.after.isIn || !approachDocumentPositionsStable || approachScroll.after.cards.some((card) => card.opacity < .99 || !['none', 'matrix(1, 0, 0, 1, 0, 0)'].includes(card.transform))) failures.push('approach: desktop block jumps or resets after its heading leaves the viewport');
 if (revealAudit.ownedRevealClasses.some((item) => !item.entered || !item.active || !item.lineVisible)) failures.push('reveal: a block-owned entrance class or vertical heading rule is reset by the shared controller');
-if (!revealAudit.clientsDesktop.moved || !revealAudit.clientsMobile.moved) failures.push('reveal: client marquees no longer move independently');
+if (!revealAudit.clientsDesktop.moved || !revealAudit.clientsDesktop4k.moved || !revealAudit.clientsMobile.moved) failures.push('reveal: client marquees no longer move independently');
 if (!revealAudit.reduced.targetVisible || !revealAudit.reduced.footerLogoExcluded) failures.push('reveal: reduced-motion fallback or mobile footer logo isolation is invalid');
 
 const report = {
