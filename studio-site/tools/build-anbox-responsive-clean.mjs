@@ -935,8 +935,45 @@ function composedMobileCss(part) {
 function finalMobileCss(part) {
   const css = composedMobileCss(part);
   if (part === '03') return `${css}.anbox-mobile-part--03 .portfolio-more-slot{background:rgba(12,9,18,0)!important;transition:background-color 220ms cubic-bezier(.22,1,.36,1)!important}.anbox-mobile-part--03 .portfolio-more-slot.is-gate-active{background:rgba(12,9,18,.56)!important}.anbox-mobile-part--03 .portfolio-gate-spacer{position:relative!important;z-index:0!important;min-height:calc(100vh - var(--abm-gallery-top))!important;min-height:calc(100svh - var(--abm-gallery-top))!important;pointer-events:none!important;overflow-anchor:none}.anbox-mobile-part--03 .portfolio-gate-spacer[hidden]{display:none!important}@media(prefers-reduced-motion:reduce){.anbox-mobile-part--03 .portfolio-more-slot{transition:none!important}}`;
-  if (part === '06') return `${css}.anbox-mobile-part--06 .section.clients{padding-block:22px 28px!important}.anbox-mobile-part--06 .logo-marquee{position:relative;gap:10px!important}.anbox-mobile-part--06 .logo-row{overflow:hidden!important}.anbox-mobile-part--06 .logo-track{--logo-loop-gap:10px;gap:var(--logo-loop-gap)!important;will-change:transform}.anbox-mobile-part--06 .logo-sequence{display:flex;gap:10px}.anbox-mobile-part--06 .logo-cell,.anbox-mobile-part--06 .logo-cell:nth-child(n){flex:0 0 clamp(112px,32vw,150px);min-height:58px!important;display:grid;place-items:center}.anbox-mobile-part--06 .logo-track[data-logo-track="forward"]{animation:abm-client-forward 19s linear infinite}.anbox-mobile-part--06 .logo-track[data-logo-track="reverse"]{animation:abm-client-reverse 23s linear infinite}.anbox-mobile-part--06 .logo-marquee.is-paused .logo-track{animation-play-state:paused}.anbox-mobile-part--06 .logo-motion-toggle{width:44px;height:44px;min-width:44px;min-height:44px;margin-top:2px;justify-self:end;display:grid;place-items:center;border:1px solid rgba(21,23,22,.18);border-radius:50%;background:rgba(255,255,255,.72);color:var(--ink);cursor:pointer}.anbox-mobile-part--06 .logo-motion-toggle span{position:relative;width:14px;height:14px;display:block}.anbox-mobile-part--06 .logo-motion-toggle span::before,.anbox-mobile-part--06 .logo-motion-toggle span::after{position:absolute;top:1px;bottom:1px;width:3px;border-radius:2px;background:currentColor;content:""}.anbox-mobile-part--06 .logo-motion-toggle span::before{left:2px}.anbox-mobile-part--06 .logo-motion-toggle span::after{right:2px}.anbox-mobile-part--06 .logo-motion-toggle[aria-pressed="true"] span::before{inset:1px auto 1px 3px;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:9px solid currentColor;border-radius:0;background:transparent}.anbox-mobile-part--06 .logo-motion-toggle[aria-pressed="true"] span::after{display:none}@keyframes abm-client-forward{from{transform:translate3d(0,0,0)}to{transform:translate3d(calc(-50% - (var(--logo-loop-gap)/2)),0,0)}}@keyframes abm-client-reverse{from{transform:translate3d(calc(-50% - (var(--logo-loop-gap)/2)),0,0)}to{transform:translate3d(0,0,0)}}@media(prefers-reduced-motion:reduce){.anbox-mobile-part--06 .logo-track{animation:none!important;transform:none!important;will-change:auto}.anbox-mobile-part--06 .logo-sequence[aria-hidden="true"]{display:none}}`;
-  if (part === '07') return `${css}.anbox-mobile-part--07 .team-grid{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}.anbox-mobile-part--07 .person-card,.anbox-mobile-part--07 .person-card:first-child,.anbox-mobile-part--07 .team-grid .person-card:last-child{grid-column:auto!important}.anbox-mobile-part--07 .person-card:first-child .person-photo{height:auto!important;aspect-ratio:1122 / 1402!important}.anbox-mobile-part--07 .person-card:first-child .person-photo img{object-fit:cover!important;object-position:center top!important}.anbox-mobile-part--07 .person-card:nth-child(n+2){min-height:clamp(220px,64vw,270px)!important;display:grid!important;grid-template-columns:minmax(116px,38%) minmax(0,1fr)!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-photo{height:auto!important;min-height:100%!important;aspect-ratio:auto!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-photo img{object-fit:cover!important;object-position:center top!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-card__caption{min-width:0!important;padding:12px!important}.anbox-mobile-part--07 .person-card__caption{padding:14px 16px 16px!important}.anbox-mobile-part--07 .person-card:first-child .person-card__caption{padding:16px 18px 18px!important}.anbox-mobile-part--07 .person-card h3{font-size:18px!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) h3{font-size:clamp(16px,4.6vw,18px)!important;line-height:1.14!important}.anbox-mobile-part--07 .person-card__caption>.person-card__role{margin-top:5px!important;font-size:clamp(13px,3.8vw,14px)!important;line-height:1.42!important}.anbox-mobile-part--07 .person-card__caption>:is(.person-card__proof,.person-card__meta){font-size:clamp(12px,3.55vw,13px)!important;line-height:1.42!important}.anbox-mobile-part--07 .person-card__caption>.person-card__meta{margin-top:5px!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-card__caption>p{font-size:clamp(11px,3.2vw,12.5px)!important;line-height:1.35!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) :is(.person-card__proof,.person-card__meta){margin-top:5px!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) :is(.person-card__nowrap,.person-card__agency){white-space:normal!important;overflow-wrap:anywhere!important}`;
+  if (part === '06') return `${css}
+    .anbox-mobile-part--06 .section.clients{padding-block:22px 22px!important}
+    .anbox-mobile-part--06 .logo-marquee{position:relative;gap:10px!important;cursor:pointer}
+    .anbox-mobile-part--06 .logo-row{overflow:hidden!important}
+    .anbox-mobile-part--06 .logo-track{--logo-loop-gap:10px;gap:var(--logo-loop-gap)!important;will-change:transform}
+    .anbox-mobile-part--06 .logo-sequence{display:flex;gap:10px}
+    .anbox-mobile-part--06 .logo-cell,.anbox-mobile-part--06 .logo-cell:nth-child(n){flex:0 0 clamp(112px,32vw,150px);min-height:58px!important;display:grid;place-items:center}
+    .anbox-mobile-part--06 .logo-track[data-logo-track="forward"]{animation:abm-client-forward 19s linear infinite}
+    .anbox-mobile-part--06 .logo-track[data-logo-track="reverse"]{animation:abm-client-reverse 23s linear infinite}
+    .anbox-mobile-part--06 .logo-marquee.is-paused .logo-track{animation-play-state:paused}
+    .anbox-mobile-part--06 .logo-motion-toggle{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);border:0;white-space:nowrap}
+    .anbox-mobile-part--06 .logo-motion-toggle:focus-visible{inset:0 8px auto auto;z-index:2;width:44px;height:44px;margin:0;clip-path:none;display:grid;place-items:center;background:#fff;color:#151716;border:1px solid #7658d0;border-radius:50%;outline:2px solid #7658d0;outline-offset:2px}
+    .anbox-mobile-part--06 .logo-motion-toggle span::before{content:"Ⅱ"}
+    .anbox-mobile-part--06 .logo-motion-toggle[aria-pressed="true"] span::before{content:"▶"}
+    @keyframes abm-client-forward{from{transform:translate3d(0,0,0)}to{transform:translate3d(calc(-50% - (var(--logo-loop-gap)/2)),0,0)}}
+    @keyframes abm-client-reverse{from{transform:translate3d(calc(-50% - (var(--logo-loop-gap)/2)),0,0)}to{transform:translate3d(0,0,0)}}
+    @media(prefers-reduced-motion:reduce){.anbox-mobile-part--06 .logo-track{animation:none!important;transform:none!important;will-change:auto}.anbox-mobile-part--06 .logo-sequence[aria-hidden="true"]{display:none}}
+  `;
+  if (part === '07') return `${css}
+    .anbox-mobile-part--07 .team-grid{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+    .anbox-mobile-part--07 .person-card,.anbox-mobile-part--07 .person-card:first-child,.anbox-mobile-part--07 .team-grid .person-card:last-child{grid-column:auto!important}
+    .anbox-mobile-part--07 .person-card .person-photo{height:auto!important;min-height:0!important;aspect-ratio:auto!important;background:#e8e6e2!important}
+    .anbox-mobile-part--07 .person-card .person-photo img{position:static!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;object-position:center top!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2){min-height:0!important;display:grid!important;grid-template-columns:minmax(108px,40%) minmax(0,1fr)!important;align-items:start!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2) .person-photo{align-self:stretch!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2) .person-card__caption{min-width:0!important;padding:12px!important}
+    .anbox-mobile-part--07 .person-card__caption{padding:14px 16px 16px!important}
+    .anbox-mobile-part--07 .person-card:first-child .person-card__caption{padding:16px 18px 18px!important}
+    .anbox-mobile-part--07 .person-card h3{font-size:18px!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2) h3{font-size:clamp(16px,4.6vw,18px)!important;line-height:1.14!important}
+    .anbox-mobile-part--07 .person-card__caption>.person-card__role{margin-top:5px!important;font-size:clamp(13px,3.8vw,14px)!important;line-height:1.42!important}
+    .anbox-mobile-part--07 .person-card__caption>:is(.person-card__proof,.person-card__meta){font-size:clamp(12px,3.55vw,13px)!important;line-height:1.42!important}
+    .anbox-mobile-part--07 .person-card__caption>.person-card__meta{margin-top:5px!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2) .person-card__caption>p{font-size:clamp(11px,3.2vw,12.5px)!important;line-height:1.35!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2) :is(.person-card__proof,.person-card__meta){margin-top:5px!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2) :is(.person-card__nowrap,.person-card__agency){white-space:normal!important;overflow-wrap:anywhere!important}
+    .anbox-mobile-part--07 .person-card__agency{display:inline!important;width:auto!important;min-height:0!important;margin:0!important;font-size:inherit!important;line-height:inherit!important}
+    .anbox-mobile-part--07 .training-visual img{max-width:100%}
+  `;
   if (part !== '01') return css;
   return `${css}.anbox-mobile-part--01 .hero{padding-bottom:max(42px,env(safe-area-inset-bottom))!important}.anbox-mobile-part--01 .hero__action{min-height:54px;padding:0 16px;justify-content:space-between;border:1px solid var(--abx-purple,#ad95ee);border-radius:8px;color:var(--white)}.anbox-mobile-part--01 .hero__action:not(.hero__action--primary)>span:first-child{padding-bottom:0;border-bottom:0}.anbox-mobile-part--01 .shelf-marquee{padding-block:12px;border-color:rgba(21,23,22,.13);background:var(--abx-paper,#f3f4f0);color:var(--abx-ink,#151716)}.anbox-mobile-part--01 .shelf-marquee__track,.anbox-mobile-part--01 .shelf-marquee__sequence{gap:32px}.anbox-mobile-part--01 .shelf-marquee__label{padding-right:10px;color:var(--abx-ink,#151716);font-size:11px;letter-spacing:.045em}.anbox-mobile-part--01 .shelf-marquee__logo{width:auto;height:28px;max-width:148px;flex:0 0 auto;object-fit:contain}.anbox-mobile-part--01 .shelf-marquee__logo:first-of-type{transform:translateY(1px)}.anbox-mobile-part--01 .shelf-marquee__logo:nth-of-type(2){height:38px}.anbox-mobile-part--01 .shelf-marquee__logo:nth-of-type(3){filter:brightness(1.06);mix-blend-mode:multiply}.anbox-mobile-part--01 .shelf-marquee__logo:nth-of-type(7){height:22px}.anbox-mobile-part--01 .shelf-marquee__logo:nth-of-type(8){height:20px}`;
 }
@@ -1109,6 +1146,18 @@ function mobileRuntimeFor(part) {
         logoMotionManual = true;
         setLogoMotion(!logoMarquee.classList.contains('is-paused'));
       });
+      let logoPointerStart = null;
+      logoMarquee.addEventListener('pointerdown', (event) => {
+        logoPointerStart = { x: event.clientX, y: event.clientY };
+      }, { passive: true });
+      logoMarquee.addEventListener('pointerup', (event) => {
+        const start = logoPointerStart;
+        logoPointerStart = null;
+        if (!start || event.target.closest('button') || Math.hypot(event.clientX - start.x, event.clientY - start.y) > 8) return;
+        logoMotionManual = true;
+        setLogoMotion(!logoMarquee.classList.contains('is-paused'));
+      }, { passive: true });
+      logoMarquee.addEventListener('pointercancel', () => { logoPointerStart = null; }, { passive: true });
       reducedMotion.addEventListener?.('change', (event) => {
         if (!logoMotionManual) setLogoMotion(event.matches);
       });`;
@@ -1160,6 +1209,20 @@ function clientLogoSprite() {
     if (!rootMatch || !viewBox) throw new Error(`Client logo ${number} is not a valid inline SVG`);
 
     let body = rootMatch[2];
+    if (number === '08') {
+      // Preserve the supplied Schwarz outlines, but paint the lettering directly.
+      // Nested raster masks inside a hidden SVG sprite fail on some mobile engines.
+      const letterMask = body.match(/<mask\b[^>]*id="mask0_2190_2867"[^>]*>([\s\S]*?)<\/mask>/i)?.[1];
+      const lettering = letterMask?.replace(/fill="white"/g, 'fill="#1d1d21"');
+      if (!lettering) throw new Error('Schwarz lettering contours not found');
+      body = body.replace(/<mask\b[\s\S]*?<\/g>\s*<\/g>/i, lettering)
+        .replace(/<pattern\b[\s\S]*?<\/pattern>/gi, '')
+        .replace(/<image\b[^>]*\/>/gi, '');
+      const background = body.match(/^\s*<rect\b[^>]*\/>/)?.[0] || '';
+      const definitions = body.match(/<defs>[\s\S]*?<\/defs>/)?.[0] || '';
+      const artwork = body.replace(background, '').replace(definitions, '');
+      body = `${background}<g transform="translate(101 41) scale(1.45) translate(-101 -41)">${artwork}</g>${definitions}`;
+    }
     const ids = [...body.matchAll(/\bid=["']([^"']+)["']/gi)].map((match) => match[1]);
     for (const id of ids) {
       const nextId = `anxl-${number}-${id}`;

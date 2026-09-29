@@ -2598,7 +2598,7 @@ button.setAttribute("aria-expanded",String(isOpen));
 
 <script data-anbox-reveal-init="05">(function(){var profile={"items":[{"selector":".anxp__kicker","kind":"text"},{"selector":".anxp__header h2","kind":"heading","delay":60,"preserveLeft":3},{"selector":"[data-anxp-card]","kind":"panel","delay":170,"stagger":140,"maxDelay":450},{"selector":".anxp__custom","kind":"action","delay":120}]};function run(api){document.querySelectorAll('.anbox-desktop-part--05').forEach(function(root){api.mount(root,profile)})}if(window.ANBOXReveal)run(window.ANBOXReveal);else(window.ANBOXRevealQueue=window.ANBOXRevealQueue||[]).push(run)})();</script>
 
-<style data-anxl-inline-style>.anxl__sprite{position:absolute!important;width:0!important;height:0!important;overflow:hidden!important;pointer-events:none!important}.anbox-mobile-part--06 .logo-cell .anxl__logo-art{width:100%;height:auto;aspect-ratio:212/82;display:block;object-fit:contain}</style>
+<style data-anxl-inline-style>.anxl__sprite{position:absolute!important;width:0!important;height:0!important;overflow:hidden!important;pointer-events:none!important}.anbox-mobile-part--06 .logo-cell{overflow:hidden!important;border:1px solid rgba(21,23,22,.08)!important;border-radius:10px!important;background:#1d1d21!important}.anbox-mobile-part--06 .logo-cell .anxl__logo-art{width:100%;height:auto;aspect-ratio:212/82;display:block;object-fit:contain}</style>
 
 <!-- ANBOX Studio · 06 · responsive clean · desktop + mobile -->
 
@@ -2609,6 +2609,27 @@ button.setAttribute("aria-expanded",String(isOpen));
 
 <style data-anbox-desktop-style="06">
 .anbox-part-06{scroll-behavior:smooth;background:var(--abx-paper,#f3f4f0)}.anbox-part-06{margin:0;overflow-x:hidden;background:var(--abx-paper,#f3f4f0);color:var(--abx-ink,#151716)}.anbox-part-06 .anbox-full-page{width:100%;overflow:clip}.anbox-part-06 .anbox-full-page>section{display:block;position:relative}.anbox-part-06 :focus-visible{outline:2px solid var(--abx-purple-strong,#7658d0);outline-offset:3px}@media (prefers-reduced-motion: reduce){.anbox-part-06{scroll-behavior:auto}}.anbox-part-06 #anxl-logos{--anxl-paper:var(--anbox-paper,#f4f1ed);--anxl-ink:var(--anbox-ink,var(--abx-ink,#151716));--anxl-line:transparent;width:100%;overflow-x:clip;background:var(--anxl-paper);color:var(--anxl-ink);text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}.anbox-part-06 #anxl-logos,.anbox-part-06 #anxl-logos *{box-sizing:border-box;min-width:0}.anbox-part-06 #anxl-logos .anxl__viewport{width:100%;padding:8px 0;overflow:hidden;border:0}.anbox-part-06 #anxl-logos .anxl__track,.anbox-part-06 #anxl-logos .anxl__group{display:flex}.anbox-part-06 #anxl-logos .anxl__track{--anxl-shift:-50%;width:max-content;will-change:transform}.anbox-part-06 #anxl-logos.anxl-is-ready .anxl__track{animation:anxl-scroll 42s linear infinite}.anbox-part-06 #anxl-logos .anxl__group{align-items:center;gap:12px;padding-right:12px;flex:0 0 auto}.anbox-part-06 #anxl-logos .anxl__logo{width:212px;min-width:212px;height:82px;min-height:82px;padding:0;display:grid;place-items:center;flex:0 0 auto;border:0}.anbox-part-06 #anxl-logos .anxl__logo :is(img,.anxl__logo-art){width:212px;height:82px;display:block;object-fit:contain}.anbox-part-06 #anxl-logos.anxl-is-paused .anxl__track{animation-play-state:paused}@keyframes anxl-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(var(--anxl-shift),0,0)}}@media (prefers-reduced-motion: reduce){.anbox-part-06 #anxl-logos .anxl__viewport{overflow-x:auto;scrollbar-width:thin}.anbox-part-06 #anxl-logos .anxl__track{animation:none !important;transform:none !important;will-change:auto}.anbox-part-06 #anxl-logos .anxl__group[aria-hidden="true"]{display:none}}
+</style>
+
+<style media="(max-width:640px)" data-anbox-mobile-patch="06">
+
+    .anbox-mobile-part--06 .section.clients{padding-block:22px 22px!important}
+    .anbox-mobile-part--06 .logo-marquee{position:relative;gap:10px!important;cursor:pointer}
+    .anbox-mobile-part--06 .logo-row{overflow:hidden!important}
+    .anbox-mobile-part--06 .logo-track{--logo-loop-gap:10px;gap:var(--logo-loop-gap)!important;will-change:transform}
+    .anbox-mobile-part--06 .logo-sequence{display:flex;gap:10px}
+    .anbox-mobile-part--06 .logo-cell,.anbox-mobile-part--06 .logo-cell:nth-child(n){flex:0 0 clamp(112px,32vw,150px);min-height:58px!important;display:grid;place-items:center}
+    .anbox-mobile-part--06 .logo-track[data-logo-track="forward"]{animation:abm-client-forward 19s linear infinite}
+    .anbox-mobile-part--06 .logo-track[data-logo-track="reverse"]{animation:abm-client-reverse 23s linear infinite}
+    .anbox-mobile-part--06 .logo-marquee.is-paused .logo-track{animation-play-state:paused}
+    .anbox-mobile-part--06 .logo-motion-toggle{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);border:0;white-space:nowrap}
+    .anbox-mobile-part--06 .logo-motion-toggle:focus-visible{inset:0 8px auto auto;z-index:2;width:44px;height:44px;margin:0;clip-path:none;display:grid;place-items:center;background:#fff;color:#151716;border:1px solid #7658d0;border-radius:50%;outline:2px solid #7658d0;outline-offset:2px}
+    .anbox-mobile-part--06 .logo-motion-toggle span::before{content:"Ⅱ"}
+    .anbox-mobile-part--06 .logo-motion-toggle[aria-pressed="true"] span::before{content:"▶"}
+    @keyframes abm-client-forward{from{transform:translate3d(0,0,0)}to{transform:translate3d(calc(-50% - (var(--logo-loop-gap)/2)),0,0)}}
+    @keyframes abm-client-reverse{from{transform:translate3d(calc(-50% - (var(--logo-loop-gap)/2)),0,0)}to{transform:translate3d(0,0,0)}}
+    @media(prefers-reduced-motion:reduce){.anbox-mobile-part--06 .logo-track{animation:none!important;transform:none!important;will-change:auto}.anbox-mobile-part--06 .logo-sequence[aria-hidden="true"]{display:none}}
+  
 </style>
 
 <div class="anbox-part-06 anbox-desktop-part anbox-desktop-part--06">
@@ -2735,7 +2756,7 @@ button.setAttribute("aria-expanded",String(isOpen));
 </linearGradient>
 </defs>
 </symbol><symbol id="anxl-client-08" viewBox="0 0 202 82">
-<rect width="202" height="82" rx="12" fill="url(#anxl-08-paint0_linear_2190_2867)"/>
+<rect width="202" height="82" rx="12" fill="url(#anxl-08-paint0_linear_2190_2867)"/><g transform="translate(101 41) scale(1.45) translate(-101 -41)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M110.824 27.296C110.597 27.2841 110.358 27.308 110.13 27.3558C110.035 27.3737 109.939 27.4096 109.85 27.4454C110.262 27.4454 110.686 27.4394 111.117 27.4335C111.021 27.3916 110.925 27.302 110.824 27.296Z" fill="#F1F1F1" fill-opacity="0.63"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M66.5699 36.8125C66.5626 36.8198 66.5626 36.8198 66.5699 36.8125V36.8125Z" fill="#F1F1F1" fill-opacity="0.63"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M74.3846 53.8028C74.4739 53.8028 74.5691 53.8028 74.6583 53.7969C74.4382 53.7969 74.337 53.7969 74.3846 53.8028Z" fill="#F1F1F1" fill-opacity="0.63"/>
@@ -2747,29 +2768,19 @@ button.setAttribute("aria-expanded",String(isOpen));
 <path fill-rule="evenodd" clip-rule="evenodd" d="M90.0312 53.6645C90.1926 53.6645 90.354 53.6645 90.5094 53.6645C90.4735 53.6466 90.4436 53.6406 90.4078 53.6406C90.2823 53.6466 90.1568 53.6586 90.0312 53.6705V53.6645Z" fill="#F1F1F1" fill-opacity="0.63"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M111.595 27.4357C111.434 27.4357 111.279 27.4357 111.117 27.4357C111.153 27.4536 111.183 27.4596 111.219 27.4596C111.344 27.4536 111.47 27.4416 111.595 27.4297V27.4357Z" fill="#F1F1F1" fill-opacity="0.63"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M134.443 33.8772C134.443 33.8772 134.443 33.8772 134.443 33.8713C134.312 33.8055 134.18 33.7458 134.049 33.7039C133.588 33.5605 134.515 34.1103 134.449 33.8772H134.443Z" fill="#F1F1F1" fill-opacity="0.63"/>
-<mask id="anxl-08-mask0_2190_2867" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="72" y="37" width="58" height="8">
-<path d="M92.4725 37.5773L92.2155 40.2188H90.6497L90.9007 37.5773H88.3369L87.6675 44.7369H90.2135L90.4944 41.8026H92.0602L91.7733 44.7369H94.3192L95.0364 37.5773H92.4725ZM110.216 39.0534H110.246L110.593 42.0954H109.165L110.21 39.0534H110.216ZM108.788 37.5773L105.632 44.7369H108.298L108.698 43.4879H110.724L110.838 44.7369H113.545L112.003 37.5773H108.776H108.788ZM117.514 38.9279H118.01C118.392 38.9279 118.661 38.9937 118.816 39.1192C118.972 39.2447 119.032 39.4598 118.99 39.7646C118.96 40.0216 118.846 40.2248 118.655 40.3862C118.464 40.5415 118.183 40.6192 117.818 40.6192H117.31L117.519 38.9279H117.514ZM115.117 37.5773L114.256 44.7369H116.802L117.149 41.8802H117.824C117.98 41.8802 118.105 41.8922 118.207 41.9221C118.308 41.952 118.386 42.0057 118.446 42.0834C118.506 42.1611 118.541 42.2627 118.547 42.4002C118.559 42.5317 118.547 42.699 118.529 42.9022L118.47 43.3803C118.464 43.452 118.452 43.5477 118.44 43.6612C118.428 43.7807 118.422 43.9003 118.422 44.0258C118.422 44.1513 118.422 44.2768 118.446 44.4023C118.464 44.5278 118.494 44.6413 118.547 44.731H121.255L121.267 44.6294C121.189 44.5995 121.135 44.5636 121.099 44.5278C121.069 44.4919 121.034 44.4561 121.004 44.4142C120.98 44.3724 120.968 44.3186 120.956 44.2469C120.944 44.1752 120.944 44.0915 120.944 44.0019C120.944 43.9122 120.956 43.8166 120.968 43.715C120.98 43.6134 120.992 43.5178 121.004 43.4281L121.081 42.8185C121.141 42.3404 121.075 41.9639 120.878 41.689C120.687 41.4141 120.287 41.2587 119.677 41.2169V41.1989C120.275 41.1332 120.723 40.9539 121.028 40.6551C121.332 40.3622 121.512 39.9738 121.571 39.4897C121.607 39.2148 121.589 38.9578 121.524 38.7247C121.458 38.4857 121.326 38.2884 121.135 38.1151C120.944 37.9418 120.675 37.8103 120.346 37.7147C120.012 37.6191 119.605 37.5713 119.115 37.5713H115.105L115.117 37.5773ZM123.173 37.5773L122.976 39.1132H125.851L122.223 43.4042L122.056 44.7429H128.092L128.295 43.2249H125.169L128.869 38.9339L129.048 37.5832H123.179L123.173 37.5773ZM73.5693 38.0135C73.0075 38.396 72.6967 38.9518 72.637 39.6869C72.6071 40.1112 72.6728 40.4519 72.8521 40.7089C73.0254 40.9718 73.2585 41.181 73.5454 41.3424C73.8263 41.5037 74.143 41.6352 74.4837 41.7368C74.8243 41.8384 75.1411 41.934 75.4279 42.0356C75.7148 42.1313 75.9539 42.2508 76.1391 42.3882C76.3244 42.5257 76.4081 42.711 76.3901 42.944C76.3722 43.1353 76.2885 43.3026 76.1391 43.4341C75.9837 43.5656 75.7746 43.6313 75.5116 43.6313C75.2666 43.6313 75.0693 43.5716 74.9259 43.4461C74.7825 43.3265 74.7227 43.47 74.7466 43.1652C74.7466 43.1652 74.7466 43.1174 74.7526 43.0695C74.7526 43.0277 74.7526 42.9978 74.7526 42.9978H72.2844L72.2664 43.2488C72.2366 43.6194 72.2844 43.5716 72.4099 43.8285C72.5354 44.0795 72.7326 44.2827 73.0015 44.4441C73.2645 44.5995 73.5992 44.7071 73.9996 44.7728C74.4 44.8385 74.8662 44.8684 75.3921 44.8684C76.5156 44.8684 77.3882 44.6951 78.0097 44.3545C78.6313 44.0138 78.9779 43.458 79.0436 42.705C79.0795 42.2687 79.0078 41.9221 78.8225 41.6472C78.6432 41.3723 78.3982 41.1571 78.0994 40.9898C77.8005 40.8224 77.4778 40.685 77.1312 40.5834C76.7846 40.4818 76.4559 40.3802 76.1511 40.2786C75.8463 40.177 75.6012 40.0575 75.404 39.92C75.2128 39.7825 75.1231 39.5973 75.1411 39.3642C75.153 39.2028 75.2307 39.0594 75.3682 38.9279C75.5056 38.7964 75.7148 38.7307 75.9897 38.7307C76.2407 38.7307 76.414 38.8084 76.5216 38.9578C76.6292 39.1072 76.677 39.2925 76.6591 39.5076L76.6471 39.6809H79.0377C79.1034 38.91 78.9002 38.3482 78.4281 37.9956C77.9559 37.643 77.1611 37.4637 76.0435 37.4637C74.9259 37.4637 74.137 37.655 73.5693 38.0374M82.2171 37.631C81.7569 37.7625 81.3744 37.9777 81.0696 38.2705C80.7648 38.5693 80.5377 38.9518 80.3823 39.4299C80.227 39.908 80.1194 40.4878 80.0596 41.1691C79.9999 41.8384 79.9999 42.4062 80.0596 42.8783C80.1134 43.3445 80.2568 43.7329 80.4899 44.0258C80.717 44.3246 81.0577 44.5338 81.5059 44.6593C81.9481 44.7848 82.5279 44.8505 83.239 44.8505C83.6514 44.8505 84.0518 44.8206 84.4463 44.7549C84.8407 44.6951 85.1933 44.5696 85.5101 44.3843C85.8268 44.2051 86.0957 43.954 86.3049 43.6313C86.5141 43.3146 86.6456 42.9022 86.6934 42.4002L86.7412 41.8683H84.273C84.2431 42.2089 84.2072 42.4898 84.1654 42.711C84.1235 42.9321 84.0698 43.1114 83.998 43.2429C83.9323 43.3743 83.8427 43.47 83.7411 43.5297C83.6335 43.5835 83.502 43.6134 83.3526 43.6134C83.1614 43.6134 83.0119 43.5775 82.9044 43.5058C82.7968 43.4341 82.7191 43.3026 82.6773 43.1174C82.6354 42.9321 82.6175 42.6751 82.6295 42.3643C82.6354 42.0476 82.6653 41.6472 82.7071 41.1691C82.749 40.6909 82.7968 40.2905 82.8386 39.9678C82.8864 39.6511 82.9462 39.3941 83.0239 39.2088C83.1016 39.0176 83.1972 38.8921 83.3227 38.8144C83.4422 38.7427 83.6036 38.7008 83.7948 38.7008C84.0459 38.7008 84.2132 38.7725 84.3148 38.9219C84.4104 39.0714 84.4403 39.3463 84.4044 39.7586L84.3686 40.1591H86.8428L86.8846 39.7048C86.9145 39.3522 86.8846 39.0415 86.801 38.7606C86.7113 38.4857 86.5499 38.2466 86.3169 38.0434C86.0838 37.8462 85.767 37.6908 85.3726 37.5832C84.9782 37.4757 84.4881 37.4219 83.9144 37.4219C83.251 37.4219 82.6892 37.4876 82.229 37.6191" fill="white"/>
-</mask>
-<g mask="url(#anxl-08-mask0_2190_2867)">
-<mask id="anxl-08-mask1_2190_2867" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-80" y="17" width="362" height="144">
-<path d="M281.112 17.7539H-79.9863V160.995H281.112V17.7539Z" fill="white"/>
-</mask>
-<g mask="url(#anxl-08-mask1_2190_2867)">
-<rect x="-79.9863" y="17.7539" width="361.57" height="143.433" fill="url(#anxl-08-pattern0_2190_2867)"/>
-</g>
-</g>
+
+<path d="M92.4725 37.5773L92.2155 40.2188H90.6497L90.9007 37.5773H88.3369L87.6675 44.7369H90.2135L90.4944 41.8026H92.0602L91.7733 44.7369H94.3192L95.0364 37.5773H92.4725ZM110.216 39.0534H110.246L110.593 42.0954H109.165L110.21 39.0534H110.216ZM108.788 37.5773L105.632 44.7369H108.298L108.698 43.4879H110.724L110.838 44.7369H113.545L112.003 37.5773H108.776H108.788ZM117.514 38.9279H118.01C118.392 38.9279 118.661 38.9937 118.816 39.1192C118.972 39.2447 119.032 39.4598 118.99 39.7646C118.96 40.0216 118.846 40.2248 118.655 40.3862C118.464 40.5415 118.183 40.6192 117.818 40.6192H117.31L117.519 38.9279H117.514ZM115.117 37.5773L114.256 44.7369H116.802L117.149 41.8802H117.824C117.98 41.8802 118.105 41.8922 118.207 41.9221C118.308 41.952 118.386 42.0057 118.446 42.0834C118.506 42.1611 118.541 42.2627 118.547 42.4002C118.559 42.5317 118.547 42.699 118.529 42.9022L118.47 43.3803C118.464 43.452 118.452 43.5477 118.44 43.6612C118.428 43.7807 118.422 43.9003 118.422 44.0258C118.422 44.1513 118.422 44.2768 118.446 44.4023C118.464 44.5278 118.494 44.6413 118.547 44.731H121.255L121.267 44.6294C121.189 44.5995 121.135 44.5636 121.099 44.5278C121.069 44.4919 121.034 44.4561 121.004 44.4142C120.98 44.3724 120.968 44.3186 120.956 44.2469C120.944 44.1752 120.944 44.0915 120.944 44.0019C120.944 43.9122 120.956 43.8166 120.968 43.715C120.98 43.6134 120.992 43.5178 121.004 43.4281L121.081 42.8185C121.141 42.3404 121.075 41.9639 120.878 41.689C120.687 41.4141 120.287 41.2587 119.677 41.2169V41.1989C120.275 41.1332 120.723 40.9539 121.028 40.6551C121.332 40.3622 121.512 39.9738 121.571 39.4897C121.607 39.2148 121.589 38.9578 121.524 38.7247C121.458 38.4857 121.326 38.2884 121.135 38.1151C120.944 37.9418 120.675 37.8103 120.346 37.7147C120.012 37.6191 119.605 37.5713 119.115 37.5713H115.105L115.117 37.5773ZM123.173 37.5773L122.976 39.1132H125.851L122.223 43.4042L122.056 44.7429H128.092L128.295 43.2249H125.169L128.869 38.9339L129.048 37.5832H123.179L123.173 37.5773ZM73.5693 38.0135C73.0075 38.396 72.6967 38.9518 72.637 39.6869C72.6071 40.1112 72.6728 40.4519 72.8521 40.7089C73.0254 40.9718 73.2585 41.181 73.5454 41.3424C73.8263 41.5037 74.143 41.6352 74.4837 41.7368C74.8243 41.8384 75.1411 41.934 75.4279 42.0356C75.7148 42.1313 75.9539 42.2508 76.1391 42.3882C76.3244 42.5257 76.4081 42.711 76.3901 42.944C76.3722 43.1353 76.2885 43.3026 76.1391 43.4341C75.9837 43.5656 75.7746 43.6313 75.5116 43.6313C75.2666 43.6313 75.0693 43.5716 74.9259 43.4461C74.7825 43.3265 74.7227 43.47 74.7466 43.1652C74.7466 43.1652 74.7466 43.1174 74.7526 43.0695C74.7526 43.0277 74.7526 42.9978 74.7526 42.9978H72.2844L72.2664 43.2488C72.2366 43.6194 72.2844 43.5716 72.4099 43.8285C72.5354 44.0795 72.7326 44.2827 73.0015 44.4441C73.2645 44.5995 73.5992 44.7071 73.9996 44.7728C74.4 44.8385 74.8662 44.8684 75.3921 44.8684C76.5156 44.8684 77.3882 44.6951 78.0097 44.3545C78.6313 44.0138 78.9779 43.458 79.0436 42.705C79.0795 42.2687 79.0078 41.9221 78.8225 41.6472C78.6432 41.3723 78.3982 41.1571 78.0994 40.9898C77.8005 40.8224 77.4778 40.685 77.1312 40.5834C76.7846 40.4818 76.4559 40.3802 76.1511 40.2786C75.8463 40.177 75.6012 40.0575 75.404 39.92C75.2128 39.7825 75.1231 39.5973 75.1411 39.3642C75.153 39.2028 75.2307 39.0594 75.3682 38.9279C75.5056 38.7964 75.7148 38.7307 75.9897 38.7307C76.2407 38.7307 76.414 38.8084 76.5216 38.9578C76.6292 39.1072 76.677 39.2925 76.6591 39.5076L76.6471 39.6809H79.0377C79.1034 38.91 78.9002 38.3482 78.4281 37.9956C77.9559 37.643 77.1611 37.4637 76.0435 37.4637C74.9259 37.4637 74.137 37.655 73.5693 38.0374M82.2171 37.631C81.7569 37.7625 81.3744 37.9777 81.0696 38.2705C80.7648 38.5693 80.5377 38.9518 80.3823 39.4299C80.227 39.908 80.1194 40.4878 80.0596 41.1691C79.9999 41.8384 79.9999 42.4062 80.0596 42.8783C80.1134 43.3445 80.2568 43.7329 80.4899 44.0258C80.717 44.3246 81.0577 44.5338 81.5059 44.6593C81.9481 44.7848 82.5279 44.8505 83.239 44.8505C83.6514 44.8505 84.0518 44.8206 84.4463 44.7549C84.8407 44.6951 85.1933 44.5696 85.5101 44.3843C85.8268 44.2051 86.0957 43.954 86.3049 43.6313C86.5141 43.3146 86.6456 42.9022 86.6934 42.4002L86.7412 41.8683H84.273C84.2431 42.2089 84.2072 42.4898 84.1654 42.711C84.1235 42.9321 84.0698 43.1114 83.998 43.2429C83.9323 43.3743 83.8427 43.47 83.7411 43.5297C83.6335 43.5835 83.502 43.6134 83.3526 43.6134C83.1614 43.6134 83.0119 43.5775 82.9044 43.5058C82.7968 43.4341 82.7191 43.3026 82.6773 43.1174C82.6354 42.9321 82.6175 42.6751 82.6295 42.3643C82.6354 42.0476 82.6653 41.6472 82.7071 41.1691C82.749 40.6909 82.7968 40.2905 82.8386 39.9678C82.8864 39.6511 82.9462 39.3941 83.0239 39.2088C83.1016 39.0176 83.1972 38.8921 83.3227 38.8144C83.4422 38.7427 83.6036 38.7008 83.7948 38.7008C84.0459 38.7008 84.2132 38.7725 84.3148 38.9219C84.4104 39.0714 84.4403 39.3463 84.4044 39.7586L84.3686 40.1591H86.8428L86.8846 39.7048C86.9145 39.3522 86.8846 39.0415 86.801 38.7606C86.7113 38.4857 86.5499 38.2466 86.3169 38.0434C86.0838 37.8462 85.767 37.6908 85.3726 37.5832C84.9782 37.4757 84.4881 37.4219 83.9144 37.4219C83.251 37.4219 82.6892 37.4876 82.229 37.6191" fill="#1d1d21"/>
+
 <path d="M103.316 42.4093L101.953 46.8915H101.93L102.007 41.0765H99.7123L97.7162 46.8915H97.6863L97.9194 42.5885L98.009 41.0586H72.6334L72.3047 42.5885H95.5587L95.6245 48.6067H98.4154L100.286 43.1085H100.31L100.137 48.6067H102.928L105.527 42.5885H128.638L128.967 41.0586H103.716L103.316 42.4093Z" fill="#6A6A6A"/>
-<defs>
-<pattern id="anxl-08-pattern0_2190_2867" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#anxl-08-image0_2190_2867" transform="scale(0.00082713 0.00208333)"/>
-</pattern>
+
+</g><defs>
+
 <linearGradient id="anxl-08-paint0_linear_2190_2867" x1="101" y1="0" x2="101" y2="82" gradientUnits="userSpaceOnUse">
 <stop stop-color="#232427"/>
 <stop offset="1" stop-color="#18191B"/>
 </linearGradient>
-<image id="anxl-08-image0_2190_2867" width="1209" height="480" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABLkAAAHgCAYAAABJgr9VAAAACXBIWXMAABYlAAAWJQFJUiTwAAANW0lEQVR4nO3awQkCQRREwV0REfOPVcTLNwadw/CkKoI+P/o4AAAAACDunJnZPQIAAAAAVlx2DwAAAACAVSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAeSIXAAAAAHkiFwAAAAB5IhcAAAAAedfdAwCA7zzut90T4G89X+/dEwCAH3lyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJAncgEAAACQJ3IBAAAAkCdyAQAAAJB3zszsHgEAAAAAKzy5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyBO5AAAAAMgTuQAAAADIE7kAAAAAyPsAcvAOt0a6p/cAAAAASUVORK5CYII="/>
-</defs>
-</symbol></svg><div class="anbox-full-page anbox-composite"><section
+
+</defs></symbol></svg><div class="anbox-full-page anbox-composite"><section
   id="anxl-logos"
   class="anxl__root"
   lang="ru"
@@ -2793,24 +2804,7 @@ button.setAttribute("aria-expanded",String(isOpen));
 
 <div class="anbox-mobile-part anbox-mobile-part--06" data-anbox-version="mobile">
 <section class="section clients" aria-label="Нам доверяют" data-logo-marquee>
-      <div class="logo-marquee" aria-label="Логотипы клиентов">
-        <div class="logo-row" role="list">
-          <div class="logo-track" data-logo-track="forward">
-            <div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="01" role="img" aria-label="Логотип клиента 01" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-01"></use></svg></div>
-            <div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="02" role="img" aria-label="Логотип клиента 02" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-02"></use></svg></div>
-            <div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="03" role="img" aria-label="Логотип клиента 03" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-03"></use></svg></div>
-            <div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="04" role="img" aria-label="Логотип клиента 04" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-04"></use></svg></div>
-          </div>
-        </div>
-        <div class="logo-row" role="list">
-          <div class="logo-track" data-logo-track="reverse">
-            <div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="05" role="img" aria-label="Логотип клиента 05" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-05"></use></svg></div>
-            <div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="06" role="img" aria-label="Логотип клиента 06" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-06"></use></svg></div>
-            <div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="07" role="img" aria-label="Логотип клиента 07" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-07"></use></svg></div>
-            <div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="08" role="img" aria-label="Логотип клиента 08" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-08"></use></svg></div>
-          </div>
-        </div>
-      </div>
+      <div class="logo-marquee" aria-label="Логотипы клиентов"><div class="logo-row" role="list"><div class="logo-track" data-logo-track="forward"><div class="logo-sequence"><div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="01" role="img" aria-label="Логотип клиента 01" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-01"></use></svg></div><div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="02" role="img" aria-label="Логотип клиента 02" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-02"></use></svg></div><div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="03" role="img" aria-label="Логотип клиента 03" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-03"></use></svg></div><div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="04" role="img" aria-label="Логотип клиента 04" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-04"></use></svg></div></div><div class="logo-sequence" aria-hidden="true"><div class="logo-cell" role="presentation"><svg class="anxl__logo-art" data-anxl-asset="01" role="img" aria-label="Логотип клиента 01" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-01"></use></svg></div><div class="logo-cell" role="presentation"><svg class="anxl__logo-art" data-anxl-asset="02" role="img" aria-label="Логотип клиента 02" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-02"></use></svg></div><div class="logo-cell" role="presentation"><svg class="anxl__logo-art" data-anxl-asset="03" role="img" aria-label="Логотип клиента 03" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-03"></use></svg></div><div class="logo-cell" role="presentation"><svg class="anxl__logo-art" data-anxl-asset="04" role="img" aria-label="Логотип клиента 04" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-04"></use></svg></div></div></div></div><div class="logo-row" role="list"><div class="logo-track" data-logo-track="reverse"><div class="logo-sequence"><div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="05" role="img" aria-label="Логотип клиента 05" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-05"></use></svg></div><div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="06" role="img" aria-label="Логотип клиента 06" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-06"></use></svg></div><div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="07" role="img" aria-label="Логотип клиента 07" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-07"></use></svg></div><div class="logo-cell" role="listitem"><svg class="anxl__logo-art" data-anxl-asset="08" role="img" aria-label="Логотип клиента 08" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-08"></use></svg></div></div><div class="logo-sequence" aria-hidden="true"><div class="logo-cell" role="presentation"><svg class="anxl__logo-art" data-anxl-asset="05" role="img" aria-label="Логотип клиента 05" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-05"></use></svg></div><div class="logo-cell" role="presentation"><svg class="anxl__logo-art" data-anxl-asset="06" role="img" aria-label="Логотип клиента 06" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-06"></use></svg></div><div class="logo-cell" role="presentation"><svg class="anxl__logo-art" data-anxl-asset="07" role="img" aria-label="Логотип клиента 07" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-07"></use></svg></div><div class="logo-cell" role="presentation"><svg class="anxl__logo-art" data-anxl-asset="08" role="img" aria-label="Логотип клиента 08" width="212" height="82" viewBox="0 0 212 82" focusable="false"><use href="#anxl-client-08"></use></svg></div></div></div></div><button class="logo-motion-toggle" type="button" aria-pressed="false" aria-label="Остановить движение логотипов"><span aria-hidden="true"></span></button></div>
     </section>
 </div>
 
@@ -2929,48 +2923,37 @@ button.setAttribute("aria-expanded",String(isOpen));
     if(started||!query.matches||!root)return;
     started=true;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-const logoMarqueeSection = root.querySelector('[data-logo-marquee]');
-      const logoMarquee = logoMarqueeSection.querySelector('.logo-marquee');
-      const logoRows = [...logoMarquee.querySelectorAll('.logo-row')];
-      let logoMarqueeFrame = 0;
-      let logoMarqueeVisible = true;
 
-      const syncLogoMarquee = () => {
-        logoMarqueeFrame = 0;
-        const sectionRect = logoMarqueeSection.getBoundingClientRect();
-        const progress = Math.min(1, Math.max(0, (innerHeight - sectionRect.top) / (innerHeight + sectionRect.height)));
+      const logoMarquee = root.querySelector('.logo-marquee');
+      const logoMotionToggle = root.querySelector('.logo-motion-toggle');
+      let logoMotionManual = false;
 
-        logoRows.forEach((row, index) => {
-          const track = row.querySelector('.logo-track');
-          const travel = Math.max(0, track.scrollWidth - row.clientWidth);
-          const phase = reducedMotion.matches
-            ? (index === 0 ? .65 : .15)
-            : (index === 0 ? .96 - .76 * progress : .04 + .76 * progress);
-          track.style.setProperty('--logo-x', `${(-travel * phase).toFixed(2)}px`);
-        });
+      const setLogoMotion = (paused) => {
+        logoMarquee.classList.toggle('is-paused', paused);
+        logoMotionToggle.setAttribute('aria-pressed', String(paused));
+        logoMotionToggle.setAttribute('aria-label', paused ? 'Запустить движение логотипов' : 'Остановить движение логотипов');
       };
 
-      const scheduleLogoMarquee = () => {
-        if (!logoMarqueeVisible || reducedMotion.matches || logoMarqueeFrame) return;
-        logoMarqueeFrame = requestAnimationFrame(syncLogoMarquee);
-      };
-
-      if ('IntersectionObserver' in window) {
-        const logoObserver = new IntersectionObserver(([entry]) => {
-          logoMarqueeVisible = entry.isIntersecting;
-          logoMarquee.classList.toggle('is-scroll-active', logoMarqueeVisible && !reducedMotion.matches);
-          if (logoMarqueeVisible) requestAnimationFrame(syncLogoMarquee);
-        }, { rootMargin: '20% 0px' });
-        logoObserver.observe(logoMarqueeSection);
-      }
-
-      window.addEventListener('scroll', scheduleLogoMarquee, { passive: true });
-      window.addEventListener('resize', () => requestAnimationFrame(syncLogoMarquee), { passive: true });
-      reducedMotion.addEventListener?.('change', () => {
-        logoMarquee.classList.toggle('is-scroll-active', logoMarqueeVisible && !reducedMotion.matches);
-        requestAnimationFrame(syncLogoMarquee);
+      setLogoMotion(reducedMotion.matches);
+      logoMotionToggle.addEventListener('click', () => {
+        logoMotionManual = true;
+        setLogoMotion(!logoMarquee.classList.contains('is-paused'));
       });
-      requestAnimationFrame(syncLogoMarquee);
+      let logoPointerStart = null;
+      logoMarquee.addEventListener('pointerdown', (event) => {
+        logoPointerStart = { x: event.clientX, y: event.clientY };
+      }, { passive: true });
+      logoMarquee.addEventListener('pointerup', (event) => {
+        const start = logoPointerStart;
+        logoPointerStart = null;
+        if (!start || event.target.closest('button') || Math.hypot(event.clientX - start.x, event.clientY - start.y) > 8) return;
+        logoMotionManual = true;
+        setLogoMotion(!logoMarquee.classList.contains('is-paused'));
+      }, { passive: true });
+      logoMarquee.addEventListener('pointercancel', () => { logoPointerStart = null; }, { passive: true });
+      reducedMotion.addEventListener?.('change', (event) => {
+        if (!logoMotionManual) setLogoMotion(event.matches);
+      });
   }
   start();
   if(query.addEventListener)query.addEventListener('change',start);
@@ -2997,7 +2980,27 @@ const logoMarqueeSection = root.querySelector('[data-logo-marquee]');
 </style>
 
 <style media="(max-width:640px)" data-anbox-mobile-patch="07">
-.anbox-mobile-part--07 .person-card:nth-child(n+2){min-height:clamp(210px,58vw,236px)!important;display:grid!important;grid-template-columns:minmax(116px,38%) minmax(0,1fr)!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-photo{height:auto!important;min-height:100%!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-card__caption{min-width:0!important;padding:12px!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) h3{font-size:clamp(16px,4.6vw,18px)!important;line-height:1.14!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-card__caption>p{font-size:clamp(11px,3.2vw,12.5px)!important;line-height:1.35!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) :is(.person-card__proof,.person-card__meta){margin-top:5px!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) :is(.person-card__nowrap,.person-card__agency){white-space:normal!important;overflow-wrap:anywhere!important}
+
+    .anbox-mobile-part--07 .team-grid{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}
+    .anbox-mobile-part--07 .person-card,.anbox-mobile-part--07 .person-card:first-child,.anbox-mobile-part--07 .team-grid .person-card:last-child{grid-column:auto!important}
+    .anbox-mobile-part--07 .person-card .person-photo{height:auto!important;min-height:0!important;aspect-ratio:auto!important;background:#e8e6e2!important}
+    .anbox-mobile-part--07 .person-card .person-photo img{position:static!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;object-position:center top!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2){min-height:0!important;display:grid!important;grid-template-columns:minmax(108px,40%) minmax(0,1fr)!important;align-items:start!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2) .person-photo{align-self:stretch!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2) .person-card__caption{min-width:0!important;padding:12px!important}
+    .anbox-mobile-part--07 .person-card__caption{padding:14px 16px 16px!important}
+    .anbox-mobile-part--07 .person-card:first-child .person-card__caption{padding:16px 18px 18px!important}
+    .anbox-mobile-part--07 .person-card h3{font-size:18px!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2) h3{font-size:clamp(16px,4.6vw,18px)!important;line-height:1.14!important}
+    .anbox-mobile-part--07 .person-card__caption>.person-card__role{margin-top:5px!important;font-size:clamp(13px,3.8vw,14px)!important;line-height:1.42!important}
+    .anbox-mobile-part--07 .person-card__caption>:is(.person-card__proof,.person-card__meta){font-size:clamp(12px,3.55vw,13px)!important;line-height:1.42!important}
+    .anbox-mobile-part--07 .person-card__caption>.person-card__meta{margin-top:5px!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2) .person-card__caption>p{font-size:clamp(11px,3.2vw,12.5px)!important;line-height:1.35!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2) :is(.person-card__proof,.person-card__meta){margin-top:5px!important}
+    .anbox-mobile-part--07 .person-card:nth-child(n+2) :is(.person-card__nowrap,.person-card__agency){white-space:normal!important;overflow-wrap:anywhere!important}
+    .anbox-mobile-part--07 .person-card__agency{display:inline!important;width:auto!important;min-height:0!important;margin:0!important;font-size:inherit!important;line-height:inherit!important}
+    .anbox-mobile-part--07 .training-visual img{max-width:100%}
+  
 </style>
 
 <div class="anbox-part-07 anbox-desktop-part anbox-desktop-part--07"><div class="anbox-full-page anbox-composite"><section
@@ -3157,7 +3160,7 @@ const logoMarqueeSection = root.querySelector('[data-logo-marquee]');
         <div class="team-grid">
           <article class="person-card">
             <div class="person-photo">
-              <img src="https://static.tildacdn.com/tild3637-3830-4331-b734-656566663032/20260831143212443_1.png" alt="Анна Плавская" width="1122" height="1402" loading="lazy" decoding="async" style="object-position:center top">
+              <img src="https://static.tildacdn.com/tild3637-3830-4331-b734-656566663032/20260831143212443_1.png" alt="Анна Плавская" width="1328" height="1321" loading="lazy" decoding="async" style="object-position:center top">
             </div>
             <div class="person-card__caption">
               <h3>Анна Плавская</h3>

@@ -23,6 +23,12 @@ page.on('console', (message) => {
 });
 
 await page.goto(pathToFileURL(previewPath).href, { waitUntil: 'domcontentloaded' });
+await page.locator('.anbox-mobile-part--07').scrollIntoViewIfNeeded();
+await page.locator('.anbox-mobile-part--07 .person-photo img').evaluateAll((images) => Promise.all(images.map((image) => image.complete || new Promise((resolve) => {
+  image.addEventListener('load', resolve, { once: true });
+  image.addEventListener('error', resolve, { once: true });
+  setTimeout(resolve, 15000);
+}))));
 const results = [];
 
 for (const width of widths) {
@@ -44,12 +50,18 @@ for (const width of widths) {
         const image = card.querySelector('.person-photo img');
         const caption = card.querySelector('.person-card__caption');
         const sourceRatio = image.naturalWidth && image.naturalHeight ? image.naturalWidth / image.naturalHeight : Number(image.getAttribute('width')) / Number(image.getAttribute('height'));
+        const rendered = image.getBoundingClientRect();
+        const fit = getComputedStyle(image).objectFit;
         return {
           name: card.querySelector('h3')?.textContent.trim(),
+          loaded: image.complete && image.naturalWidth > 0,
           cardDisplay: getComputedStyle(card).display,
           frameRatio: Number((frame.width / frame.height).toFixed(3)),
           sourceRatio: Number(sourceRatio.toFixed(3)),
-          verticalCrop: frame.width / frame.height > sourceRatio + 0.01,
+          verticalCrop: fit === 'cover' && rendered.width / rendered.height > sourceRatio + 0.01,
+          horizontalCrop: fit === 'cover' && rendered.width / rendered.height < sourceRatio - 0.01,
+          imageClipped: rendered.height > frame.height + 1 || rendered.width > frame.width + 1,
+          objectFit: fit,
           objectPosition: getComputedStyle(image).objectPosition,
           captionOverflow: Math.max(0, caption.scrollHeight - caption.clientHeight),
         };
@@ -67,7 +79,7 @@ const firstTransform = await page.locator('.anbox-mobile-part--06 .logo-track').
 await page.waitForTimeout(500);
 const secondTransform = await page.locator('.anbox-mobile-part--06 .logo-track').first().evaluate((node) => getComputedStyle(node).transform);
 await clients.screenshot({ path: path.join(qaDir, 'clients-mobile-two-row-390.png') });
-await page.locator('.anbox-mobile-part--06 .logo-motion-toggle').click();
+await page.locator('.anbox-mobile-part--06 .logo-row').first().click();
 const paused = await page.locator('.anbox-mobile-part--06 .logo-track').first().evaluate((node) => getComputedStyle(node).animationPlayState);
 
 const team = page.locator('.anbox-mobile-part--07');
@@ -75,8 +87,27 @@ await team.scrollIntoViewIfNeeded();
 await Promise.all([...Array(3)].map((_value, index) => page.locator('.anbox-mobile-part--07 .person-photo img').nth(index).evaluate((image) => image.complete || new Promise((resolve) => {
   image.addEventListener('load', resolve, { once: true });
   image.addEventListener('error', resolve, { once: true });
+  setTimeout(resolve, 10000);
 }))));
 await team.screenshot({ path: path.join(qaDir, 'team-mobile-head-safe-390.png') });
+
+// Both self-contained delivery blocks must also work without neighboring CSS.
+const isolated = await browser.newPage({ viewport: { width: 390, height: 844 } });
+const isolation = [];
+for (const [part, filename] of [['06', '06-clients.html'], ['07', '07-team-training.html']]) {
+  await isolated.setContent(`<html><head><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0">${fs.readFileSync(path.join(outputDir, filename), 'utf8')}</body></html>`);
+  isolation.push(await isolated.evaluate((number) => ({
+    part: number,
+    overflow: Math.max(0, document.documentElement.scrollWidth - innerWidth),
+    visible: getComputedStyle(document.querySelector(`.anbox-mobile-part--${number}`)).display !== 'none',
+    overflowElements: [...document.querySelectorAll('body *')].filter((node) => node.getBoundingClientRect().right > innerWidth + 1).slice(-8).map((node) => ({tag:node.tagName, cls:node.className, width:node.getBoundingClientRect().width})),
+  }), part));
+}
+const clientsCode = fs.readFileSync(path.join(outputDir, '06-clients.html'), 'utf8');
+const sprite = clientsCode.match(/<svg class="anxl__sprite"[\s\S]*?<\/svg>/)[0];
+await isolated.setContent(`<html><body style="margin:0;background:#f3f4f0;padding:24px">${sprite}<svg role="img" style="display:block;width:202px;height:82px;background:#1d1d21;border-radius:10px" viewBox="0 0 202 82"><use href="#anxl-client-08"></use></svg></body></html>`);
+await isolated.locator('svg[role="img"]').screenshot({ path: path.join(qaDir, 'schwarz-vector-20260929.png') });
+await isolated.close();
 
 const reduced = await browser.newPage({ viewport: { width: 390, height: 844 }, reducedMotion: 'reduce' });
 await reduced.goto(pathToFileURL(previewPath).href, { waitUntil: 'domcontentloaded' });
@@ -97,6 +128,7 @@ const report = {
     reducedState,
   },
   errors,
+  isolation,
 };
 
 fs.writeFileSync(path.join(qaDir, 'team-clients-mobile-results.json'), `${JSON.stringify(report, null, 2)}\n`, 'utf8');
@@ -104,8 +136,9 @@ await browser.close();
 
 const failures = [
   ...results.filter((result) => result.pageOverflow > 0),
-  ...results.filter((result) => result.width <= 640 && (result.team.length !== 3 || result.team.some((card) => card.verticalCrop || card.captionOverflow > 0))),
+  ...results.filter((result) => result.width <= 640 && (result.team.length !== 3 || result.team.some((card) => !card.loaded || card.verticalCrop || card.horizontalCrop || card.imageClipped || card.captionOverflow > 0))),
   ...results.filter((result) => result.width <= 640 && (result.logoRows !== 2 || result.logoSequences.some((count) => count !== 2))),
+  ...isolation.filter((result) => !result.visible || result.overflow > 0),
 ];
 if (!report.marquee.moves || report.marquee.paused !== 'paused' || report.marquee.reducedState.animationName !== 'none' || errors.length || failures.length) {
   console.error(JSON.stringify(report, null, 2));

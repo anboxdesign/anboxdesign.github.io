@@ -1,0 +1,419 @@
+{
+  "generatedAt": "2026-09-29T15:38:48.057Z",
+  "results": [
+    {
+      "width": 320,
+      "pageOverflow": 0,
+      "teamVisible": true,
+      "clientsVisible": true,
+      "team": [
+        {
+          "name": "Анна Плавская",
+          "loaded": true,
+          "cardDisplay": "flex",
+          "frameRatio": 1.005,
+          "sourceRatio": 1.005,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        },
+        {
+          "name": "Артём Капустин",
+          "loaded": true,
+          "cardDisplay": "grid",
+          "frameRatio": 0.751,
+          "sourceRatio": 0.8,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        },
+        {
+          "name": "Дарья Дарев",
+          "loaded": true,
+          "cardDisplay": "grid",
+          "frameRatio": 0.629,
+          "sourceRatio": 0.8,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        }
+      ],
+      "logoRows": 2,
+      "logoSequences": [
+        2,
+        2
+      ]
+    },
+    {
+      "width": 360,
+      "pageOverflow": 0,
+      "teamVisible": true,
+      "clientsVisible": true,
+      "team": [
+        {
+          "name": "Анна Плавская",
+          "loaded": true,
+          "cardDisplay": "flex",
+          "frameRatio": 1.005,
+          "sourceRatio": 1.005,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        },
+        {
+          "name": "Артём Капустин",
+          "loaded": true,
+          "cardDisplay": "grid",
+          "frameRatio": 0.8,
+          "sourceRatio": 0.8,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        },
+        {
+          "name": "Дарья Дарев",
+          "loaded": true,
+          "cardDisplay": "grid",
+          "frameRatio": 0.8,
+          "sourceRatio": 0.8,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        }
+      ],
+      "logoRows": 2,
+      "logoSequences": [
+        2,
+        2
+      ]
+    },
+    {
+      "width": 375,
+      "pageOverflow": 0,
+      "teamVisible": true,
+      "clientsVisible": true,
+      "team": [
+        {
+          "name": "Анна Плавская",
+          "loaded": true,
+          "cardDisplay": "flex",
+          "frameRatio": 1.005,
+          "sourceRatio": 1.005,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        },
+        {
+          "name": "Артём Капустин",
+          "loaded": true,
+          "cardDisplay": "grid",
+          "frameRatio": 0.8,
+          "sourceRatio": 0.8,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        },
+        {
+          "name": "Дарья Дарев",
+          "loaded": true,
+          "cardDisplay": "grid",
+          "frameRatio": 0.8,
+          "sourceRatio": 0.8,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        }
+      ],
+      "logoRows": 2,
+      "logoSequences": [
+        2,
+        2
+      ]
+    },
+    {
+      "width": 390,
+      "pageOverflow": 0,
+      "teamVisible": true,
+      "clientsVisible": true,
+      "team": [
+        {
+          "name": "Анна Плавская",
+          "loaded": true,
+          "cardDisplay": "flex",
+          "frameRatio": 1.005,
+          "sourceRatio": 1.005,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        },
+        {
+          "name": "Артём Капустин",
+          "loaded": true,
+          "cardDisplay": "grid",
+          "frameRatio": 0.8,
+          "sourceRatio": 0.8,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        },
+        {
+          "name": "Дарья Дарев",
+          "loaded": true,
+          "cardDisplay": "grid",
+          "frameRatio": 0.8,
+          "sourceRatio": 0.8,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        }
+      ],
+      "logoRows": 2,
+      "logoSequences": [
+        2,
+        2
+      ]
+    },
+    {
+      "width": 412,
+      "pageOverflow": 0,
+      "teamVisible": true,
+      "clientsVisible": true,
+      "team": [
+        {
+          "name": "Анна Плавская",
+          "loaded": true,
+          "cardDisplay": "flex",
+          "frameRatio": 1.005,
+          "sourceRatio": 1.005,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        },
+        {
+          "name": "Артём Капустин",
+          "loaded": true,
+          "cardDisplay": "grid",
+          "frameRatio": 0.8,
+          "sourceRatio": 0.8,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        },
+        {
+          "name": "Дарья Дарев",
+          "loaded": true,
+          "cardDisplay": "grid",
+          "frameRatio": 0.8,
+          "sourceRatio": 0.8,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        }
+      ],
+      "logoRows": 2,
+      "logoSequences": [
+        2,
+        2
+      ]
+    },
+    {
+      "width": 640,
+      "pageOverflow": 0,
+      "teamVisible": true,
+      "clientsVisible": true,
+      "team": [
+        {
+          "name": "Анна Плавская",
+          "loaded": true,
+          "cardDisplay": "flex",
+          "frameRatio": 1.005,
+          "sourceRatio": 1.005,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        },
+        {
+          "name": "Артём Капустин",
+          "loaded": true,
+          "cardDisplay": "grid",
+          "frameRatio": 0.8,
+          "sourceRatio": 0.8,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        },
+        {
+          "name": "Дарья Дарев",
+          "loaded": true,
+          "cardDisplay": "grid",
+          "frameRatio": 0.8,
+          "sourceRatio": 0.8,
+          "verticalCrop": false,
+          "horizontalCrop": false,
+          "imageClipped": false,
+          "objectFit": "contain",
+          "objectPosition": "50% 0%",
+          "captionOverflow": 0
+        }
+      ],
+      "logoRows": 2,
+      "logoSequences": [
+        2,
+        2
+      ]
+    },
+    {
+      "width": 641,
+      "pageOverflow": 0,
+      "teamVisible": true,
+      "clientsVisible": true,
+      "team": [],
+      "logoRows": 0,
+      "logoSequences": []
+    },
+    {
+      "width": 768,
+      "pageOverflow": 0,
+      "teamVisible": true,
+      "clientsVisible": true,
+      "team": [],
+      "logoRows": 0,
+      "logoSequences": []
+    },
+    {
+      "width": 1440,
+      "pageOverflow": 0,
+      "teamVisible": true,
+      "clientsVisible": true,
+      "team": [],
+      "logoRows": 0,
+      "logoSequences": []
+    },
+    {
+      "width": 3840,
+      "pageOverflow": 0,
+      "teamVisible": true,
+      "clientsVisible": true,
+      "team": [],
+      "logoRows": 0,
+      "logoSequences": []
+    }
+  ],
+  "marquee": {
+    "moves": true,
+    "firstTransform": "matrix(1, 0, 0, 1, -1.41991, 0)",
+    "secondTransform": "matrix(1, 0, 0, 1, -16.554, 0)",
+    "paused": "paused",
+    "reducedState": {
+      "animationName": "none",
+      "transform": "none"
+    }
+  },
+  "errors": [],
+  "isolation": [
+    {
+      "part": "06",
+      "overflow": 0,
+      "visible": true,
+      "overflowElements": [
+        {
+          "tag": "svg",
+          "cls": {},
+          "width": 124.796875
+        },
+        {
+          "tag": "use",
+          "cls": {},
+          "width": 124.5723876953125
+        },
+        {
+          "tag": "DIV",
+          "cls": "logo-cell",
+          "width": 126.796875
+        },
+        {
+          "tag": "svg",
+          "cls": {},
+          "width": 124.796875
+        },
+        {
+          "tag": "use",
+          "cls": {},
+          "width": 124.5723876953125
+        },
+        {
+          "tag": "DIV",
+          "cls": "logo-cell",
+          "width": 126.796875
+        },
+        {
+          "tag": "svg",
+          "cls": {},
+          "width": 124.796875
+        },
+        {
+          "tag": "use",
+          "cls": {},
+          "width": 124.5723876953125
+        }
+      ]
+    },
+    {
+      "part": "07",
+      "overflow": 0,
+      "visible": true,
+      "overflowElements": []
+    }
+  ]
+}
