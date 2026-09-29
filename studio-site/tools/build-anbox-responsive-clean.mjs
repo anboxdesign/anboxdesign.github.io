@@ -657,6 +657,26 @@ function renderMobileHeroShelf(markup) {
   return result;
 }
 
+function mobileClientLogoCell(number, duplicate = false) {
+  const asset = String(number).padStart(2, '0');
+  const alt = duplicate ? '' : `Логотип клиента ${asset}`;
+  return `<div class="logo-cell" role="${duplicate ? 'presentation' : 'listitem'}"><img src="assets/client-logos/client-logo-${asset}.svg" alt="${alt}" width="212" height="82"${duplicate ? '' : ' decoding="async"'}></div>`;
+}
+
+function renderMobileClients(markup) {
+  const row = (numbers, direction) => {
+    const primary = numbers.map((number) => mobileClientLogoCell(number)).join('');
+    const duplicate = numbers.map((number) => mobileClientLogoCell(number, true)).join('');
+    return `<div class="logo-row" role="list"><div class="logo-track" data-logo-track="${direction}"><div class="logo-sequence">${primary}</div><div class="logo-sequence" aria-hidden="true">${duplicate}</div></div></div>`;
+  };
+  const toggle = '<button class="logo-motion-toggle" type="button" aria-pressed="false" aria-label="Остановить движение логотипов"><span aria-hidden="true"></span></button>';
+  return replaceBalancedInner(
+    markup,
+    /<div\b[^>]*class=["'][^"']*\blogo-marquee\b[^"']*["'][^>]*>/i,
+    `${row([1, 2, 3, 4], 'forward')}${row([5, 6, 7, 8], 'reverse')}${toggle}`,
+  );
+}
+
 function renderDesktopHero(markup) {
   const projects = heroCaseNumbers.map((number) => portfolioCases.find((project) => project.number === number));
   if (projects.some((project) => !project)) throw new Error('HERO references a case missing from the catalog');
@@ -915,7 +935,8 @@ function composedMobileCss(part) {
 function finalMobileCss(part) {
   const css = composedMobileCss(part);
   if (part === '03') return `${css}.anbox-mobile-part--03 .portfolio-more-slot{background:rgba(12,9,18,0)!important;transition:background-color 220ms cubic-bezier(.22,1,.36,1)!important}.anbox-mobile-part--03 .portfolio-more-slot.is-gate-active{background:rgba(12,9,18,.56)!important}.anbox-mobile-part--03 .portfolio-gate-spacer{position:relative!important;z-index:0!important;min-height:calc(100vh - var(--abm-gallery-top))!important;min-height:calc(100svh - var(--abm-gallery-top))!important;pointer-events:none!important;overflow-anchor:none}.anbox-mobile-part--03 .portfolio-gate-spacer[hidden]{display:none!important}@media(prefers-reduced-motion:reduce){.anbox-mobile-part--03 .portfolio-more-slot{transition:none!important}}`;
-  if (part === '07') return `${css}.anbox-mobile-part--07 .person-card:nth-child(n+2){min-height:clamp(210px,58vw,236px)!important;display:grid!important;grid-template-columns:minmax(116px,38%) minmax(0,1fr)!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-photo{height:auto!important;min-height:100%!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-card__caption{min-width:0!important;padding:12px!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) h3{font-size:clamp(16px,4.6vw,18px)!important;line-height:1.14!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-card__caption>p{font-size:clamp(11px,3.2vw,12.5px)!important;line-height:1.35!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) :is(.person-card__proof,.person-card__meta){margin-top:5px!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) :is(.person-card__nowrap,.person-card__agency){white-space:normal!important;overflow-wrap:anywhere!important}`;
+  if (part === '06') return `${css}.anbox-mobile-part--06 .section.clients{padding-block:22px 28px!important}.anbox-mobile-part--06 .logo-marquee{position:relative;gap:10px!important}.anbox-mobile-part--06 .logo-row{overflow:hidden!important}.anbox-mobile-part--06 .logo-track{--logo-loop-gap:10px;gap:var(--logo-loop-gap)!important;will-change:transform}.anbox-mobile-part--06 .logo-sequence{display:flex;gap:10px}.anbox-mobile-part--06 .logo-cell,.anbox-mobile-part--06 .logo-cell:nth-child(n){flex:0 0 clamp(112px,32vw,150px);min-height:58px!important;display:grid;place-items:center}.anbox-mobile-part--06 .logo-track[data-logo-track="forward"]{animation:abm-client-forward 19s linear infinite}.anbox-mobile-part--06 .logo-track[data-logo-track="reverse"]{animation:abm-client-reverse 23s linear infinite}.anbox-mobile-part--06 .logo-marquee.is-paused .logo-track{animation-play-state:paused}.anbox-mobile-part--06 .logo-motion-toggle{width:44px;height:44px;min-width:44px;min-height:44px;margin-top:2px;justify-self:end;display:grid;place-items:center;border:1px solid rgba(21,23,22,.18);border-radius:50%;background:rgba(255,255,255,.72);color:var(--ink);cursor:pointer}.anbox-mobile-part--06 .logo-motion-toggle span{position:relative;width:14px;height:14px;display:block}.anbox-mobile-part--06 .logo-motion-toggle span::before,.anbox-mobile-part--06 .logo-motion-toggle span::after{position:absolute;top:1px;bottom:1px;width:3px;border-radius:2px;background:currentColor;content:""}.anbox-mobile-part--06 .logo-motion-toggle span::before{left:2px}.anbox-mobile-part--06 .logo-motion-toggle span::after{right:2px}.anbox-mobile-part--06 .logo-motion-toggle[aria-pressed="true"] span::before{inset:1px auto 1px 3px;width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:9px solid currentColor;border-radius:0;background:transparent}.anbox-mobile-part--06 .logo-motion-toggle[aria-pressed="true"] span::after{display:none}@keyframes abm-client-forward{from{transform:translate3d(0,0,0)}to{transform:translate3d(calc(-50% - (var(--logo-loop-gap)/2)),0,0)}}@keyframes abm-client-reverse{from{transform:translate3d(calc(-50% - (var(--logo-loop-gap)/2)),0,0)}to{transform:translate3d(0,0,0)}}@media(prefers-reduced-motion:reduce){.anbox-mobile-part--06 .logo-track{animation:none!important;transform:none!important;will-change:auto}.anbox-mobile-part--06 .logo-sequence[aria-hidden="true"]{display:none}}`;
+  if (part === '07') return `${css}.anbox-mobile-part--07 .team-grid{grid-template-columns:minmax(0,1fr)!important;gap:12px!important}.anbox-mobile-part--07 .person-card,.anbox-mobile-part--07 .person-card:first-child,.anbox-mobile-part--07 .team-grid .person-card:last-child{grid-column:auto!important}.anbox-mobile-part--07 .person-card:first-child .person-photo{height:auto!important;aspect-ratio:1122 / 1402!important}.anbox-mobile-part--07 .person-card:first-child .person-photo img{object-fit:cover!important;object-position:center top!important}.anbox-mobile-part--07 .person-card:nth-child(n+2){min-height:clamp(220px,64vw,270px)!important;display:grid!important;grid-template-columns:minmax(116px,38%) minmax(0,1fr)!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-photo{height:auto!important;min-height:100%!important;aspect-ratio:auto!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-photo img{object-fit:cover!important;object-position:center top!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-card__caption{min-width:0!important;padding:12px!important}.anbox-mobile-part--07 .person-card__caption{padding:14px 16px 16px!important}.anbox-mobile-part--07 .person-card:first-child .person-card__caption{padding:16px 18px 18px!important}.anbox-mobile-part--07 .person-card h3{font-size:18px!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) h3{font-size:clamp(16px,4.6vw,18px)!important;line-height:1.14!important}.anbox-mobile-part--07 .person-card__caption>.person-card__role{margin-top:5px!important;font-size:clamp(13px,3.8vw,14px)!important;line-height:1.42!important}.anbox-mobile-part--07 .person-card__caption>:is(.person-card__proof,.person-card__meta){font-size:clamp(12px,3.55vw,13px)!important;line-height:1.42!important}.anbox-mobile-part--07 .person-card__caption>.person-card__meta{margin-top:5px!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) .person-card__caption>p{font-size:clamp(11px,3.2vw,12.5px)!important;line-height:1.35!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) :is(.person-card__proof,.person-card__meta){margin-top:5px!important}.anbox-mobile-part--07 .person-card:nth-child(n+2) :is(.person-card__nowrap,.person-card__agency){white-space:normal!important;overflow-wrap:anywhere!important}`;
   if (part !== '01') return css;
   return `${css}.anbox-mobile-part--01 .hero{padding-bottom:max(42px,env(safe-area-inset-bottom))!important}.anbox-mobile-part--01 .hero__action{min-height:54px;padding:0 16px;justify-content:space-between;border:1px solid var(--abx-purple,#ad95ee);border-radius:8px;color:var(--white)}.anbox-mobile-part--01 .hero__action:not(.hero__action--primary)>span:first-child{padding-bottom:0;border-bottom:0}.anbox-mobile-part--01 .shelf-marquee{padding-block:12px;border-color:rgba(21,23,22,.13);background:var(--abx-paper,#f3f4f0);color:var(--abx-ink,#151716)}.anbox-mobile-part--01 .shelf-marquee__track,.anbox-mobile-part--01 .shelf-marquee__sequence{gap:32px}.anbox-mobile-part--01 .shelf-marquee__label{padding-right:10px;color:var(--abx-ink,#151716);font-size:11px;letter-spacing:.045em}.anbox-mobile-part--01 .shelf-marquee__logo{width:auto;height:28px;max-width:148px;flex:0 0 auto;object-fit:contain}.anbox-mobile-part--01 .shelf-marquee__logo:first-of-type{transform:translateY(1px)}.anbox-mobile-part--01 .shelf-marquee__logo:nth-of-type(2){height:38px}.anbox-mobile-part--01 .shelf-marquee__logo:nth-of-type(3){filter:brightness(1.06);mix-blend-mode:multiply}.anbox-mobile-part--01 .shelf-marquee__logo:nth-of-type(7){height:22px}.anbox-mobile-part--01 .shelf-marquee__logo:nth-of-type(8){height:20px}`;
 }
@@ -1072,8 +1093,25 @@ function mobileRuntimeFor(part) {
       .replace("document.querySelectorAll('.package-tab')", "root.querySelectorAll('.package-tab')")
       .replace("document.querySelectorAll('.package-panel')", "root.querySelectorAll('.package-panel')");
   } else if (part === '06') {
-    code = `${sharedReducedMotion}${sliceRuntime("const logoMarqueeSection = document.querySelector('[data-logo-marquee]');", "const approachCarousel = document.querySelector('[data-approach-carousel]');")}`
-      .replace("document.querySelector('[data-logo-marquee]')", "root.querySelector('[data-logo-marquee]')");
+    code = `${sharedReducedMotion}
+      const logoMarquee = root.querySelector('.logo-marquee');
+      const logoMotionToggle = root.querySelector('.logo-motion-toggle');
+      let logoMotionManual = false;
+
+      const setLogoMotion = (paused) => {
+        logoMarquee.classList.toggle('is-paused', paused);
+        logoMotionToggle.setAttribute('aria-pressed', String(paused));
+        logoMotionToggle.setAttribute('aria-label', paused ? 'Запустить движение логотипов' : 'Остановить движение логотипов');
+      };
+
+      setLogoMotion(reducedMotion.matches);
+      logoMotionToggle.addEventListener('click', () => {
+        logoMotionManual = true;
+        setLogoMotion(!logoMarquee.classList.contains('is-paused'));
+      });
+      reducedMotion.addEventListener?.('change', (event) => {
+        if (!logoMotionManual) setLogoMotion(event.matches);
+      });`;
   } else if (part === '09') {
     code = sliceRuntime("const form = document.querySelector('#project-form');", null)
       .replace("document.querySelector('#project-form')", "root.querySelector('#project-form')")
@@ -1135,7 +1173,7 @@ function clientLogoSprite() {
   }
 
   return {
-    style: `<style data-anxl-inline-style>.anxl__sprite{position:absolute!important;width:0!important;height:0!important;overflow:hidden!important;pointer-events:none!important}.anbox-mobile-part--06 .logo-cell .anxl__logo-art{width:100%;height:auto;aspect-ratio:212/82;display:block;object-fit:contain}</style>`,
+    style: `<style data-anxl-inline-style>.anxl__sprite{position:absolute!important;width:0!important;height:0!important;overflow:hidden!important;pointer-events:none!important}.anbox-mobile-part--06 .logo-cell{overflow:hidden!important;border:1px solid rgba(21,23,22,.08)!important;border-radius:10px!important;background:#1d1d21!important}.anbox-mobile-part--06 .logo-cell .anxl__logo-art{width:100%;height:auto;aspect-ratio:212/82;display:block;object-fit:contain}</style>`,
     sprite: `<svg class="anxl__sprite" data-anxl-inline-sprite aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">${symbols.join('')}</svg>`,
   };
 }
@@ -1222,6 +1260,7 @@ function buildMobile(def) {
       .replace(/\s*<p class="hero__eyebrow">[^<]*<\/p>/, '')
       .replace('<h1 id="hero-title">', '<h1 class="hero__title" id="hero-title">');
   }
+  if (def.part === '06') fragment = renderMobileClients(fragment);
   if (def.part === '08') fragment = fragment.replace('<section class="section journal"', '<section class="section journal" id="abm-journal"');
   if (def.part === '03') fragment = addPortfolioCaseHandles(renderMobilePortfolio(fragment), 'mobile');
   const rootId = def.part === '01' ? ' id="abm-mobile-main-start"' : '';
